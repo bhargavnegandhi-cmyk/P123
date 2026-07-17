@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inventories: LIFO Effects & Write-Downs — CFA Prerequisite FSA Toolkit</title>
+<link rel="stylesheet" href="../../shared-module-standard.css">
+</head>
+<body>
+
+<div class="mobile-bar">
+  <strong style="font-family:var(--font-display)">LIFO Reserve</strong>
+  <button id="sidebarToggle">Menu</button>
+</div>
+
+<div class="app">
+  <nav class="sidebar" id="sidebar">
+    <a href="../index.html" class="brand">
+      <span class="brand-mark"></span>
+      <span class="brand-name">Inventories<br>Part 2</span>
+    </a>
+    <div class="brand-sub">CFA Prerequisite · FSA · Module 5 · Part 2 of 2</div>
+
+    <div class="progress-wrap">
+      <div class="progress-label"><span>Progress</span><span id="progressPct">0%</span></div>
+      <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+    </div>
+
+    <div class="toc-group-label">LIFO's Consequences</div>
+    <ul class="toc">
+      <li><a href="#sec-risingcosts" data-sec="sec-risingcosts"><span class="num">04</span>Rising Costs — LIFO vs. FIFO</a></li>
+      <li><a href="#sec-lifreserve" data-sec="sec-lifreserve"><span class="num">05</span>LIFO Reserve &amp; Conversion</a></li>
+      <li><a href="#sec-lifoliquidation" data-sec="sec-lifoliquidation"><span class="num">06</span>LIFO Liquidation</a></li>
+    </ul>
+
+    <div class="toc-group-label">When Inventory Loses Value</div>
+    <ul class="toc">
+      <li><a href="#sec-writedown" data-sec="sec-writedown"><span class="num">07</span>Lower of Cost and NRV</a></li>
+    </ul>
+
+    <div class="toc-group-label">Check Yourself</div>
+    <ul class="toc">
+      <li><a href="#sec-quiz" data-sec="sec-quiz"><span class="num">Q</span>Practice Quiz (14)</a></li>
+    </ul>
+  </nav>
+
+  <main id="top">
+    <header class="hero">
+      <div class="eyebrow">CFA Program · Prerequisite Financial Statement Analysis · Module 5 · Part 2 of 2</div>
+      <h1>The same accounting choice that saves a company real money in taxes can also mislead an analyst reading its margins.</h1>
+      <p class="lede">Part 1 covered how inventory gets measured. This half is about what happens next — specifically, what LIFO does to every major number on the financial statements when costs are genuinely rising (the far more common real-world case), and how to reverse-engineer a LIFO company's figures back onto a comparable FIFO basis using nothing but a single footnote disclosure.</p>
+    </header>
+
+    <!-- =========================================================
+         04 RISING COSTS - LIFO VS FIFO
+    ========================================================== -->
+    <section class="section" id="sec-risingcosts">
+      <div class="section-head">
+        <span class="section-tag">04</span>
+        <div>
+          <h2>Rising Costs — How LIFO and FIFO Diverge</h2>
+          <p class="subhead">In the far more common real-world case of rising costs, LIFO and FIFO pull every major statement and ratio in genuinely opposite directions.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="callout" style="border-left-color:var(--red);">
+            <div class="label" style="font-family:var(--font-mono); font-size:.72rem; text-transform:uppercase; color:var(--red); font-weight:700; margin-bottom:8px;">When inventory costs are rising, LIFO produces:</div>
+            <p style="margin:0 0 6px;"><strong>Income statement:</strong> higher cost of sales → lower gross profit, operating profit, and net income.</p>
+            <p style="margin:0 0 6px;"><strong>Balance sheet:</strong> lower ending inventory → lower working capital, total assets, and equity.</p>
+            <p style="margin:0;"><strong>Cash flow:</strong> lower taxable income → lower taxes paid → <em>higher</em> operating cash flow, the one place LIFO actually looks "better."</p>
+          </div>
+
+          <div class="callout example">
+            <div class="label">Why a company would deliberately choose LIFO</div>
+            <p style="margin:0;">The tax savings are the entire motivation. Lower reported taxable income under LIFO genuinely means paying less tax in cash today — and since company value is ultimately about the present value of future cash flows, that tax deferral has real economic value, even though it makes reported profit look worse.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c4">
+            <div class="label">Check yourself</div>
+            <div class="q">During a period of rising inventory costs, a company switches from FIFO to LIFO. What happens to its reported net operating cash flow, all else equal?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="true">It increases, due to lower income taxes paid</button>
+              <button class="opt-btn" data-correct="false">It decreases</button>
+              <button class="opt-btn" data-correct="false">It is completely unaffected by the inventory method</button>
+            </div>
+            <div class="checkin-feedback">Correct — LIFO's higher cost of sales lowers taxable income and taxes paid, which actually increases operating cash flow, even as reported net income falls.</div>
+          </div>
+        </div>
+        <div>
+          <div class="callout" style="margin-top:0;">
+            <table class="exhibit" style="margin:0;">
+              <tr><th>Rising costs</th><th>LIFO vs. FIFO</th></tr>
+              <tr><td>Cost of sales</td><td class="num">Higher</td></tr>
+              <tr><td>Gross profit / Net income</td><td class="num">Lower</td></tr>
+              <tr><td>Ending inventory</td><td class="num">Lower</td></tr>
+              <tr><td>Operating cash flow</td><td class="num">Higher</td></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         05 LIFO RESERVE & CONVERSION
+    ========================================================== -->
+    <section class="section" id="sec-lifreserve">
+      <div class="section-head">
+        <span class="section-tag">05</span>
+        <div>
+          <h2>LIFO Reserve &amp; LIFO-to-FIFO Conversion</h2>
+          <p class="subhead">One required disclosure lets an analyst reconstruct exactly what a LIFO company's numbers would have looked like under FIFO.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="callout formula">
+            <div class="label">LIFO reserve</div>
+            <div class="formula-body" style="font-size:1rem;">LIFO Reserve = FIFO Inventory − LIFO Inventory</div>
+            <p style="margin:10px 0 0; font-size:.85rem; color:var(--ink-soft);">US GAAP requires companies using LIFO to disclose this figure, in a note or directly on the balance sheet.</p>
+          </div>
+
+          <div class="definition">
+            <div class="label">The two-step conversion</div>
+            <p style="margin-bottom:8px;"><strong>Inventory:</strong> FIFO inventory = LIFO inventory (reported) + LIFO reserve.</p>
+            <p style="margin:0;"><strong>Cost of sales:</strong> FIFO cost of sales = LIFO cost of sales (reported) − the <em>increase</em> in the LIFO reserve during the period (add back a decrease, if the reserve fell).</p>
+          </div>
+
+          <div class="callout example">
+            <div class="label">Why this matters so much for comparability</div>
+            <p style="margin:0;">A US company using LIFO and a European competitor using FIFO (IFRS prohibits LIFO entirely) will show genuinely different gross margins purely from this accounting choice — even with economically identical operations. The LIFO reserve conversion is exactly the tool that lets an analyst put both companies on the same footing before comparing them.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c5">
+            <div class="label">Check yourself</div>
+            <div class="q">A company reports LIFO inventory of $40 million and discloses a LIFO reserve of $12 million. What would its inventory be if it had used FIFO instead?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="false">$28 million</button>
+              <button class="opt-btn" data-correct="true">$52 million</button>
+              <button class="opt-btn" data-correct="false">$40 million (no difference)</button>
+            </div>
+            <div class="checkin-feedback">Correct — FIFO inventory = LIFO inventory + LIFO reserve = $40M + $12M = $52 million.</div>
+          </div>
+        </div>
+        <div>
+          <div class="dist-card" style="margin-top:0;">
+            <div class="label" style="font-family:var(--font-mono); font-size:.72rem; text-transform:uppercase; color:var(--indigo); font-weight:700; margin-bottom:12px;">Try it — LIFO-to-FIFO converter</div>
+            <div class="tvm-grid">
+              <div class="tvm-field"><label>LIFO inventory ($M)</label><input type="number" id="lrLifoInv" value="40" step="1"></div>
+              <div class="tvm-field"><label>LIFO reserve, this year ($M)</label><input type="number" id="lrReserveNow" value="12" step="1"></div>
+              <div class="tvm-field"><label>LIFO reserve, last year ($M)</label><input type="number" id="lrReservePrior" value="9" step="1"></div>
+              <div class="tvm-field"><label>LIFO cost of sales ($M)</label><input type="number" id="lrLifoCOGS" value="250" step="5"></div>
+            </div>
+            <div class="tvm-result" id="lrResult">FIFO inventory = $52M · FIFO cost of sales = $247M</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         06 LIFO LIQUIDATION
+    ========================================================== -->
+    <section class="section" id="sec-lifoliquidation">
+      <div class="section-head">
+        <span class="section-tag">06</span>
+        <div>
+          <h2>LIFO Liquidation</h2>
+          <p class="subhead">Selling more than you buy digs into old, cheap inventory layers — creating a one-time profit boost that's genuinely a warning sign, not good news.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="definition">
+            <div class="label">What causes it</div>
+            <p style="margin:0;">When units sold exceed units purchased or produced in a period, a LIFO company draws down into <strong>older, lower-cost inventory layers</strong> that would normally stay untouched. If costs have been rising, this produces an inventory-related jump in gross profit — but purely because old, cheap costs are being matched against current, higher sale prices.</p>
+          </div>
+
+          <div class="callout" style="border-left-color:var(--red);">
+            <div class="label" style="font-family:var(--font-mono); font-size:.72rem; text-transform:uppercase; color:var(--red); font-weight:700; margin-bottom:8px;">Why this is a genuine red flag, not a real improvement</div>
+            <p style="margin:0;">The profit boost from LIFO liquidation is a <strong>one-time, unsustainable</strong> event — it can't recur once those old layers are gone. Worse, management can potentially manipulate reported earnings around a weak quarter by deliberately running down inventory to trigger this effect. A declining LIFO reserve from one period to the next is the specific signal analysts watch for to catch this.</p>
+          </div>
+
+          <div class="callout example">
+            <div class="label">Outside example</div>
+            <p style="margin:0;">A manufacturer facing a supplier labor strike is forced to sell down existing inventory faster than it can restock. If costs have risen steadily for years, the oldest LIFO layers being liquidated might have been recorded at half today's cost — producing an artificially inflated gross margin that has nothing to do with the business's actual current profitability.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c6">
+            <div class="label">Check yourself</div>
+            <div class="q">A LIFO company's reserve declined significantly from the prior year, and inventory unit costs have been rising for years. What does this most likely indicate?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="true">A LIFO liquidation has likely occurred, producing an unsustainable, one-time boost to gross profit</button>
+              <button class="opt-btn" data-correct="false">The company has switched to FIFO</button>
+              <button class="opt-btn" data-correct="false">Inventory costs must have started falling</button>
+            </div>
+            <div class="checkin-feedback">Correct — a declining LIFO reserve, alongside historically rising costs, is the classic signal of a LIFO liquidation and its associated one-time profit boost.</div>
+          </div>
+        </div>
+        <div>
+          <div class="callout" style="margin-top:0;">
+            <p style="margin:0; font-size:.9rem;"><strong>The practical takeaway:</strong> always check the LIFO reserve footnote year over year before trusting a reported gross margin improvement at a LIFO company — it might be real operating improvement, or it might just be inventory liquidation.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         07 LOWER OF COST AND NRV
+    ========================================================== -->
+    <section class="section" id="sec-writedown">
+      <div class="section-head">
+        <span class="section-tag">07</span>
+        <div>
+          <h2>Lower of Cost and Net Realisable Value</h2>
+          <p class="subhead">Inventory is never allowed to sit on the books at more than it could actually be sold for — the accounting version of "don't kid yourself."</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="definition">
+            <div class="label">The rule and the key term</div>
+            <p style="margin-bottom:8px;"><strong>IFRS rule:</strong> inventory is carried at the lower of cost and net realisable value (NRV).</p>
+            <p style="margin:0;"><strong>Net realisable value:</strong> the estimated selling price in the ordinary course of business, minus the estimated costs to complete and sell the item.</p>
+          </div>
+
+          <div class="callout example">
+            <div class="label">Worked example — a write-down</div>
+            <p style="margin:0;">A batch of inventory cost 4.20 CHF/kg to produce, but due to obsolescence, its net realisable value has fallen to 3.95 CHF/kg. The inventory must be written down by 0.25 CHF/kg — recognized as an expense (typically within cost of sales) on the income statement, with the balance sheet inventory value reduced to match the lower NRV.</p>
+          </div>
+
+          <div class="callout" style="border-left-color:var(--red);">
+            <div class="label" style="font-family:var(--font-mono); font-size:.72rem; text-transform:uppercase; color:var(--red); font-weight:700; margin-bottom:8px;">A genuine IFRS vs. US GAAP difference</div>
+            <p style="margin:0;">Under IFRS, if inventory value recovers later, the write-down can be <strong>reversed</strong> (limited to the original write-down amount). Under US GAAP, once written down, that value is a new cost basis — <strong>reversal is prohibited entirely</strong>, even if the inventory's value genuinely recovers.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c7">
+            <div class="label">Check yourself</div>
+            <div class="q">Inventory with a cost of $80,000 has a net realisable value of $65,000. Under IFRS, what is the required accounting treatment?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="true">Write the inventory down to $65,000, recognizing a $15,000 expense</button>
+              <button class="opt-btn" data-correct="false">Leave the inventory at $80,000, since cost is always used</button>
+              <button class="opt-btn" data-correct="false">Increase inventory to reflect expected future recovery</button>
+            </div>
+            <div class="checkin-feedback">Correct — inventory must be written down to the lower of cost and NRV, recognizing the $15,000 difference as an expense.</div>
+          </div>
+        </div>
+        <div>
+          <div class="dist-card" style="margin-top:0;">
+            <div class="label" style="font-family:var(--font-mono); font-size:.72rem; text-transform:uppercase; color:var(--indigo); font-weight:700; margin-bottom:12px;">Try it — write-down calculator</div>
+            <div class="tvm-grid">
+              <div class="tvm-field"><label>Inventory cost</label><input type="number" id="wdCost" value="80000" step="1000"></div>
+              <div class="tvm-field"><label>Net realisable value</label><input type="number" id="wdNRV" value="65000" step="1000"></div>
+            </div>
+            <div class="tvm-result" id="wdResult">Write-down required = $15,000</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         QUIZ
+    ========================================================== -->
+    <section class="section" id="sec-quiz" style="max-width:900px;">
+      <div class="section-head">
+        <span class="section-tag">Q</span>
+        <div>
+          <h2>Practice Quiz</h2>
+          <p class="subhead">14 questions across everything above. Answer, get instant feedback, and see your score at the end.</p>
+        </div>
+      </div>
+      <div class="quiz-shell" id="quizShell">
+        <!-- populated by JS -->
+      </div>
+    </section>
+
+    <footer class="footer">
+      Built as a companion study tool for the CFA Program prerequisite Financial Statement Analysis reading on Inventories (Part 2 of 2). Continuing next to <a href="../long-lived-assets/index.html" style="color:var(--indigo);">Module 6: Long-Lived Assets →</a>
+    </footer>
+  </main>
+</div>
+
+<script src="../../diagnostics.js"></script>
+<script src="../bundle.js"></script>
+<script src="../../accessibility.js"></script>
+</body>
+</html>

@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cash Flow Statements — CFA Prerequisite FSA Toolkit</title>
+<link rel="stylesheet" href="../../shared-module-standard.css">
+</head>
+<body>
+
+<div class="mobile-bar">
+  <strong style="font-family:var(--font-display)">Cash In / Out</strong>
+  <button id="sidebarToggle">Menu</button>
+</div>
+
+<div class="app">
+  <nav class="sidebar" id="sidebar">
+    <a href="../index.html" class="brand">
+      <span class="brand-mark"></span>
+      <span class="brand-name">Cash Flow<br>Statements</span>
+    </a>
+    <div class="brand-sub">CFA Prerequisite · FSA · Module 4</div>
+
+    <div class="progress-wrap">
+      <div class="progress-label"><span>Progress</span><span id="progressPct">0%</span></div>
+      <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+    </div>
+
+    <div class="toc-group-label">Why This Statement Exists</div>
+    <ul class="toc">
+      <li><a href="#sec-why" data-sec="sec-why"><span class="num">01</span>Why the Cash Flow Statement Exists</a></li>
+      <li><a href="#sec-classify" data-sec="sec-classify"><span class="num">02</span>Operating, Investing &amp; Financing</a></li>
+      <li><a href="#sec-noncash" data-sec="sec-noncash"><span class="num">03</span>Non-Cash Activities</a></li>
+    </ul>
+
+    <div class="toc-group-label">How It Gets Presented</div>
+    <ul class="toc">
+      <li><a href="#sec-directindirect" data-sec="sec-directindirect"><span class="num">04</span>Direct vs. Indirect Method</a></li>
+      <li><a href="#sec-ifrsgaap" data-sec="sec-ifrsgaap"><span class="num">05</span>IFRS vs. US GAAP</a></li>
+      <li><a href="#sec-realexample" data-sec="sec-realexample"><span class="num">06</span>Reading a Real Statement</a></li>
+    </ul>
+
+    <div class="toc-group-label">Check Yourself</div>
+    <ul class="toc">
+      <li><a href="#sec-quiz" data-sec="sec-quiz"><span class="num">Q</span>Practice Quiz (20)</a></li>
+    </ul>
+  </nav>
+
+  <main id="top">
+    <header class="hero">
+      <div class="eyebrow">CFA Program · Prerequisite Financial Statement Analysis · Module 4</div>
+      <h1>A profitable company can still run out of cash and die.</h1>
+      <p class="lede">The income statement can make a company look genuinely healthy — strong sales, solid margins, real net income — while it quietly runs out of the one thing it actually needs to pay its bills: cash. This module is the statement built specifically to answer the question the income statement can't: did the cash actually show up, and where did it go?</p>
+    </header>
+
+    <!-- =========================================================
+         01 WHY THE CASH FLOW STATEMENT EXISTS
+    ========================================================== -->
+    <section class="section" id="sec-why">
+      <div class="section-head">
+        <span class="section-tag">01</span>
+        <div>
+          <h2>Why the Cash Flow Statement Exists</h2>
+          <p class="subhead">Take accrual accounting to its logical extreme, and you get a company that looks perfectly healthy right up until the moment it can't pay its own employees.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="callout" style="border-left-color:var(--red);">
+            <div class="label" style="font-family:var(--font-mono); font-size:.72rem; text-transform:uppercase; color:var(--red); font-weight:700; margin-bottom:8px;">The extreme case that makes the point</div>
+            <p style="margin:0;">Imagine a company that makes all its sales on credit, to customers who never actually pay. Its income statement would show healthy revenue and genuine net income — accrual accounting recognizes revenue when earned, not when collected. But with zero actual cash coming in, this company literally cannot survive, no matter how profitable it looks on paper.</p>
+          </div>
+
+          <p>The cash flow statement exists specifically to answer questions the income statement structurally cannot: does the company generate enough cash from operations to fund its own growth, or is it relying on new borrowing? Does it pay dividends from real operating cash, or from selling off assets?</p>
+
+          <div class="definition">
+            <div class="label">Why the answer matters so much</div>
+            <p style="margin:0;">Generating cash from operations can continue indefinitely. Generating cash from selling assets only works as long as there are assets left to sell. Generating cash from new debt only works as long as lenders keep believing they'll be repaid. One of these three sources is sustainable in a way the other two simply aren't.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c1">
+            <div class="label">Check yourself</div>
+            <div class="q">A company reports strong net income this year, driven almost entirely by a surge in credit sales it hasn't yet collected in cash. What might the cash flow statement reveal that the income statement alone would miss?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="true">The company may be generating little or even negative actual cash from operations, despite reported profitability</button>
+              <button class="opt-btn" data-correct="false">Nothing — net income and operating cash flow are always identical</button>
+              <button class="opt-btn" data-correct="false">The cash flow statement only reports information already visible on the income statement</button>
+            </div>
+            <div class="checkin-feedback">Correct — the cash flow statement can reveal a genuine gap between reported profitability and actual cash generation, which the income statement alone can't show.</div>
+          </div>
+        </div>
+        <div>
+          <div class="callout" style="margin-top:0;">
+            <p style="margin:0; font-size:.9rem;"><strong>Three questions the cash flow statement is built to answer:</strong> where did cash come from, where did it go, and does the beginning-to-ending cash balance on the balance sheet actually reconcile?</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         02 OPERATING, INVESTING & FINANCING
+    ========================================================== -->
+    <section class="section" id="sec-classify">
+      <div class="section-head">
+        <span class="section-tag">02</span>
+        <div>
+          <h2>Classifying Operating, Investing &amp; Financing Activities</h2>
+          <p class="subhead">Every single cash movement a company makes falls into exactly one of three buckets — and sorting them correctly is most of what this module actually tests.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="definition">
+            <div class="label">The three categories</div>
+            <p style="margin-bottom:8px;"><strong>Operating:</strong> day-to-day activities that generate revenue — cash from sales, collections on receivables; cash out for inventory, salaries, taxes.</p>
+            <p style="margin-bottom:8px;"><strong>Investing:</strong> buying and selling long-term assets — property, equipment, intangibles, and investments in other companies' debt or equity (excluding trading securities).</p>
+            <p style="margin:0;"><strong>Financing:</strong> raising or repaying capital — issuing or repurchasing stock, issuing or repaying debt.</p>
+          </div>
+
+          <div class="callout finance">
+            <div class="label">Worked example — sorting the cash flows</div>
+            <p style="margin:0 0 8px;">A company reports: proceeds from issuing long-term debt €300,000; purchase of equipment €200,000; loss on sale of equipment €70,000; proceeds from sale of equipment €120,000; equity in earnings of affiliate €10,000.</p>
+            <p style="margin:0;">Only two items are actual investing cash flows: the €200,000 equipment purchase (outflow) and €120,000 sale proceeds (inflow). Net investing cash flow = −200,000 + 120,000 = <strong>−€80,000</strong>. The debt issuance is a financing flow; the "loss on sale" and "equity in earnings" are income statement items with no direct cash flow of their own.</p>
+          </div>
+
+          <div class="callout" style="border-left-color:var(--red);">
+            <div class="label" style="font-family:var(--font-mono); font-size:.72rem; text-transform:uppercase; color:var(--red); font-weight:700; margin-bottom:8px;">The classic trap — indirect borrowing via accounts payable</div>
+            <p style="margin:0;">Stretching out payment to suppliers is, in a real economic sense, a form of borrowing. But it's classified as an <strong>operating</strong> activity, not financing — because it's the accounts payable balance itself doing the "lending," not a formal debt instrument.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c2">
+            <div class="label">Check yourself</div>
+            <div class="q">A company issues a £30,000 short-term note to pay for inventory, and separately issues £110,000 of long-term debt to buy new equipment. What is the combined effect on financing cash flows?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="true">Financing cash flows increase by £140,000 (both the note and the long-term debt are financing inflows)</button>
+              <button class="opt-btn" data-correct="false">Financing cash flows increase by only £110,000</button>
+              <button class="opt-btn" data-correct="false">Financing cash flows are unaffected — both are operating activities</button>
+            </div>
+            <div class="checkin-feedback">Correct — both the short-term note (£30,000) and the long-term debt (£110,000) are financing inflows, totaling £140,000; how the proceeds were later spent doesn't change this.</div>
+          </div>
+        </div>
+        <div>
+          <div class="dist-card" style="margin-top:0;">
+            <div class="label" style="font-family:var(--font-mono); font-size:.72rem; text-transform:uppercase; color:var(--indigo); font-weight:700; margin-bottom:12px;">Try it — investing cash flow calculator</div>
+            <div class="tvm-grid">
+              <div class="tvm-field"><label>Purchase of equipment</label><input type="number" id="cfPurchase" value="200000" step="10000"></div>
+              <div class="tvm-field"><label>Proceeds from sale of equipment</label><input type="number" id="cfSale" value="120000" step="10000"></div>
+            </div>
+            <div class="tvm-result" id="cfResult">Net investing cash flow = −€80,000</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         03 NON-CASH ACTIVITIES
+    ========================================================== -->
+    <section class="section" id="sec-noncash">
+      <div class="section-head">
+        <span class="section-tag">03</span>
+        <div>
+          <h2>Non-Cash Investing &amp; Financing Activities</h2>
+          <p class="subhead">Some genuinely significant transactions involve zero cash at all — and by definition, they never appear inside the cash flow statement itself.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="definition">
+            <div class="label">What counts as non-cash</div>
+            <p style="margin:0;">A <strong>non-cash transaction</strong> is any transaction with no cash inflow or outflow at all — swapping one non-monetary asset for another, issuing stock to convert a convertible bond, or issuing shares as a stock dividend. Since no cash moves, none of it belongs inside the cash flow statement proper.</p>
+          </div>
+
+          <div class="callout" style="border-left-color:var(--red);">
+            <p style="margin:0; font-size:.9rem;"><strong>But "no cash flow" doesn't mean "not disclosed."</strong> Because these transactions can genuinely reshape a company's capital or asset structure, any significant non-cash transaction must still be disclosed — typically in a separate note or supplementary schedule alongside the cash flow statement.</p>
+          </div>
+
+          <div class="callout example">
+            <div class="label">Outside example — converting a bond into stock</div>
+            <p style="margin:0;">A company's convertible bondholders exercise their right to convert $10 million of bonds into common stock. Debt on the balance sheet falls by $10 million; equity rises by $10 million. Not one dollar of cash changed hands — yet this is a genuinely significant capital-structure event that any careful analyst needs to know about, hence the required disclosure.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c3">
+            <div class="label">Check yourself</div>
+            <div class="q">A company issues new shares directly to acquire a building, with no cash changing hands. How should this transaction be handled?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="false">Reported as a large investing outflow on the cash flow statement</button>
+              <button class="opt-btn" data-correct="true">Excluded from the cash flow statement itself, but disclosed separately as a significant non-cash transaction</button>
+              <button class="opt-btn" data-correct="false">Ignored entirely, since no cash was involved</button>
+            </div>
+            <div class="checkin-feedback">Correct — with no cash involved, this transaction is excluded from the cash flow statement itself, but its significance still requires separate disclosure.</div>
+          </div>
+        </div>
+        <div>
+          <div class="callout" style="margin-top:0;">
+            <p style="margin:0; font-size:.9rem;">Watch for these disclosures specifically when comparing a company's reported financing activity to what actually happened to its capital structure over the year — the full picture sometimes lives partly outside the cash flow statement itself.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         04 DIRECT VS INDIRECT METHOD
+    ========================================================== -->
+    <section class="section" id="sec-directindirect">
+      <div class="section-head">
+        <span class="section-tag">04</span>
+        <div>
+          <h2>Direct vs. Indirect Method</h2>
+          <p class="subhead">Two completely different-looking presentations, producing the exact same final number for operating cash flow, every time.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="definition">
+            <div class="label">The two methods</div>
+            <p style="margin-bottom:8px;"><strong>Direct method:</strong> shows the actual cash inflows and outflows — cash collected from customers, cash paid for inventory, cash paid to employees — stripped of every accrual.</p>
+            <p style="margin:0;"><strong>Indirect method:</strong> starts from net income and works backward, adjusting for non-cash items, non-operating items, and changes in operating accruals to arrive at the same operating cash flow figure.</p>
+          </div>
+
+          <div class="callout" style="border-left-color:var(--red);">
+            <p style="margin:0; font-size:.9rem;"><strong>Only the operating section differs between the two methods.</strong> The investing and financing sections are presented identically either way — the direct/indirect choice is purely about how operating cash flow gets shown.</p>
+          </div>
+
+          <div class="callout example">
+            <div class="label">Why each side has genuine defenders</div>
+            <p style="margin:0 0 8px;"><strong>Direct method advocates</strong> (many analysts and commercial lenders) argue it shows the actual sources of operating cash receipts and payments — genuinely useful for assessing a company's real financing needs and repayment capacity.</p>
+            <p style="margin:0;"><strong>Indirect method advocates</strong> (most preparers) argue it's cheaper and easier to produce, and it directly shows why net income and cash flow diverge — useful for forecasting, since analysts often build cash flow projections by first forecasting income.</p>
+          </div>
+
+          <div class="callout" style="border-left-color:var(--red);">
+            <p style="margin:0; font-size:.9rem;"><strong>In practice, indirect wins by a landslide.</strong> Both IFRS and US GAAP technically encourage the direct method, but the vast majority of real companies use indirect — even though CFA Institute itself has specifically advocated for direct-method reporting as the primary presentation.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c4">
+            <div class="label">Check yourself</div>
+            <div class="q">Does the choice between direct and indirect method change the total amount of operating cash flow reported?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="false">Yes, the two methods produce genuinely different totals</button>
+              <button class="opt-btn" data-correct="true">No — both methods arrive at the identical operating cash flow figure; only the presentation differs</button>
+              <button class="opt-btn" data-correct="false">Only under IFRS, not under US GAAP</button>
+            </div>
+            <div class="checkin-feedback">Correct — the direct and indirect methods are two different presentations of the exact same underlying operating cash flow number.</div>
+          </div>
+        </div>
+        <div>
+          <div class="callout" style="margin-top:0;">
+            <table class="exhibit" style="margin:0;">
+              <tr><th></th><th>Direct</th><th>Indirect</th></tr>
+              <tr><td>Starting point</td><td class="num">Cash receipts/payments</td><td class="num">Net income</td></tr>
+              <tr><td>Shows accrual adjustments?</td><td class="num">No</td><td class="num">Yes</td></tr>
+              <tr><td>Common in practice?</td><td class="num">Rare</td><td class="num">Vast majority</td></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         05 IFRS VS US GAAP
+    ========================================================== -->
+    <section class="section" id="sec-ifrsgaap">
+      <div class="section-head">
+        <span class="section-tag">05</span>
+        <div>
+          <h2>IFRS vs. US GAAP — Interest &amp; Dividend Classification</h2>
+          <p class="subhead">The exact same cash payment can legitimately land in a different section of the cash flow statement, purely depending on which accounting standard prepared it.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="definition">
+            <div class="label">IFRS — genuine choice, applied consistently</div>
+            <p style="margin-bottom:6px;"><strong>Interest received:</strong> operating OR investing.</p>
+            <p style="margin-bottom:6px;"><strong>Interest paid:</strong> operating OR financing.</p>
+            <p style="margin-bottom:6px;"><strong>Dividends received:</strong> operating OR investing.</p>
+            <p style="margin:0;"><strong>Dividends paid:</strong> operating OR financing.</p>
+          </div>
+
+          <div class="definition">
+            <div class="label">US GAAP — no discretion at all</div>
+            <p style="margin-bottom:6px;"><strong>Interest received AND paid:</strong> always operating.</p>
+            <p style="margin-bottom:6px;"><strong>Dividends received:</strong> always operating.</p>
+            <p style="margin:0;"><strong>Dividends paid:</strong> always financing.</p>
+          </div>
+
+          <div class="callout" style="border-left-color:var(--red);">
+            <p style="margin:0; font-size:.9rem;"><strong>Why this genuinely matters for cross-standard comparison:</strong> two economically identical companies — one reporting under IFRS, one under US GAAP — can show meaningfully different operating cash flow figures purely from this classification choice, with zero difference in actual underlying performance. Always check which standard, and which choice, before comparing operating cash flow across companies.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c5">
+            <div class="label">Check yourself</div>
+            <div class="q">Under US GAAP, how are dividends PAID to shareholders classified on the cash flow statement?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="false">Operating activities</button>
+              <button class="opt-btn" data-correct="true">Financing activities</button>
+              <button class="opt-btn" data-correct="false">Investing activities</button>
+            </div>
+            <div class="checkin-feedback">Correct — under US GAAP, dividends paid are always classified as a financing activity, with no discretion permitted.</div>
+          </div>
+        </div>
+        <div>
+          <div class="dist-card" style="margin-top:0;">
+            <div class="label" style="font-family:var(--font-mono); font-size:.72rem; text-transform:uppercase; color:var(--indigo); font-weight:700; margin-bottom:12px;">Try it — classify under each standard</div>
+            <div id="classifierWidget"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         06 READING A REAL STATEMENT
+    ========================================================== -->
+    <section class="section" id="sec-realexample">
+      <div class="section-head">
+        <span class="section-tag">06</span>
+        <div>
+          <h2>Reading a Real Statement — Unilever</h2>
+          <p class="subhead">A genuine indirect-method cash flow statement, from a real global consumer products company, isn't actually as intimidating as it first looks.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <p>Unilever's 2017 consolidated cash flow statement (indirect method) starts with net profit of €6,486 million, then works through a genuinely long list of adjustments: adding back non-cash depreciation and amortization (€1,538M), removing non-operating items like the share of joint venture profits, and adjusting for working capital changes (inventories, receivables, payables) — arriving at net cash flow from operating activities of €7,292 million.</p>
+
+          <div class="callout example">
+            <div class="label">The pattern worth recognizing</div>
+            <p style="margin:0;">Net income (€6,486M) and operating cash flow (€7,292M) are genuinely different numbers — as they almost always are — but they're not wildly different, which is itself a healthy sign. A company whose net income and operating cash flow diverge dramatically, in either direction, over multiple years is one worth investigating more closely.</p>
+          </div>
+
+          <div class="callout" style="border-left-color:var(--red);">
+            <p style="margin:0; font-size:.9rem;"><strong>Notice the structure, not just the numbers:</strong> every indirect-method statement follows the same skeleton — start with net income, add back non-cash charges (depreciation is nearly universal), adjust for non-operating gains/losses, then adjust for each working-capital account's change. Once you recognize this skeleton, unfamiliar companies' cash flow statements stop looking intimidating.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c6">
+            <div class="label">Check yourself</div>
+            <div class="q">In an indirect-method cash flow statement, why is depreciation added back to net income?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="true">Depreciation is a non-cash expense that reduced net income but never actually used any cash</button>
+              <button class="opt-btn" data-correct="false">Depreciation is a cash inflow in its own right</button>
+              <button class="opt-btn" data-correct="false">Depreciation must be subtracted, not added, in the indirect method</button>
+            </div>
+            <div class="checkin-feedback">Correct — depreciation reduces net income but involves no actual cash outflow, so it must be added back to reconcile net income to operating cash flow.</div>
+          </div>
+        </div>
+        <div>
+          <div class="callout" style="margin-top:0;">
+            <table class="exhibit" style="margin:0;">
+              <tr><th>Unilever 2017 (€M)</th><th></th></tr>
+              <tr><td>Net profit</td><td class="num">6,486</td></tr>
+              <tr><td>+ Depreciation &amp; amortization</td><td class="num">1,538</td></tr>
+              <tr><td>± Working capital changes</td><td class="num">(68)</td></tr>
+              <tr><td>Net operating cash flow</td><td class="num">7,292</td></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         QUIZ
+    ========================================================== -->
+    <section class="section" id="sec-quiz" style="max-width:900px;">
+      <div class="section-head">
+        <span class="section-tag">Q</span>
+        <div>
+          <h2>Practice Quiz</h2>
+          <p class="subhead">20 questions across everything above. Answer, get instant feedback, and see your score at the end.</p>
+        </div>
+      </div>
+      <div class="quiz-shell" id="quizShell">
+        <!-- populated by JS -->
+      </div>
+    </section>
+
+    <footer class="footer">
+      Built as a companion study tool for the CFA Program prerequisite Financial Statement Analysis reading on Cash Flow Statements. Work through it alongside your primary curriculum — this isn't a replacement for official CFA Institute materials.
+    </footer>
+  </main>
+</div>
+
+<script src="../../diagnostics.js"></script>
+<script src="../bundle.js"></script>
+<script src="../../accessibility.js"></script>
+</body>
+</html>

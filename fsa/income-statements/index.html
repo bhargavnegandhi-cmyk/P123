@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Income Statements — CFA Prerequisite FSA Toolkit</title>
+<link rel="stylesheet" href="../../shared-module-standard.css">
+</head>
+<body>
+
+<div class="mobile-bar">
+  <strong style="font-family:var(--font-display)">Rev − Exp = NI</strong>
+  <button id="sidebarToggle">Menu</button>
+</div>
+
+<div class="app">
+  <nav class="sidebar" id="sidebar">
+    <a href="../index.html" class="brand">
+      <span class="brand-mark"></span>
+      <span class="brand-name">Income<br>Statements</span>
+    </a>
+    <div class="brand-sub">CFA Prerequisite · FSA · Module 2</div>
+
+    <div class="progress-wrap">
+      <div class="progress-label"><span>Progress</span><span id="progressPct">0%</span></div>
+      <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+    </div>
+
+    <div class="toc-group-label">The Top Line</div>
+    <ul class="toc">
+      <li><a href="#sec-overview" data-sec="sec-overview"><span class="num">01</span>What the Income Statement Reports</a></li>
+      <li><a href="#sec-fivestep" data-sec="sec-fivestep"><span class="num">02</span>The Five-Step Revenue Model</a></li>
+      <li><a href="#sec-principalagent" data-sec="sec-principalagent"><span class="num">03</span>Principal vs. Agent</a></li>
+    </ul>
+
+    <div class="toc-group-label">The Bottom Line</div>
+    <ul class="toc">
+      <li><a href="#sec-doubtfulwarranty" data-sec="sec-doubtfulwarranty"><span class="num">04</span>Doubtful Accounts &amp; Warranties</a></li>
+      <li><a href="#sec-depreciation" data-sec="sec-depreciation"><span class="num">05</span>Depreciation &amp; Amortization</a></li>
+      <li><a href="#sec-nonoperating" data-sec="sec-nonoperating"><span class="num">06</span>Operating vs. Non-Operating</a></li>
+    </ul>
+
+    <div class="toc-group-label">Reading the Whole Statement</div>
+    <ul class="toc">
+      <li><a href="#sec-commonsize" data-sec="sec-commonsize"><span class="num">07</span>Common-Size Analysis</a></li>
+      <li><a href="#sec-comprehensive" data-sec="sec-comprehensive"><span class="num">08</span>Comprehensive Income</a></li>
+    </ul>
+
+    <div class="toc-group-label">Check Yourself</div>
+    <ul class="toc">
+      <li><a href="#sec-quiz" data-sec="sec-quiz"><span class="num">Q</span>Practice Quiz (24)</a></li>
+    </ul>
+  </nav>
+
+  <main id="top">
+    <header class="hero">
+      <div class="eyebrow">CFA Program · Prerequisite Financial Statement Analysis · Module 2</div>
+      <h1>Deciding when a sale actually "counts" turns out to be a genuinely hard problem.</h1>
+      <p class="lede">Revenue minus expenses equals net income — the equation itself takes five words. Getting the timing and amount of each side right, consistently, across every industry from software subscriptions to twenty-year construction contracts, is what this entire module is actually about. This is the reading analysts scrutinize more than any other, because earnings drive valuations more than any other single number.</p>
+    </header>
+
+    <!-- =========================================================
+         01 WHAT THE INCOME STATEMENT REPORTS
+    ========================================================== -->
+    <section class="section" id="sec-overview">
+      <div class="section-head">
+        <span class="section-tag">01</span>
+        <div>
+          <h2>What the Income Statement Reports</h2>
+          <p class="subhead">Three different names, one basic equation, and a genuinely intense level of scrutiny from every corner of the market.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="callout formula">
+            <div class="label">The basic equation</div>
+            <div class="formula-body">Revenue − Expenses = Net Income</div>
+          </div>
+
+          <p>You'll also see the income statement called the <strong>statement of operations</strong>, the <strong>statement of earnings</strong>, or the <strong>profit and loss (P&amp;L) statement</strong> — all the same thing. It reports results over a <em>period</em> of time (a quarter, a year) — unlike the balance sheet, which is a snapshot at one instant.</p>
+
+          <div class="callout example">
+            <div class="label">Why analysts obsess over this specific statement</div>
+            <p style="margin:0;"><strong>Equity analysts</strong> care because markets reward high-earnings-growth companies with premium valuations, and most valuation models are built directly on earnings estimates. <strong>Fixed-income analysts</strong> scrutinize it for a company's ability to keep making debt payments through a full business cycle. <strong>Corporate announcements</strong> emphasize earnings more than any other single reported figure.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c1">
+            <div class="label">Check yourself</div>
+            <div class="q">Which statement below correctly distinguishes the income statement from the balance sheet?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="true">The income statement covers a period of time; the balance sheet is a snapshot at one instant</button>
+              <button class="opt-btn" data-correct="false">Both statements report the exact same information, just with different titles</button>
+              <button class="opt-btn" data-correct="false">The balance sheet covers a period of time; the income statement is a snapshot</button>
+            </div>
+            <div class="checkin-feedback">Correct — the income statement summarizes performance over a period, while the balance sheet captures position at a single moment.</div>
+          </div>
+        </div>
+        <div>
+          <div class="callout" style="margin-top:0;">
+            <p style="margin:0; font-size:.9rem;"><strong>Same statement, different names:</strong> statement of operations, statement of earnings, P&amp;L statement, and income statement all refer to the identical report — don't let the naming variation across companies and textbooks throw you off.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         02 THE FIVE-STEP REVENUE MODEL
+    ========================================================== -->
+    <section class="section" id="sec-fivestep">
+      <div class="section-head">
+        <span class="section-tag">02</span>
+        <div>
+          <h2>The Five-Step Revenue Recognition Model</h2>
+          <p class="subhead">One converged global standard (IFRS 15 / ASC 606) governs when and how much revenue a company gets to report — five steps, applied to every contract.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="definition">
+            <div class="label">The five steps</div>
+            <p style="margin-bottom:6px;"><strong>1. Identify the contract(s)</strong> with a customer.</p>
+            <p style="margin-bottom:6px;"><strong>2. Identify the separate performance obligations</strong> — the distinct promises within the contract.</p>
+            <p style="margin-bottom:6px;"><strong>3. Determine the transaction price</strong> — what the seller expects to receive.</p>
+            <p style="margin-bottom:6px;"><strong>4. Allocate the transaction price</strong> to each performance obligation.</p>
+            <p style="margin:0;"><strong>5. Recognize revenue</strong> when (or as) each performance obligation is satisfied.</p>
+          </div>
+
+          <div class="callout finance">
+            <div class="label">Worked example — Builder Co.'s long-term construction contract</div>
+            <p style="margin:0 0 8px;">Builder Co. contracts to construct a commercial building for $1,000,000, with expected total costs of $700,000. In year one, it incurs $420,000 of costs. Since the building is one integrated deliverable (not separable pre-construction, plumbing, wiring, etc. as distinct obligations), it's treated as a <strong>single performance obligation</strong>, satisfied <em>over time</em>.</p>
+            <p style="margin:0;">Progress is measured as costs incurred ÷ total expected costs = $420,000/$700,000 = <strong>60%</strong>. Revenue recognized in year one = 60% × $1,000,000 = <strong>$600,000</strong> — this is the same result the old "percentage-of-completion" method would have produced, just described in the new standard's language.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c2">
+            <div class="label">Check yourself</div>
+            <div class="q">Builder Co. incurs $420,000 in costs in Year 1, and $700,000 total costs are expected. It's Year 2, and it now expects $150,000 more revenue plus a $200,000 completion bonus, raising total revenue to $1,350,000. Costs incurred are still $420,000, but total expected costs rise to $820,000. What is the new percentage of completion?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="true">51.2% ($420,000 / $820,000)</button>
+              <button class="opt-btn" data-correct="false">60% (unchanged from Year 1)</button>
+              <button class="opt-btn" data-correct="false">31.1% ($420,000 / $1,350,000)</button>
+            </div>
+            <div class="checkin-feedback">Correct — percentage of completion = costs incurred / total expected costs = 420,000/820,000 = 51.2%, using the updated cost estimate after the contract modification.</div>
+          </div>
+        </div>
+        <div>
+          <div class="dist-card" style="margin-top:0;">
+            <div class="label" style="font-family:var(--font-mono); font-size:.72rem; text-transform:uppercase; color:var(--indigo); font-weight:700; margin-bottom:12px;">Try it — percentage-of-completion calculator</div>
+            <div class="tvm-grid">
+              <div class="tvm-field"><label>Total contract price ($)</label><input type="number" id="pocPrice" value="1000000" step="10000"></div>
+              <div class="tvm-field"><label>Total expected costs ($)</label><input type="number" id="pocTotalCost" value="700000" step="10000"></div>
+              <div class="tvm-field"><label>Costs incurred so far ($)</label><input type="number" id="pocIncurred" value="420000" step="10000"></div>
+            </div>
+            <div class="tvm-result" id="pocResult">Progress = 60.0% → Revenue recognized = $600,000</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         03 PRINCIPAL VS AGENT
+    ========================================================== -->
+    <section class="section" id="sec-principalagent">
+      <div class="section-head">
+        <span class="section-tag">03</span>
+        <div>
+          <h2>Principal vs. Agent — Gross vs. Net Revenue</h2>
+          <p class="subhead">The exact same $100 sale can legitimately be reported as $100 of revenue by one company, and $10 by another — depending on who's actually taking the risk.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="definition">
+            <div class="label">The distinction</div>
+            <p style="margin-bottom:8px;"><strong>Principal:</strong> primarily responsible for fulfilling the contract, bears inventory and credit risk, has discretion in setting price. Reports revenue <strong>gross</strong> — the full sale amount.</p>
+            <p style="margin:0;"><strong>Agent:</strong> arranges for another party to provide the goods or service, doesn't bear the same risks, earns a commission. Reports revenue <strong>net</strong> — just the commission.</p>
+          </div>
+
+          <div class="callout finance">
+            <div class="label">Worked example — a marketplace website</div>
+            <p style="margin:0;">A company operates a website connecting customers with suppliers. Customers pay in advance and orders are non-refundable, but suppliers ship directly to customers, and the company earns a 10% commission. Because the company isn't responsible for fulfillment, doesn't take inventory or credit risk, and doesn't control pricing — it's acting as an <strong>agent</strong>. On a $500 order, it reports only <strong>$50</strong> of revenue (its commission), not the full $500.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c3">
+            <div class="label">Check yourself</div>
+            <div class="q">A retailer buys inventory outright, sets its own prices, and bears the risk if goods don't sell. When it sells $200 of goods, how much revenue should it report?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="true">$200 (gross) — it's acting as a principal</button>
+              <button class="opt-btn" data-correct="false">Only its markup/profit margin, since that's what it actually earns</button>
+              <button class="opt-btn" data-correct="false">$0, until the customer pays in cash</button>
+            </div>
+            <div class="checkin-feedback">Correct — bearing inventory risk and controlling price are hallmarks of a principal, who reports the full (gross) sale amount as revenue.</div>
+          </div>
+        </div>
+        <div>
+          <div class="callout" style="margin-top:0;">
+            <p style="margin:0; font-size:.9rem;"><strong>Why this matters for comparing companies:</strong> two companies with identical underlying economics can show wildly different revenue figures purely based on principal-vs-agent classification — a critical adjustment analysts need to check before comparing "revenue growth" across marketplace-style businesses.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         04 DOUBTFUL ACCOUNTS & WARRANTIES
+    ========================================================== -->
+    <section class="section" id="sec-doubtfulwarranty">
+      <div class="section-head">
+        <span class="section-tag">04</span>
+        <div>
+          <h2>Expense Recognition: Doubtful Accounts &amp; Warranties</h2>
+          <p class="subhead">You have to guess how much of today's sale will never actually get paid — and record that guess as an expense today, not later.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="callout" style="border-left-color:var(--red);">
+            <div class="label" style="font-family:var(--font-mono); font-size:.72rem; text-transform:uppercase; color:var(--red); font-weight:700; margin-bottom:8px;">The wrong way — waiting for certainty</div>
+            <p style="margin:0;">Waiting until a specific customer actually defaults before recording any loss (the "direct write-off method") sounds simpler, but it violates the matching principle — the expense would land in a completely different period from the revenue it relates to. This approach generally isn't accepted under GAAP or IFRS.</p>
+          </div>
+
+          <div class="definition">
+            <div class="label">The required approach — estimate upfront</div>
+            <p style="margin-bottom:8px;"><strong>Doubtful accounts:</strong> at the moment revenue is recognized, the company must also estimate — based on historical experience — how much of it will ultimately go uncollected, and record that as an expense immediately.</p>
+            <p style="margin:0;"><strong>Warranties:</strong> the same logic applies — estimate future warranty repair/replacement costs at the time of sale, record the expense then, and true up the estimate against actual experience over the warranty's life.</p>
+          </div>
+
+          <div class="callout example">
+            <div class="label">Why this is really just the matching principle again</div>
+            <p style="margin:0;">Both doubtful accounts and warranty expense are the exact same idea from Module 00's matching principle, applied to two specific, genuinely uncertain future costs. The revenue is certain today; the associated cost isn't — but accrual accounting still demands a best estimate be recorded in the same period as the revenue, not whenever the uncertainty eventually resolves.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c4">
+            <div class="label">Check yourself</div>
+            <div class="q">A company sells $500,000 of goods on credit this quarter and, based on historical experience, expects 2% to ultimately be uncollectible. When should this expected loss be recorded?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="true">In the same quarter as the sale, as an estimate</button>
+              <button class="opt-btn" data-correct="false">Only once a specific customer actually defaults</button>
+              <button class="opt-btn" data-correct="false">It should never be recorded as an expense at all</button>
+            </div>
+            <div class="checkin-feedback">Correct — the matching principle requires the estimated uncollectible amount to be recorded in the same period as the related revenue.</div>
+          </div>
+        </div>
+        <div>
+          <div class="callout" style="margin-top:0;">
+            <p style="margin:0; font-size:.9rem;">Both estimates get revisited and adjusted over time as actual experience comes in — an estimate made today isn't locked in forever; it's refined as reality unfolds.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         05 DEPRECIATION & AMORTIZATION
+    ========================================================== -->
+    <section class="section" id="sec-depreciation">
+      <div class="section-head">
+        <span class="section-tag">05</span>
+        <div>
+          <h2>Expense Recognition: Depreciation &amp; Amortization</h2>
+          <p class="subhead">The matching principle, applied to assets that stick around for years instead of days.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="definition">
+            <div class="label">Two words, same idea, different asset types</div>
+            <p style="margin-bottom:8px;"><strong>Depreciation:</strong> the systematic allocation of a physical long-lived asset's cost (plant, equipment) over its useful life. Land is never depreciated.</p>
+            <p style="margin:0;"><strong>Amortization:</strong> the identical idea applied to intangible assets with a finite useful life (a patent with a set expiration, an acquired mailing list). Intangibles with an <em>indefinite</em> life (like goodwill) are never amortized — instead, they're tested annually for impairment.</p>
+          </div>
+
+          <div class="callout formula">
+            <div class="label">Straight-line depreciation</div>
+            <div class="formula-body">Annual depreciation = (Cost − Residual value) / Useful life</div>
+          </div>
+
+          <div class="callout example">
+            <div class="label">Two estimates drive the whole calculation</div>
+            <p style="margin:0;">Both the <strong>useful life</strong> and the <strong>residual (salvage) value</strong> are estimates management has to make upfront — and both are genuinely sensitive levers. A longer assumed useful life or a higher residual value both shrink annual depreciation expense, boosting reported profit — without changing anything about the asset's actual physical wear.</p>
+          </div>
+
+          <div class="callout" style="border-left-color:var(--red);">
+            <p style="margin:0; font-size:.9rem;"><strong>Cost model vs. revaluation model (IFRS only):</strong> under the cost model, an asset is carried at cost minus accumulated depreciation. Under the revaluation model — permitted under IFRS but NOT under US GAAP, and rarely used in practice — the asset is instead carried at fair value.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c5">
+            <div class="label">Check yourself</div>
+            <div class="q">A company raises its estimate of an asset's useful life from 5 years to 10 years, with no other changes. What happens to annual depreciation expense?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="true">It falls, since the same cost is now spread over more years</button>
+              <button class="opt-btn" data-correct="false">It rises</button>
+              <button class="opt-btn" data-correct="false">It is completely unaffected</button>
+            </div>
+            <div class="checkin-feedback">Correct — spreading the same depreciable cost over a longer useful life reduces the annual expense, all else equal.</div>
+          </div>
+        </div>
+        <div>
+          <div class="dist-card" style="margin-top:0;">
+            <div class="label" style="font-family:var(--font-mono); font-size:.72rem; text-transform:uppercase; color:var(--indigo); font-weight:700; margin-bottom:12px;">Try it — straight-line depreciation calculator</div>
+            <div class="tvm-grid">
+              <div class="tvm-field"><label>Asset cost ($)</label><input type="number" id="depCost" value="50000" step="1000"></div>
+              <div class="tvm-field"><label>Residual value ($)</label><input type="number" id="depResidual" value="5000" step="500"></div>
+              <div class="tvm-field"><label>Useful life (years)</label><input type="number" id="depLife" value="9" step="1" min="1"></div>
+            </div>
+            <div class="tvm-result" id="depResult">Annual depreciation = $5,000</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         06 OPERATING VS NON-OPERATING
+    ========================================================== -->
+    <section class="section" id="sec-nonoperating">
+      <div class="section-head">
+        <span class="section-tag">06</span>
+        <div>
+          <h2>Operating vs. Non-Operating Items</h2>
+          <p class="subhead">The same dollar of income can mean something very different depending on which bucket it falls into.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="definition">
+            <div class="label">The distinction</div>
+            <p style="margin-bottom:8px;"><strong>Operating items:</strong> arise from a company's core, central business activities — producing and delivering the goods or services it actually exists to sell.</p>
+            <p style="margin:0;"><strong>Non-operating items:</strong> arise from peripheral activities — most commonly interest expense/income and gains or losses from investing activities, for a typical non-financial company.</p>
+          </div>
+
+          <div class="callout" style="border-left-color:var(--red);">
+            <p style="margin:0; font-size:.9rem;"><strong>The classification genuinely depends on the business.</strong> Interest income and expense are non-operating for a typical manufacturer — but for a bank or insurance company, interest IS the core operating activity. There's no universal rule; it depends entirely on what the company is actually in business to do.</p>
+          </div>
+
+          <div class="callout example">
+            <div class="label">Why separating these matters for analysis</div>
+            <p style="margin:0;">A manufacturer's future performance depends on demand for its products and its cost structure — that's the operating story. Its non-operating financing expense depends instead on its capital structure and borrowing costs — a completely different driver. Blending the two together obscures which lever is actually driving results.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c6">
+            <div class="label">Check yourself</div>
+            <div class="q">For a typical non-financial manufacturing company, how is interest expense on its debt usually classified?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="true">Non-operating</button>
+              <button class="opt-btn" data-correct="false">Operating</button>
+              <button class="opt-btn" data-correct="false">It's never reported at all</button>
+            </div>
+            <div class="checkin-feedback">Correct — for a typical manufacturer, interest expense relates to financing decisions, not core operations, so it's classified as non-operating.</div>
+          </div>
+        </div>
+        <div>
+          <div class="callout" style="margin-top:0;">
+            <p style="margin:0; font-size:.9rem;"><strong>A genuine wrinkle:</strong> a company's income statement classification of interest isn't always consistent with how the same item appears on the cash flow statement — IFRS actually allows some flexibility here that US GAAP does not.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         07 COMMON-SIZE ANALYSIS
+    ========================================================== -->
+    <section class="section" id="sec-commonsize">
+      <div class="section-head">
+        <span class="section-tag">07</span>
+        <div>
+          <h2>Common-Size Analysis of the Income Statement</h2>
+          <p class="subhead">Strip away company size entirely, and suddenly a $2 million company can be compared fairly against a $10 million one.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="callout formula">
+            <div class="label">Vertical common-size analysis</div>
+            <div class="formula-body" style="font-size:1rem;">Every line item ÷ Revenue, expressed as a percentage</div>
+          </div>
+
+          <div class="callout finance">
+            <div class="label">Worked example — three companies, one comparison</div>
+            <p style="margin:0 0 8px;">Company A and B both have $10 million in sales; Company C has only $2 million. Company A's operating profit is $2 million, Company B's is $1.5 million, and Company C's is just $400,000 — in raw dollars, C looks like the weakest performer by far.</p>
+            <p style="margin:0;">Once converted to common-size percentages, though: Company C's operating margin is <strong>20%</strong> ($400,000/$2,000,000) — identical to Company A's, and actually <em>better</em> than Company B's <strong>15%</strong> ($1,500,000/$10,000,000). Size was hiding C's genuinely stronger operating efficiency.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c7">
+            <div class="label">Check yourself</div>
+            <div class="q">Why is common-size analysis specifically useful for comparing companies of very different sizes?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="true">It expresses every line item as a percentage of revenue, removing the effect of company size entirely</button>
+              <button class="opt-btn" data-correct="false">It only works for companies of identical size</button>
+              <button class="opt-btn" data-correct="false">It converts every number into a foreign currency</button>
+            </div>
+            <div class="checkin-feedback">Correct — by standardizing every line item as a percentage of revenue, common-size analysis makes companies of vastly different absolute sizes genuinely comparable.</div>
+          </div>
+        </div>
+        <div>
+          <div class="dist-card" style="margin-top:0;">
+            <div class="label" style="font-family:var(--font-mono); font-size:.72rem; text-transform:uppercase; color:var(--indigo); font-weight:700; margin-bottom:12px;">Try it — common-size comparator</div>
+            <div class="tvm-grid">
+              <div class="tvm-field"><label>Company revenue ($)</label><input type="number" id="csRevenue" value="2000000" step="100000"></div>
+              <div class="tvm-field"><label>Operating profit ($)</label><input type="number" id="csProfit" value="400000" step="10000"></div>
+            </div>
+            <div class="tvm-result" id="csResult">Operating margin = 20.0%</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         08 COMPREHENSIVE INCOME
+    ========================================================== -->
+    <section class="section" id="sec-comprehensive">
+      <div class="section-head">
+        <span class="section-tag">08</span>
+        <div>
+          <h2>Comprehensive Income</h2>
+          <p class="subhead">Some real gains and losses never touch net income at all — but they still have to show up somewhere, or the balance sheet stops making sense.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="callout formula">
+            <div class="label">Comprehensive income</div>
+            <div class="formula-body" style="font-size:1rem;">Net Income + Other Comprehensive Income (OCI)</div>
+          </div>
+
+          <div class="definition">
+            <div class="label">Four common types of other comprehensive income</div>
+            <p style="margin-bottom:6px;">1. Foreign currency translation adjustments (consolidating foreign subsidiaries)</p>
+            <p style="margin-bottom:6px;">2. Unrealized gains/losses on derivatives used as hedges</p>
+            <p style="margin-bottom:6px;">3. Unrealized holding gains/losses on certain investment securities</p>
+            <p style="margin:0;">4. Certain unrecognized costs from defined-benefit pension plans</p>
+          </div>
+
+          <div class="callout finance">
+            <div class="label">Worked example — finding the "missing" OCI</div>
+            <p style="margin:0 0 8px;">Beginning shareholders' equity is €110 million. Net income for the year is €10 million, dividends paid are €2 million, and there's no new stock issued or repurchased. If ending equity is actually €123 million, what happened to the extra €5 million?</p>
+            <p style="margin:0;">Expected ending equity (net income and dividends only) = €110 + €10 − €2 = €118 million. Actual ending equity is €123 million — the €5 million gap (€123 − €118) is <strong>other comprehensive income</strong>, a real change in equity that bypassed the income statement entirely.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c8">
+            <div class="label">Check yourself</div>
+            <div class="q">A company holds available-for-sale debt securities whose value rises during the year, but it hasn't sold them. Where does this unrealized gain typically appear?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="false">Directly in net income on the income statement</button>
+              <button class="opt-btn" data-correct="true">As other comprehensive income, bypassing net income but still affecting total equity</button>
+              <button class="opt-btn" data-correct="false">Nowhere — unrealized gains are never reported</button>
+            </div>
+            <div class="checkin-feedback">Correct — unrealized gains on available-for-sale securities typically flow through other comprehensive income rather than net income, while still affecting shareholders' equity.</div>
+          </div>
+        </div>
+        <div>
+          <div class="dist-card" style="margin-top:0;">
+            <div class="label" style="font-family:var(--font-mono); font-size:.72rem; text-transform:uppercase; color:var(--indigo); font-weight:700; margin-bottom:12px;">Try it — find the missing OCI</div>
+            <div class="tvm-grid">
+              <div class="tvm-field"><label>Beginning equity</label><input type="number" id="ociBeg" value="110000000" step="1000000"></div>
+              <div class="tvm-field"><label>Net income</label><input type="number" id="ociNI" value="10000000" step="500000"></div>
+              <div class="tvm-field"><label>Dividends paid</label><input type="number" id="ociDiv" value="2000000" step="500000"></div>
+              <div class="tvm-field"><label>Actual ending equity</label><input type="number" id="ociEnd" value="123000000" step="1000000"></div>
+            </div>
+            <div class="tvm-result" id="ociResult">Other comprehensive income = €5,000,000</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         QUIZ
+    ========================================================== -->
+    <section class="section" id="sec-quiz" style="max-width:900px;">
+      <div class="section-head">
+        <span class="section-tag">Q</span>
+        <div>
+          <h2>Practice Quiz</h2>
+          <p class="subhead">24 questions across everything above. Answer, get instant feedback, and see your score at the end.</p>
+        </div>
+      </div>
+      <div class="quiz-shell" id="quizShell">
+        <!-- populated by JS -->
+      </div>
+    </section>
+
+    <footer class="footer">
+      Built as a companion study tool for the CFA Program prerequisite Financial Statement Analysis reading on Income Statements. Work through it alongside your primary curriculum — this isn't a replacement for official CFA Institute materials.
+    </footer>
+  </main>
+</div>
+
+<script src="../../diagnostics.js"></script>
+<script src="../bundle.js"></script>
+<script src="../../accessibility.js"></script>
+</body>
+</html>

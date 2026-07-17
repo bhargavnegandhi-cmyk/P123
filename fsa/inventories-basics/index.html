@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inventories: Measurement Basics — CFA Prerequisite FSA Toolkit</title>
+<link rel="stylesheet" href="../../shared-module-standard.css">
+</head>
+<body>
+
+<div class="mobile-bar">
+  <strong style="font-family:var(--font-display)">FIFO / LIFO</strong>
+  <button id="sidebarToggle">Menu</button>
+</div>
+
+<div class="app">
+  <nav class="sidebar" id="sidebar">
+    <a href="../index.html" class="brand">
+      <span class="brand-mark"></span>
+      <span class="brand-name">Inventories<br>Part 1</span>
+    </a>
+    <div class="brand-sub">CFA Prerequisite · FSA · Module 5 · Part 1 of 2</div>
+
+    <div class="progress-wrap">
+      <div class="progress-label"><span>Progress</span><span id="progressPct">0%</span></div>
+      <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+    </div>
+
+    <div class="toc-group-label">Getting Inventory On the Books</div>
+    <ul class="toc">
+      <li><a href="#sec-costsincluded" data-sec="sec-costsincluded"><span class="num">01</span>Costs Included in Inventory</a></li>
+      <li><a href="#sec-costformulas" data-sec="sec-costformulas"><span class="num">02</span>The Four Cost Formulas</a></li>
+      <li><a href="#sec-periodicperpetual" data-sec="sec-periodicperpetual"><span class="num">03</span>Periodic vs. Perpetual Systems</a></li>
+    </ul>
+
+    <div class="toc-group-label">Check Yourself</div>
+    <ul class="toc">
+      <li><a href="#sec-quiz" data-sec="sec-quiz"><span class="num">Q</span>Practice Quiz (12)</a></li>
+    </ul>
+  </nav>
+
+  <main id="top">
+    <header class="hero">
+      <div class="eyebrow">CFA Program · Prerequisite Financial Statement Analysis · Module 5 · Part 1 of 2</div>
+      <h1>Four accountants, four different profit figures — from the exact same warehouse.</h1>
+      <p class="lede">Sell the same units, at the same prices, from the same physical inventory — and depending on which of four accepted cost formulas a company uses, its reported gross profit, ending inventory, and even its taxes can come out meaningfully different. This first half covers what belongs in inventory, the four cost formulas, and how the timing of your bookkeeping system can change the answer. Part 2 covers what happens specifically under LIFO when costs are rising.</p>
+    </header>
+
+    <!-- =========================================================
+         01 COSTS INCLUDED IN INVENTORY
+    ========================================================== -->
+    <section class="section" id="sec-costsincluded">
+      <div class="section-head">
+        <span class="section-tag">01</span>
+        <div>
+          <h2>Costs Included in Inventory</h2>
+          <p class="subhead">Every dollar spent getting a product ready to sell falls into one of two buckets — and which bucket genuinely changes when profit gets recognized.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="definition">
+            <div class="label">What belongs in inventory (an asset)</div>
+            <p style="margin:0;"><strong>Costs of purchase</strong> (price, import duties, transport, insurance, handling), <strong>costs of conversion</strong> (direct labor, fixed and variable overhead), and other costs directly bringing inventory to its present location and condition — all get capitalized into inventory, not expensed immediately.</p>
+          </div>
+
+          <div class="definition">
+            <div class="label">What gets expensed immediately instead</div>
+            <p style="margin:0;">Abnormal waste, most storage costs, and all administrative and selling costs are excluded from inventory and expensed as incurred — they don't wait for the inventory to actually sell.</p>
+          </div>
+
+          <div class="callout" style="border-left-color:var(--red);">
+            <p style="margin:0; font-size:.9rem;"><strong>Why the distinction genuinely matters:</strong> capitalizing a cost that should have been expensed defers its recognition — this overstates both current profitability (cost of sales is too low) and the balance sheet (inventory is too high). Getting this classification wrong distorts two statements at once, not just one.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c1">
+            <div class="label">Check yourself</div>
+            <div class="q">A company incurs abnormal costs from a production line malfunction that wasted significant raw materials. How should these abnormal costs be treated?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="true">Expensed immediately on the income statement, not included in inventory</button>
+              <button class="opt-btn" data-correct="false">Capitalized into inventory and expensed only once the goods are sold</button>
+              <button class="opt-btn" data-correct="false">Recorded directly as a reduction to equity</button>
+            </div>
+            <div class="checkin-feedback">Correct — abnormal waste costs are explicitly excluded from inventory and expensed immediately, under both IFRS and US GAAP.</div>
+          </div>
+        </div>
+        <div>
+          <div class="callout" style="margin-top:0;">
+            <p style="margin:0; font-size:.9rem;"><strong>Three types of inventory a manufacturer tracks:</strong> raw materials (not yet touched), work-in-progress (partway through conversion), and finished goods (ready for sale). A pure merchandiser (retailer/wholesaler) only ever has finished goods inventory.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         02 THE FOUR COST FORMULAS
+    ========================================================== -->
+    <section class="section" id="sec-costformulas">
+      <div class="section-head">
+        <span class="section-tag">02</span>
+        <div>
+          <h2>The Four Cost Formulas</h2>
+          <p class="subhead">Specific identification, weighted average, FIFO, and LIFO — four different, all individually defensible, ways to decide which specific unit's cost gets matched to which sale.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="definition">
+            <div class="label">The four cost formulas</div>
+            <p style="margin-bottom:6px;"><strong>Specific identification:</strong> tracks the actual physical cost of each specific unit sold — used when units are genuinely distinguishable (like unique jewelry pieces or cars by VIN).</p>
+            <p style="margin-bottom:6px;"><strong>Weighted average cost:</strong> blends the cost of all available units into a single average cost per unit.</p>
+            <p style="margin-bottom:6px;"><strong>FIFO (first-in, first-out):</strong> assumes the oldest units are sold first; ending inventory reflects the most recently acquired costs.</p>
+            <p style="margin:0;"><strong>LIFO (last-in, first-out):</strong> assumes the newest units are sold first; ending inventory reflects the oldest costs. Permitted under US GAAP only — <strong>IFRS prohibits LIFO entirely.</strong></p>
+          </div>
+
+          <div class="callout finance">
+            <div class="label">Flagship worked example — Global Sales, Inc. (GSI)</div>
+            <p style="margin:0 0 8px;">GSI purchases soap in three batches: 100,000 kg at 110 AED/kg, then 200,000 kg at 100 AED/kg, then 300,000 kg at 90 AED/kg (600,000 kg total, costs falling over time). It sells 520,000 kg at 240 AED/kg.</p>
+            <table class="exhibit" style="margin:0 0 8px;">
+              <tr><th>Method</th><th>Cost of Sales</th><th>Ending Inventory</th><th>Gross Profit</th></tr>
+              <tr><td>Specific ID</td><td class="num">50,600,000</td><td class="num">7,400,000</td><td class="num">74,200,000</td></tr>
+              <tr><td>Weighted Average</td><td class="num">50,267,000</td><td class="num">7,733,000</td><td class="num">74,533,000</td></tr>
+              <tr><td>FIFO</td><td class="num">50,800,000</td><td class="num">7,200,000</td><td class="num">74,000,000</td></tr>
+              <tr><td>LIFO</td><td class="num">49,200,000</td><td class="num">8,800,000</td><td class="num">75,600,000</td></tr>
+            </table>
+            <p style="margin:0;">Because costs were <em>falling</em> over the year, LIFO (selling the newest, cheapest units first) produced the <strong>lowest</strong> cost of sales and <strong>highest</strong> gross profit here — the opposite of what LIFO typically does when costs are rising, which is the far more common real-world case.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c2">
+            <div class="label">Check yourself</div>
+            <div class="q">In a period of steadily RISING costs, which method generally produces the LOWEST cost of sales and HIGHEST gross profit?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="false">LIFO</button>
+              <button class="opt-btn" data-correct="true">FIFO</button>
+              <button class="opt-btn" data-correct="false">Weighted average, always</button>
+            </div>
+            <div class="checkin-feedback">Correct — with rising costs, FIFO matches the oldest (cheapest) costs to cost of sales, producing the lowest cost of sales and highest gross profit — the reverse of the GSI example, where costs were falling.</div>
+          </div>
+        </div>
+        <div>
+          <div class="dist-card" style="margin-top:0;">
+            <div class="label" style="font-family:var(--font-mono); font-size:.72rem; text-transform:uppercase; color:var(--indigo); font-weight:700; margin-bottom:12px;">Try it — GSI inventory method calculator</div>
+            <div class="tvm-grid">
+              <div class="tvm-field"><label>Batch 1: qty @ price</label><input type="number" id="invQ1" value="100000" step="1000"></div>
+              <div class="tvm-field"><label>Batch 1 price/kg</label><input type="number" id="invP1" value="110" step="1"></div>
+              <div class="tvm-field"><label>Batch 2: qty</label><input type="number" id="invQ2" value="200000" step="1000"></div>
+              <div class="tvm-field"><label>Batch 2 price/kg</label><input type="number" id="invP2" value="100" step="1"></div>
+              <div class="tvm-field"><label>Batch 3: qty</label><input type="number" id="invQ3" value="300000" step="1000"></div>
+              <div class="tvm-field"><label>Batch 3 price/kg</label><input type="number" id="invP3" value="90" step="1"></div>
+              <div class="tvm-field"><label>Units sold @ price</label><input type="number" id="invSold" value="520000" step="1000"></div>
+              <div class="tvm-field"><label>Sale price/kg</label><input type="number" id="invSalePrice" value="240" step="1"></div>
+            </div>
+            <div id="invOut" style="margin-top:12px;"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         03 PERIODIC VS PERPETUAL SYSTEMS
+    ========================================================== -->
+    <section class="section" id="sec-periodicperpetual">
+      <div class="section-head">
+        <span class="section-tag">03</span>
+        <div>
+          <h2>Periodic vs. Perpetual Inventory Systems</h2>
+          <p class="subhead">One system checks inventory only at period-end. The other updates in real time, transaction by transaction — and for one specific cost formula, that timing difference genuinely changes the answer.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="definition">
+            <div class="label">The two systems</div>
+            <p style="margin-bottom:8px;"><strong>Periodic:</strong> inventory and cost of sales are determined only at period-end, typically via physical count. Cost of sales = Beginning inventory + Purchases − Ending inventory.</p>
+            <p style="margin:0;"><strong>Perpetual:</strong> inventory values and cost of sales are continuously updated with every purchase and sale, in real time.</p>
+          </div>
+
+          <div class="callout" style="border-left-color:var(--red);">
+            <div class="label" style="font-family:var(--font-mono); font-size:.72rem; text-transform:uppercase; color:var(--red); font-weight:700; margin-bottom:8px;">The one place the choice actually matters</div>
+            <p style="margin:0;">For specific identification and FIFO, periodic and perpetual give <strong>identical</strong> results. For weighted average, they can genuinely differ — a perpetual system recalculates the average cost after every purchase, while a periodic system only computes one single average at period-end. For LIFO, the two systems can produce meaningfully different allocations too, since perpetual LIFO applies the "sell newest first" rule after every single transaction, not just once at year-end.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c3">
+            <div class="label">Check yourself</div>
+            <div class="q">For which cost formula(s) do periodic and perpetual inventory systems generally produce identical results?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="true">Specific identification and FIFO</button>
+              <button class="opt-btn" data-correct="false">Weighted average and LIFO</button>
+              <button class="opt-btn" data-correct="false">All four methods always produce identical results regardless of system</button>
+            </div>
+            <div class="checkin-feedback">Correct — specific identification and FIFO are unaffected by timing, while weighted average and LIFO can genuinely diverge between periodic and perpetual systems.</div>
+          </div>
+        </div>
+        <div>
+          <div class="callout" style="margin-top:0;">
+            <p style="margin:0; font-size:.9rem;"><strong>Why analysts usually don't adjust for this:</strong> given how dominant perpetual systems are in practice today, and limited disclosure of which system underlies reported figures, analysts typically don't attempt periodic-vs-perpetual adjustments when comparing FIFO and weighted-average companies.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         QUIZ
+    ========================================================== -->
+    <section class="section" id="sec-quiz" style="max-width:900px;">
+      <div class="section-head">
+        <span class="section-tag">Q</span>
+        <div>
+          <h2>Practice Quiz</h2>
+          <p class="subhead">12 questions across everything above. Answer, get instant feedback, and see your score at the end.</p>
+        </div>
+      </div>
+      <div class="quiz-shell" id="quizShell">
+        <!-- populated by JS -->
+      </div>
+    </section>
+
+    <footer class="footer">
+      Built as a companion study tool for the CFA Program prerequisite Financial Statement Analysis reading on Inventories (Part 1 of 2). Continue to <a href="../inventories-lifo/index.html" style="color:var(--indigo);">Part 2: LIFO Effects &amp; Write-Downs →</a>
+    </footer>
+  </main>
+</div>
+
+<script src="../../diagnostics.js"></script>
+<script src="../bundle.js"></script>
+<script src="../../accessibility.js"></script>
+</body>
+</html>

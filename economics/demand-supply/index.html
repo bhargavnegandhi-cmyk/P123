@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Topics in Demand and Supply Analysis — CFA Prerequisite Economics Toolkit</title>
+<link rel="stylesheet" href="../../shared-module-standard.css">
+</head>
+<body>
+
+<div class="mobile-bar">
+  <strong style="font-family:var(--font-display)">D ↔ S</strong>
+  <button id="sidebarToggle">Menu</button>
+</div>
+
+<div class="app">
+
+  <!-- ============ SIDEBAR ============ -->
+  <nav class="sidebar" id="sidebar">
+    <a href="../index.html" class="brand">
+      <span class="brand-mark"></span>
+      <span class="brand-name">Demand &amp;<br>Supply Analysis</span>
+    </a>
+    <div class="brand-sub">CFA Prerequisite · Economics · Module 1</div>
+
+    <div class="progress-wrap">
+      <div class="progress-label"><span>Progress</span><span id="progressPct">0%</span></div>
+      <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+    </div>
+
+    <div class="toc-group-label">The Demand Side</div>
+    <ul class="toc">
+      <li><a href="#sec-demandfunction" data-sec="sec-demandfunction"><span class="num">01</span>The Demand Function &amp; Curve</a></li>
+      <li><a href="#sec-elasticity" data-sec="sec-elasticity"><span class="num">02</span>Price Elasticity of Demand</a></li>
+      <li><a href="#sec-determinants" data-sec="sec-determinants"><span class="num">03</span>What Drives Elasticity?</a></li>
+      <li><a href="#sec-incomecross" data-sec="sec-incomecross"><span class="num">04</span>Income &amp; Cross-Price Elasticity</a></li>
+      <li><a href="#sec-effects" data-sec="sec-effects"><span class="num">05</span>Substitution &amp; Income Effects</a></li>
+    </ul>
+
+    <div class="toc-group-label">The Supply Side</div>
+    <ul class="toc">
+      <li><a href="#sec-productivity" data-sec="sec-productivity"><span class="num">06</span>Marginal Returns &amp; Productivity</a></li>
+      <li><a href="#sec-marginalrevenue" data-sec="sec-marginalrevenue"><span class="num">07</span>Marginal Revenue &amp; Profit Max</a></li>
+      <li><a href="#sec-costcurves" data-sec="sec-costcurves"><span class="num">08</span>Cost Curves &amp; Breakeven</a></li>
+    </ul>
+
+    <div class="toc-group-label">Check Yourself</div>
+    <ul class="toc">
+      <li><a href="#sec-quiz" data-sec="sec-quiz"><span class="num">Q</span>Practice Quiz (20)</a></li>
+    </ul>
+  </nav>
+
+  <!-- ============ MAIN ============ -->
+  <main id="top">
+
+    <header class="hero">
+      <div class="eyebrow">CFA Program · Prerequisite Economics · Module 1</div>
+      <h1>Every price is a conversation between buyers and sellers.</h1>
+      <p class="lede">This module builds the demand-and-supply model from the ground up — starting with a single household deciding how much gasoline to buy, and ending with a firm deciding exactly how many units to produce. The tools are the same wherever you point them: elasticity measures how sensitive people are to a changing price, and cost curves reveal exactly when a business should expand, hold steady, or shut its doors.</p>
+    </header>
+
+    <!-- =========================================================
+         01 THE DEMAND FUNCTION & CURVE
+    ========================================================== -->
+    <section class="section" id="sec-demandfunction">
+      <div class="section-head">
+        <span class="section-tag">01</span>
+        <div>
+          <h2>The Demand Function &amp; the Demand Curve</h2>
+          <p class="subhead">How much of something will people buy? It depends on more than just its price.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <p>The quantity of a good people want to buy depends on several things at once — its own price, how much money they have, and the prices of related goods. Economists capture all of this in a single relationship called the <strong>demand function</strong>.</p>
+
+          <div class="callout finance">
+            <div class="label">A real demand function — household gasoline demand</div>
+            <div class="formula-body" style="font-family:var(--font-mono); background:var(--paper-dim); padding:10px 14px; border-radius:8px; margin:10px 0;">Qx = 84.5 − 6.39Px + 0.25I − 2Py</div>
+            <p style="margin:0;">Here Qx is liters of gasoline demanded per month, Px is the price of gasoline (€/liter), I is household income (€000s), and Py is the average price of an automobile (€000s). The negative sign on Px is the <strong>law of demand</strong> at work — as gasoline gets pricier, people buy less of it. The positive sign on income says gasoline is a good people buy more of as they earn more. The negative sign on car prices makes sense too: pricier cars means fewer cars on the road, which means less gasoline burned.</p>
+          </div>
+
+          <p>To draw a simple two-dimensional picture, economists hold every variable but one constant. Fixing income at €50,000 and car prices at €20,000 collapses the function down to just price and quantity:</p>
+
+          <div class="callout formula">
+            <div class="label">The simplified demand curve</div>
+            <div class="formula-body">Qx = 57 − 6.39Px &nbsp;&nbsp;⟺&nbsp;&nbsp; Px = 8.92 − 0.156Qx</div>
+            <p style="margin:10px 0 0; font-size:.85rem; color:var(--ink-soft);">The second form — price written as a function of quantity — is called the <strong>inverse demand function</strong>. It's what actually gets plotted as the demand curve, with price on the vertical axis.</p>
+          </div>
+
+          <div class="chart-card">
+            <div id="demandCurveChart"></div>
+            <p style="font-size:.82rem; color:var(--ink-soft); margin:10px 0 0;">At €1.48/liter, this household buys 47.54 liters a month. Push price up to €2.48, and quantity demanded falls to 41.15 liters — every €1 increase in price costs 6.39 liters of demand, the slope of the line.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c1">
+            <div class="label">Check yourself</div>
+            <div class="q">In the demand function Qx = 84.5 − 6.39Px + 0.25I − 2Py, what does the coefficient −2 on Py tell you about gasoline and automobiles?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="false">They are substitutes</button>
+              <button class="opt-btn" data-correct="true">They are complements</button>
+              <button class="opt-btn" data-correct="false">Automobile prices don't affect gasoline demand</button>
+            </div>
+            <div class="checkin-feedback">Correct — a negative relationship between the price of one good and the quantity demanded of another means the two are consumed together, as complements: pricier cars mean less driving, which means less gasoline burned.</div>
+          </div>
+        </div>
+        <div>
+          <div class="dist-card" style="margin-top:0;">
+            <div class="label" style="font-family:var(--font-mono); font-size:.72rem; text-transform:uppercase; color:var(--indigo); font-weight:700; margin-bottom:12px;">Try it — the demand function calculator</div>
+            <div class="tvm-grid">
+              <div class="tvm-field"><label>Price Px (€)</label><input type="number" id="dfPx" value="1.48" step="0.01"></div>
+              <div class="tvm-field"><label>Income I (€000s)</label><input type="number" id="dfI" value="50" step="1"></div>
+              <div class="tvm-field"><label>Car price Py (€000s)</label><input type="number" id="dfPy" value="20" step="1"></div>
+            </div>
+            <div class="tvm-result" id="dfResult">Qx = 47.54 liters/month</div>
+            <div class="calc-steps" id="dfSteps">84.5 − 6.39(1.48) + 0.25(50) − 2(20) = 47.54</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         02 PRICE ELASTICITY OF DEMAND
+    ========================================================== -->
+    <section class="section" id="sec-elasticity">
+      <div class="section-head">
+        <span class="section-tag">02</span>
+        <div>
+          <h2>Price Elasticity of Demand</h2>
+          <p class="subhead">The slope of the demand curve tells you units. Elasticity strips the units away, so you can compare sensitivity honestly.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <p>Saying "quantity falls by 6.39 liters for every €1 rise in price" is only meaningful if you remember the units — liters and euros. Switch to gallons and dollars, and the number 6.39 means something completely different. <strong>Elasticity</strong> fixes this by measuring sensitivity in percentage terms, which never depends on units:</p>
+
+          <div class="callout formula">
+            <div class="label">Own-price elasticity of demand</div>
+            <div class="formula-body">Ep = %ΔQx / %ΔPx = (ΔQx/ΔPx) × (Px/Qx)</div>
+          </div>
+
+          <div class="callout finance">
+            <div class="label">Worked example — gasoline at two different prices</div>
+            <p style="margin:0 0 8px;">Using Qx = 57 − 6.39Px, the slope ΔQx/ΔPx is always −6.39. At Px=€1.48, Q=47.54, so elasticity = −6.39 × (1.48/47.54) = <strong>−0.20</strong>. At a much higher Px=€5, Q=25.05, so elasticity = −6.39 × (5/25.05) = <strong>−1.28</strong>.</p>
+            <p style="margin:0;">Same demand curve, same slope — but wildly different elasticity, because P/Q changes as you move along the line. At the low price, demand barely reacts (inelastic); at the high price, demand reacts sharply (elastic).</p>
+          </div>
+
+          <div class="definition">
+            <div class="label">Reading the magnitude</div>
+            <p style="margin-bottom:8px;"><strong>|E| &lt; 1 → inelastic:</strong> quantity barely responds to price. A price hike raises total spending on the good.</p>
+            <p style="margin-bottom:8px;"><strong>|E| &gt; 1 → elastic:</strong> quantity responds strongly. A price hike lowers total spending.</p>
+            <p style="margin:0;"><strong>|E| = 1 → unit elastic:</strong> total spending is completely unmoved by price.</p>
+          </div>
+
+          <div class="chart-card">
+            <div id="elasticityZoneChart"></div>
+            <p style="font-size:.82rem; color:var(--ink-soft); margin:10px 0 0;">Every straight-line demand curve behaves this way: elastic in its upper half, unit elastic exactly at the midpoint, inelastic in its lower half — even though the slope never changes.</p>
+          </div>
+
+          <div class="callout example">
+            <div class="label">The two extremes</div>
+            <p style="margin:0;">A perfectly <strong>vertical</strong> demand curve has zero elasticity — buyers purchase the same quantity no matter the price (insulin for a diabetic, in the short run, is the classic case). A perfectly <strong>horizontal</strong> demand curve has infinite elasticity — the tiniest price increase drives quantity demanded to zero. This describes an individual wheat farmer in a competitive market: raise your price even slightly above the market price, and buyers switch entirely to any of a thousand other identical sellers.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c2">
+            <div class="label">Check yourself</div>
+            <div class="q">A 4% rise in the price of a good causes quantity demanded to fall by 10%. Is demand elastic or inelastic, and what happens to total expenditure?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="true">Elastic (|E|=2.5); total expenditure falls</button>
+              <button class="opt-btn" data-correct="false">Inelastic (|E|=0.4); total expenditure rises</button>
+              <button class="opt-btn" data-correct="false">Unit elastic; total expenditure is unchanged</button>
+            </div>
+            <div class="checkin-feedback">Correct — E = −10%/4% = −2.5, so |E|=2.5 &gt; 1, elastic. Since quantity falls proportionally more than price rises, total spending (P×Q) falls.</div>
+          </div>
+        </div>
+        <div>
+          <div class="dist-card" style="margin-top:0;">
+            <div class="label" style="font-family:var(--font-mono); font-size:.72rem; text-transform:uppercase; color:var(--indigo); font-weight:700; margin-bottom:12px;">Try it — elasticity calculator</div>
+            <div class="tvm-grid">
+              <div class="tvm-field"><label>Slope ΔQ/ΔP</label><input type="number" id="elSlope" value="-6.39" step="0.01"></div>
+              <div class="tvm-field"><label>Price P</label><input type="number" id="elP" value="1.48" step="0.01"></div>
+              <div class="tvm-field"><label>Quantity Q</label><input type="number" id="elQ" value="47.54" step="0.01"></div>
+            </div>
+            <div class="tvm-result" id="elResult">E = −0.20 <span class="elastic-zone-tag inelastic">INELASTIC</span></div>
+            <div class="calc-steps" id="elSteps">−6.39 × (1.48/47.54) = −0.20</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         03 WHAT DRIVES ELASTICITY
+    ========================================================== -->
+    <section class="section" id="sec-determinants">
+      <div class="section-head">
+        <span class="section-tag">03</span>
+        <div>
+          <h2>What Makes a Good's Demand Elastic?</h2>
+          <p class="subhead">Four practical characteristics predict how sensitive buyers will be to a price change — long before you ever run the numbers.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="definition">
+            <div class="label">Four predictors of elastic demand</div>
+            <p style="margin-bottom:8px;"><strong>Close substitutes exist:</strong> if buyers can easily switch to something else, demand is elastic. There's no close substitute for "bread" as a whole category (inelastic), but plenty of substitutes for one specific bakery's loaf (elastic).</p>
+            <p style="margin-bottom:8px;"><strong>Large share of the budget:</strong> a 10% rise in toothpaste prices barely registers; a 10% rise in rent forces real choices. Bigger budget share, more elastic.</p>
+            <p style="margin-bottom:8px;"><strong>Necessity vs. luxury:</strong> people cut discretionary spending (restaurant meals) before they cut staples — necessities are more inelastic.</p>
+            <p style="margin:0;"><strong>Time to adjust:</strong> demand is more elastic the longer people have to respond. A gasoline price spike barely changes commuting habits this month, but over several years, people relocate, buy efficient cars, or change jobs — long-run elasticity typically exceeds short-run elasticity.</p>
+          </div>
+
+          <div class="callout example">
+            <div class="label">Outside example — durable goods break the "longer = more elastic" rule</div>
+            <p style="margin:0;">Washing machines behave the opposite way. If prices fall, a household with an aging machine might buy immediately (a sharp short-run reaction) — but if prices simply stayed low forever, people wouldn't buy machines any more often over their lifetime than they need to. For durable goods, short-run demand can be more elastic than long-run demand.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c3">
+            <div class="label">Check yourself</div>
+            <div class="q">Which good is likely to have the most elastic demand?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="false">Table salt (the entire category)</button>
+              <button class="opt-btn" data-correct="true">One specific brand of bottled water, with many close competitors</button>
+              <button class="opt-btn" data-correct="false">Prescription insulin for a diabetic patient</button>
+            </div>
+            <div class="checkin-feedback">Correct — a specific branded product with many close substitutes is the classic elastic-demand case; buyers switch away easily if its price rises.</div>
+          </div>
+        </div>
+        <div>
+          <div class="callout" style="margin-top:0;">
+            <table class="exhibit" style="margin:0;">
+              <tr><th>More elastic when…</th><th>More inelastic when…</th></tr>
+              <tr><td>Many substitutes</td><td class="num">Few or no substitutes</td></tr>
+              <tr><td>Large budget share</td><td class="num">Small budget share</td></tr>
+              <tr><td>Discretionary / luxury</td><td class="num">Necessity</td></tr>
+              <tr><td>Longer time to adjust</td><td class="num">Shorter time to adjust</td></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         04 INCOME & CROSS-PRICE ELASTICITY
+    ========================================================== -->
+    <section class="section" id="sec-incomecross">
+      <div class="section-head">
+        <span class="section-tag">04</span>
+        <div>
+          <h2>Income Elasticity &amp; Cross-Price Elasticity</h2>
+          <p class="subhead">Price isn't the only thing demand responds to — income and the prices of other goods matter too, and each gets its own elasticity measure with the exact same structure.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <p>Every elasticity in this reading shares one identical skeleton: %-change in quantity demanded, divided by %-change in whatever variable you're testing. Swap out the denominator, and you get a completely different — but equally useful — measure.</p>
+
+          <div class="callout formula">
+            <div class="label">Income &amp; cross-price elasticity</div>
+            <div class="formula-body">
+              E_I = %ΔQx / %ΔI &nbsp;&nbsp;(income elasticity)<br>
+              E_Py = %ΔQx / %ΔPy &nbsp;&nbsp;(cross-price elasticity)
+            </div>
+          </div>
+
+          <div class="definition">
+            <div class="label">Reading the sign</div>
+            <p style="margin-bottom:8px;"><strong>Income elasticity positive → normal good</strong> (buy more as income rises). <strong>Negative → inferior good</strong> (buy less as income rises — generic brands, cheaper cuts of meat).</p>
+            <p style="margin:0;"><strong>Cross-price elasticity positive → substitutes</strong> (price of Y rises, buyers switch to X). <strong>Negative → complements</strong> (price of Y rises, less of both get used together).</p>
+          </div>
+
+          <div class="callout finance">
+            <div class="label">Worked example — all three elasticities for the same market</div>
+            <p style="margin:0 0 8px;">Scaling the household gasoline demand function up to a 1,000-household market: Qx = 84,500 − 6,390Px + 250I − 2,000Py. At Px=€1.48, I=€50k, Py=€20k, quantity works out to 47,543 liters/month. The three elasticities:</p>
+            <table class="exhibit" style="margin:0 0 10px;">
+              <tr><th>Elasticity</th><th>Value</th><th>Interpretation</th></tr>
+              <tr><td>Own-price</td><td class="num">−0.20</td><td>Inelastic</td></tr>
+              <tr><td>Income</td><td class="num">0.26</td><td>Normal good</td></tr>
+              <tr><td>Cross-price (vs. autos)</td><td class="num">−0.84</td><td>Complements (weakly)</td></tr>
+            </table>
+            <p style="margin:0; font-size:.9rem;">All three numbers come from the exact same demand equation — just three different partial slopes, each rescaled by the point (P, I, Py, Qx) at which you evaluate them.</p>
+          </div>
+
+          <div class="callout example">
+            <div class="label">Worked example — e-books and hardbound books</div>
+            <p style="margin:0;">Demand: Qeb = 2 − 0.4Peb + 0.0005I + 0.15Phb. At Peb=€10.68, I=€2,300, Phb=€21.40: Qeb=2.088. Own-price elasticity = (−0.4)(10.68/2.088) = <strong>−2.05</strong> (elastic). Income elasticity = (0.0005)(2,300/2.088) = <strong>0.55</strong> (normal good). Cross-price elasticity vs. hardbound books = (0.15)(21.40/2.088) = <strong>1.54</strong> — positive, so e-books and hardbound books are substitutes.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c4">
+            <div class="label">Check yourself</div>
+            <div class="q">The cross-price elasticity of demand between peanut butter and jelly is calculated to be −0.6. What does this tell you?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="false">They are substitutes</button>
+              <button class="opt-btn" data-correct="true">They are complements</button>
+              <button class="opt-btn" data-correct="false">Jelly is an inferior good</button>
+            </div>
+            <div class="checkin-feedback">Correct — a negative cross-price elasticity means the two goods are complements, consistent with peanut butter and jelly typically being consumed together.</div>
+          </div>
+        </div>
+        <div>
+          <div class="dist-card" style="margin-top:0;">
+            <div class="label" style="font-family:var(--font-mono); font-size:.72rem; text-transform:uppercase; color:var(--indigo); font-weight:700; margin-bottom:12px;">Try it — income &amp; cross-price calculator</div>
+            <div class="tvm-grid">
+              <div class="tvm-field"><label>ΔQ/ΔI (or ΔQ/ΔPy)</label><input type="number" id="icSlope" value="250" step="1"></div>
+              <div class="tvm-field"><label>I or Py (level)</label><input type="number" id="icVar" value="50" step="1"></div>
+              <div class="tvm-field"><label>Quantity Q</label><input type="number" id="icQ" value="47543" step="1"></div>
+            </div>
+            <div class="tvm-result" id="icResult">E = 0.26 <span class="elastic-zone-tag inelastic">NORMAL GOOD</span></div>
+            <div class="calc-steps" id="icSteps">250 × (50/47543) = 0.26</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         05 SUBSTITUTION & INCOME EFFECTS
+    ========================================================== -->
+    <section class="section" id="sec-effects">
+      <div class="section-head">
+        <span class="section-tag">05</span>
+        <div>
+          <h2>Substitution &amp; Income Effects</h2>
+          <p class="subhead">Why does a falling price make people buy more? Two separate forces are actually at work, and they don't always pull in the same direction.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="definition">
+            <div class="label">Two distinct forces</div>
+            <p style="margin-bottom:8px;"><strong>Substitution effect:</strong> when something gets relatively cheaper compared to alternatives, people swap toward it. Gasoline gets cheaper → driving to work beats public transit → people substitute toward driving.</p>
+            <p style="margin:0;"><strong>Income effect:</strong> a lower price leaves you with more real purchasing power, as if your income quietly rose. What you do with that extra purchasing power depends entirely on whether the good is normal or inferior.</p>
+          </div>
+
+          <div class="callout example">
+            <div class="label">How the two effects combine</div>
+            <table class="exhibit" style="margin:0;">
+              <tr><th></th><th>Substitution effect</th><th>Income effect</th><th>Net result (price falls)</th></tr>
+              <tr><td>Normal good</td><td>Buy more (relatively cheaper)</td><td>Buy more (higher real income)</td><td>Effects reinforce — buy more</td></tr>
+              <tr><td>Inferior good</td><td>Buy more (relatively cheaper)</td><td>Buy less (higher real income)</td><td>Effects fight — usually still buy more, but less than normal case</td></tr>
+            </table>
+          </div>
+
+          <p>For a <strong>normal</strong> good — restaurant meals, say — both effects push the same direction, which is exactly why the demand curve slopes down so reliably. For an <strong>inferior</strong> good — a generic-brand staple, cheaper cuts of meat — the income effect actually fights the substitution effect. As income rises, people often trade <em>up</em> away from the inferior good entirely, even though it hasn't gotten any more expensive.</p>
+
+          <div class="callout" style="border-left-color:var(--red);">
+            <p style="margin:0; font-size:.9rem;"><strong>"Inferior" is not a judgment about quality</strong> — it's a technical label for any good people buy less of specifically because their income rose. The exact same product can be normal for a low-income household and inferior for a high-income one — instant noodles being a convenient once-in-a-while option at low income, and something almost entirely abandoned once income is high enough to eat out instead.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c5">
+            <div class="label">Check yourself</div>
+            <div class="q">For an inferior good, when its price falls, the substitution effect and income effect:</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="false">Both push toward buying more, reinforcing each other</button>
+              <button class="opt-btn" data-correct="true">Push in opposite directions — substitution says buy more, income says buy less</button>
+              <button class="opt-btn" data-correct="false">Both push toward buying less</button>
+            </div>
+            <div class="checkin-feedback">Correct — for an inferior good, the substitution effect (buy more, it's relatively cheaper) fights the income effect (buy less, since higher real income makes you want to trade away from the inferior good).</div>
+          </div>
+        </div>
+        <div>
+          <div class="callout" style="margin-top:0;">
+            <p style="margin:0; font-size:.9rem;">This is exactly why a good's <strong>income elasticity sign</strong> (Module 04) and its behavior here are the same fact viewed two ways: positive income elasticity = normal good = substitution and income effects reinforce each other.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         06 MARGINAL RETURNS & PRODUCTIVITY
+    ========================================================== -->
+    <section class="section" id="sec-productivity">
+      <div class="section-head">
+        <span class="section-tag">06</span>
+        <div>
+          <h2>Marginal Returns &amp; Productivity</h2>
+          <p class="subhead">Flip to the supply side. Before a firm can price anything, it needs to understand what each additional worker actually adds.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="definition">
+            <div class="label">Three ways to measure labor productivity</div>
+            <p style="margin-bottom:8px;"><strong>Total product (TP):</strong> the total output produced at a given level of labor input.</p>
+            <p style="margin-bottom:8px;"><strong>Average product (AP = TP/L):</strong> output per worker-hour, on average — a broad efficiency gauge.</p>
+            <p style="margin:0;"><strong>Marginal product (MP = ΔTP/ΔL):</strong> the extra output from just the <em>next</em> worker-hour — the number that actually drives hiring decisions.</p>
+          </div>
+
+          <p>Add workers to a fixed amount of capital (a fixed factory, fixed machines), and output typically follows a predictable arc: <strong>increasing marginal returns</strong> at first, as workers specialize and divide labor efficiently, followed eventually by <strong>diminishing marginal returns</strong>, as the fixed capital base becomes the bottleneck and each additional worker adds less than the one before.</p>
+
+          <div class="chart-card">
+            <div id="productivityChart"></div>
+            <p style="font-size:.82rem; color:var(--ink-soft); margin:10px 0 0;">Marginal product rises through the 2nd labor hour (specialization kicking in), then falls steadily — turning negative at the 7th hour, where adding a worker actually makes total output <em>worse</em>. Average product, in contrast, moves more slowly and peaks later.</p>
+          </div>
+
+          <div class="callout" style="border-left-color:var(--red);">
+            <p style="margin:0; font-size:.9rem;"><strong>Why marginal turning negative matters:</strong> once MP goes negative, a firm is actively destroying output by adding more labor — pure waste, since those extra worker-hours cost money but subtract from production. No rational firm should ever operate past that point.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c6">
+            <div class="label">Check yourself</div>
+            <div class="q">A firm's total product rises from 400 to 420 units when labor increases from 5 to 6 hours. What is the marginal product of the 6th labor hour?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="false">70 units</button>
+              <button class="opt-btn" data-correct="true">20 units</button>
+              <button class="opt-btn" data-correct="false">420 units</button>
+            </div>
+            <div class="checkin-feedback">Correct — MP = ΔTP/ΔL = (420−400)/(6−5) = 20 units.</div>
+          </div>
+        </div>
+        <div>
+          <div class="dist-card" style="margin-top:0;">
+            <div class="label" style="font-family:var(--font-mono); font-size:.72rem; text-transform:uppercase; color:var(--indigo); font-weight:700; margin-bottom:12px;">Try it — edit the labor/output table</div>
+            <p style="font-size:.82rem; color:var(--ink-soft); margin:0 0 10px;">Total product at each labor hour, comma-separated (starts at L=0).</p>
+            <textarea id="prodInput" rows="2" style="width:100%; font-family:var(--font-mono); font-size:.85rem; padding:8px; border:1.5px solid var(--line); border-radius:8px; background:var(--paper-dim);">0, 100, 210, 300, 360, 400, 420, 350</textarea>
+            <div id="prodTable" style="margin-top:12px; overflow-x:auto;"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         07 MARGINAL REVENUE & PROFIT MAXIMIZATION
+    ========================================================== -->
+    <section class="section" id="sec-marginalrevenue">
+      <div class="section-head">
+        <span class="section-tag">07</span>
+        <div>
+          <h2>Marginal Revenue, Marginal Cost &amp; Profit Maximization</h2>
+          <p class="subhead">One rule, two conditions, governs every profit-maximizing decision a firm ever makes.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="callout formula">
+            <div class="label">The profit-maximizing rule</div>
+            <div class="formula-body" style="font-size:.95rem;">Produce where MR = MC, and MC is not falling</div>
+          </div>
+
+          <p>The logic is almost obvious once stated plainly: if the next unit brings in more revenue than it costs (MR &gt; MC), making it adds to profit — produce it. If it costs more than it brings in (MR &lt; MC), stop. Profit is maximized exactly where these two cross.</p>
+
+          <div class="definition">
+            <div class="label">Marginal revenue depends on market power</div>
+            <p style="margin-bottom:8px;"><strong>Perfect competition</strong> (many sellers, identical products — think wheat): a single seller has zero pricing power and can sell any quantity at the going market price. MR = P exactly.</p>
+            <p style="margin:0;"><strong>Imperfect competition</strong> (a differentiated product, real pricing power): selling one more unit requires lowering price on <em>all</em> units sold, not just the last one. MR = P + Q(ΔP/ΔQ), which is always less than price.</p>
+          </div>
+
+          <div class="callout example">
+            <div class="label">Outside example — a wheat farmer vs. a boutique brand</div>
+            <p style="margin:0;">A wheat farmer selling 1,000 bushels at £3 gets exactly £3 more for the 1,001st bushel — nobody notices one farmer's extra bushel in a global market. A boutique clothing brand selling a signature jacket, by contrast, typically has to discount slightly to move additional units — so its marginal revenue on the next jacket sold is less than its current price.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c7">
+            <div class="label">Check yourself</div>
+            <div class="q">A firm operating under imperfect competition faces a negatively sloped demand curve. How does its marginal revenue compare to price?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="false">MR always equals price</button>
+              <button class="opt-btn" data-correct="true">MR is always less than price</button>
+              <button class="opt-btn" data-correct="false">MR is always greater than price</button>
+            </div>
+            <div class="checkin-feedback">Correct — MR = P + Q(ΔP/ΔQ), and since the demand curve slopes downward (ΔP/ΔQ &lt; 0), MR must be less than price.</div>
+          </div>
+        </div>
+        <div>
+          <div class="callout" style="margin-top:0;">
+            <table class="exhibit" style="margin:0;">
+              <tr><th></th><th>Perfect competition</th><th>Imperfect competition</th></tr>
+              <tr><td>Pricing power</td><td class="num">None</td><td class="num">Some</td></tr>
+              <tr><td>Demand curve faced</td><td class="num">Horizontal</td><td class="num">Downward-sloping</td></tr>
+              <tr><td>MR vs. Price</td><td class="num">MR = P</td><td class="num">MR &lt; P</td></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         08 COST CURVES & BREAKEVEN
+    ========================================================== -->
+    <section class="section" id="sec-costcurves">
+      <div class="section-head">
+        <span class="section-tag">08</span>
+        <div>
+          <h2>Cost Curves, Breakeven &amp; Shutdown Points</h2>
+          <p class="subhead">Six related cost measures, all built from just two numbers per output level: fixed cost and variable cost.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="callout formula">
+            <div class="label">The full cost family</div>
+            <div class="formula-body" style="font-size:.88rem;">
+              TC = TFC + TVC<br>
+              AFC = TFC/Q &nbsp;&nbsp; AVC = TVC/Q &nbsp;&nbsp; ATC = TC/Q<br>
+              MC = ΔTC/ΔQ
+            </div>
+          </div>
+
+          <p><strong>Fixed costs</strong> (rent, debt service, equipment leases) don't change with output — even at zero production, they're still owed. <strong>Variable costs</strong> (labor, raw materials) rise and fall directly with output. <strong>Marginal cost</strong> — the cost of one more unit — is what actually drives the produce-or-don't decision from Module 07.</p>
+
+          <div class="chart-card">
+            <div id="costCurveChart"></div>
+            <p style="font-size:.82rem; color:var(--ink-soft); margin:10px 0 0;">The classic bowl shape: AFC falls continuously as fixed costs spread across more units. AVC and ATC each fall, bottom out, then rise. MC crosses both AVC and ATC exactly at their minimum points — a mathematical fact, not a coincidence: whenever MC is below average cost, it pulls the average down; whenever MC is above, it pulls the average up.</p>
+          </div>
+
+          <div class="definition">
+            <div class="label">Breakeven and shutdown, defined</div>
+            <p style="margin-bottom:8px;"><strong>Breakeven point:</strong> where price equals ATC (equivalently, TR = TC). Above this price, the firm earns a profit; below it, a loss.</p>
+            <p style="margin:0;"><strong>Shutdown point:</strong> where price equals AVC. Below this price, the firm can't even cover its variable costs — it loses <em>less</em> money by shutting down entirely than by continuing to operate, since fixed costs are owed either way.</p>
+          </div>
+
+          <div class="callout finance">
+            <div class="label">Worked example — reading a firm's cost table</div>
+            <p style="margin:0 0 8px;">Fixed cost = 5,000; at Q=5, TVC=11,000. AFC = 5,000/5 = 1,000. AVC = 11,000/5 = 2,200. ATC = 1,000 + 2,200 = 3,200. If the going market price is exactly 3,200, this firm is precisely at breakeven.</p>
+            <p style="margin:0;">Between shutdown (P=AVC) and breakeven (P=ATC), a firm is losing money overall but still covering its variable costs and part of its fixed costs — the rational short-run choice is to keep operating anyway, since fixed costs are owed whether or not the firm produces.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c8">
+            <div class="label">Check yourself</div>
+            <div class="q">The market price for a firm's product has fallen below its average variable cost, though still above zero. What is the economically rational choice?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="false">Keep operating — fixed costs are sunk anyway</button>
+              <button class="opt-btn" data-correct="true">Shut down — losses are smaller than continuing to operate</button>
+              <button class="opt-btn" data-correct="false">Raise price to cover the gap</button>
+            </div>
+            <div class="checkin-feedback">Correct — once price falls below AVC, every unit produced loses money even before counting fixed costs. Shutting down limits the loss to fixed costs alone, rather than fixed costs plus a growing variable-cost loss.</div>
+          </div>
+        </div>
+        <div>
+          <div class="dist-card" style="margin-top:0;">
+            <div class="label" style="font-family:var(--font-mono); font-size:.72rem; text-transform:uppercase; color:var(--indigo); font-weight:700; margin-bottom:12px;">Try it — cost curve builder</div>
+            <div class="tvm-grid">
+              <div class="tvm-field"><label>Fixed cost (TFC)</label><input type="number" id="ccTFC" value="5000" step="100"></div>
+            </div>
+            <p style="font-size:.8rem; color:var(--ink-soft); margin:8px 0 4px;">Total variable cost at Q=1..10, comma-separated:</p>
+            <textarea id="ccTVC" rows="2" style="width:100%; font-family:var(--font-mono); font-size:.85rem; padding:8px; border:1.5px solid var(--line); border-radius:8px; background:var(--paper-dim);">2000, 3800, 5400, 8000, 11000, 15000, 21000, 28800, 38700, 51000</textarea>
+            <div class="tvm-grid" style="margin-top:10px;">
+              <div class="tvm-field"><label>Market price (for breakeven check)</label><input type="number" id="ccPrice" value="3200" step="10"></div>
+            </div>
+            <div id="ccOut" style="margin-top:10px;"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         QUIZ
+    ========================================================== -->
+    <section class="section" id="sec-quiz" style="max-width:900px;">
+      <div class="section-head">
+        <span class="section-tag">Q</span>
+        <div>
+          <h2>Practice Quiz</h2>
+          <p class="subhead">20 questions across everything above. Answer, get instant feedback, and see your score at the end.</p>
+        </div>
+      </div>
+
+      <div class="quiz-shell" id="quizShell">
+        <!-- populated by JS -->
+      </div>
+    </section>
+
+    <footer class="footer">
+      Built as a companion study tool for the CFA Program prerequisite Economics reading on Topics in Demand and Supply Analysis. Work through it alongside your primary curriculum — this isn't a replacement for official CFA Institute materials.
+    </footer>
+
+  </main>
+</div>
+
+<script src="../../diagnostics.js"></script>
+<script src="../bundle.js"></script>
+<script src="../../accessibility.js"></script>
+</body>
+</html>

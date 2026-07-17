@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Income Taxes — CFA Prerequisite FSA Toolkit</title>
+<link rel="stylesheet" href="../../shared-module-standard.css">
+</head>
+<body>
+
+<div class="mobile-bar">
+  <strong style="font-family:var(--font-display)">DTA / DTL</strong>
+  <button id="sidebarToggle">Menu</button>
+</div>
+
+<div class="app">
+  <nav class="sidebar" id="sidebar">
+    <a href="../index.html" class="brand">
+      <span class="brand-mark"></span>
+      <span class="brand-name">Income<br>Taxes</span>
+    </a>
+    <div class="brand-sub">CFA Prerequisite · FSA · Module 7</div>
+
+    <div class="progress-wrap">
+      <div class="progress-label"><span>Progress</span><span id="progressPct">0%</span></div>
+      <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+    </div>
+
+    <div class="toc-group-label">Two Sets of Books</div>
+    <ul class="toc">
+      <li><a href="#sec-vocabulary" data-sec="sec-vocabulary"><span class="num">01</span>Accounting Income vs. Taxable Income</a></li>
+      <li><a href="#sec-taxbaseasset" data-sec="sec-taxbaseasset"><span class="num">02</span>Tax Base of an Asset</a></li>
+      <li><a href="#sec-taxbaseliability" data-sec="sec-taxbaseliability"><span class="num">03</span>Tax Base of a Liability</a></li>
+    </ul>
+
+    <div class="toc-group-label">Where the Gap Goes</div>
+    <ul class="toc">
+      <li><a href="#sec-tempperm" data-sec="sec-tempperm"><span class="num">04</span>Temporary vs. Permanent Differences</a></li>
+      <li><a href="#sec-valuationallowance" data-sec="sec-valuationallowance"><span class="num">05</span>The Valuation Allowance</a></li>
+    </ul>
+
+    <div class="toc-group-label">When the Rules Change</div>
+    <ul class="toc">
+      <li><a href="#sec-ratechanges" data-sec="sec-ratechanges"><span class="num">06</span>Changes in Tax Rates</a></li>
+      <li><a href="#sec-directequity" data-sec="sec-directequity"><span class="num">07</span>Taxes Charged Directly to Equity</a></li>
+    </ul>
+
+    <div class="toc-group-label">Check Yourself</div>
+    <ul class="toc">
+      <li><a href="#sec-quiz" data-sec="sec-quiz"><span class="num">Q</span>Practice Quiz (24)</a></li>
+    </ul>
+  </nav>
+
+  <main id="top">
+    <header class="hero">
+      <div class="eyebrow">CFA Program · Prerequisite Financial Statement Analysis · Module 7</div>
+      <h1>Every company keeps two sets of books — legally, and for a genuinely good reason.</h1>
+      <p class="lede">The rules for reporting profit to shareholders and the rules for reporting profit to tax authorities aren't the same rulebook — and they were never meant to be. This module is about the gap between them: why it exists, when it reverses itself, and how to read the deferred tax assets and liabilities that gap leaves behind on the balance sheet.</p>
+    </header>
+
+    <!-- =========================================================
+         01 ACCOUNTING VS TAXABLE INCOME
+    ========================================================== -->
+    <section class="section" id="sec-vocabulary">
+      <div class="section-head">
+        <span class="section-tag">01</span>
+        <div>
+          <h2>Accounting Income vs. Taxable Income</h2>
+          <p class="subhead">Four terms that sound almost interchangeable, but mean genuinely distinct things.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="definition">
+            <div class="label">The four key terms</div>
+            <p style="margin-bottom:6px;"><strong>Accounting (pre-tax) income:</strong> profit reported to shareholders, following accounting standards like IFRS or US GAAP.</p>
+            <p style="margin-bottom:6px;"><strong>Taxable income:</strong> profit as calculated under tax law, used to determine taxes actually owed.</p>
+            <p style="margin-bottom:6px;"><strong>Income tax expense:</strong> the total tax cost reported on the income statement — current tax payable plus (or minus) the change in deferred taxes.</p>
+            <p style="margin:0;"><strong>Taxes payable:</strong> the actual amount currently owed to tax authorities, based on taxable income.</p>
+          </div>
+
+          <div class="callout" style="border-left-color:var(--red);">
+            <p style="margin:0; font-size:.9rem;"><strong>Why the two income figures genuinely differ:</strong> accounting standards and tax law exist for different purposes — one aims to fairly represent economic performance to investors, the other to fund government revenue with its own policy priorities (encouraging investment, discouraging certain behavior). They were never designed to produce the same number.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c1">
+            <div class="label">Check yourself</div>
+            <div class="q">Which figure represents the amount a company actually owes tax authorities for the current period?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="false">Accounting income</button>
+              <button class="opt-btn" data-correct="true">Taxes payable, based on taxable income</button>
+              <button class="opt-btn" data-correct="false">Income tax expense</button>
+            </div>
+            <div class="checkin-feedback">Correct — taxes payable is the actual current obligation to tax authorities, calculated from taxable income under tax law, distinct from the income tax expense reported on the income statement.</div>
+          </div>
+        </div>
+        <div>
+          <div class="callout" style="margin-top:0;">
+            <p style="margin:0; font-size:.9rem;"><strong>Where deferred taxes come from:</strong> whenever income tax expense (based on accounting income) differs from taxes payable (based on taxable income) in a given year, the difference creates a deferred tax asset or liability — the subject of the rest of this module.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         02 TAX BASE OF AN ASSET
+    ========================================================== -->
+    <section class="section" id="sec-taxbaseasset">
+      <div class="section-head">
+        <span class="section-tag">02</span>
+        <div>
+          <h2>Determining the Tax Base of an Asset</h2>
+          <p class="subhead">Two different numbers can describe the exact same asset — its accounting carrying amount, and its tax base — and the gap between them is where deferred taxes are born.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="definition">
+            <div class="label">The definition</div>
+            <p style="margin:0;">The <strong>tax base of an asset</strong> is the amount that will be deductible for tax purposes in future periods, as the asset's economic benefits are realized. It's genuinely distinct from the <strong>carrying amount</strong>, which follows accounting rules.</p>
+          </div>
+
+          <div class="callout finance">
+            <div class="label">Flagship worked example — Entiguan Sports</div>
+            <p style="margin:0 0 8px;">Entiguan Sports capitalizes €3,000,000 of development costs, amortizing €500,000 this year (accounting basis). Tax law allows 25% amortization per year.</p>
+            <p style="margin:0;">Carrying amount = 3,000,000 − 500,000 = <strong>€2,500,000</strong>. Tax base = 3,000,000 − (25% × 3,000,000) = <strong>€2,250,000</strong>. The €250,000 gap is a temporary difference — since the carrying amount exceeds the tax base, this creates a <strong>deferred tax liability</strong>.</p>
+          </div>
+
+          <div class="callout formula">
+            <div class="label">The core rule for assets</div>
+            <div class="formula-body" style="font-size:.95rem;">Carrying amount &gt; Tax base → Deferred Tax Liability<br>Carrying amount &lt; Tax base → Deferred Tax Asset</div>
+          </div>
+
+          <div class="checkin" data-checkin="c2">
+            <div class="label">Check yourself</div>
+            <div class="q">An asset's carrying amount for accounting purposes is $80,000, while its tax base is $95,000. What does this difference create?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="true">A deferred tax asset</button>
+              <button class="opt-btn" data-correct="false">A deferred tax liability</button>
+              <button class="opt-btn" data-correct="false">No deferred tax effect at all</button>
+            </div>
+            <div class="checkin-feedback">Correct — when carrying amount is less than tax base for an asset, this creates a deferred tax asset.</div>
+          </div>
+        </div>
+        <div>
+          <div class="dist-card" style="margin-top:0;">
+            <div class="label" style="font-family:var(--font-mono); font-size:.72rem; text-transform:uppercase; color:var(--indigo); font-weight:700; margin-bottom:12px;">Try it — asset tax base calculator</div>
+            <div class="tvm-grid">
+              <div class="tvm-field"><label>Original cost</label><input type="number" id="tbCost" value="3000000" step="10000"></div>
+              <div class="tvm-field"><label>Accounting amortization ($)</label><input type="number" id="tbAcctAmort" value="500000" step="10000"></div>
+              <div class="tvm-field"><label>Tax amortization rate (%)</label><input type="number" id="tbTaxRate" value="25" step="1"></div>
+              <div class="tvm-field"><label>Applicable tax rate (%)</label><input type="number" id="tbApplicableRate" value="40" step="1"></div>
+            </div>
+            <div class="tvm-result" id="tbResult">Carrying = €2,500,000 · Tax base = €2,250,000 · DTL = €100,000</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         03 TAX BASE OF A LIABILITY
+    ========================================================== -->
+    <section class="section" id="sec-taxbaseliability">
+      <div class="section-head">
+        <span class="section-tag">03</span>
+        <div>
+          <h2>Determining the Tax Base of a Liability</h2>
+          <p class="subhead">Liabilities work through the identical logic as assets — just mirrored.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="definition">
+            <div class="label">The definition</div>
+            <p style="margin:0;">The <strong>tax base of a liability</strong> is its carrying amount minus any amount that will be deductible for tax purposes in the future.</p>
+          </div>
+
+          <div class="callout finance">
+            <div class="label">Worked example — rent received in advance</div>
+            <p style="margin:0 0 8px;">Entiguan Sports receives €10,000,000 of rent in advance. For accounting purposes, this is deferred (a liability) until earned. But tax law taxes cash received immediately, regardless of when it's earned.</p>
+            <p style="margin:0;">Carrying amount = <strong>€10,000,000</strong> (the full liability). Tax base = carrying amount − amount already taxed = 10,000,000 − 10,000,000 = <strong>€0</strong>. Since the carrying amount of the liability exceeds its tax base, this creates a <strong>deferred tax asset</strong> — the company has effectively prepaid tax on income it hasn't recognized for accounting purposes yet.</p>
+          </div>
+
+          <div class="callout formula">
+            <div class="label">The core rule for liabilities (mirrored from assets)</div>
+            <div class="formula-body" style="font-size:.95rem;">Carrying amount &gt; Tax base → Deferred Tax Asset<br>Carrying amount &lt; Tax base → Deferred Tax Liability</div>
+          </div>
+
+          <div class="checkin" data-checkin="c3">
+            <div class="label">Check yourself</div>
+            <div class="q">A company's warranty liability has a carrying amount of $200,000, but tax law only allows a deduction once the warranty repair is actually performed, giving it a tax base of $0. What does this create?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="true">A deferred tax asset</button>
+              <button class="opt-btn" data-correct="false">A deferred tax liability</button>
+              <button class="opt-btn" data-correct="false">No temporary difference at all</button>
+            </div>
+            <div class="checkin-feedback">Correct — for a liability, carrying amount exceeding tax base creates a deferred tax asset, since the company will get a future tax deduction it hasn't yet recognized for accounting purposes.</div>
+          </div>
+        </div>
+        <div>
+          <div class="callout" style="margin-top:0;">
+            <table class="exhibit" style="margin:0;">
+              <tr><th></th><th>Carrying &gt; Tax Base</th><th>Carrying &lt; Tax Base</th></tr>
+              <tr><td>Asset</td><td class="num">DTL</td><td class="num">DTA</td></tr>
+              <tr><td>Liability</td><td class="num">DTA</td><td class="num">DTL</td></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         04 TEMPORARY VS PERMANENT DIFFERENCES
+    ========================================================== -->
+    <section class="section" id="sec-tempperm">
+      <div class="section-head">
+        <span class="section-tag">04</span>
+        <div>
+          <h2>Temporary vs. Permanent Differences</h2>
+          <p class="subhead">One type of gap between accounting and tax income eventually closes on its own. The other never does — and only one of them creates a deferred tax item at all.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="definition">
+            <div class="label">The distinction</div>
+            <p style="margin-bottom:8px;"><strong>Temporary difference:</strong> a difference expected to reverse in a future period — the carrying amount and tax base will eventually converge. Creates a deferred tax asset or liability.</p>
+            <p style="margin:0;"><strong>Permanent difference:</strong> a difference that will never reverse. Creates <em>no</em> deferred tax item at all — it simply makes the effective tax rate differ from the statutory rate, permanently.</p>
+          </div>
+
+          <div class="callout example">
+            <div class="label">Worked example — donations</div>
+            <p style="margin:0;">Entiguan Sports expenses €100,000 of donations on its income statement, but tax law never allows donations as a deduction. Carrying amount = €0, tax base = €0 — no temporary difference at all, since there's nothing to eventually reverse. This is a <strong>permanent difference</strong>: the donation expense simply never gets a tax benefit, ever.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c4">
+            <div class="label">Check yourself</div>
+            <div class="q">A jurisdiction permanently disallows entertainment expenses as a tax deduction, though they're fully expensed for accounting purposes. What effect does this have?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="true">A permanent difference — no deferred tax item is created, but the effective tax rate differs from the statutory rate</button>
+              <button class="opt-btn" data-correct="false">A temporary difference, creating a deferred tax asset</button>
+              <button class="opt-btn" data-correct="false">A temporary difference, creating a deferred tax liability</button>
+            </div>
+            <div class="checkin-feedback">Correct — since this difference will never reverse, it's permanent, and creates no deferred tax asset or liability, though it does affect the effective tax rate.</div>
+          </div>
+        </div>
+        <div>
+          <div class="callout" style="margin-top:0;">
+            <p style="margin:0; font-size:.9rem;"><strong>Quick test:</strong> ask "will this gap eventually close by itself, as the asset is used up or the liability settled?" If yes, temporary. If the gap is permanent by its very nature (like a non-deductible expense category), it's permanent — and it never touches deferred taxes.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         05 THE VALUATION ALLOWANCE
+    ========================================================== -->
+    <section class="section" id="sec-valuationallowance">
+      <div class="section-head">
+        <span class="section-tag">05</span>
+        <div>
+          <h2>The Valuation Allowance</h2>
+          <p class="subhead">A deferred tax asset is only genuinely valuable if the company expects enough future taxable profit to actually use it.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="definition">
+            <div class="label">What it is</div>
+            <p style="margin:0;">Under US GAAP, a deferred tax asset is initially recognized in full, then reduced by a <strong>valuation allowance</strong> if it's more likely than not that some or all of it won't actually be realized — typically because future taxable profits are genuinely in doubt.</p>
+          </div>
+
+          <div class="callout" style="border-left-color:var(--red);">
+            <div class="label" style="font-family:var(--font-mono); font-size:.72rem; text-transform:uppercase; color:var(--red); font-weight:700; margin-bottom:8px;">What a growing valuation allowance signals</div>
+            <p style="margin:0;">A history of tax losses is a red flag — it may indicate the company genuinely can't be expected to generate enough future taxable income to use its deferred tax assets. Establishing a valuation allowance reduces both the deferred tax asset <em>and</em> reported income in the period it's established — a real hit to earnings, not just a balance sheet reclassification.</p>
+          </div>
+
+          <div class="callout example">
+            <div class="label">Why analysts scrutinize valuation allowance reversals</div>
+            <p style="margin:0;">If circumstances improve, a valuation allowance can be reversed — which <em>increases</em> the deferred tax asset and boosts reported operating income in that period. Because this judgment is genuinely subjective, a sudden, large reversal right when a company needs an earnings boost deserves real scrutiny — it may reflect real improved prospects, or it may be a convenient lever for managing reported earnings.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c5">
+            <div class="label">Check yourself</div>
+            <div class="q">A company with a multi-year history of tax losses records a valuation allowance against its deferred tax asset. What is the effect on reported income in the period the allowance is established?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="true">Reported income decreases</button>
+              <button class="opt-btn" data-correct="false">Reported income increases</button>
+              <button class="opt-btn" data-correct="false">There is no effect on reported income, only the balance sheet</button>
+            </div>
+            <div class="checkin-feedback">Correct — establishing a valuation allowance reduces the deferred tax asset and reported income in that same period.</div>
+          </div>
+        </div>
+        <div>
+          <div class="callout" style="margin-top:0;">
+            <p style="margin:0; font-size:.9rem;"><strong>Factors used to judge realizability:</strong> the probability of sufficient future taxable profits, whether past losses stemmed from circumstances unlikely to repeat, and available tax planning opportunities that could generate future profits.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         06 CHANGES IN TAX RATES
+    ========================================================== -->
+    <section class="section" id="sec-ratechanges">
+      <div class="section-head">
+        <span class="section-tag">06</span>
+        <div>
+          <h2>Changes in Income Tax Rates</h2>
+          <p class="subhead">Deferred tax balances aren't frozen at the rate that created them — they get revalued the instant tax law changes.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="callout formula">
+            <div class="label">The rule</div>
+            <div class="formula-body" style="font-size:.95rem;">Deferred taxes are measured at the tax rate expected to apply when the asset is realized or the liability settled</div>
+          </div>
+
+          <div class="callout" style="border-left-color:var(--red);">
+            <p style="margin:0; font-size:.9rem;"><strong>When a tax rate changes, every existing deferred tax balance must be revalued</strong> — using the new rate, not the rate in effect when the temporary difference originated. A rate cut reduces the value of existing deferred tax liabilities (a genuine boost to reported income); a rate increase does the opposite, raising both DTAs and DTLs.</p>
+          </div>
+
+          <div class="callout example">
+            <div class="label">Worked example</div>
+            <p style="margin:0;">A company has a $500,000 deferred tax liability recorded at a 30% tax rate (from a $1,666,667 temporary difference). The government cuts the corporate tax rate to 21%. The DTL must be revalued: $1,666,667 × 21% = <strong>$350,000</strong> — a $150,000 reduction, recognized as a one-time boost to income tax expense (i.e., a reduction in the expense) in the period the rate change is enacted.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c6">
+            <div class="label">Check yourself</div>
+            <div class="q">A government enacts a significant corporate tax rate increase. What is the most likely effect on a company's existing deferred tax liabilities?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="true">They increase, since the liability must be revalued using the new, higher rate</button>
+              <button class="opt-btn" data-correct="false">They decrease</button>
+              <button class="opt-btn" data-correct="false">They are unaffected by tax rate changes</button>
+            </div>
+            <div class="checkin-feedback">Correct — a tax rate increase requires revaluing existing deferred tax liabilities upward, using the new expected settlement rate.</div>
+          </div>
+        </div>
+        <div>
+          <div class="dist-card" style="margin-top:0;">
+            <div class="label" style="font-family:var(--font-mono); font-size:.72rem; text-transform:uppercase; color:var(--indigo); font-weight:700; margin-bottom:12px;">Try it — tax rate change calculator</div>
+            <div class="tvm-grid">
+              <div class="tvm-field"><label>Temporary difference ($)</label><input type="number" id="trcDiff" value="1666667" step="10000"></div>
+              <div class="tvm-field"><label>Old tax rate (%)</label><input type="number" id="trcOldRate" value="30" step="1"></div>
+              <div class="tvm-field"><label>New tax rate (%)</label><input type="number" id="trcNewRate" value="21" step="1"></div>
+            </div>
+            <div class="tvm-result" id="trcResult">Old DTL = $500,000 · New DTL = $350,000 · Change = −$150,000</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         07 TAXES CHARGED DIRECTLY TO EQUITY
+    ========================================================== -->
+    <section class="section" id="sec-directequity">
+      <div class="section-head">
+        <span class="section-tag">07</span>
+        <div>
+          <h2>Taxes Charged Directly to Equity</h2>
+          <p class="subhead">If the item that caused a deferred tax bypassed the income statement, the resulting tax should bypass it too — consistency, not coincidence.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="definition">
+            <div class="label">The consistency principle</div>
+            <p style="margin:0;">When an item that creates a deferred tax liability is itself taken directly to equity (bypassing net income), the related deferred tax should follow it directly to equity too — not flow through the income statement.</p>
+          </div>
+
+          <div class="callout example">
+            <div class="label">Common examples</div>
+            <p style="margin:0;">Revaluation of property, plant, and equipment under IFRS's revaluation model (Module 6) is the classic case — since the revaluation surplus itself goes to OCI/equity, not net income, the associated deferred tax liability follows it directly into equity as well. Other examples include certain fair value changes on long-term investments and foreign currency translation adjustments.</p>
+          </div>
+
+          <div class="callout" style="border-left-color:var(--red);">
+            <p style="margin:0; font-size:.9rem;"><strong>This ties the whole volume together:</strong> Module 2's comprehensive income, Module 3's AOCI, Module 6's revaluation surplus, and this module's deferred taxes are all the same underlying idea — some genuine gains and losses simply never touch net income, and the tax consequences of those items follow the same path.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c7">
+            <div class="label">Check yourself</div>
+            <div class="q">A company revalues a building upward under IFRS, recognizing the gain in other comprehensive income. Where should the associated deferred tax liability be recognized?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="true">Directly in equity, alongside the revaluation surplus</button>
+              <button class="opt-btn" data-correct="false">On the income statement as part of income tax expense</button>
+              <button class="opt-btn" data-correct="false">It should not be recognized at all</button>
+            </div>
+            <div class="checkin-feedback">Correct — since the revaluation gain itself bypasses net income, the associated deferred tax liability should also be recognized directly in equity, for consistency.</div>
+          </div>
+        </div>
+        <div>
+          <div class="callout" style="margin-top:0;">
+            <p style="margin:0; font-size:.9rem;">This is exactly why an analyst reviewing a company's deferred tax footnote should always check whether a deferred tax movement flowed through net income or bypassed it entirely — the two have very different implications for evaluating reported earnings quality.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         QUIZ
+    ========================================================== -->
+    <section class="section" id="sec-quiz" style="max-width:900px;">
+      <div class="section-head">
+        <span class="section-tag">Q</span>
+        <div>
+          <h2>Practice Quiz</h2>
+          <p class="subhead">24 questions across everything above. Answer, get instant feedback, and see your score at the end.</p>
+        </div>
+      </div>
+      <div class="quiz-shell" id="quizShell">
+        <!-- populated by JS -->
+      </div>
+    </section>
+
+    <footer class="footer">
+      Built as a companion study tool for the CFA Program prerequisite Financial Statement Analysis reading on Income Taxes. Work through it alongside your primary curriculum — this isn't a replacement for official CFA Institute materials.
+    </footer>
+  </main>
+</div>
+
+<script src="../../diagnostics.js"></script>
+<script src="../bundle.js"></script>
+<script src="../../accessibility.js"></script>
+</body>
+</html>

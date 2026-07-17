@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Long-Lived Assets — CFA Prerequisite FSA Toolkit</title>
+<link rel="stylesheet" href="../../shared-module-standard.css">
+</head>
+<body>
+
+<div class="mobile-bar">
+  <strong style="font-family:var(--font-display)">PP&amp;E</strong>
+  <button id="sidebarToggle">Menu</button>
+</div>
+
+<div class="app">
+  <nav class="sidebar" id="sidebar">
+    <a href="../index.html" class="brand">
+      <span class="brand-mark"></span>
+      <span class="brand-name">Long-Lived<br>Assets</span>
+    </a>
+    <div class="brand-sub">CFA Prerequisite · FSA · Module 6</div>
+
+    <div class="progress-wrap">
+      <div class="progress-label"><span>Progress</span><span id="progressPct">0%</span></div>
+      <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+    </div>
+
+    <div class="toc-group-label">Getting an Asset On the Books</div>
+    <ul class="toc">
+      <li><a href="#sec-acquisition" data-sec="sec-acquisition"><span class="num">01</span>Acquisition Costs</a></li>
+      <li><a href="#sec-depmethods" data-sec="sec-depmethods"><span class="num">02</span>Depreciation Methods</a></li>
+      <li><a href="#sec-depeffects" data-sec="sec-depeffects"><span class="num">03</span>Effects on Statements &amp; Ratios</a></li>
+    </ul>
+
+    <div class="toc-group-label">Intangibles &amp; Alternatives</div>
+    <ul class="toc">
+      <li><a href="#sec-amortization" data-sec="sec-amortization"><span class="num">04</span>Amortization of Intangibles</a></li>
+      <li><a href="#sec-revaluation" data-sec="sec-revaluation"><span class="num">05</span>The Revaluation Model</a></li>
+      <li><a href="#sec-investmentproperty" data-sec="sec-investmentproperty"><span class="num">06</span>Investment Property</a></li>
+    </ul>
+
+    <div class="toc-group-label">When an Asset Leaves the Books</div>
+    <ul class="toc">
+      <li><a href="#sec-impairment" data-sec="sec-impairment"><span class="num">07</span>Impairment &amp; Derecognition</a></li>
+    </ul>
+
+    <div class="toc-group-label">Check Yourself</div>
+    <ul class="toc">
+      <li><a href="#sec-quiz" data-sec="sec-quiz"><span class="num">Q</span>Practice Quiz (24)</a></li>
+    </ul>
+  </nav>
+
+  <main id="top">
+    <header class="hero">
+      <div class="eyebrow">CFA Program · Prerequisite Financial Statement Analysis · Module 6</div>
+      <h1>Three companies, one identical machine, three genuinely different profit pictures.</h1>
+      <p class="lede">Buy the exact same piece of equipment, use it the exact same way, and depending purely on which depreciation method you pick, your reported profit in Year 1 can differ by hundreds of dollars — with the difference reversing entirely by the asset's final year. This module works through three hypothetical companies depreciating an identical machine three different ways, side by side.</p>
+    </header>
+
+    <!-- =========================================================
+         01 ACQUISITION COSTS
+    ========================================================== -->
+    <section class="section" id="sec-acquisition">
+      <div class="section-head">
+        <span class="section-tag">01</span>
+        <div>
+          <h2>Acquisition Costs — What Gets Capitalized</h2>
+          <p class="subhead">The sticker price is rarely the whole story — everything genuinely needed to get an asset working belongs in its cost.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="definition">
+            <div class="label">What belongs in an asset's capitalized cost</div>
+            <p style="margin:0;">The purchase price, plus any costs directly attributable to bringing the asset to its working condition and location — delivery, installation, testing, and professional fees directly tied to acquisition. Once the asset is ready for its intended use, further costs generally stop being capitalized.</p>
+          </div>
+
+          <div class="callout example">
+            <div class="label">Why this genuinely matters</div>
+            <p style="margin:0;">Capitalizing a cost defers its recognition as an expense, spreading it out via depreciation over the asset's useful life. Expensing the identical cost immediately hits net income right away, in full. Same dollar, same transaction — a materially different profit picture depending purely on the classification choice.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c1">
+            <div class="label">Check yourself</div>
+            <div class="q">A company pays for delivery and professional installation of a new production machine, before it's ready for use. How should these costs be treated?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="true">Capitalized as part of the machine's cost</button>
+              <button class="opt-btn" data-correct="false">Expensed immediately, regardless of purpose</button>
+              <button class="opt-btn" data-correct="false">Recorded directly as a reduction to revenue</button>
+            </div>
+            <div class="checkin-feedback">Correct — costs directly attributable to bringing an asset to its working condition and location, like delivery and installation, are capitalized into its cost.</div>
+          </div>
+        </div>
+        <div>
+          <div class="callout" style="margin-top:0;">
+            <p style="margin:0; font-size:.9rem;"><strong>The two models ahead:</strong> the <strong>cost model</strong> (required under US GAAP, permitted under IFRS) carries assets at historical cost minus accumulated depreciation. The alternative <strong>revaluation model</strong> (IFRS only) carries assets at fair value — covered in Section 5.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         02 DEPRECIATION METHODS
+    ========================================================== -->
+    <section class="section" id="sec-depmethods">
+      <div class="section-head">
+        <span class="section-tag">02</span>
+        <div>
+          <h2>Depreciation Methods</h2>
+          <p class="subhead">Straight-line, accelerated, and units-of-production — three genuinely different ways to spread the same asset's cost across the years it earns its keep.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="definition">
+            <div class="label">The three methods</div>
+            <p style="margin-bottom:8px;"><strong>Straight-line:</strong> depreciable cost ÷ useful life — identical expense every single year.</p>
+            <p style="margin-bottom:8px;"><strong>Double-declining balance (accelerated):</strong> a fixed rate (double the straight-line rate) applied to the beginning-of-year carrying amount — front-loads expense into earlier years.</p>
+            <p style="margin:0;"><strong>Units-of-production:</strong> depreciable cost × (actual production this period ÷ total estimated productive capacity) — expense tracks actual usage, not the calendar.</p>
+          </div>
+
+          <div class="callout finance">
+            <div class="label">Flagship worked example — three companies, one machine</div>
+            <p style="margin:0 0 8px;">EVEN-LI Co., SOONER Inc., and AZUSED Co. each buy an identical $2,300 machine — 4-year useful life, $100 residual value, 800 total units of estimated capacity, producing 200/300/200/100 units across the four years — but each uses a different depreciation method.</p>
+            <table class="exhibit" style="margin:0;">
+              <tr><th>Year</th><th>EVEN-LI (SL)</th><th>SOONER (DDB)</th><th>AZUSED (UOP)</th></tr>
+              <tr><td>1</td><td class="num">$550</td><td class="num">$1,150</td><td class="num">$550</td></tr>
+              <tr><td>2</td><td class="num">$550</td><td class="num">$575</td><td class="num">$825</td></tr>
+              <tr><td>3</td><td class="num">$550</td><td class="num">$288</td><td class="num">$550</td></tr>
+              <tr><td>4</td><td class="num">$550</td><td class="num">$187</td><td class="num">$275</td></tr>
+            </table>
+            <p style="margin:8px 0 0; font-size:.85rem; color:var(--ink-soft);">All three total exactly $2,200 in accumulated depreciation by Year 4 — the total is unaffected by method choice, only the year-by-year <em>timing</em> differs.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c2">
+            <div class="label">Check yourself</div>
+            <div class="q">Does the total accumulated depreciation over an asset's entire useful life depend on which depreciation method is chosen?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="false">Yes, accelerated methods produce more total depreciation over the asset's life</button>
+              <button class="opt-btn" data-correct="true">No — total depreciation over the full useful life is identical regardless of method; only the year-by-year timing differs</button>
+              <button class="opt-btn" data-correct="false">Only straight-line depreciates the full depreciable cost</button>
+            </div>
+            <div class="checkin-feedback">Correct — every method depreciates the exact same total depreciable cost (cost minus residual value) over the asset's life; the choice only affects which years get more or less expense.</div>
+          </div>
+        </div>
+        <div>
+          <div class="dist-card" style="margin-top:0;">
+            <div class="label" style="font-family:var(--font-mono); font-size:.72rem; text-transform:uppercase; color:var(--indigo); font-weight:700; margin-bottom:12px;">Try it — three-method depreciation calculator</div>
+            <div class="tvm-grid">
+              <div class="tvm-field"><label>Asset cost</label><input type="number" id="depAssetCost" value="2300" step="100"></div>
+              <div class="tvm-field"><label>Residual value</label><input type="number" id="depResidual2" value="100" step="10"></div>
+              <div class="tvm-field"><label>Useful life (years)</label><input type="number" id="depLife2" value="4" step="1" min="1"></div>
+              <div class="tvm-field"><label>Total productive capacity (units)</label><input type="number" id="depCapacity" value="800" step="10"></div>
+            </div>
+            <p style="font-size:.78rem; color:var(--ink-soft); margin:10px 0 6px;">Annual production (comma-separated):</p>
+            <input type="text" id="depProduction" value="200,300,200,100" style="width:100%; padding:8px 10px; border-radius:8px; border:1.5px solid var(--line); font-family:var(--font-mono); font-size:.85rem; margin-bottom:10px;">
+            <div id="depTableOut"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         03 EFFECTS ON STATEMENTS & RATIOS
+    ========================================================== -->
+    <section class="section" id="sec-depeffects">
+      <div class="section-head">
+        <span class="section-tag">03</span>
+        <div>
+          <h2>How Depreciation Choices Affect Statements &amp; Ratios</h2>
+          <p class="subhead">Every depreciation assumption ripples through the income statement, the balance sheet, and a whole family of financial ratios at once.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="callout" style="border-left-color:var(--red);">
+            <div class="label" style="font-family:var(--font-mono); font-size:.72rem; text-transform:uppercase; color:var(--red); font-weight:700; margin-bottom:8px;">Accelerated depreciation, in the early years, produces:</div>
+            <p style="margin:0 0 6px;"><strong>Lower</strong> net income and operating profit margin, but <strong>higher</strong> total asset turnover, since the asset's carrying value shrinks faster.</p>
+            <p style="margin:0;"><strong>Higher</strong> operating cash flow, via lower taxes paid on lower taxable income (a genuine cash benefit, not just an accounting one).</p>
+          </div>
+
+          <div class="callout example">
+            <div class="label">Why switching methods mid-life matters to analysts</div>
+            <p style="margin:0;">A company switching from straight-line to an accelerated method partway through an asset's life will show a sudden jump in depreciation expense, dragging down net income and taxes payable in that specific year — while boosting operating cash flow via the resulting tax savings. Recognizing this pattern helps an analyst separate a genuine operating deterioration from a pure accounting policy change.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c3">
+            <div class="label">Check yourself</div>
+            <div class="q">A company switches from straight-line to an accelerated depreciation method this year. What is the most likely effect on operating cash flow?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="true">It increases, due to lower taxes paid on the resulting lower taxable income</button>
+              <button class="opt-btn" data-correct="false">It decreases</button>
+              <button class="opt-btn" data-correct="false">It is completely unaffected, since depreciation is a non-cash expense</button>
+            </div>
+            <div class="checkin-feedback">Correct — while depreciation itself is non-cash, the higher expense lowers taxable income and actual cash taxes paid, genuinely increasing operating cash flow.</div>
+          </div>
+        </div>
+        <div>
+          <div class="callout" style="margin-top:0;">
+            <p style="margin:0; font-size:.9rem;"><strong>The capitalize-vs-expense choice has the same directional logic:</strong> expensing an investment immediately (instead of capitalizing it) lowers current net income but removes future years' depreciation — front-loading the pain, but making subsequent year-over-year profit growth look artificially stronger by comparison.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         04 AMORTIZATION OF INTANGIBLES
+    ========================================================== -->
+    <section class="section" id="sec-amortization">
+      <div class="section-head">
+        <span class="section-tag">04</span>
+        <div>
+          <h2>Amortization of Intangible Assets with Finite Lives</h2>
+          <p class="subhead">Same idea as depreciation, applied to assets you can't physically touch — a customer list, a patent, a license.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="definition">
+            <div class="label">The key distinction</div>
+            <p style="margin-bottom:8px;"><strong>Finite-life intangibles</strong> (a patent with a legal expiration, a customer list with an estimated useful benefit period) are amortized over their useful life, exactly like depreciation.</p>
+            <p style="margin:0;"><strong>Indefinite-life intangibles</strong> (goodwill, some trademarks) are never amortized — instead, they're tested for impairment at least annually.</p>
+          </div>
+
+          <div class="callout finance">
+            <div class="label">Worked example — a customer list</div>
+            <p style="margin:0 0 8px;">A direct-mail marketing company acquires a customer list expected to generate benefits for 18 months, with no residual value. Because the benefit period is finite, the list must be capitalized and amortized over management's best estimate of its useful life — 18 months.</p>
+            <p style="margin:0;">A shorter estimated useful life produces higher amortization expense each year, over fewer years — but the <em>total</em> accumulated amortization over the intangible's full life is identical regardless of the useful-life estimate or the method chosen. Only the timing changes, exactly like depreciation.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c4">
+            <div class="label">Check yourself</div>
+            <div class="q">A company holds goodwill from a past acquisition, deemed to have an indefinite life. How should this goodwill be accounted for?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="false">Amortized over a standard 10-year period</button>
+              <button class="opt-btn" data-correct="true">Not amortized at all — tested for impairment at least annually</button>
+              <button class="opt-btn" data-correct="false">Expensed immediately in full upon acquisition</button>
+            </div>
+            <div class="checkin-feedback">Correct — indefinite-life intangibles like goodwill are never amortized; instead, they're tested for impairment at least once a year.</div>
+          </div>
+        </div>
+        <div>
+          <div class="callout" style="margin-top:0;">
+            <p style="margin:0; font-size:.9rem;">Every point made about depreciation method/estimate choices affecting statements and ratios applies identically to amortization — same mechanics, different asset category.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         05 THE REVALUATION MODEL
+    ========================================================== -->
+    <section class="section" id="sec-revaluation">
+      <div class="section-head">
+        <span class="section-tag">05</span>
+        <div>
+          <h2>The Revaluation Model</h2>
+          <p class="subhead">An IFRS-only alternative to historical cost — carry the asset at what it's actually worth today, not what was paid for it years ago.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="definition">
+            <div class="label">Cost model vs. revaluation model</div>
+            <p style="margin-bottom:8px;"><strong>Cost model:</strong> carrying amount = historical cost − accumulated depreciation − any impairment. Required under US GAAP; also permitted under IFRS.</p>
+            <p style="margin:0;"><strong>Revaluation model:</strong> carrying amount = fair value at the revaluation date − subsequent depreciation − any subsequent impairment. Permitted under IFRS only; <strong>US GAAP prohibits it entirely.</strong></p>
+          </div>
+
+          <div class="callout" style="border-left-color:var(--red);">
+            <p style="margin:0; font-size:.9rem;"><strong>An upward revaluation doesn't flow through net income.</strong> Instead, it typically goes directly to other comprehensive income (as a revaluation surplus within equity) — connecting straight back to Module 2's comprehensive income and Module 3's AOCI. A downward revaluation, though, is generally recognized as a loss on the income statement, unless it's reversing a prior upward revaluation of that same asset.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c5">
+            <div class="label">Check yourself</div>
+            <div class="q">Under IFRS, a company revalues a building upward for the first time, reflecting a genuine increase in fair value. Where does this increase typically get recognized?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="false">Directly in net income on the income statement</button>
+              <button class="opt-btn" data-correct="true">In other comprehensive income, as a revaluation surplus within equity</button>
+              <button class="opt-btn" data-correct="false">As a reduction to liabilities</button>
+            </div>
+            <div class="checkin-feedback">Correct — a first-time upward revaluation typically bypasses net income, flowing instead through other comprehensive income into equity as a revaluation surplus.</div>
+          </div>
+        </div>
+        <div>
+          <div class="callout" style="margin-top:0;">
+            <p style="margin:0; font-size:.9rem;"><strong>Why revaluation is genuinely rare in practice:</strong> most companies, even under IFRS, stick with the cost model — it's simpler, doesn't require ongoing independent valuations, and doesn't introduce the volatility of periodically re-marking assets to market.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         06 INVESTMENT PROPERTY
+    ========================================================== -->
+    <section class="section" id="sec-investmentproperty">
+      <div class="section-head">
+        <span class="section-tag">06</span>
+        <div>
+          <h2>Investment Property</h2>
+          <p class="subhead">The same physical building can be a completely different type of asset, purely depending on why the company holds it.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="definition">
+            <div class="label">The distinction — purpose, not physical nature</div>
+            <p style="margin-bottom:8px;"><strong>Property, plant & equipment:</strong> held for use in producing goods or services, or for administrative purposes.</p>
+            <p style="margin:0;"><strong>Investment property:</strong> held purely to earn rental income, for capital appreciation, or both — genuinely separate from the company's core operations.</p>
+          </div>
+
+          <div class="callout example">
+            <div class="label">Outside example — two identical office towers</div>
+            <p style="margin:0;">A company occupies one office tower as its own corporate headquarters (PP&E), while owning an identical tower across the street purely to lease out to unrelated tenants for rental income (investment property). Same physical asset type, completely different classification — and IFRS specifically permits investment property to be measured using either the cost model <em>or</em> a fair value model, with fair value changes flowing directly through net income under the fair value model — a genuinely different treatment from ordinary PP&E's revaluation surplus.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c6">
+            <div class="label">Check yourself</div>
+            <div class="q">A company owns an office building it leases entirely to unrelated third-party tenants for rental income. How should this building be classified?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="false">Property, plant, and equipment</button>
+              <button class="opt-btn" data-correct="true">Investment property</button>
+              <button class="opt-btn" data-correct="false">Inventory</button>
+            </div>
+            <div class="checkin-feedback">Correct — a building held purely to earn rental income, rather than for use in the company's own operations, is classified as investment property.</div>
+          </div>
+        </div>
+        <div>
+          <div class="callout" style="margin-top:0;">
+            <p style="margin:0; font-size:.9rem;"><strong>Why the classification matters to analysts:</strong> under the fair value model for investment property, unrealized gains and losses hit net income directly — unlike ordinary PP&E revaluations, which bypass net income via OCI. This can make reported earnings genuinely more volatile for real-estate-heavy companies using this model.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         07 IMPAIRMENT & DERECOGNITION
+    ========================================================== -->
+    <section class="section" id="sec-impairment">
+      <div class="section-head">
+        <span class="section-tag">07</span>
+        <div>
+          <h2>Impairment &amp; Derecognition</h2>
+          <p class="subhead">Sometimes an asset's carrying value on the books is simply, provably too high — and the accounting has to admit it, all at once.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="definition">
+            <div class="label">Impairment</div>
+            <p style="margin:0;">An asset is <strong>impaired</strong> when its carrying amount exceeds its recoverable amount — genuinely no longer expected to generate enough future value to justify its current book value. The carrying amount is written down, with the loss recognized on the income statement.</p>
+          </div>
+
+          <div class="callout" style="border-left-color:var(--red);">
+            <div class="label" style="font-family:var(--font-mono); font-size:.72rem; text-transform:uppercase; color:var(--red); font-weight:700; margin-bottom:8px;">What an impairment loss actually tells an analyst</div>
+            <p style="margin:0;">An impairment loss suggests <strong>insufficient depreciation was recognized in prior years</strong> — the asset's book value had drifted too high relative to reality, and this write-down is catching it up all at once. Net income in the impairment year is lower, but subsequent years' net profit margins are typically <em>higher</em>, since there's less remaining carrying value left to depreciate going forward. And critically: <strong>impairment is a non-cash charge</strong> — it does not affect operating cash flow directly.</p>
+          </div>
+
+          <div class="definition">
+            <div class="label">Derecognition</div>
+            <p style="margin:0;">An asset is <strong>derecognized</strong> — removed from the balance sheet entirely — when it's disposed of (sold, scrapped) or when no future economic benefits are expected from its use or disposal. Any gain or loss on disposal is the difference between the sale proceeds and the asset's carrying amount at the time, recognized on the income statement.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c7">
+            <div class="label">Check yourself</div>
+            <div class="q">A company recognizes a significant impairment loss on a piece of equipment this year. What is the most likely effect on operating cash flow?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="true">No direct effect — impairment is a non-cash charge</button>
+              <button class="opt-btn" data-correct="false">Operating cash flow decreases by the full amount of the impairment</button>
+              <button class="opt-btn" data-correct="false">Operating cash flow increases by the full amount of the impairment</button>
+            </div>
+            <div class="checkin-feedback">Correct — like depreciation, an impairment loss is a non-cash expense and doesn't directly affect operating cash flow, even though it reduces net income.</div>
+          </div>
+        </div>
+        <div>
+          <div class="callout" style="margin-top:0;">
+            <p style="margin:0; font-size:.9rem;"><strong>The full picture, tied together:</strong> depreciation, amortization, revaluation, impairment, and derecognition are really all the same underlying question, asked at different moments — is this asset's carrying value still an honest reflection of its remaining economic benefit?</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         QUIZ
+    ========================================================== -->
+    <section class="section" id="sec-quiz" style="max-width:900px;">
+      <div class="section-head">
+        <span class="section-tag">Q</span>
+        <div>
+          <h2>Practice Quiz</h2>
+          <p class="subhead">24 questions across everything above. Answer, get instant feedback, and see your score at the end.</p>
+        </div>
+      </div>
+      <div class="quiz-shell" id="quizShell">
+        <!-- populated by JS -->
+      </div>
+    </section>
+
+    <footer class="footer">
+      Built as a companion study tool for the CFA Program prerequisite Financial Statement Analysis reading on Long-Lived Assets. Work through it alongside your primary curriculum — this isn't a replacement for official CFA Institute materials.
+    </footer>
+  </main>
+</div>
+
+<script src="../../diagnostics.js"></script>
+<script src="../bundle.js"></script>
+<script src="../../accessibility.js"></script>
+</body>
+</html>

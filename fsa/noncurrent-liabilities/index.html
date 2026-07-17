@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Non-Current Liabilities — CFA Prerequisite FSA Toolkit</title>
+<link rel="stylesheet" href="../../shared-module-standard.css">
+</head>
+<body>
+
+<div class="mobile-bar">
+  <strong style="font-family:var(--font-display)">Bonds Payable</strong>
+  <button id="sidebarToggle">Menu</button>
+</div>
+
+<div class="app">
+  <nav class="sidebar" id="sidebar">
+    <a href="../index.html" class="brand">
+      <span class="brand-mark"></span>
+      <span class="brand-name">Non-Current<br>Liabilities</span>
+    </a>
+    <div class="brand-sub">CFA Prerequisite · FSA · Module 8</div>
+
+    <div class="progress-wrap">
+      <div class="progress-label"><span>Progress</span><span id="progressPct">0%</span></div>
+      <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+    </div>
+
+    <div class="toc-group-label">Pricing a Bond</div>
+    <ul class="toc">
+      <li><a href="#sec-bondbasics" data-sec="sec-bondbasics"><span class="num">01</span>Face Value, Coupon &amp; Market Rate</a></li>
+      <li><a href="#sec-parpremiumdiscount" data-sec="sec-parpremiumdiscount"><span class="num">02</span>Par, Premium &amp; Discount</a></li>
+    </ul>
+
+    <div class="toc-group-label">Living With the Bond</div>
+    <ul class="toc">
+      <li><a href="#sec-effectiveinterest" data-sec="sec-effectiveinterest"><span class="num">03</span>The Effective Interest Method</a></li>
+      <li><a href="#sec-premiumamort" data-sec="sec-premiumamort"><span class="num">04</span>Amortizing a Premium</a></li>
+      <li><a href="#sec-fairvalue" data-sec="sec-fairvalue"><span class="num">05</span>The Fair Value Option</a></li>
+    </ul>
+
+    <div class="toc-group-label">Ending the Bond</div>
+    <ul class="toc">
+      <li><a href="#sec-derecognition" data-sec="sec-derecognition"><span class="num">06</span>Derecognition of Debt</a></li>
+    </ul>
+
+    <div class="toc-group-label">Check Yourself</div>
+    <ul class="toc">
+      <li><a href="#sec-quiz" data-sec="sec-quiz"><span class="num">Q</span>Practice Quiz (20)</a></li>
+    </ul>
+  </nav>
+
+  <main id="top">
+    <header class="hero">
+      <div class="eyebrow">CFA Program · Prerequisite Financial Statement Analysis · Module 8</div>
+      <h1>A bond's price is really just Module 1's present value math, wearing a suit.</h1>
+      <p class="lede">Everything in this module — issuance, amortization, redemption — traces back to a single idea already familiar from the Interest Rates module in the Quant volume: discount every promised future cash flow back to today. The only genuinely new part is what happens to that number every single year afterward, as the bond's carrying amount drifts steadily toward its face value.</p>
+    </header>
+
+    <!-- =========================================================
+         01 FACE VALUE, COUPON & MARKET RATE
+    ========================================================== -->
+    <section class="section" id="sec-bondbasics">
+      <div class="section-head">
+        <span class="section-tag">01</span>
+        <div>
+          <h2>Face Value, Coupon Rate &amp; Market Rate</h2>
+          <p class="subhead">Three numbers define every bond — and it's the gap between two of them that determines everything else in this module.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="definition">
+            <div class="label">The vocabulary</div>
+            <p style="margin-bottom:6px;"><strong>Face value (principal/par value):</strong> the amount paid to bondholders at maturity.</p>
+            <p style="margin-bottom:6px;"><strong>Coupon rate (nominal/stated rate):</strong> the fixed rate written into the bond contract, used to calculate periodic interest payments.</p>
+            <p style="margin:0;"><strong>Market rate (effective interest rate):</strong> the rate actually demanded by investors for bonds of comparable risk and terms, at the time of issuance.</p>
+          </div>
+
+          <div class="callout formula">
+            <div class="label">How a bond is priced</div>
+            <div class="formula-body" style="font-size:.95rem;">Bond price = PV of coupon payments + PV of face value, both discounted at the market rate</div>
+          </div>
+
+          <div class="callout" style="border-left-color:var(--red);">
+            <p style="margin:0; font-size:.9rem;"><strong>The coupon rate is fixed for the bond's life. The market rate moves constantly</strong> with interest rate conditions. Whenever these two rates diverge at issuance, the bond simply won't sell for face value — the market rate is what actually determines price, and the coupon rate just determines the cash payments.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c1">
+            <div class="label">Check yourself</div>
+            <div class="q">A bond's coupon rate is fixed at 5% for its entire life. What happens to the market rate demanded by investors over time?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="true">It can move continuously with changing interest rate conditions, independent of the fixed coupon rate</button>
+              <button class="opt-btn" data-correct="false">It's always identical to the coupon rate</button>
+              <button class="opt-btn" data-correct="false">It's fixed for the bond's life, just like the coupon rate</button>
+            </div>
+            <div class="checkin-feedback">Correct — the market rate reflects current conditions and moves continuously, while the coupon rate is locked in at issuance.</div>
+          </div>
+        </div>
+        <div>
+          <div class="callout" style="margin-top:0;">
+            <p style="margin:0; font-size:.9rem;"><strong>Bond prices are often quoted as a percentage of face value</strong> — a bond priced at "100" sells at exactly face value; one priced at "95.79" sells at 95.79% of face value (a discount).</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         02 PAR, PREMIUM & DISCOUNT
+    ========================================================== -->
+    <section class="section" id="sec-parpremiumdiscount">
+      <div class="section-head">
+        <span class="section-tag">02</span>
+        <div>
+          <h2>Bonds Issued at Par, Premium &amp; Discount</h2>
+          <p class="subhead">The relationship between coupon rate and market rate determines, entirely, whether a bond sells for exactly face value, more, or less.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="definition">
+            <div class="label">The three cases</div>
+            <p style="margin-bottom:6px;"><strong>Issued at par:</strong> coupon rate = market rate → sales proceeds = face value.</p>
+            <p style="margin-bottom:6px;"><strong>Issued at a premium:</strong> coupon rate &gt; market rate → the bond's attractive coupon makes it worth more than face value.</p>
+            <p style="margin:0;"><strong>Issued at a discount:</strong> coupon rate &lt; market rate → investors demand a lower price to compensate for the below-market coupon.</p>
+          </div>
+
+          <div class="callout finance">
+            <div class="label">Worked example — Debond Corp., issued at par</div>
+            <p style="margin:0 0 8px;">Debond Corp. issues £1,000,000 face value, 5-year bonds, 5% coupon, when the market rate is also 5%. Annual interest payment = £50,000.</p>
+            <p style="margin:0;">Summing the present value of five £50,000 coupons plus the £1,000,000 face value, all at 5%: PV = £216,474 + £783,526 = <strong>£1,000,000</strong> — exactly face value, since coupon rate equals market rate.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c2">
+            <div class="label">Check yourself</div>
+            <div class="q">A bond has a 6% coupon rate, but the market rate for comparable bonds is only 4%. Will this bond sell at par, a premium, or a discount?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="false">At par</button>
+              <button class="opt-btn" data-correct="true">At a premium — its above-market coupon makes it worth more than face value</button>
+              <button class="opt-btn" data-correct="false">At a discount</button>
+            </div>
+            <div class="checkin-feedback">Correct — a coupon rate above the market rate means investors will pay more than face value to obtain that attractive coupon.</div>
+          </div>
+        </div>
+        <div>
+          <div class="dist-card" style="margin-top:0;">
+            <div class="label" style="font-family:var(--font-mono); font-size:.72rem; text-transform:uppercase; color:var(--indigo); font-weight:700; margin-bottom:12px;">Try it — bond pricing calculator</div>
+            <div class="tvm-grid">
+              <div class="tvm-field"><label>Face value (£)</label><input type="number" id="bpFace" value="1000000" step="10000"></div>
+              <div class="tvm-field"><label>Coupon rate (%)</label><input type="number" id="bpCoupon" value="5" step="0.25"></div>
+              <div class="tvm-field"><label>Market rate (%)</label><input type="number" id="bpMarket" value="6" step="0.25"></div>
+              <div class="tvm-field"><label>Years to maturity</label><input type="number" id="bpYears" value="5" step="1" min="1"></div>
+            </div>
+            <div class="tvm-result" id="bpResult">Sales proceeds = £957,876 (issued at a discount)</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         03 THE EFFECTIVE INTEREST METHOD
+    ========================================================== -->
+    <section class="section" id="sec-effectiveinterest">
+      <div class="section-head">
+        <span class="section-tag">03</span>
+        <div>
+          <h2>The Effective Interest Method — Amortizing a Discount</h2>
+          <p class="subhead">The bond's carrying amount doesn't stay fixed after issuance — it drifts, year by year, all the way to face value by maturity.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="callout formula">
+            <div class="label">The effective interest method, each year</div>
+            <div class="formula-body" style="font-size:.9rem;">Interest expense = Beginning carrying amount × Market rate<br>Discount amortization = Interest expense − Coupon payment<br>Ending carrying amount = Beginning + Discount amortization</div>
+          </div>
+
+          <div class="callout finance">
+            <div class="label">Flagship worked example — Debond Corp., issued at a discount</div>
+            <p style="margin:0 0 8px;">Debond issues £1,000,000 face value, 5-year, 5% coupon bonds when the market rate is 6%. Sales proceeds = £957,876 (a £42,124 discount).</p>
+            <table class="exhibit" style="margin:0;">
+              <tr><th>Year</th><th>Beginning</th><th>Interest Exp. (6%)</th><th>Coupon (5%)</th><th>Amort.</th><th>Ending</th></tr>
+              <tr><td>2017</td><td class="num">957,876</td><td class="num">57,473</td><td class="num">50,000</td><td class="num">7,473</td><td class="num">965,349</td></tr>
+              <tr><td>2018</td><td class="num">965,349</td><td class="num">57,921</td><td class="num">50,000</td><td class="num">7,921</td><td class="num">973,270</td></tr>
+              <tr><td>2019</td><td class="num">973,270</td><td class="num">58,396</td><td class="num">50,000</td><td class="num">8,396</td><td class="num">981,666</td></tr>
+              <tr><td>2020</td><td class="num">981,666</td><td class="num">58,900</td><td class="num">50,000</td><td class="num">8,900</td><td class="num">990,566</td></tr>
+              <tr><td>2021</td><td class="num">990,566</td><td class="num">59,434</td><td class="num">50,000</td><td class="num">9,434</td><td class="num">1,000,000</td></tr>
+            </table>
+            <p style="margin:8px 0 0; font-size:.85rem; color:var(--ink-soft);">Notice: interest expense is calculated on the <em>carrying amount</em>, not the face value — so it grows every year as the carrying amount grows, and lands exactly on face value at maturity.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c3">
+            <div class="label">Check yourself</div>
+            <div class="q">Under the effective interest method, why does interest expense on a discount bond increase each year?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="true">Because it's calculated on the carrying amount, which itself grows toward face value each year</button>
+              <button class="opt-btn" data-correct="false">Because the market rate itself increases every year</button>
+              <button class="opt-btn" data-correct="false">Interest expense actually stays flat under this method</button>
+            </div>
+            <div class="checkin-feedback">Correct — interest expense = carrying amount × market rate, and since the carrying amount grows each year for a discount bond, so does interest expense.</div>
+          </div>
+        </div>
+        <div>
+          <div class="dist-card" style="margin-top:0;">
+            <div class="label" style="font-family:var(--font-mono); font-size:.72rem; text-transform:uppercase; color:var(--indigo); font-weight:700; margin-bottom:12px;">Try it — discount amortization table</div>
+            <div class="tvm-grid">
+              <div class="tvm-field"><label>Sales proceeds (£)</label><input type="number" id="eiProceeds" value="957876" step="1000"></div>
+              <div class="tvm-field"><label>Face value (£)</label><input type="number" id="eiFace" value="1000000" step="10000"></div>
+              <div class="tvm-field"><label>Coupon rate (%)</label><input type="number" id="eiCoupon" value="5" step="0.25"></div>
+              <div class="tvm-field"><label>Market rate (%)</label><input type="number" id="eiMarket" value="6" step="0.25"></div>
+              <div class="tvm-field"><label>Years</label><input type="number" id="eiYears" value="5" step="1" min="1"></div>
+            </div>
+            <div id="eiTableOut" style="margin-top:12px;"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         04 AMORTIZING A PREMIUM
+    ========================================================== -->
+    <section class="section" id="sec-premiumamort">
+      <div class="section-head">
+        <span class="section-tag">04</span>
+        <div>
+          <h2>Amortizing a Premium</h2>
+          <p class="subhead">The exact same mechanics as a discount, just running in reverse — the carrying amount falls toward face value instead of rising.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="definition">
+            <div class="label">The mirror-image logic</div>
+            <p style="margin:0;">A bond issued at a premium starts with a carrying amount <em>above</em> face value. Interest expense (carrying amount × market rate) is now <em>less</em> than the coupon payment — the difference reduces the carrying amount each year, until it reaches exactly face value at maturity.</p>
+          </div>
+
+          <div class="callout" style="border-left-color:var(--red);">
+            <p style="margin:0; font-size:.9rem;"><strong>The pattern, stated once and for all:</strong> a discount bond's carrying amount rises to face value; a premium bond's carrying amount falls to face value. In both cases, interest expense reflects the market rate at issuance, applied to a carrying amount that steadily converges toward face value — the coupon rate only ever determines the cash payment, never the reported expense.</p>
+          </div>
+
+          <div class="callout example">
+            <div class="label">Straight-line amortization — the simpler, cruder alternative</div>
+            <p style="margin:0;">Instead of applying a constant rate to a changing carrying amount, the straight-line method simply divides the total discount or premium evenly across the bond's life. It's simpler, but doesn't tie interest expense to the actual effective rate — most standards prefer the effective interest method specifically because it does.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c4">
+            <div class="label">Check yourself</div>
+            <div class="q">For a bond issued at a premium, how does interest expense compare to the coupon (cash) payment each year?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="true">Interest expense is less than the coupon payment</button>
+              <button class="opt-btn" data-correct="false">Interest expense is greater than the coupon payment</button>
+              <button class="opt-btn" data-correct="false">They are always exactly equal</button>
+            </div>
+            <div class="checkin-feedback">Correct — for a premium bond, the effective interest rate is below the coupon rate, so interest expense is less than the cash coupon payment each period.</div>
+          </div>
+        </div>
+        <div>
+          <div class="callout" style="margin-top:0;">
+            <table class="exhibit" style="margin:0;">
+              <tr><th></th><th>Discount Bond</th><th>Premium Bond</th></tr>
+              <tr><td>Carrying amount trend</td><td class="num">Rises to face value</td><td class="num">Falls to face value</td></tr>
+              <tr><td>Interest exp. vs. coupon</td><td class="num">Higher</td><td class="num">Lower</td></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         05 THE FAIR VALUE OPTION
+    ========================================================== -->
+    <section class="section" id="sec-fairvalue">
+      <div class="section-head">
+        <span class="section-tag">05</span>
+        <div>
+          <h2>The Fair Value Option</h2>
+          <p class="subhead">Companies can choose to report bonds at what they're actually worth today, instead of a steadily-amortizing historical figure — but almost nobody actually does.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="definition">
+            <div class="label">Why amortized cost can mislead</div>
+            <p style="margin:0;">Amortized cost reflects the market rate <em>at issuance</em>, frozen. As market rates move afterward, a bond's true fair value diverges from its amortized-cost carrying amount — when rates fall, a fixed-coupon bond's fair value rises, meaning the company's real economic liability may exceed its reported debt.</p>
+          </div>
+
+          <div class="callout" style="border-left-color:var(--red);">
+            <p style="margin:0; font-size:.9rem;"><strong>The fair value option's genuine mechanics:</strong> electing it means a <em>decrease</em> in the liability's fair value is reported as income (the company owes less), and an <em>increase</em> is a loss. But the portion of any fair value change caused specifically by the company's <em>own</em> credit risk deteriorating must be separated out and reported in OCI, not net income — isolating market-rate effects from the company's own creditworthiness.</p>
+          </div>
+
+          <div class="callout example">
+            <div class="label">Why so few companies actually elect it</div>
+            <p style="margin:0;">As of the most recent data, the fair value option is used almost exclusively by financial-sector companies — Goldman Sachs among them — specifically because their financial <em>assets</em> are already fair-valued, and using amortized cost for their liabilities would create an artificial accounting mismatch, adding volatility that doesn't reflect real economic reality.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c5">
+            <div class="label">Check yourself</div>
+            <div class="q">A company elects the fair value option, and the fair value of its bond liability decreases this period due to rising market rates. What is the effect on net income?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="true">Net income increases, since a decrease in the liability's fair value is recognized as income</button>
+              <button class="opt-btn" data-correct="false">Net income decreases</button>
+              <button class="opt-btn" data-correct="false">There is no income statement effect at all</button>
+            </div>
+            <div class="checkin-feedback">Correct — under the fair value option, a decrease in the liability's fair value (the company now owes less in economic terms) is recognized as income.</div>
+          </div>
+        </div>
+        <div>
+          <div class="callout" style="margin-top:0;">
+            <p style="margin:0; font-size:.9rem;"><strong>Why this matters for comparing companies:</strong> two companies with identical bonds can report meaningfully different carrying amounts and income volatility purely based on this election — always check the footnotes for which measurement basis is in use.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         06 DERECOGNITION OF DEBT
+    ========================================================== -->
+    <section class="section" id="sec-derecognition">
+      <div class="section-head">
+        <span class="section-tag">06</span>
+        <div>
+          <h2>Derecognition of Debt</h2>
+          <p class="subhead">A bond leaves the balance sheet one of two ways — quietly at maturity, or with a bang if redeemed early.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="definition">
+            <div class="label">Two ways a bond gets derecognized</div>
+            <p style="margin-bottom:8px;"><strong>At maturity:</strong> the discount or premium is by then fully amortized — carrying amount equals face value exactly. Bonds payable and cash both decrease by that same amount; a clean, gain/loss-free retirement.</p>
+            <p style="margin:0;"><strong>Early redemption (calling or open-market repurchase):</strong> the difference between the cash paid to redeem and the bond's carrying amount at that moment is a genuine gain or loss, reported on the income statement.</p>
+          </div>
+
+          <div class="callout finance">
+            <div class="label">Worked example — an early call</div>
+            <p style="margin:0;">A company has a £10 million bond, carrying amount equal to face value, with 5 years remaining. It redeems the bonds at a call price of 103 (103% of face value) — costing £10.3 million in cash. Loss on redemption = £10 million carrying amount − £10.3 million cash paid = <strong>a £300,000 loss</strong>, recognized on the income statement.</p>
+          </div>
+
+          <div class="callout" style="border-left-color:var(--red);">
+            <p style="margin:0; font-size:.9rem;"><strong>On the cash flow statement (indirect method):</strong> any gain or loss on debt extinguishment gets removed from operating cash flow (it's a non-operating item), while the actual cash paid to redeem the bonds is classified as a financing outflow.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c6">
+            <div class="label">Check yourself</div>
+            <div class="q">A company redeems bonds with a carrying amount of $5 million for $4.8 million in cash. What is the effect on the income statement?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="true">A $200,000 gain on extinguishment of debt</button>
+              <button class="opt-btn" data-correct="false">A $200,000 loss on extinguishment of debt</button>
+              <button class="opt-btn" data-correct="false">No income statement effect at all</button>
+            </div>
+            <div class="checkin-feedback">Correct — paying less cash ($4.8M) than the carrying amount ($5M) to extinguish the debt produces a $200,000 gain.</div>
+          </div>
+        </div>
+        <div>
+          <div class="dist-card" style="margin-top:0;">
+            <div class="label" style="font-family:var(--font-mono); font-size:.72rem; text-transform:uppercase; color:var(--indigo); font-weight:700; margin-bottom:12px;">Try it — gain/loss on redemption calculator</div>
+            <div class="tvm-grid">
+              <div class="tvm-field"><label>Carrying amount</label><input type="number" id="drCarrying" value="10000000" step="100000"></div>
+              <div class="tvm-field"><label>Call price (% of face)</label><input type="number" id="drCallPrice" value="103" step="0.5"></div>
+            </div>
+            <div class="tvm-result" id="drResult">Cash paid = £10,300,000 · Loss on redemption = £300,000</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         QUIZ
+    ========================================================== -->
+    <section class="section" id="sec-quiz" style="max-width:900px;">
+      <div class="section-head">
+        <span class="section-tag">Q</span>
+        <div>
+          <h2>Practice Quiz</h2>
+          <p class="subhead">20 questions across everything above. Answer, get instant feedback, and see your score at the end.</p>
+        </div>
+      </div>
+      <div class="quiz-shell" id="quizShell">
+        <!-- populated by JS -->
+      </div>
+    </section>
+
+    <footer class="footer">
+      Built as a companion study tool for the CFA Program prerequisite Financial Statement Analysis reading on Non-Current Liabilities. Work through it alongside your primary curriculum — this isn't a replacement for official CFA Institute materials.
+    </footer>
+  </main>
+</div>
+
+<script src="../../diagnostics.js"></script>
+<script src="../bundle.js"></script>
+<script src="../../accessibility.js"></script>
+</body>
+</html>

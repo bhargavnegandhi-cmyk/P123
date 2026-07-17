@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GDP, Income &amp; Expenditure (Part 1) — CFA Prerequisite Economics Toolkit</title>
+<link rel="stylesheet" href="../../shared-module-standard.css">
+</head>
+<body>
+
+<div class="mobile-bar">
+  <strong style="font-family:var(--font-display)">Y = C+I+G+NX</strong>
+  <button id="sidebarToggle">Menu</button>
+</div>
+
+<div class="app">
+  <nav class="sidebar" id="sidebar">
+    <a href="../index.html" class="brand">
+      <span class="brand-mark"></span>
+      <span class="brand-name">GDP, Income &amp;<br>Expenditure</span>
+    </a>
+    <div class="brand-sub">CFA Prerequisite · Economics · Module 3, Part 1 of 2</div>
+
+    <div class="progress-wrap">
+      <div class="progress-label"><span>Progress</span><span id="progressPct">0%</span></div>
+      <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+    </div>
+
+    <div class="toc-group-label">Measuring the Economy</div>
+    <ul class="toc">
+      <li><a href="#sec-gdpdefinition" data-sec="sec-gdpdefinition"><span class="num">01</span>What Is GDP?</a></li>
+      <li><a href="#sec-valueadded" data-sec="sec-valueadded"><span class="num">02</span>The Value-Added Method</a></li>
+      <li><a href="#sec-nominalreal" data-sec="sec-nominalreal"><span class="num">03</span>Nominal vs. Real GDP</a></li>
+    </ul>
+
+    <div class="toc-group-label">The Flow of Spending</div>
+    <ul class="toc">
+      <li><a href="#sec-components" data-sec="sec-components"><span class="num">04</span>The Components of GDP</a></li>
+      <li><a href="#sec-savingidentity" data-sec="sec-savingidentity"><span class="num">05</span>Saving, Investment &amp; the Trade Balance</a></li>
+    </ul>
+
+    <div class="toc-group-label">Check Yourself</div>
+    <ul class="toc">
+      <li><a href="#sec-quiz" data-sec="sec-quiz"><span class="num">Q</span>Practice Quiz (20)</a></li>
+    </ul>
+
+    <div class="toc-group-label">This Module</div>
+    <ul class="toc">
+      <li><a href="../ad-as-growth/index.html" style="color:#8FDFC0;"><span class="num">▸</span>Part 2: AD, AS &amp; Growth</a></li>
+    </ul>
+  </nav>
+
+  <main id="top">
+    <header class="hero">
+      <div class="eyebrow">CFA Program · Prerequisite Economics · Module 3, Part 1 of 2</div>
+      <h1>Every dollar spent is a dollar earned by someone else.</h1>
+      <p class="lede">GDP sounds like an abstract statistic, but it's built from the same circular flow of money you already understand: someone spends, someone else receives it as income, and that income eventually gets spent again. Part 1 builds GDP from the ground up — how to measure it three equivalent ways, how to strip out the effect of inflation, and the accounting identity linking a nation's saving, investment, government budget, and trade balance into one equation.</p>
+    </header>
+
+    <!-- =========================================================
+         01 WHAT IS GDP
+    ========================================================== -->
+    <section class="section" id="sec-gdpdefinition">
+      <div class="section-head">
+        <span class="section-tag">01</span>
+        <div>
+          <h2>What Is GDP?</h2>
+          <p class="subhead">Three different questions, one identical answer.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <p><strong>Gross domestic product</strong> measures the market value of all final goods and services produced within an economy during a period. That's the <em>output</em> definition. But every dollar spent buying that output becomes income for someone — a wage, a rent payment, interest, or profit. So GDP is equally the <em>income</em> definition: the total income earned by everyone in the economy. And since every dollar of that income traces back to someone spending it, GDP is also total <em>expenditure</em>. Three names, one number.</p>
+
+          <div class="chart-card">
+            <div id="circularFlowChart"></div>
+            <p style="font-size:.82rem; color:var(--ink-soft); margin:10px 0 0;">A simplified economy: households supply labor and capital to firms in exchange for £100 of income; firms use those inputs to produce £100 of goods and services, which households buy right back. Output, income, and expenditure are all exactly £100 — the same money, counted three different ways as it circulates.</p>
+          </div>
+
+          <div class="definition">
+            <div class="label">Three rules that keep GDP consistent</div>
+            <p style="margin-bottom:8px;"><strong>Only current production counts.</strong> A used car sale, a stock's capital gain, and government transfer payments (unemployment benefits) are all excluded — nothing new was produced.</p>
+            <p style="margin-bottom:8px;"><strong>Only market transactions count.</strong> Unpaid housework, gardening, or your own home cooking never appear in GDP, however valuable they are, because there's no market price to record.</p>
+            <p style="margin:0;"><strong>Only final goods count</strong> — more on this in the next section, since it's the trickiest rule to apply correctly.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c1">
+            <div class="label">Check yourself</div>
+            <div class="q">A government sends a $1,000 unemployment benefit check to a laid-off worker. Does this transaction get counted in GDP?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="false">Yes, it's government spending</button>
+              <button class="opt-btn" data-correct="true">No, it's a transfer payment, not payment for newly produced output</button>
+            </div>
+            <div class="checkin-feedback">Correct — transfer payments move money without any corresponding new production, so they're excluded from GDP entirely.</div>
+          </div>
+        </div>
+        <div>
+          <div class="callout" style="margin-top:0;">
+            <p style="margin:0; font-size:.9rem;"><strong>Why this matters for an analyst:</strong> whichever of the three lenses you use — output, income, or expenditure — you're describing the identical economic activity. Government statistical agencies actually compute GDP through both the income and expenditure approaches independently, as a built-in consistency check.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         02 THE VALUE-ADDED METHOD
+    ========================================================== -->
+    <section class="section" id="sec-valueadded">
+      <div class="section-head">
+        <span class="section-tag">02</span>
+        <div>
+          <h2>The Value-Added Method</h2>
+          <p class="subhead">A loaf of bread changes hands four times before it reaches you. GDP only wants to count it once.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <p>A <strong>final good</strong> is sold to its ultimate user. An <strong>intermediate good</strong> gets resold or used to make something else. If GDP counted every sale at every stage, the same underlying value would be counted again and again — this is exactly the double-counting problem the "final goods only" rule is designed to prevent.</p>
+
+          <div class="callout finance">
+            <div class="label">Worked example — from wheat to bread</div>
+            <table class="exhibit" style="margin:10px 0;">
+              <tr><th>Stage</th><th>Receipts (€)</th><th>Value added (€)</th></tr>
+              <tr><td>Farmer sells wheat to miller</td><td class="num">0.15</td><td class="num">0.15</td></tr>
+              <tr><td>Miller sells flour to baker</td><td class="num">0.46</td><td class="num">0.31</td></tr>
+              <tr><td>Baker sells bread to retailer</td><td class="num">0.78</td><td class="num">0.32</td></tr>
+              <tr><td>Retailer sells bread to customer</td><td class="num">1.00</td><td class="num">0.22</td></tr>
+              <tr><td><strong>Total</strong></td><td class="num">—</td><td class="num"><strong>1.00</strong></td></tr>
+            </table>
+            <p style="margin:0;">GDP counts the €1.00 final sale price exactly once — <em>or</em>, equivalently, sums each stage's value added (0.15+0.31+0.32+0.22), which lands on the identical €1.00. The wheat and flour never separately appear in GDP; their value is already baked into the final loaf's price.</p>
+          </div>
+
+          <div class="callout example">
+            <div class="label">Worked example — an automobile</div>
+            <p style="margin:0 0 8px;">Materials cost $5,000 (steel, plastics, semiconductors combined), assembly brings the manufacturer's price to $15,000, wholesale to $16,000, and retail to $18,000. Summing raw sales at every stage gives $54,000 — but that wildly overstates GDP's actual contribution.</p>
+            <p style="margin:0;">The correct answer is simply the <strong>final retail price, $18,000</strong> — equivalently, the sum of value added at each step: $5,000 (materials) + $10,000 (assembly) + $1,000 (wholesale markup) + $2,000 (retail markup) = $18,000.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c2">
+            <div class="label">Check yourself</div>
+            <div class="q">A lumber mill sells $200 of wood to a furniture maker, who builds a chair and sells it to a retailer for $500, who then sells it to a customer for $800. What is this chair's contribution to GDP?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="false">$1,500 (summing every sale)</button>
+              <button class="opt-btn" data-correct="true">$800 (the final sale price only)</button>
+              <button class="opt-btn" data-correct="false">$200 (just the raw materials)</button>
+            </div>
+            <div class="checkin-feedback">Correct — only the final sale to the end customer, $800, counts toward GDP. Summing the value added at each stage (200+300+300=800) gives the identical answer.</div>
+          </div>
+        </div>
+        <div>
+          <div class="dist-card" style="margin-top:0;">
+            <div class="label" style="font-family:var(--font-mono); font-size:.72rem; text-transform:uppercase; color:var(--indigo); font-weight:700; margin-bottom:12px;">Try it — value-added calculator</div>
+            <p style="font-size:.8rem; color:var(--ink-soft); margin:0 0 10px;">Enter each stage's selling price, comma-separated, from first sale to final retail.</p>
+            <textarea id="vaInput" rows="2" style="width:100%; font-family:var(--font-mono); font-size:.9rem; padding:8px; border:1.5px solid var(--line); border-radius:8px; background:var(--paper-dim);">0.15, 0.46, 0.78, 1.00</textarea>
+            <div id="vaTable" style="margin-top:12px;"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         03 NOMINAL VS REAL GDP
+    ========================================================== -->
+    <section class="section" id="sec-nominalreal">
+      <div class="section-head">
+        <span class="section-tag">03</span>
+        <div>
+          <h2>Nominal vs. Real GDP &amp; the GDP Deflator</h2>
+          <p class="subhead">If prices rise 7% and output doesn't change at all, did the economy actually grow? GDP alone can't tell you — you need to strip out inflation first.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="callout formula">
+            <div class="label">Nominal vs. real GDP</div>
+            <div class="formula-body">
+              Nominal GDP<sub>t</sub> = P<sub>t</sub> × Q<sub>t</sub><br>
+              Real GDP<sub>t</sub> = P<sub>base</sub> × Q<sub>t</sub>
+            </div>
+            <p style="margin:10px 0 0; font-size:.85rem; color:var(--ink-soft);">Nominal GDP uses this year's prices. Real GDP uses base-year prices held fixed — so real GDP only moves when actual output moves.</p>
+          </div>
+
+          <div class="callout finance">
+            <div class="label">Worked example — an economy that only makes cars</div>
+            <p style="margin:0 0 8px;">2019: 300,000 cars at €18,750 each. 2020: still 300,000 cars, but the average price rises 7% to €20,062.50.</p>
+            <p style="margin:0 0 8px;">Nominal GDP<sub>2019</sub> = 300,000 × €18,750 = €5,625,000,000. Nominal GDP<sub>2020</sub> = 300,000 × €20,062.50 = €6,018,750,000 — an apparent 7% "growth."</p>
+            <p style="margin:0;">But Real GDP<sub>2020</sub> (valued at 2019 prices) = 300,000 × €18,750 = €5,625,000,000 — <strong>unchanged</strong>. The economy didn't grow at all; only prices did.</p>
+          </div>
+
+          <div class="callout formula">
+            <div class="label">The GDP deflator</div>
+            <div class="formula-body">GDP deflator = (Nominal GDP / Real GDP) × 100</div>
+            <p style="margin:10px 0 0; font-size:.85rem; color:var(--ink-soft);">A deflator of 107 means the overall price level is 7% above the base year. It's one of the broadest available gauges of economy-wide inflation.</p>
+          </div>
+
+          <div class="callout example">
+            <div class="label">Now add real growth on top</div>
+            <p style="margin:0;">If 2020 production actually rises 3% (to 309,000 cars) on top of the 7% price increase: Nominal GDP<sub>2020</sub> = 309,000 × €20,062.50 = €6,199,312,500. Real GDP<sub>2020</sub> = 309,000 × €18,750 = €5,793,750,000 (a genuine 3% increase). GDP deflator = (6,199,312,500 / 5,793,750,000) × 100 = <strong>107</strong> — correctly isolating the 7% inflation from the 3% real growth, even though nominal GDP rose by a blended 10.2%.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c3">
+            <div class="label">Check yourself</div>
+            <div class="q">Nominal GDP grew 9% this year, while the GDP deflator rose from 100 to 104. Approximately what was real GDP growth?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="false">13%</button>
+              <button class="opt-btn" data-correct="true">About 5%</button>
+              <button class="opt-btn" data-correct="false">9%</button>
+            </div>
+            <div class="checkin-feedback">Correct — real GDP growth ≈ nominal growth − inflation ≈ 9% − 4% = 5% (the exact figure is (1.09/1.04)−1 ≈ 4.8%).</div>
+          </div>
+        </div>
+        <div>
+          <div class="dist-card" style="margin-top:0;">
+            <div class="label" style="font-family:var(--font-mono); font-size:.72rem; text-transform:uppercase; color:var(--indigo); font-weight:700; margin-bottom:12px;">Try it — nominal/real GDP &amp; deflator calculator</div>
+            <div class="tvm-grid">
+              <div class="tvm-field"><label>Base price</label><input type="number" id="gdpPBase" value="18750" step="1"></div>
+              <div class="tvm-field"><label>Current price</label><input type="number" id="gdpPCurrent" value="20062.5" step="1"></div>
+              <div class="tvm-field"><label>Base quantity</label><input type="number" id="gdpQBase" value="300000" step="1"></div>
+              <div class="tvm-field"><label>Current quantity</label><input type="number" id="gdpQCurrent" value="309000" step="1"></div>
+            </div>
+            <div class="stat-readout-row" id="gdpOut">
+              <div class="stat-readout"><div class="k">Nominal GDP</div><div class="v">6.20B</div></div>
+              <div class="stat-readout"><div class="k">Real GDP</div><div class="v">5.79B</div></div>
+              <div class="stat-readout"><div class="k">Deflator</div><div class="v">107.0</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         04 COMPONENTS OF GDP
+    ========================================================== -->
+    <section class="section" id="sec-components">
+      <div class="section-head">
+        <span class="section-tag">04</span>
+        <div>
+          <h2>The Components of GDP</h2>
+          <p class="subhead">Four sectors, one formula — this is the single most-used equation in macroeconomics.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="callout formula">
+            <div class="label">The expenditure approach to GDP</div>
+            <div class="formula-body">GDP = C + I + G + (X − M)</div>
+          </div>
+
+          <div class="definition">
+            <div class="label">The four components</div>
+            <p style="margin-bottom:8px;"><strong>C — Consumption:</strong> household spending on final goods and services. Typically the largest single component, often over half of GDP.</p>
+            <p style="margin-bottom:8px;"><strong>I — Investment:</strong> business spending on capital goods (factories, equipment) plus changes in inventory. Driven mainly by interest rates and expected profitability.</p>
+            <p style="margin-bottom:8px;"><strong>G — Government spending:</strong> government purchases of final goods and services (not transfer payments, which were already excluded in Module 01).</p>
+            <p style="margin:0;"><strong>X − M — Net exports:</strong> exports minus imports — the country's trade balance.</p>
+          </div>
+
+          <div class="callout formula">
+            <div class="label">The consumption function</div>
+            <div class="formula-body">C = C(Y − T)</div>
+            <p style="margin:10px 0 0; font-size:.85rem; color:var(--ink-soft);">Consumption depends primarily on disposable income (GDP minus net taxes). The <strong>marginal propensity to consume (MPC)</strong> is the fraction of one extra dollar of income that gets spent; the rest is saved, so MPC + MPS = 1.</p>
+          </div>
+
+          <div class="callout finance">
+            <div class="label">Reading real-world consumption data</div>
+            <p style="margin:0;">Household consumption as a share of GDP: United States 68.0%, Mexico 64.8%, Italy 60.3%, Canada 57.9%, Japan 55.6%, France 53.9%, Germany 52.1%. These ratios approximate each country's average propensity to consume — the higher the number, the more sensitive that economy is to changes in household income, and the larger the effect of a tax cut on total spending.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c4">
+            <div class="label">Check yourself</div>
+            <div class="q">A household's marginal propensity to consume is 0.75. If it receives an extra $2,000 in income, how much does it save?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="false">$1,500</button>
+              <button class="opt-btn" data-correct="true">$500</button>
+              <button class="opt-btn" data-correct="false">$2,000</button>
+            </div>
+            <div class="checkin-feedback">Correct — MPS = 1 − MPC = 1 − 0.75 = 0.25. Saving = 0.25 × $2,000 = $500.</div>
+          </div>
+        </div>
+        <div>
+          <div class="dist-card" style="margin-top:0;">
+            <div class="label" style="font-family:var(--font-mono); font-size:.72rem; text-transform:uppercase; color:var(--indigo); font-weight:700; margin-bottom:12px;">Try it — GDP components calculator</div>
+            <div class="tvm-grid">
+              <div class="tvm-field"><label>C</label><input type="number" id="gcC" value="14000" step="10"></div>
+              <div class="tvm-field"><label>I</label><input type="number" id="gcI" value="3400" step="10"></div>
+              <div class="tvm-field"><label>G</label><input type="number" id="gcG" value="3900" step="10"></div>
+              <div class="tvm-field"><label>X − M</label><input type="number" id="gcNX" value="-700" step="10"></div>
+            </div>
+            <div id="gcChart" style="margin:14px 0;"></div>
+            <div class="tvm-result" id="gcResult">GDP = 20,600</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         05 SAVING, INVESTMENT & TRADE BALANCE
+    ========================================================== -->
+    <section class="section" id="sec-savingidentity">
+      <div class="section-head">
+        <span class="section-tag">05</span>
+        <div>
+          <h2>Saving, Investment, the Fiscal Balance &amp; the Trade Balance</h2>
+          <p class="subhead">One accounting identity ties a nation's private savings, government budget, and trade balance into a single unbreakable equation.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <p>Since total expenditure must equal total income, a bit of algebra on GDP = C + I + G + (X−M) produces a genuinely powerful identity:</p>
+
+          <div class="callout formula">
+            <div class="label">The fundamental macro identity</div>
+            <div class="formula-body">S = I + (G − T) + (X − M)</div>
+            <p style="margin:10px 0 0; font-size:.85rem; color:var(--ink-soft);">S = total private saving, T = net taxes. Rearranged: G − T = (S − I) − (X − M).</p>
+          </div>
+
+          <p>This says domestic private saving gets absorbed exactly three ways: funding <strong>business investment (I)</strong>, financing a <strong>government deficit (G−T)</strong>, or building up <strong>net claims on foreign economies</strong> via a trade surplus. If a country runs a trade <em>deficit</em> instead, it's effectively importing savings from abroad to make the identity balance.</p>
+
+          <div class="callout example">
+            <div class="label">Reading the rearranged identity</div>
+            <p style="margin:0;">A government running a fiscal deficit [(G−T)&gt;0] has exactly two possible offsetting sources, or some mix of both: the private sector saves more than it invests [(S−I)&gt;0], or the country runs a trade deficit [(X−M)&lt;0] and effectively borrows the difference from abroad. There's no fourth option — the identity always has to balance.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c5">
+            <div class="label">Check yourself</div>
+            <div class="q">A country's private saving is 22% of GDP and investment is 18% of GDP, with a balanced government budget (G=T). What must be true of its trade balance?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="true">It must be running a trade surplus of 4% of GDP</button>
+              <button class="opt-btn" data-correct="false">It must be running a trade deficit of 4% of GDP</button>
+              <button class="opt-btn" data-correct="false">Trade balance cannot be determined from this information</button>
+            </div>
+            <div class="checkin-feedback">Correct — S = I + (G−T) + (X−M) → 22 = 18 + 0 + (X−M) → (X−M) = 4% of GDP, a trade surplus, since excess private saving beyond investment must show up as net foreign lending.</div>
+          </div>
+        </div>
+        <div>
+          <div class="dist-card" style="margin-top:0;">
+            <div class="label" style="font-family:var(--font-mono); font-size:.72rem; text-transform:uppercase; color:var(--indigo); font-weight:700; margin-bottom:12px;">Try it — the identity solver</div>
+            <p style="font-size:.8rem; color:var(--ink-soft); margin:0 0 10px;">Enter any three values (as % of GDP); the fourth is solved for.</p>
+            <div class="tvm-grid">
+              <div class="tvm-field"><label>Saving (S)</label><input type="number" id="idS" value="22" step="0.5"></div>
+              <div class="tvm-field"><label>Investment (I)</label><input type="number" id="idI" value="18" step="0.5"></div>
+              <div class="tvm-field"><label>Fiscal balance (G−T)</label><input type="number" id="idGT" value="0" step="0.5"></div>
+            </div>
+            <div class="tvm-result" id="idResult">Trade balance (X−M) = 4.0%</div>
+            <div class="calc-steps" id="idSteps">22 = 18 + 0 + (X−M) → X−M = 4.0%</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         QUIZ
+    ========================================================== -->
+    <section class="section" id="sec-quiz" style="max-width:900px;">
+      <div class="section-head">
+        <span class="section-tag">Q</span>
+        <div>
+          <h2>Practice Quiz</h2>
+          <p class="subhead">20 questions across everything above. Answer, get instant feedback, and see your score at the end.</p>
+        </div>
+      </div>
+      <div class="quiz-shell" id="quizShell">
+        <!-- populated by JS -->
+      </div>
+    </section>
+
+    <footer class="footer">
+      Part 1 of 2 for the CFA Program prerequisite Economics reading on Aggregate Output, Prices, and Economic Growth. <a href="../ad-as-growth/index.html" style="color:var(--indigo);">Continue to Part 2: Aggregate Demand, Supply &amp; Growth →</a>
+    </footer>
+  </main>
+</div>
+
+<script src="../../diagnostics.js"></script>
+<script src="../bundle.js"></script>
+<script src="../../accessibility.js"></script>
+</body>
+</html>

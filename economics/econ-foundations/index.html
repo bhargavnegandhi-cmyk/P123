@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Economics Foundations — CFA Prerequisite Economics Toolkit</title>
+<link rel="stylesheet" href="../../shared-module-standard.css">
+</head>
+<body>
+
+<div class="mobile-bar">
+  <strong style="font-family:var(--font-display)">Scarcity → Choice</strong>
+  <button id="sidebarToggle">Menu</button>
+</div>
+
+<div class="app">
+  <nav class="sidebar" id="sidebar">
+    <a href="../index.html" class="brand">
+      <span class="brand-mark"></span>
+      <span class="brand-name">Economics<br>Foundations</span>
+    </a>
+    <div class="brand-sub">CFA Prerequisite · Economics · Module 00</div>
+
+    <div class="progress-wrap">
+      <div class="progress-label"><span>Progress</span><span id="progressPct">0%</span></div>
+      <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+    </div>
+
+    <div class="toc-group-label">The Core Problem</div>
+    <ul class="toc">
+      <li><a href="#sec-scarcity" data-sec="sec-scarcity"><span class="num">01</span>Scarcity &amp; Opportunity Cost</a></li>
+      <li><a href="#sec-factors" data-sec="sec-factors"><span class="num">02</span>Factors of Production &amp; Economic Systems</a></li>
+      <li><a href="#sec-ppf" data-sec="sec-ppf"><span class="num">03</span>The Production Possibilities Frontier</a></li>
+    </ul>
+
+    <div class="toc-group-label">Thinking Like an Economist</div>
+    <ul class="toc">
+      <li><a href="#sec-micromacro" data-sec="sec-micromacro"><span class="num">04</span>Microeconomics vs. Macroeconomics</a></li>
+      <li><a href="#sec-positivenormative" data-sec="sec-positivenormative"><span class="num">05</span>Positive vs. Normative Economics</a></li>
+      <li><a href="#sec-graphs" data-sec="sec-graphs"><span class="num">06</span>Reading a Graph — Movements vs. Shifts</a></li>
+    </ul>
+
+    <div class="toc-group-label">The Whole Economy</div>
+    <ul class="toc">
+      <li><a href="#sec-circularflow" data-sec="sec-circularflow"><span class="num">07</span>The Circular Flow of Income</a></li>
+    </ul>
+
+    <div class="toc-group-label">Check Yourself</div>
+    <ul class="toc">
+      <li><a href="#sec-quiz" data-sec="sec-quiz"><span class="num">Q</span>Practice Quiz (20)</a></li>
+    </ul>
+  </nav>
+
+  <main id="top">
+    <header class="hero">
+      <div class="eyebrow">CFA Program · Prerequisite Economics · Module 00</div>
+      <h1>Every economic question is really the same question, asked a thousand different ways.</h1>
+      <p class="lede">Module E1 opens with a demand function and an elasticity formula, and it assumes you already know why any of it matters. This module fills that gap — the true first-principles ideas underneath the entire Economics volume: the one problem economics exists to study, the tool used to visualize it, and the vocabulary that separates a market's decisions from a nation's.</p>
+    </header>
+
+    <!-- =========================================================
+         01 SCARCITY & OPPORTUNITY COST
+    ========================================================== -->
+    <section class="section" id="sec-scarcity">
+      <div class="section-head">
+        <span class="section-tag">01</span>
+        <div>
+          <h2>Scarcity &amp; Opportunity Cost</h2>
+          <p class="subhead">One sentence contains the entire reason economics exists as a field of study.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="definition">
+            <div class="label">The definition of economics</div>
+            <p style="margin:0;">Economics is the study of how individuals, firms, and societies choose to allocate <strong>scarce resources</strong> among <strong>competing, unlimited wants</strong>. Strip away every formula and graph in this entire toolkit, and this single sentence is what all of it is actually about.</p>
+          </div>
+
+          <p><strong>Scarcity</strong> doesn't mean "rare" in the everyday sense — it means that resources (time, money, labor, raw materials, land) are always limited relative to everything people would like to do with them. Even a billionaire faces scarcity: unlimited money doesn't buy unlimited time, attention, or the same afternoon spent two different ways.</p>
+
+          <div class="callout formula">
+            <div class="label">Opportunity cost</div>
+            <div class="formula-body" style="font-size:1rem;">The value of the next-best alternative given up when you make a choice</div>
+          </div>
+
+          <div class="callout example">
+            <div class="label">Outside example — a Saturday afternoon</div>
+            <p style="margin:0;">A student can spend Saturday afternoon studying for an exam or working a paid shift at $15/hour. Choosing to study doesn't just cost zero dollars — it costs the $15/hour (times however many hours) that working would have paid. That forgone wage is the real, economic cost of studying, even though no cash ever actually left the student's pocket.</p>
+          </div>
+
+          <div class="callout" style="border-left-color:var(--red);">
+            <p style="margin:0; font-size:.9rem;"><strong>This is the single idea threading through the entire Economics volume.</strong> It's the reason a farmer chooses wheat over corn (Module E1), the reason a monopolist's price includes a markup (Module E2), and the entire foundation of comparative advantage and international trade (Module E6) — one country's cost of producing a good is always measured in terms of what it gave up to produce it.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c1">
+            <div class="label">Check yourself</div>
+            <div class="q">A company spends $2 million building a new factory using cash it already had on hand — no loan, no interest paid. Does this decision have an opportunity cost?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="true">Yes — the $2 million could have been invested elsewhere, and that forgone return is the opportunity cost</button>
+              <button class="opt-btn" data-correct="false">No — since no interest was paid, there is no cost at all</button>
+            </div>
+            <div class="checkin-feedback">Correct — opportunity cost exists whenever a resource (here, cash) is used one way instead of another, regardless of whether interest or an explicit cash cost was involved.</div>
+          </div>
+        </div>
+        <div>
+          <div class="dist-card" style="margin-top:0;">
+            <div class="label" style="font-family:var(--font-mono); font-size:.72rem; text-transform:uppercase; color:var(--indigo); font-weight:700; margin-bottom:12px;">Try it — opportunity cost calculator</div>
+            <p style="font-size:.8rem; color:var(--ink-soft); margin:0 0 10px;">Choosing Option A means giving up Option B.</p>
+            <div class="tvm-grid">
+              <div class="tvm-field"><label>Value of Option A</label><input type="number" id="ocA" value="0" step="10"></div>
+              <div class="tvm-field"><label>Value of Option B (forgone)</label><input type="number" id="ocB" value="240" step="10"></div>
+            </div>
+            <div class="tvm-result" id="ocResult">Opportunity cost of choosing A = 240</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         02 FACTORS OF PRODUCTION & ECONOMIC SYSTEMS
+    ========================================================== -->
+    <section class="section" id="sec-factors">
+      <div class="section-head">
+        <span class="section-tag">02</span>
+        <div>
+          <h2>Factors of Production &amp; Economic Systems</h2>
+          <p class="subhead">Everything ever produced traces back to four ingredients, combined in one of a few basic ways.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="definition">
+            <div class="label">The four factors of production</div>
+            <p style="margin-bottom:8px;"><strong>Land:</strong> natural resources — soil, minerals, water, the physical space itself.</p>
+            <p style="margin-bottom:8px;"><strong>Labor:</strong> human effort, physical and mental, applied to production.</p>
+            <p style="margin-bottom:8px;"><strong>Capital:</strong> tools, machinery, buildings, and infrastructure used to produce other goods — not to be confused with money itself, which is just a claim used to acquire capital.</p>
+            <p style="margin:0;"><strong>Entrepreneurship:</strong> the willingness to combine the other three factors, take on risk, and organize production in pursuit of profit.</p>
+          </div>
+
+          <div class="definition">
+            <div class="label">Three ways a society can organize its answers</div>
+            <p style="margin-bottom:8px;"><strong>Market economy:</strong> decisions about what to produce, how, and for whom are driven by prices, set by the interaction of supply and demand, with resources privately owned.</p>
+            <p style="margin-bottom:8px;"><strong>Command economy:</strong> a central authority plans and directs production, ownership, and distribution — prices are set by decree, not by market forces.</p>
+            <p style="margin:0;"><strong>Mixed economy:</strong> markets handle most allocation decisions, with government intervention in specific areas (regulation, public goods, redistribution). In practice, nearly every real-world economy is a mixed economy — the real question is only ever <em>how much</em> mixing.</p>
+          </div>
+
+          <div class="callout example">
+            <div class="label">A useful mental spectrum, not three separate boxes</div>
+            <p style="margin:0;">Rather than three discrete categories, think of a continuous spectrum — heavily planned economies at one end, minimally regulated free markets at the other, with essentially every real country's economy landing somewhere in between and shifting position over time as policy changes.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c2">
+            <div class="label">Check yourself</div>
+            <div class="q">A factory's assembly-line robots are an example of which factor of production?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="false">Labor</button>
+              <button class="opt-btn" data-correct="true">Capital</button>
+              <button class="opt-btn" data-correct="false">Land</button>
+            </div>
+            <div class="checkin-feedback">Correct — machinery and equipment used to produce other goods is capital, distinct from the money used to buy it.</div>
+          </div>
+        </div>
+        <div>
+          <div class="callout" style="margin-top:0;">
+            <table class="exhibit" style="margin:0;">
+              <tr><th>Factor</th><th>Example</th></tr>
+              <tr><td>Land</td><td class="num">Farmland, oil deposits</td></tr>
+              <tr><td>Labor</td><td class="num">A factory worker's time</td></tr>
+              <tr><td>Capital</td><td class="num">Machinery, buildings</td></tr>
+              <tr><td>Entrepreneurship</td><td class="num">Starting the company</td></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         03 THE PRODUCTION POSSIBILITIES FRONTIER
+    ========================================================== -->
+    <section class="section" id="sec-ppf">
+      <div class="section-head">
+        <span class="section-tag">03</span>
+        <div>
+          <h2>The Production Possibilities Frontier (PPF)</h2>
+          <p class="subhead">One curve, and every core idea in economics — scarcity, trade-offs, efficiency, and growth — shows up on it at once.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <p>Picture an economy that can only produce two things — say, tractors and wheat. The <strong>production possibilities frontier</strong> plots every combination of the two goods this economy can produce, given its current resources and technology, if it uses every resource as efficiently as possible.</p>
+
+          <div class="chart-card">
+            <div id="ppfChart"></div>
+            <div class="test-tabs" id="ppfTabs" style="margin-top:12px;">
+              <button class="test-tab active" data-mode="onCurve">Point on the curve</button>
+              <button class="test-tab" data-mode="inside">Point inside the curve</button>
+              <button class="test-tab" data-mode="outside">Point outside the curve</button>
+              <button class="test-tab" data-mode="growth">Economic growth</button>
+            </div>
+            <p id="ppfCaption" style="font-size:.85rem; color:var(--ink-soft); margin:10px 0 0;"></p>
+          </div>
+
+          <div class="definition">
+            <div class="label">Reading the three zones</div>
+            <p style="margin-bottom:8px;"><strong>On the curve:</strong> production is efficient — every resource is fully and effectively employed. Moving along the curve means trading off one good for the other; the curve's outward bow reflects that the opportunity cost of each additional tractor rises as the economy pushes further into producing them (specialized wheat land is progressively less suited to tractor factories).</p>
+            <p style="margin-bottom:8px;"><strong>Inside the curve:</strong> production is inefficient — resources are unemployed or misallocated. The economy could produce more of <em>both</em> goods without sacrificing anything, simply by using its existing resources better.</p>
+            <p style="margin:0;"><strong>Outside the curve:</strong> unattainable, given current resources and technology. The only way to reach a point out here is genuine <strong>economic growth</strong> — more resources, better technology — which shifts the entire curve outward.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c3">
+            <div class="label">Check yourself</div>
+            <div class="q">An economy is producing at a point clearly inside its PPF. What does this indicate?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="false">The economy is operating at maximum efficiency</button>
+              <button class="opt-btn" data-correct="true">Resources are unemployed or misallocated — more of both goods could be produced</button>
+              <button class="opt-btn" data-correct="false">The point is impossible to produce at all</button>
+            </div>
+            <div class="checkin-feedback">Correct — a point inside the frontier means the economy isn't using its resources fully or efficiently, since more of both goods could be produced by reallocating or fully employing them.</div>
+          </div>
+        </div>
+        <div>
+          <div class="callout" style="margin-top:0;">
+            <p style="margin:0; font-size:.9rem;"><strong>This is where "growth" in Module E3 literally comes from</strong> — an outward-shifting PPF, driven by more capital, more labor, or better technology, is the same production function (Y = A×F(L,K)) from the Aggregate Output module, just drawn as a picture instead of an equation.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         04 MICRO VS MACRO
+    ========================================================== -->
+    <section class="section" id="sec-micromacro">
+      <div class="section-head">
+        <span class="section-tag">04</span>
+        <div>
+          <h2>Microeconomics vs. Macroeconomics</h2>
+          <p class="subhead">Same toolkit, radically different scale — one zooms into a single market, the other pulls back to an entire nation.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="definition">
+            <div class="label">Two branches, two scales</div>
+            <p style="margin-bottom:8px;"><strong>Microeconomics</strong> studies individual decision-makers — a single household, a single firm, a single market — and how they respond to prices, costs, and incentives.</p>
+            <p style="margin:0;"><strong>Macroeconomics</strong> studies the economy as a whole — aggregate output, the overall price level, national employment, growth — built up from the combined behavior of every micro-level decision happening at once.</p>
+          </div>
+
+          <div class="callout example">
+            <div class="label">The same underlying question, asked at two different scales</div>
+            <p style="margin:0;">"Why did the price of gasoline rise 10% this month?" is a microeconomic question — about one specific market. "Why did the overall price level across the entire economy rise 10% this year?" is a macroeconomic question — about inflation, an economy-wide phenomenon. Same word, "price," completely different scale of analysis.</p>
+          </div>
+
+          <p>Everything already built in this toolkit sorts cleanly into one branch or the other. <strong>Module E1</strong> (demand and supply) and <strong>Module E2</strong> (market structures) are both microeconomics — a single market, a single firm's pricing decision. <strong>Modules E3 through E7</strong> — GDP, business cycles, monetary policy, trade, exchange rates — are all macroeconomics, studying the economy in aggregate.</p>
+
+          <div class="checkin" data-checkin="c4">
+            <div class="label">Check yourself</div>
+            <div class="q">\"What determines the unemployment rate for an entire country?\" is an example of which branch of economics?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="false">Microeconomics</button>
+              <button class="opt-btn" data-correct="true">Macroeconomics</button>
+            </div>
+            <div class="checkin-feedback">Correct — a question about an economy-wide aggregate, like the national unemployment rate, is macroeconomics.</div>
+          </div>
+        </div>
+        <div>
+          <div class="callout" style="margin-top:0;">
+            <table class="exhibit" style="margin:0;">
+              <tr><th>Microeconomics</th><th>Macroeconomics</th></tr>
+              <tr><td class="num">E1: Demand &amp; Supply</td><td class="num">E3: GDP &amp; Growth</td></tr>
+              <tr><td class="num">E2: Firms &amp; Markets</td><td class="num">E4: Business Cycles</td></tr>
+              <tr><td class="num"></td><td class="num">E5: Monetary/Fiscal Policy</td></tr>
+              <tr><td class="num"></td><td class="num">E6–E7: Trade &amp; Currency</td></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         05 POSITIVE VS NORMATIVE ECONOMICS
+    ========================================================== -->
+    <section class="section" id="sec-positivenormative">
+      <div class="section-head">
+        <span class="section-tag">05</span>
+        <div>
+          <h2>Positive vs. Normative Economics</h2>
+          <p class="subhead">"What is" and "what should be" are two completely different kinds of statement — and mixing them up is where most economic arguments actually go wrong.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="definition">
+            <div class="label">Two kinds of economic statement</div>
+            <p style="margin-bottom:8px;"><strong>Positive economics:</strong> objective, testable statements about how the economy actually works — "if" and "then," fact-based, in principle provable or disprovable with data.</p>
+            <p style="margin:0;"><strong>Normative economics:</strong> value-based statements about how things <em>ought</em> to be — opinions and policy judgments that can't be settled by data alone, because they depend on values.</p>
+          </div>
+
+          <div class="callout example">
+            <div class="label">The same topic, both ways</div>
+            <p style="margin:0 0 8px;"><strong>Positive:</strong> "Raising the minimum wage by $2 is associated with a measurable increase in unemployment among entry-level workers in this industry." — a claim about cause and effect that data could, in principle, confirm or refute.</p>
+            <p style="margin:0;"><strong>Normative:</strong> "The government should raise the minimum wage to ensure a livable income." — a value judgment about what <em>ought</em> to happen, which no dataset alone can settle, since it depends on how much weight you place on different people's competing interests.</p>
+          </div>
+
+          <div class="callout" style="border-left-color:var(--red);">
+            <p style="margin:0; font-size:.9rem;"><strong>Why the distinction matters for an analyst:</strong> economic research and models are genuinely most useful, and most credible, when they stick to positive claims — what the data shows, what a model predicts. The moment a "should" sneaks into an argument, it's carrying values and preferences the data itself can't verify, however confidently it's stated.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c5">
+            <div class="label">Check yourself</div>
+            <div class="q">"Higher tariffs on imported steel will raise domestic steel prices." Is this a positive or normative statement?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="true">Positive — it's a testable factual claim about cause and effect</button>
+              <button class="opt-btn" data-correct="false">Normative — it expresses an opinion about what should happen</button>
+            </div>
+            <div class="checkin-feedback">Correct — this is a factual, testable prediction about an economic outcome, not a value judgment about whether tariffs are good policy — that would be the normative version.</div>
+          </div>
+        </div>
+        <div>
+          <div class="callout" style="margin-top:0;">
+            <p style="margin:0; font-size:.9rem;"><strong>A quick test:</strong> if a statement contains (or clearly implies) the word "should," it's almost certainly normative. If it's phrased as "if X, then Y" and could in principle be checked against real data, it's positive.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         06 MOVEMENTS VS SHIFTS
+    ========================================================== -->
+    <section class="section" id="sec-graphs">
+      <div class="section-head">
+        <span class="section-tag">06</span>
+        <div>
+          <h2>Reading an Economic Graph — Movements vs. Shifts</h2>
+          <p class="subhead">This one distinction trips up more students than anything else in the entire subject — and it shows up in literally every module ahead.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="definition">
+            <div class="label">The rule</div>
+            <p style="margin-bottom:8px;"><strong>Movement along a curve:</strong> caused specifically by a change in whichever variable sits on that curve's own axis. On a demand curve (price vs. quantity), a change in <em>price</em> moves you along the existing curve.</p>
+            <p style="margin:0;"><strong>Shift of the entire curve:</strong> caused by a change in <em>anything else</em> — income, tastes, the price of a related good, expectations about the future. The whole curve relocates to a new position.</p>
+          </div>
+
+          <div class="chart-card">
+            <div id="shiftChart"></div>
+            <div class="test-tabs" id="shiftTabs" style="margin-top:12px;">
+              <button class="test-tab active" data-mode="movement">Price changes</button>
+              <button class="test-tab" data-mode="shiftright">Income rises (shift right)</button>
+              <button class="test-tab" data-mode="shiftleft">Preferences weaken (shift left)</button>
+            </div>
+            <p id="shiftCaption" style="font-size:.85rem; color:var(--ink-soft); margin:10px 0 0;"></p>
+          </div>
+
+          <div class="callout example">
+            <div class="label">Why this exact confusion shows up everywhere ahead</div>
+            <p style="margin:0;">This is precisely the logic behind Module E1's demand curve, Module E3's AD/AS framework, and Module E5's money market — in every single case, the variable graphed on that curve's own axis causes a movement <em>along</em> it, while every other variable causes the whole curve to <em>shift</em>. Learn this rule once, correctly, and it applies without modification to every diagram in the rest of this toolkit.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c6">
+            <div class="label">Check yourself</div>
+            <div class="q">On a standard demand curve (price on the vertical axis, quantity on the horizontal), a rise in consumer income causes:</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="false">A movement along the existing demand curve</button>
+              <button class="opt-btn" data-correct="true">A shift of the entire demand curve</button>
+              <button class="opt-btn" data-correct="false">No change to the demand curve at all</button>
+            </div>
+            <div class="checkin-feedback">Correct — income isn't the variable on either axis of a standard price-quantity demand curve, so a change in income shifts the whole curve rather than moving along it.</div>
+          </div>
+        </div>
+        <div>
+          <div class="callout" style="margin-top:0;">
+            <p style="margin:0; font-size:.9rem;"><strong>A simple test you can always apply:</strong> ask "is this variable printed on one of the two axes?" If yes, it causes movement along the curve. If no, it causes the entire curve to shift.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         07 THE CIRCULAR FLOW OF INCOME
+    ========================================================== -->
+    <section class="section" id="sec-circularflow">
+      <div class="section-head">
+        <span class="section-tag">07</span>
+        <div>
+          <h2>The Circular Flow of Income</h2>
+          <p class="subhead">Four groups, endlessly exchanging money and goods — and the whole macroeconomy is just this picture, scaled up to a national level.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <p>The full circular flow model has four participants: <strong>households</strong>, <strong>firms</strong>, the <strong>government</strong>, and the <strong>foreign sector</strong> (the rest of the world). Money and goods circulate continuously between them, and — as in Module 3's national income identity — every flow out of one sector is a flow into another.</p>
+
+          <div class="chart-card">
+            <div id="circularFlowChart"></div>
+            <p style="font-size:.82rem; color:var(--ink-soft); margin:10px 0 0;">Households supply labor and capital to firms in exchange for wages and profits (top loop), and spend that income buying goods and services back from firms (bottom loop). The government collects taxes from both and injects spending back in; the foreign sector absorbs exports and supplies imports.</p>
+          </div>
+
+          <div class="definition">
+            <div class="label">Reading the diagram</div>
+            <p style="margin-bottom:8px;"><strong>Households → Firms:</strong> labor and capital flow to firms; consumption spending flows to firms in exchange for goods and services.</p>
+            <p style="margin-bottom:8px;"><strong>Firms → Households:</strong> wages, rent, interest, and profit flow back to households as income.</p>
+            <p style="margin-bottom:8px;"><strong>Government:</strong> collects taxes from both households and firms; injects spending back into the economy (public services, transfers, purchases).</p>
+            <p style="margin:0;"><strong>Foreign sector:</strong> receives payment for imports; pays for the domestic economy's exports.</p>
+          </div>
+
+          <div class="callout" style="border-left-color:var(--red);">
+            <p style="margin:0; font-size:.9rem;"><strong>This is literally where GDP = C + I + G + (X−M) comes from.</strong> Each term in that formula is just one of the flows in this diagram: C is the household-to-firm consumption flow, G is the government injection, and (X−M) is the net flow to and from the foreign sector. The equation from Module E3 is this picture, written algebraically.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c7">
+            <div class="label">Check yourself</div>
+            <div class="q">In the circular flow model, wages paid by firms to households represent a flow in exchange for:</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="true">Labor and capital supplied by households to firms</button>
+              <button class="opt-btn" data-correct="false">Goods and services purchased by households</button>
+              <button class="opt-btn" data-correct="false">Taxes paid to the government</button>
+            </div>
+            <div class="checkin-feedback">Correct — wages are firms' payment to households for the labor (and capital) households supply, the reverse flow of the goods-and-services loop.</div>
+          </div>
+        </div>
+        <div>
+          <div class="callout" style="margin-top:0;">
+            <p style="margin:0; font-size:.9rem;">Every module from here forward — GDP, business cycles, monetary policy, trade — is really just a closer look at one specific pipe in this same diagram.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         QUIZ
+    ========================================================== -->
+    <section class="section" id="sec-quiz" style="max-width:900px;">
+      <div class="section-head">
+        <span class="section-tag">Q</span>
+        <div>
+          <h2>Practice Quiz</h2>
+          <p class="subhead">20 questions across everything above. Answer, get instant feedback, and see your score at the end.</p>
+        </div>
+      </div>
+      <div class="quiz-shell" id="quizShell">
+        <!-- populated by JS -->
+      </div>
+    </section>
+
+    <footer class="footer">
+      Module 00 — the true first-principles foundation beneath the CFA Program prerequisite Economics readings. When this feels solid, move on to <a href="../demand-supply/index.html" style="color:var(--indigo);">Module E1: Topics in Demand and Supply Analysis →</a>
+    </footer>
+  </main>
+</div>
+
+<script src="../../diagnostics.js"></script>
+<script src="../bundle.js"></script>
+<script src="../../accessibility.js"></script>
+</body>
+</html>

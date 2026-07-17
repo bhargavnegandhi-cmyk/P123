@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Introduction to the Firm and Market Organization — CFA Prerequisite Economics Toolkit</title>
+<link rel="stylesheet" href="../../shared-module-standard.css">
+</head>
+<body>
+
+<div class="mobile-bar">
+  <strong style="font-family:var(--font-display)">1 vs. Many</strong>
+  <button id="sidebarToggle">Menu</button>
+</div>
+
+<div class="app">
+
+  <!-- ============ SIDEBAR ============ -->
+  <nav class="sidebar" id="sidebar">
+    <a href="../index.html" class="brand">
+      <span class="brand-mark"></span>
+      <span class="brand-name">The Firm &amp;<br>Market Organization</span>
+    </a>
+    <div class="brand-sub">CFA Prerequisite · Economics · Module 2</div>
+
+    <div class="progress-wrap">
+      <div class="progress-label"><span>Progress</span><span id="progressPct">0%</span></div>
+      <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+    </div>
+
+    <div class="toc-group-label">The Landscape</div>
+    <ul class="toc">
+      <li><a href="#sec-structures" data-sec="sec-structures"><span class="num">01</span>Four Market Structures</a></li>
+      <li><a href="#sec-elasticityrevenue" data-sec="sec-elasticityrevenue"><span class="num">02</span>Elasticity &amp; Revenue</a></li>
+      <li><a href="#sec-surplus" data-sec="sec-surplus"><span class="num">03</span>Consumer Surplus</a></li>
+    </ul>
+
+    <div class="toc-group-label">Perfect Competition</div>
+    <ul class="toc">
+      <li><a href="#sec-pcequilibrium" data-sec="sec-pcequilibrium"><span class="num">04</span>Optimal Price &amp; Output</a></li>
+      <li><a href="#sec-pclongrun" data-sec="sec-pclongrun"><span class="num">05</span>Cost Curves &amp; Long-Run Equilibrium</a></li>
+    </ul>
+
+    <div class="toc-group-label">Monopoly</div>
+    <ul class="toc">
+      <li><a href="#sec-monopolypower" data-sec="sec-monopolypower"><span class="num">06</span>Sources of Market Power</a></li>
+      <li><a href="#sec-monopolyoptimal" data-sec="sec-monopolyoptimal"><span class="num">07</span>Optimal Price &amp; Output</a></li>
+      <li><a href="#sec-pricediscrimination" data-sec="sec-pricediscrimination"><span class="num">08</span>Price Discrimination</a></li>
+    </ul>
+
+    <div class="toc-group-label">Check Yourself</div>
+    <ul class="toc">
+      <li><a href="#sec-quiz" data-sec="sec-quiz"><span class="num">Q</span>Practice Quiz (20)</a></li>
+    </ul>
+  </nav>
+
+  <!-- ============ MAIN ============ -->
+  <main id="top">
+
+    <header class="hero">
+      <div class="eyebrow">CFA Program · Prerequisite Economics · Module 2</div>
+      <h1>How many sellers does it take to change everything?</h1>
+      <p class="lede">One farmer selling corn among thousands of identical competitors has zero control over price. One company owning the only natural gas pipeline on an island has enormous control over price. This module is about that entire spectrum — how the number of sellers, and how different their products are, reshapes every pricing decision a firm makes.</p>
+    </header>
+
+    <!-- =========================================================
+         01 FOUR MARKET STRUCTURES
+    ========================================================== -->
+    <section class="section" id="sec-structures">
+      <div class="section-head">
+        <span class="section-tag">01</span>
+        <div>
+          <h2>The Four Market Structures</h2>
+          <p class="subhead">Economists sort every market into one of four buckets — and five simple questions tell you which bucket you're in.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="definition">
+            <div class="label">Five factors that determine market structure</div>
+            <p style="margin:0;">1. The number and relative size of sellers &nbsp;2. How differentiated the product is &nbsp;3. How much pricing power sellers hold &nbsp;4. How strong the barriers to entry/exit are &nbsp;5. How much non-price competition (advertising, branding) exists.</p>
+          </div>
+
+          <table class="exhibit" style="margin:14px 0;">
+            <tr><th>Structure</th><th>Sellers</th><th>Product</th><th>Barriers to Entry</th><th>Pricing Power</th></tr>
+            <tr><td>Perfect competition</td><td>Many</td><td>Identical</td><td>Very low</td><td>None</td></tr>
+            <tr><td>Monopolistic competition</td><td>Many</td><td>Differentiated</td><td>Low</td><td>Some</td></tr>
+            <tr><td>Oligopoly</td><td>Few</td><td>Similar or differentiated</td><td>High</td><td>Some to considerable</td></tr>
+            <tr><td>Monopoly</td><td>One</td><td>Unique</td><td>Very high</td><td>Considerable</td></tr>
+          </table>
+
+          <div class="callout example">
+            <div class="label">Outside example — corn vs. Rolex</div>
+            <p style="margin:0;">A bushel of corn from Farmer Brown is indistinguishable from a bushel from Farmer Lopez — buyers don't care whose field it came from, so neither farmer has any pricing power. A Rolex, by contrast, has spent a century building brand loyalty so strong that customers believe nothing else compares — giving Rolex real pricing power despite plenty of other watches existing. Same broad category (a tradeable good), completely different market structure.</p>
+          </div>
+
+          <p>This module works through <strong>perfect competition</strong> and <strong>monopoly</strong> in real mathematical depth — the two clean endpoints of the spectrum. Monopolistic competition and oligopoly sit between them, and get their fuller mathematical treatment later in the curriculum, but the table above already tells you the qualitative story: as you move from many sellers toward one, pricing power climbs steadily.</p>
+
+          <div class="checkin" data-checkin="c1">
+            <div class="label">Check yourself</div>
+            <div class="q">A market has thousands of small firms selling nearly identical products, with very low barriers to entry and no firm able to influence price. This is:</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="true">Perfect competition</button>
+              <button class="opt-btn" data-correct="false">Oligopoly</button>
+              <button class="opt-btn" data-correct="false">Monopoly</button>
+            </div>
+            <div class="checkin-feedback">Correct — many sellers, homogeneous products, low barriers, and zero individual pricing power are the textbook signature of perfect competition.</div>
+          </div>
+        </div>
+        <div>
+          <div class="callout" style="margin-top:0;">
+            <p style="margin:0; font-size:.9rem;"><strong>Why an analyst cares:</strong> a firm's market structure directly predicts its long-run profitability. Highly competitive markets grind economic profit down toward zero; markets with real pricing power can sustain profit far longer — which is exactly the kind of judgment a fundamental analyst has to make about any company.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         02 ELASTICITY & REVENUE
+    ========================================================== -->
+    <section class="section" id="sec-elasticityrevenue">
+      <div class="section-head">
+        <span class="section-tag">02</span>
+        <div>
+          <h2>Elasticity &amp; Total Revenue</h2>
+          <p class="subhead">One formula tells you, in advance, whether raising your price will help or hurt your total revenue.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <table class="exhibit" style="margin:0 0 14px;">
+            <tr><th>Elasticity</th><th>Price rises</th><th>Price falls</th></tr>
+            <tr><td>Elastic (|E|&gt;1)</td><td>TR falls</td><td>TR rises</td></tr>
+            <tr><td>Unit elastic (|E|=1)</td><td>TR unchanged</td><td>TR unchanged</td></tr>
+            <tr><td>Inelastic (|E|&lt;1)</td><td>TR rises</td><td>TR falls</td></tr>
+          </table>
+
+          <p>This connects directly to marginal revenue: <strong>total revenue is maximized exactly where marginal revenue is zero.</strong> As long as MR is positive, selling one more unit still adds to total revenue, so TR keeps climbing. Once MR turns negative, each additional unit actually subtracts from TR.</p>
+
+          <div class="callout formula">
+            <div class="label">The bridge between MR and elasticity</div>
+            <div class="formula-body">MR = P × [1 − (1/E<sub>P</sub>)]</div>
+            <p style="margin:10px 0 0; font-size:.85rem; color:var(--ink-soft);">This single formula is the hinge this whole module swings on — it connects a firm's pricing decision directly to how sensitive its customers are.</p>
+          </div>
+
+          <div class="callout finance">
+            <div class="label">Worked example — should this firm raise its price?</div>
+            <p style="margin:0;">A firm's product has price elasticity of demand of −0.6 (inelastic). Using the table above: raising price on an inelastic good <em>increases</em> total revenue, since the percentage drop in quantity is smaller than the percentage rise in price. A firm with market research showing inelastic demand has a straightforward lever to pull.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c2">
+            <div class="label">Check yourself</div>
+            <div class="q">A company's price elasticity of demand is estimated at −2.2. If the company raises its price, what happens to total revenue?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="true">Total revenue falls</button>
+              <button class="opt-btn" data-correct="false">Total revenue rises</button>
+              <button class="opt-btn" data-correct="false">Total revenue is unaffected</button>
+            </div>
+            <div class="checkin-feedback">Correct — |E|=2.2 &gt; 1, elastic demand, so a price increase causes a proportionally larger drop in quantity, and total revenue falls.</div>
+          </div>
+        </div>
+        <div>
+          <div class="callout" style="margin-top:0;">
+            <p style="margin:0; font-size:.9rem;">Notice this is the exact same elasticity concept from Module 1 — nothing new to learn here, just a new use for a tool you already have: predicting revenue, not just quantity.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         03 CONSUMER SURPLUS
+    ========================================================== -->
+    <section class="section" id="sec-surplus">
+      <div class="section-head">
+        <span class="section-tag">03</span>
+        <div>
+          <h2>Consumer Surplus</h2>
+          <p class="subhead">The demand curve isn't just about quantity — it's a map of exactly how much buyers value each additional unit.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <p>A demand curve slopes downward because the value of one more unit falls the more you already have. That means the demand curve is secretly a <strong>marginal value curve</strong> — at any quantity, the height of the curve is the most a buyer would pay for just one more unit. Since every buyer actually pays only the market price, most of them are getting a bargain relative to what they'd have been willing to pay.</p>
+
+          <div class="definition">
+            <div class="label">Consumer surplus, defined</div>
+            <p style="margin:0;">The difference between total value (the full area under the demand curve, up to the quantity purchased) and total expenditure (price × quantity). Graphically, it's the triangular area above the price line and below the demand curve.</p>
+          </div>
+
+          <div class="callout finance">
+            <div class="label">Worked example</div>
+            <p style="margin:0 0 8px;">Market demand: QD = 180 − 2P. At price 65, quantity demanded = 180 − 2(65) = 50. Inverting the demand function: P = 90 − 0.5QD, so the price-axis intercept is 90.</p>
+            <p style="margin:0;">Consumer surplus = ½ × base × height = ½ × 50 × (90−65) = ½ × 50 × 25 = <strong>625</strong>.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c3">
+            <div class="label">Check yourself</div>
+            <div class="q">A demand curve has a price-axis intercept of 40. At the current market price of 25, quantity demanded is 30 units. What is consumer surplus?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="false">750</button>
+              <button class="opt-btn" data-correct="true">225</button>
+              <button class="opt-btn" data-correct="false">1,200</button>
+            </div>
+            <div class="checkin-feedback">Correct — CS = ½ × base × height = ½ × 30 × (40−25) = ½ × 30 × 15 = 225.</div>
+          </div>
+        </div>
+        <div>
+          <div class="dist-card" style="margin-top:0;">
+            <div class="label" style="font-family:var(--font-mono); font-size:.72rem; text-transform:uppercase; color:var(--indigo); font-weight:700; margin-bottom:12px;">Try it — consumer surplus calculator</div>
+            <p style="font-size:.8rem; color:var(--ink-soft); margin:0 0 10px;">Demand: QD = a − bP</p>
+            <div class="tvm-grid">
+              <div class="tvm-field"><label>a (intercept)</label><input type="number" id="csA" value="180" step="1"></div>
+              <div class="tvm-field"><label>b (slope)</label><input type="number" id="csB" value="2" step="0.1"></div>
+              <div class="tvm-field"><label>Price P</label><input type="number" id="csP" value="65" step="1"></div>
+            </div>
+            <div id="csChart" style="margin:14px 0;"></div>
+            <div class="tvm-result" id="csResult">Consumer surplus = 625</div>
+            <div class="calc-steps" id="csSteps">Q=50, price intercept=90, CS=½(50)(25)=625</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         04 PERFECT COMPETITION - OPTIMAL PRICE & OUTPUT
+    ========================================================== -->
+    <section class="section" id="sec-pcequilibrium">
+      <div class="section-head">
+        <span class="section-tag">04</span>
+        <div>
+          <h2>Optimal Price &amp; Output in Perfect Competition</h2>
+          <p class="subhead">Combine market demand and market supply, and the price is no longer a choice — it's an outcome.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <p>Set the market demand and market supply functions equal to each other, and you get the market's equilibrium price and quantity — the point where every willing buyer and every willing seller is satisfied simultaneously.</p>
+
+          <div class="callout finance">
+            <div class="label">Worked example — solving for market equilibrium</div>
+            <p style="margin:0 0 8px;">Demand: P = 25 − 0.5QD. Supply: P = −2 + 0.2QS. Setting them equal:</p>
+            <div class="formula-body" style="font-family:var(--font-mono); background:var(--paper-dim); padding:10px 14px; border-radius:8px; margin:8px 0;">25 − 0.5Q* = −2 + 0.2Q* &nbsp;→&nbsp; 27 = 0.7Q* &nbsp;→&nbsp; Q* = 38.57</div>
+            <p style="margin:0;">Plugging back into either equation: P* = 25 − 0.5(38.57) = <strong>5.71</strong>. With many firms in the market, no single one of them can move this price — each perfectly competitive firm simply takes 5.71 as given.</p>
+          </div>
+
+          <div class="definition">
+            <div class="label">The individual firm's demand curve</div>
+            <p style="margin:0;">Even though the <em>market</em> demand curve slopes downward, each individual firm inside a perfectly competitive market faces a perfectly horizontal (flat) demand curve at the market price — it can sell any quantity it wants at 5.71, but nothing at all above that price. This gives the clean result: <strong>Price = Average Revenue = Marginal Revenue</strong> for every firm in perfect competition.</p>
+          </div>
+
+          <div class="callout" style="border-left-color:var(--red);">
+            <div class="label" style="font-family:var(--font-mono); font-size:.72rem; text-transform:uppercase; color:var(--red); font-weight:700; margin-bottom:8px;">Economic profit ≠ accounting profit</div>
+            <p style="margin:0;"><strong>Economic cost</strong> includes every opportunity cost — what the owner's labor, land, and capital could have earned in their next-best use, not just explicit cash payments. <strong>Economic profit</strong> = TR − total economic cost. A business can show positive accounting profit while economic profit is actually zero or negative, once you properly charge for the owner's forgone alternatives.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c4">
+            <div class="label">Check yourself</div>
+            <div class="q">Market demand is P = 40 − Q, market supply is P = 4 + Q. What is the equilibrium quantity?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="true">18</button>
+              <button class="opt-btn" data-correct="false">22</button>
+              <button class="opt-btn" data-correct="false">36</button>
+            </div>
+            <div class="checkin-feedback">Correct — 40−Q = 4+Q → 36 = 2Q → Q=18. (Price would then be 40−18=22.)</div>
+          </div>
+        </div>
+        <div>
+          <div class="dist-card" style="margin-top:0;">
+            <div class="label" style="font-family:var(--font-mono); font-size:.72rem; text-transform:uppercase; color:var(--indigo); font-weight:700; margin-bottom:12px;">Try it — market equilibrium solver</div>
+            <p style="font-size:.8rem; color:var(--ink-soft); margin:0 0 10px;">Demand: P = a − bQ &nbsp;·&nbsp; Supply: P = c + dQ</p>
+            <div class="tvm-grid">
+              <div class="tvm-field"><label>Demand a</label><input type="number" id="eqA" value="25" step="0.5"></div>
+              <div class="tvm-field"><label>Demand b</label><input type="number" id="eqB" value="0.5" step="0.1"></div>
+              <div class="tvm-field"><label>Supply c</label><input type="number" id="eqC" value="-2" step="0.5"></div>
+              <div class="tvm-field"><label>Supply d</label><input type="number" id="eqD" value="0.2" step="0.1"></div>
+            </div>
+            <div class="tvm-result" id="eqResult">Q* = 38.57, P* = 5.71</div>
+            <div class="calc-steps" id="eqSteps">25 − 0.5Q = −2 + 0.2Q → Q* = 38.57</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         05 COST CURVES & LONG-RUN EQUILIBRIUM
+    ========================================================== -->
+    <section class="section" id="sec-pclongrun">
+      <div class="section-head">
+        <span class="section-tag">05</span>
+        <div>
+          <h2>Cost Curves &amp; Long-Run Equilibrium</h2>
+          <p class="subhead">Short-run profit is an invitation. In the long run, that invitation gets accepted until profit disappears entirely.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="callout formula">
+            <div class="label">Average and marginal cost</div>
+            <div class="formula-body">AC = TC/Q &nbsp;&nbsp;&nbsp; MC = ΔTC/ΔQ</div>
+            <p style="margin:10px 0 0; font-size:.85rem; color:var(--ink-soft);">Both are U-shaped: costs fall as production becomes more efficient, then rise again as the law of diminishing returns takes hold. MC always crosses AC exactly at AC's minimum — a mathematical necessity, not a coincidence.</p>
+          </div>
+
+          <p>In the <strong>short run</strong>, a perfectly competitive firm earning economic profit is a magnet — other entrepreneurs see the opportunity and pile in. As more firms enter, market supply shifts right, and the market price gets pushed down. This continues exactly until:</p>
+
+          <div class="callout formula">
+            <div class="label">Long-run equilibrium condition</div>
+            <div class="formula-body">Price = Marginal Cost = Minimum Average Cost</div>
+            <p style="margin:10px 0 0; font-size:.85rem; color:var(--ink-soft);">At this point, economic profit is exactly zero — the firm earns only its normal return (the opportunity cost of capital), with no incentive left for new entrants to join or existing firms to leave.</p>
+          </div>
+
+          <div class="callout example">
+            <div class="label">Watching it happen</div>
+            <p style="margin:0;">If the market price starts at €5.71 (above minimum average cost), profit-seeking new entrants keep arriving, supply keeps expanding, and price keeps falling — say, to €4.50 — until it lands exactly on the minimum point of every firm's average cost curve. From that point on, there's no more economic profit left to attract anyone new.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c5">
+            <div class="label">Check yourself</div>
+            <div class="q">A perfectly competitive market is currently earning positive economic profit. What happens over the long run?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="true">New entrants arrive, supply rises, price falls until profit reaches zero</button>
+              <button class="opt-btn" data-correct="false">Existing firms raise prices to capture more profit</button>
+              <button class="opt-btn" data-correct="false">Nothing changes, since perfect competition has no entry</button>
+            </div>
+            <div class="checkin-feedback">Correct — positive economic profit attracts new entrants (perfect competition has very low barriers to entry), which drives supply up and price down until profit is competed away entirely.</div>
+          </div>
+        </div>
+        <div>
+          <div class="callout" style="margin-top:0;">
+            <p style="margin:0; font-size:.9rem;"><strong>Why this matters for an analyst:</strong> if a company operates in a genuinely perfectly competitive industry, don't expect its economic profit margin to persist — competition will erode it toward zero over time, however good the business looks today.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         06 SOURCES OF MARKET POWER
+    ========================================================== -->
+    <section class="section" id="sec-monopolypower">
+      <div class="section-head">
+        <span class="section-tag">06</span>
+        <div>
+          <h2>Monopoly — Sources of Market Power</h2>
+          <p class="subhead">A monopoly needs a genuine, durable reason competitors can't simply show up.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="definition">
+            <div class="label">Four ways monopoly power actually gets built</div>
+            <p style="margin-bottom:8px;"><strong>Legal protection:</strong> a patent or copyright directly blocks competitors from copying the product.</p>
+            <p style="margin-bottom:8px;"><strong>Control of a critical resource:</strong> De Beers' historical control of South African diamond mines let it manage cut-diamond prices for decades.</p>
+            <p style="margin-bottom:8px;"><strong>Economies of scale ("natural monopoly"):</strong> a single large power plant is dramatically cheaper per unit than many small generators — the government often authorizes exactly one seller (water, electricity) because duplicating the infrastructure would waste resources.</p>
+            <p style="margin:0;"><strong>Network effects:</strong> a product gets more valuable as more people use it. Once a word processor becomes the standard everyone already knows how to use, that familiarity alone becomes a barrier new entrants can't easily overcome.</p>
+          </div>
+
+          <div class="callout formula">
+            <div class="label">The monopolist's demand &amp; marginal revenue</div>
+            <div class="formula-body">QD = a − bP &nbsp;⟺&nbsp; P = a/b − (1/b)QD<br>MR = a/b − (2/b)QD</div>
+            <p style="margin:10px 0 0; font-size:.85rem; color:var(--ink-soft);">Notice: for any linear demand curve, the marginal revenue curve starts at the same price-intercept but falls <strong>twice as steeply</strong>. This single fact drives everything that follows.</p>
+          </div>
+
+          <div class="callout example">
+            <div class="label">Why twice as steep</div>
+            <p style="margin:0;">Selling one more unit forces the monopolist to lower price on <em>every</em> unit sold, not just the newest one — a "double penalty" compared to a price-taking competitive firm, which is exactly what makes MR fall faster than demand itself.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c6">
+            <div class="label">Check yourself</div>
+            <div class="q">A monopolist's demand curve is QD = 500 − 2P, with a price-axis intercept of 250. What is the price-axis intercept of its marginal revenue curve?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="true">250 — the same as demand</button>
+              <button class="opt-btn" data-correct="false">500 — twice the demand intercept</button>
+              <button class="opt-btn" data-correct="false">125 — half the demand intercept</button>
+            </div>
+            <div class="checkin-feedback">Correct — MR always shares the same price-axis intercept as demand; it's the slope that doubles, not the starting point.</div>
+          </div>
+        </div>
+        <div>
+          <div class="callout" style="margin-top:0;">
+            <table class="exhibit" style="margin:0;">
+              <tr><th>Source</th><th>Example</th></tr>
+              <tr><td>Patent/copyright</td><td class="num">Pharmaceuticals</td></tr>
+              <tr><td>Resource control</td><td class="num">De Beers diamonds</td></tr>
+              <tr><td>Economies of scale</td><td class="num">Electric utilities</td></tr>
+              <tr><td>Network effects</td><td class="num">Dominant software</td></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         07 MONOPOLY OPTIMAL PRICE & OUTPUT
+    ========================================================== -->
+    <section class="section" id="sec-monopolyoptimal">
+      <div class="section-head">
+        <span class="section-tag">07</span>
+        <div>
+          <h2>Optimal Price &amp; Output in Monopoly</h2>
+          <p class="subhead">Same MR = MC rule as perfect competition. Wildly different result, because MR is no longer just the price.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="callout finance">
+            <div class="label">Worked example — a natural gas monopoly on a remote island</div>
+            <p style="margin:0 0 8px;">Demand: QD = 400 − 0.5P, or P = 800 − 2QD. Total cost: TC = 20,000 + 50Q + 3Q². This gives:</p>
+            <div class="formula-body" style="font-family:var(--font-mono); background:var(--paper-dim); padding:10px 14px; border-radius:8px; margin:8px 0; font-size:.88rem;">
+              MR = 800 − 4Q<br>
+              MC = 50 + 6Q
+            </div>
+            <p style="margin:0 0 8px;">Setting MR = MC: 800 − 4Q = 50 + 6Q → 750 = 10Q → <strong>Q* = 75</strong>.</p>
+            <p style="margin:0 0 8px;">Price from the demand curve: P* = 800 − 2(75) = <strong>€650</strong>.</p>
+            <p style="margin:0;">Total profit = TR − TC = 800(75) − 2(75²) − [20,000 + 50(75) + 3(75²)] = <strong>€8,125</strong>.</p>
+          </div>
+
+          <p>One subtle but important fact: the profit-maximizing point <em>always</em> lands where demand is <strong>elastic</strong>. This has to be true — MR is only positive in the elastic region of a linear demand curve, and MC is essentially always positive, so their intersection can only occur where MR &gt; 0.</p>
+
+          <div class="callout formula">
+            <div class="label">Solving for price directly from elasticity</div>
+            <div class="formula-body">P × [1 − (1/E)] = MC &nbsp;→&nbsp; P = MC / [1 − (1/E)]</div>
+            <p style="margin:10px 0 0; font-size:.85rem; color:var(--ink-soft);">If a firm knows its marginal cost and its demand elasticity, it can skip the full demand/cost derivation entirely and solve for the optimal price in one step.</p>
+          </div>
+
+          <div class="callout example">
+            <div class="label">Worked example — pricing from elasticity alone</div>
+            <p style="margin:0;">Marginal cost is constant at 75; market research estimates elasticity at 1.5. P = 75/(1 − 1/1.5) = 75/(1/3) = <strong>€225</strong>.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c7">
+            <div class="label">Check yourself</div>
+            <div class="q">Why must a profit-maximizing monopolist always operate in the elastic region of its demand curve?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="false">Because regulators require it</button>
+              <button class="opt-btn" data-correct="true">Because MR is only positive where demand is elastic, and MC is always positive at the optimum</button>
+              <button class="opt-btn" data-correct="false">Because consumers refuse to buy in the inelastic region</button>
+            </div>
+            <div class="checkin-feedback">Correct — since MR=MC requires MR to be positive (matching a positive MC), and MR is only positive on the elastic portion of a linear demand curve, profit maximization can only occur there.</div>
+          </div>
+        </div>
+        <div>
+          <div class="dist-card" style="margin-top:0;">
+            <div class="label" style="font-family:var(--font-mono); font-size:.72rem; text-transform:uppercase; color:var(--indigo); font-weight:700; margin-bottom:12px;">Try it — monopoly optimizer</div>
+            <p style="font-size:.8rem; color:var(--ink-soft); margin:0 0 10px;">Demand: P = a − bQ &nbsp;·&nbsp; Cost: TC = F + cQ + dQ²</p>
+            <div class="tvm-grid">
+              <div class="tvm-field"><label>Demand a</label><input type="number" id="mpA" value="800" step="10"></div>
+              <div class="tvm-field"><label>Demand b</label><input type="number" id="mpB" value="2" step="0.1"></div>
+              <div class="tvm-field"><label>Fixed cost F</label><input type="number" id="mpF" value="20000" step="100"></div>
+              <div class="tvm-field"><label>Cost c</label><input type="number" id="mpC" value="50" step="1"></div>
+              <div class="tvm-field"><label>Cost d</label><input type="number" id="mpD" value="3" step="0.1"></div>
+            </div>
+            <div class="stat-readout-row" id="mpOut">
+              <div class="stat-readout"><div class="k">Q*</div><div class="v">75</div></div>
+              <div class="stat-readout"><div class="k">P*</div><div class="v">650</div></div>
+              <div class="stat-readout"><div class="k">Profit</div><div class="v">8,125</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         08 PRICE DISCRIMINATION
+    ========================================================== -->
+    <section class="section" id="sec-pricediscrimination">
+      <div class="section-head">
+        <span class="section-tag">08</span>
+        <div>
+          <h2>Price Discrimination &amp; Regulated Monopoly</h2>
+          <p class="subhead">If a monopolist could charge every customer their exact maximum willingness to pay, it would capture every last drop of consumer surplus. Real pricing strategies chase that ideal in three different ways.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="definition">
+            <div class="label">Three degrees of price discrimination</div>
+            <p style="margin-bottom:8px;"><strong>First-degree:</strong> charge each individual customer their own maximum willingness to pay. Rare in practice — requires knowing each buyer's exact demand — but a two-part tariff (membership fee + per-unit price) can approximate it.</p>
+            <p style="margin-bottom:8px;"><strong>Second-degree:</strong> let customers self-select via a menu — volume discounts, bundling, coupons — so heavy users and light users effectively pay different average prices.</p>
+            <p style="margin:0;"><strong>Third-degree:</strong> segment customers by an observable trait — a student software license vs. a professional one, or airline tickets priced differently based on how far in advance they're booked.</p>
+          </div>
+
+          <div class="callout finance">
+            <div class="label">Worked example — a two-part tariff at a health club</div>
+            <p style="margin:0 0 8px;">Nicole's monthly demand: QD = 20 − 4P. Marginal cost per visit is a constant €2.</p>
+            <p style="margin:0 0 8px;">At P=MC=2: QD = 20 − 4(2) = <strong>12 visits/month</strong>. Inverse demand: P = 5 − 0.25QD, so the price intercept is 5.</p>
+            <p style="margin:0 0 8px;">Consumer surplus at this price: ½ × 12 × (5−2) = <strong>€18</strong>.</p>
+            <p style="margin:0;">The club can extract this entire surplus with a two-part tariff: charge a <strong>€18 monthly membership fee</strong> plus <strong>€2 per visit</strong>. Nicole is no better or worse off than paying a flat per-visit price with no membership — but the club has converted her entire consumer surplus into revenue.</p>
+          </div>
+
+          <div class="definition">
+            <div class="label">Regulating a natural monopoly — three pricing options</div>
+            <p style="margin-bottom:8px;"><strong>Unregulated (P<sub>M</sub>):</strong> the monopolist's own profit-maximizing price — highest price, lowest quantity.</p>
+            <p style="margin-bottom:8px;"><strong>Regulated at average cost (P<sub>R</sub>):</strong> the common real-world compromise — the firm earns a fair, normal return, no more.</p>
+            <p style="margin:0;"><strong>Marginal-cost pricing (P<sub>C</sub>):</strong> the theoretically efficient competitive-market outcome, but this price often falls below average cost for a natural monopoly, requiring a government subsidy to keep the firm viable.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c8">
+            <div class="label">Check yourself</div>
+            <div class="q">A software company sells a "Student Edition" for $50 and a "Professional Edition" for $500, with the same underlying features but a dataset-size restriction on the cheaper version. This is:</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="false">First-degree price discrimination</button>
+              <button class="opt-btn" data-correct="false">Second-degree price discrimination</button>
+              <button class="opt-btn" data-correct="true">Third-degree price discrimination</button>
+            </div>
+            <div class="checkin-feedback">Correct — segmenting customers by an observable trait (student status) into different prices is third-degree price discrimination.</div>
+          </div>
+        </div>
+        <div>
+          <div class="dist-card" style="margin-top:0;">
+            <div class="label" style="font-family:var(--font-mono); font-size:.72rem; text-transform:uppercase; color:var(--indigo); font-weight:700; margin-bottom:12px;">Try it — two-part tariff calculator</div>
+            <p style="font-size:.8rem; color:var(--ink-soft); margin:0 0 10px;">Demand: QD = a − bP &nbsp;·&nbsp; Marginal cost MC</p>
+            <div class="tvm-grid">
+              <div class="tvm-field"><label>a</label><input type="number" id="tpA" value="20" step="1"></div>
+              <div class="tvm-field"><label>b</label><input type="number" id="tpB" value="4" step="0.1"></div>
+              <div class="tvm-field"><label>MC</label><input type="number" id="tpMC" value="2" step="0.1"></div>
+            </div>
+            <div class="stat-readout-row" id="tpOut">
+              <div class="stat-readout"><div class="k">Quantity</div><div class="v">12</div></div>
+              <div class="stat-readout"><div class="k">Membership fee</div><div class="v">€18</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         QUIZ
+    ========================================================== -->
+    <section class="section" id="sec-quiz" style="max-width:900px;">
+      <div class="section-head">
+        <span class="section-tag">Q</span>
+        <div>
+          <h2>Practice Quiz</h2>
+          <p class="subhead">20 questions across everything above. Answer, get instant feedback, and see your score at the end.</p>
+        </div>
+      </div>
+
+      <div class="quiz-shell" id="quizShell">
+        <!-- populated by JS -->
+      </div>
+    </section>
+
+    <footer class="footer">
+      Built as a companion study tool for the CFA Program prerequisite Economics reading on Introduction to the Firm and Market Organization. Work through it alongside your primary curriculum — this isn't a replacement for official CFA Institute materials.
+    </footer>
+
+  </main>
+</div>
+
+<script src="../../diagnostics.js"></script>
+<script src="../bundle.js"></script>
+<script src="../../accessibility.js"></script>
+</body>
+</html>

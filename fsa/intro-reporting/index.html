@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Introduction to Financial Reporting — CFA Prerequisite FSA Toolkit</title>
+<link rel="stylesheet" href="../../shared-module-standard.css">
+</head>
+<body>
+
+<div class="mobile-bar">
+  <strong style="font-family:var(--font-display)">IASB / FASB</strong>
+  <button id="sidebarToggle">Menu</button>
+</div>
+
+<div class="app">
+  <nav class="sidebar" id="sidebar">
+    <a href="../index.html" class="brand">
+      <span class="brand-mark"></span>
+      <span class="brand-name">Introduction to<br>Financial Reporting</span>
+    </a>
+    <div class="brand-sub">CFA Prerequisite · FSA · Module 1</div>
+
+    <div class="progress-wrap">
+      <div class="progress-label"><span>Progress</span><span id="progressPct">0%</span></div>
+      <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+    </div>
+
+    <div class="toc-group-label">Who Makes the Rules</div>
+    <ul class="toc">
+      <li><a href="#sec-standardsetters" data-sec="sec-standardsetters"><span class="num">01</span>Standard-Setters vs. Regulators</a></li>
+      <li><a href="#sec-objective" data-sec="sec-objective"><span class="num">02</span>The Objective of Financial Reporting</a></li>
+    </ul>
+
+    <div class="toc-group-label">What Makes Information Useful</div>
+    <ul class="toc">
+      <li><a href="#sec-fundamental" data-sec="sec-fundamental"><span class="num">03</span>Relevance &amp; Faithful Representation</a></li>
+      <li><a href="#sec-enhancing" data-sec="sec-enhancing"><span class="num">04</span>Enhancing Characteristics &amp; Constraints</a></li>
+    </ul>
+
+    <div class="toc-group-label">The Formal Building Blocks</div>
+    <ul class="toc">
+      <li><a href="#sec-elements" data-sec="sec-elements"><span class="num">05</span>The Elements of Financial Statements</a></li>
+      <li><a href="#sec-assumptions" data-sec="sec-assumptions"><span class="num">06</span>Accrual Accounting &amp; Going Concern</a></li>
+      <li><a href="#sec-measurement" data-sec="sec-measurement"><span class="num">07</span>Bases of Measurement</a></li>
+    </ul>
+
+    <div class="toc-group-label">Check Yourself</div>
+    <ul class="toc">
+      <li><a href="#sec-quiz" data-sec="sec-quiz"><span class="num">Q</span>Practice Quiz (20)</a></li>
+    </ul>
+  </nav>
+
+  <main id="top">
+    <header class="hero">
+      <div class="eyebrow">CFA Program · Prerequisite Financial Statement Analysis · Module 1</div>
+      <h1>Someone has to decide what "profit" is allowed to mean.</h1>
+      <p class="lede">Module 00 built the mechanics — the accounting equation, accrual accounting, debits and credits. This module steps back and asks who actually writes the rulebook those mechanics follow, what "useful" financial information even means, and the formal vocabulary — elements, recognition, measurement — that every later module in this volume will lean on constantly.</p>
+    </header>
+
+    <!-- =========================================================
+         01 STANDARD-SETTERS VS REGULATORS
+    ========================================================== -->
+    <section class="section" id="sec-standardsetters">
+      <div class="section-head">
+        <span class="section-tag">01</span>
+        <div>
+          <h2>Standard-Setters vs. Regulators</h2>
+          <p class="subhead">One group writes the rules. A completely different group has the legal power to enforce them.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="definition">
+            <div class="label">Two different jobs, easy to confuse</div>
+            <p style="margin-bottom:8px;"><strong>Standard-setting bodies</strong> — like the IASB and FASB — are private-sector, self-regulated organizations of accountants, auditors, and academics who actually write accounting standards. They have no legal power on their own.</p>
+            <p style="margin:0;"><strong>Regulatory authorities</strong> — like the SEC in the US, or similar bodies elsewhere — have the legal authority to require companies to actually follow those standards, and to enforce compliance within their jurisdiction.</p>
+          </div>
+
+          <div class="callout example">
+            <div class="label">Why this distinction genuinely matters</div>
+            <p style="margin:0;">Without a regulator's recognition, a standard-setting body's rules are just a well-written suggestion. The IASB writes IFRS; it's the individual countries' regulators who decide whether companies within their borders are legally required to follow it. Regulators generally retain the power to overrule the standard-setters within their own jurisdiction, even though this is rare in practice.</p>
+          </div>
+
+          <div class="definition">
+            <div class="label">The two most influential standard-setters</div>
+            <p style="margin-bottom:8px;"><strong>IASB</strong> (International Accounting Standards Board): issues IFRS, used by the vast majority of countries globally.</p>
+            <p style="margin:0;"><strong>FASB</strong> (Financial Accounting Standards Board): issues US GAAP, used in the United States, recognized as authoritative by the SEC.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c1">
+            <div class="label">Check yourself</div>
+            <div class="q">Which of these best describes the relationship between the IASB and national regulatory authorities?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="false">The IASB has direct legal power to force companies to comply with IFRS in every country</button>
+              <button class="opt-btn" data-correct="true">The IASB writes the standards, but regulatory authorities must recognize and enforce them for the standards to have legal force</button>
+              <button class="opt-btn" data-correct="false">Regulatory authorities write the standards, and the IASB enforces them</button>
+            </div>
+            <div class="checkin-feedback">Correct — standard-setting bodies like the IASB draft the rules, but it's the regulatory authorities in each jurisdiction that give those rules actual legal force.</div>
+          </div>
+        </div>
+        <div>
+          <div class="callout" style="margin-top:0;">
+            <table class="exhibit" style="margin:0;">
+              <tr><th></th><th>Standard-setter</th><th>Regulator</th></tr>
+              <tr><td>Example</td><td class="num">IASB, FASB</td><td class="num">SEC (US)</td></tr>
+              <tr><td>Writes the rules?</td><td class="num">Yes</td><td class="num">No</td></tr>
+              <tr><td>Legal enforcement power?</td><td class="num">No</td><td class="num">Yes</td></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         02 THE OBJECTIVE OF FINANCIAL REPORTING
+    ========================================================== -->
+    <section class="section" id="sec-objective">
+      <div class="section-head">
+        <span class="section-tag">02</span>
+        <div>
+          <h2>The Objective of Financial Reporting</h2>
+          <p class="subhead">Every rule in every accounting standard ultimately traces back to a single sentence.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="callout formula">
+            <div class="label">The IASB's stated objective</div>
+            <div class="formula-body" style="font-size:.95rem;">Provide financial information useful to current and potential resource providers in making decisions</div>
+          </div>
+
+          <p>"Resource providers" mainly means investors and lenders — the people deciding whether to give the company money, in exchange for equity or debt. Everything else in the conceptual framework — every qualitative characteristic, every measurement rule — exists in service of that one goal.</p>
+
+          <div class="definition">
+            <div class="label">What users actually need to know</div>
+            <p style="margin-bottom:6px;"><strong>Financial position:</strong> what resources (assets) the company has, and what it owes (liabilities).</p>
+            <p style="margin-bottom:6px;"><strong>Financial performance:</strong> how and why that position changed over the period.</p>
+            <p style="margin:0;"><strong>Cash position:</strong> where cash came from, and where it went.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c2">
+            <div class="label">Check yourself</div>
+            <div class="q">According to the IASB's Conceptual Framework, who are the primary intended users of financial reports?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="true">Existing and potential investors, lenders, and other creditors</button>
+              <button class="opt-btn" data-correct="false">Only company management and internal staff</button>
+              <button class="opt-btn" data-correct="false">Only government tax authorities</button>
+            </div>
+            <div class="checkin-feedback">Correct — the framework centers on resource providers: investors, lenders, and other creditors deciding whether to commit capital to the entity.</div>
+          </div>
+        </div>
+        <div>
+          <div class="callout" style="margin-top:0;">
+            <p style="margin:0; font-size:.9rem;"><strong>Why this framing matters for an analyst:</strong> financial statements aren't designed purely for valuation — they're designed for the broader decision needs of resource providers. Useful as they are for valuation, that's a byproduct, not the primary design goal.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         03 RELEVANCE & FAITHFUL REPRESENTATION
+    ========================================================== -->
+    <section class="section" id="sec-fundamental">
+      <div class="section-head">
+        <span class="section-tag">03</span>
+        <div>
+          <h2>Relevance &amp; Faithful Representation</h2>
+          <p class="subhead">Two fundamental qualities decide whether a number is even worth reporting at all — everything else is secondary.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="definition">
+            <div class="label">The two fundamental qualitative characteristics</div>
+            <p style="margin-bottom:8px;"><strong>Relevance:</strong> information that could actually affect a user's decision — either by helping predict the future (predictive value) or by confirming/correcting a past judgment (confirmatory value).</p>
+            <p style="margin:0;"><strong>Faithful representation:</strong> information that is complete, neutral, and free from error — it genuinely depicts the economic reality, without bias.</p>
+          </div>
+
+          <div class="callout example">
+            <div class="label">Materiality — relevance's practical filter</div>
+            <p style="margin:0;">Information is <strong>material</strong> if leaving it out or getting it wrong could actually change a user's decision. Materiality is why a $500 rounding difference doesn't need its own disclosure at a company with $50 billion in revenue, but the exact same $500 might matter enormously at a small startup.</p>
+          </div>
+
+          <div class="callout finance">
+            <div class="label">Worked example — the tension between the two</div>
+            <p style="margin:0;">A company makes a credit sale and must simultaneously estimate an expense for potential bad debts it hasn't collected yet. Including that estimate makes the numbers more <em>faithfully representative</em> of the real economic period — but since the estimate isn't certain until later, it sacrifices some <em>verifiability</em>. This is a genuinely common trade-off: information can rarely satisfy every quality at once.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c3">
+            <div class="label">Check yourself</div>
+            <div class="q">Information that is complete, neutral, and free from error is said to have which fundamental qualitative characteristic?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="false">Relevance</button>
+              <button class="opt-btn" data-correct="true">Faithful representation</button>
+              <button class="opt-btn" data-correct="false">Timeliness</button>
+            </div>
+            <div class="checkin-feedback">Correct — faithful representation specifically requires information to be complete, neutral, and free from error.</div>
+          </div>
+        </div>
+        <div>
+          <div class="callout" style="margin-top:0;">
+            <p style="margin:0; font-size:.9rem;"><strong>A useful memory hook:</strong> relevance asks "does this matter?" Faithful representation asks "is this actually true?" A number can be perfectly accurate and still irrelevant, or highly relevant and still misleading — you genuinely need both.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         04 ENHANCING CHARACTERISTICS & CONSTRAINTS
+    ========================================================== -->
+    <section class="section" id="sec-enhancing">
+      <div class="section-head">
+        <span class="section-tag">04</span>
+        <div>
+          <h2>Enhancing Characteristics &amp; Constraints</h2>
+          <p class="subhead">Four more qualities that make already-relevant, already-faithful information even more useful — plus the real-world limits on how far you can push all of this.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="definition">
+            <div class="label">The four enhancing characteristics</div>
+            <p style="margin-bottom:6px;"><strong>Comparability:</strong> presented consistently enough, over time and across companies, that similarities and differences are actually visible.</p>
+            <p style="margin-bottom:6px;"><strong>Verifiability:</strong> independent, knowledgeable observers would agree the information faithfully represents what it claims to.</p>
+            <p style="margin-bottom:6px;"><strong>Timeliness:</strong> available to decision-makers before it becomes stale.</p>
+            <p style="margin:0;"><strong>Understandability:</strong> clearly and concisely presented for users with reasonable business knowledge, willing to study it with diligence.</p>
+          </div>
+
+          <div class="callout" style="border-left-color:var(--red);">
+            <div class="label" style="font-family:var(--font-mono); font-size:.72rem; text-transform:uppercase; color:var(--red); font-weight:700; margin-bottom:8px;">The pervasive constraint — cost</div>
+            <p style="margin:0;">Producing and using financial information is never free. Ideally, the benefit of disclosing something exceeds the cost of gathering, verifying, and presenting it. This is exactly why financial statements don't try to capture absolutely everything — like a workforce's creativity or a strong corporate culture — even when those things genuinely drive value.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c4">
+            <div class="label">Check yourself</div>
+            <div class="q">A company changes its accounting policy every year, making it hard to compare this year's results to prior years. Which enhancing characteristic is most directly compromised?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="true">Comparability</button>
+              <button class="opt-btn" data-correct="false">Timeliness</button>
+              <button class="opt-btn" data-correct="false">Understandability</button>
+            </div>
+            <div class="checkin-feedback">Correct — inconsistent presentation across periods directly undermines comparability, making it harder to identify genuine trends versus accounting changes.</div>
+          </div>
+        </div>
+        <div>
+          <div class="callout" style="margin-top:0;">
+            <p style="margin:0; font-size:.9rem;">The enhancing characteristics have no fixed priority order — sometimes timeliness wins out over perfect verifiability (an early estimate beats a late certainty), and the "right" balance depends on the specific situation.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         05 THE ELEMENTS OF FINANCIAL STATEMENTS
+    ========================================================== -->
+    <section class="section" id="sec-elements">
+      <div class="section-head">
+        <span class="section-tag">05</span>
+        <div>
+          <h2>The Elements of Financial Statements</h2>
+          <p class="subhead">Five formal categories. Every number in every financial statement belongs to exactly one of them.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="definition">
+            <div class="label">Three elements measuring financial position</div>
+            <p style="margin-bottom:8px;"><strong>Assets:</strong> a present economic resource controlled by the entity, from a past event, with the potential to produce future economic benefit.</p>
+            <p style="margin-bottom:8px;"><strong>Liabilities:</strong> a present obligation to transfer an economic resource, from a past event, that the entity has no practical ability to avoid.</p>
+            <p style="margin:0;"><strong>Equity:</strong> assets minus liabilities — the residual interest left for owners.</p>
+          </div>
+
+          <div class="definition">
+            <div class="label">Two elements measuring performance</div>
+            <p style="margin-bottom:8px;"><strong>Income:</strong> increases in assets or decreases in liabilities that increase equity — other than contributions from owners. Includes both <em>revenue</em> (from ordinary operations) and <em>gains</em> (from other activities, like selling surplus equipment).</p>
+            <p style="margin:0;"><strong>Expenses:</strong> decreases in assets or increases in liabilities that decrease equity — other than distributions to owners. Includes ordinary costs and <em>losses</em> (like an asset impairment).</p>
+          </div>
+
+          <div class="callout example">
+            <div class="label">Why "income" is a broader word than "revenue"</div>
+            <p style="margin:0;">A software company's <strong>revenue</strong> comes from subscription sales — its ordinary business. If it also sells an old office building for more than its book value, that's a <strong>gain</strong> — still income, but not revenue, since selling buildings isn't what the company is actually in business to do.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c5">
+            <div class="label">Check yourself</div>
+            <div class="q">A retailer sells surplus warehouse equipment it no longer needs, for more than the equipment's book value. How should this be classified?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="false">Revenue, since it increased the company's income</button>
+              <button class="opt-btn" data-correct="true">A gain — income from a non-ordinary activity, not revenue</button>
+              <button class="opt-btn" data-correct="false">A liability</button>
+            </div>
+            <div class="checkin-feedback">Correct — this is a gain, since selling surplus equipment isn't the retailer's ordinary operating activity; it's still income, but distinct from revenue.</div>
+          </div>
+        </div>
+        <div>
+          <div class="dist-card" style="margin-top:0;">
+            <div class="label" style="font-family:var(--font-mono); font-size:.72rem; text-transform:uppercase; color:var(--indigo); font-weight:700; margin-bottom:12px;">Try it — classify the element</div>
+            <p style="font-size:.8rem; color:var(--ink-soft); margin:0 0 10px;">Click each item to see which element it belongs to.</p>
+            <div id="elementClassifier"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         06 ACCRUAL ACCOUNTING & GOING CONCERN
+    ========================================================== -->
+    <section class="section" id="sec-assumptions">
+      <div class="section-head">
+        <span class="section-tag">06</span>
+        <div>
+          <h2>Underlying Assumptions — Accrual Accounting &amp; Going Concern</h2>
+          <p class="subhead">Two quiet assumptions sit underneath every financial statement — change either one, and the numbers mean something completely different.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="definition">
+            <div class="label">The two underlying assumptions</div>
+            <p style="margin-bottom:8px;"><strong>Accrual accounting:</strong> transactions are reflected when they actually occur, not necessarily when cash moves — already the core idea from Module 00.</p>
+            <p style="margin:0;"><strong>Going concern:</strong> the company is assumed to continue operating into the foreseeable future — not about to be liquidated.</p>
+          </div>
+
+          <div class="callout example">
+            <div class="label">Why going concern actually changes the numbers</div>
+            <p style="margin:0;">Inventory valued assuming a company can sell it over a normal sales cycle is worth one thing. The exact same inventory, valued assuming the whole company must liquidate everything within a week, is often worth considerably less — a forced, rushed sale rarely fetches full value. Whether going concern holds fundamentally changes how assets should be valued.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c6">
+            <div class="label">Check yourself</div>
+            <div class="q">A company is on the verge of bankruptcy and expects to liquidate all its assets within the next month. Should its financial statements still assume going concern?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="false">Yes, going concern always applies regardless of circumstances</button>
+              <button class="opt-btn" data-correct="true">No — if liquidation is genuinely expected, the going concern assumption no longer holds, and different valuation is required</button>
+              <button class="opt-btn" data-correct="false">Going concern only applies to public companies</button>
+            </div>
+            <div class="checkin-feedback">Correct — when liquidation is genuinely expected, the going concern assumption breaks down, and assets typically need to be valued on a different (often lower) basis.</div>
+          </div>
+        </div>
+        <div>
+          <div class="callout" style="margin-top:0;">
+            <p style="margin:0; font-size:.9rem;">Every ratio, every valuation model built on financial statements implicitly assumes going concern holds — it's rarely stated out loud, but it's foundational to nearly all standard analysis.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         07 BASES OF MEASUREMENT
+    ========================================================== -->
+    <section class="section" id="sec-measurement">
+      <div class="section-head">
+        <span class="section-tag">07</span>
+        <div>
+          <h2>Bases of Measurement</h2>
+          <p class="subhead">"How much is this worth?" has at least six defensible answers — and the one a company picks changes the number that ends up on the page.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="definition">
+            <div class="label">Six measurement bases</div>
+            <p style="margin-bottom:6px;"><strong>Historical cost:</strong> what was actually paid to acquire the asset.</p>
+            <p style="margin-bottom:6px;"><strong>Amortised cost:</strong> historical cost, adjusted for depreciation, amortization, or impairment since acquisition.</p>
+            <p style="margin-bottom:6px;"><strong>Current cost:</strong> what it would cost to buy the same or an equivalent asset today (replacement cost).</p>
+            <p style="margin-bottom:6px;"><strong>Realizable (settlement) value:</strong> what could be obtained by selling the asset today, in an orderly sale.</p>
+            <p style="margin-bottom:6px;"><strong>Present value:</strong> the discounted value of future cash flows the asset is expected to generate.</p>
+            <p style="margin:0;"><strong>Fair value:</strong> the price that would be received to sell an asset (or paid to transfer a liability) in an orderly transaction between market participants.</p>
+          </div>
+
+          <div class="callout example">
+            <div class="label">Outside example — a delivery van, four different ways</div>
+            <p style="margin:0;">A van bought 3 years ago for €30,000: <strong>historical cost</strong> is €30,000. <strong>Amortised cost</strong> is €30,000 minus three years of depreciation, say €18,000. <strong>Current cost</strong> is whatever an equivalent new van costs today, maybe €35,000 given inflation. <strong>Realizable value</strong> is whatever a buyer would actually pay for this specific, used van today, maybe €14,000. Four completely different, all individually defensible, numbers for the same physical object.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c7">
+            <div class="label">Check yourself</div>
+            <div class="q">A company reports an asset at the amount it would cost to replace it with an equivalent new asset today. Which measurement basis is this?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="false">Historical cost</button>
+              <button class="opt-btn" data-correct="true">Current cost</button>
+              <button class="opt-btn" data-correct="false">Present value</button>
+            </div>
+            <div class="checkin-feedback">Correct — current cost specifically refers to the cost of buying the same or an equivalent asset today, also called replacement cost.</div>
+          </div>
+        </div>
+        <div>
+          <div class="callout" style="margin-top:0;">
+            <p style="margin:0; font-size:.9rem;"><strong>Why this matters immediately ahead:</strong> Module 6 (Long-Lived Assets) revolves entirely around choosing between historical/amortised cost and fair value (the "revaluation model") — this section is the vocabulary that entire debate is conducted in.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         QUIZ
+    ========================================================== -->
+    <section class="section" id="sec-quiz" style="max-width:900px;">
+      <div class="section-head">
+        <span class="section-tag">Q</span>
+        <div>
+          <h2>Practice Quiz</h2>
+          <p class="subhead">20 questions across everything above. Answer, get instant feedback, and see your score at the end.</p>
+        </div>
+      </div>
+      <div class="quiz-shell" id="quizShell">
+        <!-- populated by JS -->
+      </div>
+    </section>
+
+    <footer class="footer">
+      Built as a companion study tool for the CFA Program prerequisite Financial Statement Analysis reading on Introduction to Financial Reporting. Work through it alongside your primary curriculum — this isn't a replacement for official CFA Institute materials.
+    </footer>
+  </main>
+</div>
+
+<script src="../../diagnostics.js"></script>
+<script src="../bundle.js"></script>
+<script src="../../accessibility.js"></script>
+</body>
+</html>

@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FSA Foundations — CFA Prerequisite FSA Toolkit</title>
+<link rel="stylesheet" href="../../shared-module-standard.css">
+</head>
+<body>
+
+<div class="mobile-bar">
+  <strong style="font-family:var(--font-display)">A = L + E</strong>
+  <button id="sidebarToggle">Menu</button>
+</div>
+
+<div class="app">
+  <nav class="sidebar" id="sidebar">
+    <a href="../index.html" class="brand">
+      <span class="brand-mark"></span>
+      <span class="brand-name">FSA<br>Foundations</span>
+    </a>
+    <div class="brand-sub">CFA Prerequisite · FSA · Module 00</div>
+
+    <div class="progress-wrap">
+      <div class="progress-label"><span>Progress</span><span id="progressPct">0%</span></div>
+      <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+    </div>
+
+    <div class="toc-group-label">Why Accounting Exists</div>
+    <ul class="toc">
+      <li><a href="#sec-why" data-sec="sec-why"><span class="num">01</span>What Is Financial Reporting?</a></li>
+      <li><a href="#sec-equation" data-sec="sec-equation"><span class="num">02</span>The Accounting Equation</a></li>
+      <li><a href="#sec-fourstatements" data-sec="sec-fourstatements"><span class="num">03</span>The Four Statements — A Bird's Eye View</a></li>
+    </ul>
+
+    <div class="toc-group-label">How the Numbers Get There</div>
+    <ul class="toc">
+      <li><a href="#sec-accrual" data-sec="sec-accrual"><span class="num">04</span>Accrual vs. Cash Basis</a></li>
+      <li><a href="#sec-doubleentry" data-sec="sec-doubleentry"><span class="num">05</span>Double-Entry Bookkeeping</a></li>
+    </ul>
+
+    <div class="toc-group-label">The Building Blocks</div>
+    <ul class="toc">
+      <li><a href="#sec-ale" data-sec="sec-ale"><span class="num">06</span>Assets, Liabilities &amp; Equity</a></li>
+      <li><a href="#sec-revexp" data-sec="sec-revexp"><span class="num">07</span>Revenues, Expenses &amp; Matching</a></li>
+    </ul>
+
+    <div class="toc-group-label">Check Yourself</div>
+    <ul class="toc">
+      <li><a href="#sec-quiz" data-sec="sec-quiz"><span class="num">Q</span>Practice Quiz (20)</a></li>
+    </ul>
+  </nav>
+
+  <main id="top">
+    <header class="hero">
+      <div class="eyebrow">CFA Program · Prerequisite Financial Statement Analysis · Module 00</div>
+      <h1>Every financial statement is just an answer to a question a stranger asked.</h1>
+      <p class="lede">Module 1 of this volume opens with financial reporting standards, regulatory bodies, and the IASB's conceptual framework — and quietly assumes you already know what a balance sheet, an accrual, or a debit actually is. This module builds those true first-principles ideas: why financial statements exist at all, the one equation every single one of them has to obey, and the mechanical system that turns a real business transaction into numbers on a page.</p>
+    </header>
+
+    <!-- =========================================================
+         01 WHAT IS FINANCIAL REPORTING?
+    ========================================================== -->
+    <section class="section" id="sec-why">
+      <div class="section-head">
+        <span class="section-tag">01</span>
+        <div>
+          <h2>What Is Financial Reporting, and Why Does It Exist?</h2>
+          <p class="subhead">A stranger with money wants to know if you can be trusted with more of it. That's the entire problem financial reporting solves.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <p>Imagine lending a friend money to start a lemonade stand. You'd want to know: how much did they sell? What did it cost to run? Do they still owe suppliers money? Now imagine that "friend" is a company with thousands of employees, millions of customers, and investors scattered across the globe who've never met the management team and never will. <strong>Financial reporting is how a business answers those same basic questions to a stranger, at scale, in a standardized way everyone can trust.</strong></p>
+
+          <div class="definition">
+            <div class="label">Who actually reads financial statements</div>
+            <p style="margin:0;"><strong>Investors</strong> deciding whether to buy or sell shares. <strong>Creditors</strong> (banks, bondholders) deciding whether to lend money. <strong>Employees</strong> assessing job security. <strong>Suppliers</strong> deciding whether to extend credit. <strong>Regulators and tax authorities</strong> checking compliance. None of these people work inside the company — financial statements are how they see in from outside.</p>
+          </div>
+
+          <div class="callout example">
+            <div class="label">Why standards matter</div>
+            <p style="margin:0;">If every company were free to define "profit" however it liked, comparing two companies would be meaningless — one might count a sale the moment it's promised, another only once cash arrives. <strong>Financial reporting standards</strong> (like IFRS, used in most of the world) exist specifically to force enough consistency that a number in one company's report means roughly the same thing in another's.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c1">
+            <div class="label">Check yourself</div>
+            <div class="q">Why do financial reporting standards exist at all?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="false">To make accounting more complicated for its own sake</button>
+              <button class="opt-btn" data-correct="true">To create enough consistency that financial statements are comparable across different companies</button>
+              <button class="opt-btn" data-correct="false">Only to satisfy tax authorities</button>
+            </div>
+            <div class="checkin-feedback">Correct — standards exist to ensure a reported number means roughly the same thing everywhere, making comparison across companies meaningful.</div>
+          </div>
+        </div>
+        <div>
+          <div class="callout" style="margin-top:0;">
+            <p style="margin:0; font-size:.9rem;"><strong>Why this matters for an analyst specifically:</strong> you will spend far more time reading financial statements than preparing them. Understanding what question each number is trying to answer — and for whom — is what separates reading a statement from actually understanding it.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         02 THE ACCOUNTING EQUATION
+    ========================================================== -->
+    <section class="section" id="sec-equation">
+      <div class="section-head">
+        <span class="section-tag">02</span>
+        <div>
+          <h2>The Accounting Equation</h2>
+          <p class="subhead">One equation, three words, and every financial statement ever produced has to obey it without exception.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="callout formula">
+            <div class="label">The accounting equation</div>
+            <div class="formula-body">Assets = Liabilities + Equity</div>
+          </div>
+
+          <div class="definition">
+            <div class="label">In plain words</div>
+            <p style="margin-bottom:8px;"><strong>Assets:</strong> everything the business owns or controls that has value — cash, inventory, buildings, equipment, money owed to it.</p>
+            <p style="margin-bottom:8px;"><strong>Liabilities:</strong> everything the business owes to others — loans, unpaid bills, wages owed.</p>
+            <p style="margin:0;"><strong>Equity:</strong> what's left over for the owners once every liability is paid off — sometimes called "net assets" or "book value."</p>
+          </div>
+
+          <div class="callout example">
+            <div class="label">Outside example — buying a house</div>
+            <p style="margin:0;">A house worth $400,000 (an asset), bought with a $300,000 mortgage (a liability) and $100,000 of your own cash (your equity in it): $400,000 = $300,000 + $100,000. Sell the house, pay off the mortgage, and whatever's left is genuinely yours — that's exactly what equity means for a company too.</p>
+          </div>
+
+          <div class="callout" style="border-left-color:var(--red);">
+            <p style="margin:0; font-size:.9rem;"><strong>This equation must always balance — that's not a coincidence, it's the rule.</strong> Every single transaction a business makes affects this equation in a way that keeps both sides equal. If assets go up, either liabilities went up too (you borrowed to buy something), or equity went up (you paid with your own money), or another asset went down by the same amount (you swapped cash for inventory).</p>
+          </div>
+
+          <div class="checkin" data-checkin="c2">
+            <div class="label">Check yourself</div>
+            <div class="q">A company has $500,000 in assets and $180,000 in liabilities. What is its equity?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="false">$680,000</button>
+              <button class="opt-btn" data-correct="true">$320,000</button>
+              <button class="opt-btn" data-correct="false">$180,000</button>
+            </div>
+            <div class="checkin-feedback">Correct — rearranging the accounting equation: Equity = Assets − Liabilities = 500,000 − 180,000 = $320,000.</div>
+          </div>
+        </div>
+        <div>
+          <div class="dist-card" style="margin-top:0;">
+            <div class="label" style="font-family:var(--font-mono); font-size:.72rem; text-transform:uppercase; color:var(--indigo); font-weight:700; margin-bottom:12px;">Try it — accounting equation solver</div>
+            <p style="font-size:.8rem; color:var(--ink-soft); margin:0 0 10px;">Enter any two values; the third is solved for.</p>
+            <div class="tvm-grid">
+              <div class="tvm-field"><label>Assets</label><input type="number" id="aeAssets" value="500000" step="1000"></div>
+              <div class="tvm-field"><label>Liabilities</label><input type="number" id="aeLiabilities" value="180000" step="1000"></div>
+            </div>
+            <div class="tvm-result" id="aeResult">Equity = $320,000</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         03 THE FOUR STATEMENTS - BIRD'S EYE VIEW
+    ========================================================== -->
+    <section class="section" id="sec-fourstatements">
+      <div class="section-head">
+        <span class="section-tag">03</span>
+        <div>
+          <h2>The Four Financial Statements — A Bird's Eye View</h2>
+          <p class="subhead">Four different reports, four different questions — before diving into any one of them in technical depth, it helps to know what each one is even for.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="chart-card">
+            <div class="test-tabs" id="statementTabs">
+              <button class="test-tab active" data-stmt="income">Income Statement</button>
+              <button class="test-tab" data-stmt="balance">Balance Sheet</button>
+              <button class="test-tab" data-stmt="cashflow">Cash Flow Statement</button>
+              <button class="test-tab" data-stmt="equity">Statement of Changes in Equity</button>
+            </div>
+            <div id="statementDisplay"></div>
+          </div>
+
+          <div class="callout example">
+            <div class="label">How the four connect</div>
+            <p style="margin:0;">These aren't four unrelated reports — they're four views of the same underlying business, stitched together. Net income from the income statement flows into equity on the balance sheet (via the statement of changes in equity). The balance sheet's beginning and ending cash balances are explained, in full, by the cash flow statement. Pull on any one thread and the others move with it.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c3">
+            <div class="label">Check yourself</div>
+            <div class="q">An investor wants to know exactly how much cash a company generated from its core operations this year, separate from any accounting estimates. Which statement answers this most directly?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="false">The income statement</button>
+              <button class="opt-btn" data-correct="true">The cash flow statement</button>
+              <button class="opt-btn" data-correct="false">The statement of changes in equity</button>
+            </div>
+            <div class="checkin-feedback">Correct — the cash flow statement is specifically designed to show actual cash movements, unaffected by the accruals and estimates baked into the income statement.</div>
+          </div>
+        </div>
+        <div>
+          <div class="callout" style="margin-top:0;">
+            <table class="exhibit" style="margin:0;">
+              <tr><th>Statement</th><th>Core question</th></tr>
+              <tr><td>Income Statement</td><td class="num">Was the company profitable?</td></tr>
+              <tr><td>Balance Sheet</td><td class="num">What does it own and owe, right now?</td></tr>
+              <tr><td>Cash Flow Statement</td><td class="num">Where did the cash actually go?</td></tr>
+              <tr><td>Changes in Equity</td><td class="num">Why did owners' stake change?</td></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         04 ACCRUAL VS CASH BASIS
+    ========================================================== -->
+    <section class="section" id="sec-accrual">
+      <div class="section-head">
+        <span class="section-tag">04</span>
+        <div>
+          <h2>Accrual vs. Cash Basis Accounting</h2>
+          <p class="subhead">A company can be genuinely profitable and still run out of cash. This single distinction is the reason why.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="definition">
+            <div class="label">Two ways to record the same event</div>
+            <p style="margin-bottom:8px;"><strong>Cash basis:</strong> record a transaction only when cash actually changes hands — money in, money out, nothing else.</p>
+            <p style="margin:0;"><strong>Accrual basis:</strong> record revenue when it's <em>earned</em> (the work is done, the product delivered) and expenses when they're <em>incurred</em> — regardless of when the cash actually moves. This is the basis nearly all real-world financial statements use.</p>
+          </div>
+
+          <div class="callout example">
+            <div class="label">Outside example — a consulting project</div>
+            <p style="margin:0;">A consultant finishes a $10,000 project in March but isn't paid until May. Under cash basis, March shows $0 revenue and May shows $10,000. Under accrual basis, March shows the full $10,000 — because that's when the work was actually done — and May shows nothing new, just cash arriving to settle a debt that already existed on the books.</p>
+          </div>
+
+          <div class="callout" style="border-left-color:var(--red);">
+            <div class="label" style="font-family:var(--font-mono); font-size:.72rem; text-transform:uppercase; color:var(--red); font-weight:700; margin-bottom:8px;">Why this is the single most important idea in this entire module</div>
+            <p style="margin:0;">Accrual accounting is exactly why <strong>net income and cash flow are two different numbers</strong>, and why a business needs a separate cash flow statement at all. A company can report a healthy profit while its customers are slow to pay (real cash is tight), or report a loss while collecting plenty of cash from work done in a prior period. Every later module in this volume — receivables, inventory, deferred taxes — is really just accrual accounting applied to one specific corner of the business.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c4">
+            <div class="label">Check yourself</div>
+            <div class="q">A retailer delivers $5,000 of goods to a customer in December on 60-day credit terms (payment due in February). Under accrual accounting, when is the revenue recognized?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="true">December — when the goods were delivered and revenue was earned</button>
+              <button class="opt-btn" data-correct="false">February — when the cash is actually received</button>
+              <button class="opt-btn" data-correct="false">It's split evenly between December and February</button>
+            </div>
+            <div class="checkin-feedback">Correct — under accrual accounting, revenue is recognized when it's earned (goods delivered), regardless of when cash actually changes hands.</div>
+          </div>
+        </div>
+        <div>
+          <div class="dist-card" style="margin-top:0;">
+            <div class="label" style="font-family:var(--font-mono); font-size:.72rem; text-transform:uppercase; color:var(--indigo); font-weight:700; margin-bottom:12px;">Try it — cash vs. accrual comparison</div>
+            <div class="tvm-grid">
+              <div class="tvm-field"><label>Work completed this month ($)</label><input type="number" id="accrualEarned" value="10000" step="500"></div>
+              <div class="tvm-field"><label>Cash actually collected this month ($)</label><input type="number" id="accrualCash" value="0" step="500"></div>
+            </div>
+            <div class="stat-readout-row" id="accrualOut">
+              <div class="stat-readout"><div class="k">Cash-basis revenue</div><div class="v">$0</div></div>
+              <div class="stat-readout"><div class="k">Accrual-basis revenue</div><div class="v">$10,000</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         05 DOUBLE-ENTRY BOOKKEEPING
+    ========================================================== -->
+    <section class="section" id="sec-doubleentry">
+      <div class="section-head">
+        <span class="section-tag">05</span>
+        <div>
+          <h2>Double-Entry Bookkeeping — Debits &amp; Credits</h2>
+          <p class="subhead">The mechanical system underneath every financial statement ever produced — and the reason the accounting equation never breaks.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <p>Every single transaction a business records touches <strong>at least two accounts</strong>, never just one. This isn't bureaucratic redundancy — it's precisely what keeps Assets = Liabilities + Equity balanced after every single transaction, automatically.</p>
+
+          <div class="definition">
+            <div class="label">The mechanical rule</div>
+            <p style="margin-bottom:8px;"><strong>Debit:</strong> an entry on the left side of an account. Increases assets and expenses; decreases liabilities, equity, and revenue.</p>
+            <p style="margin:0;"><strong>Credit:</strong> an entry on the right side of an account. Increases liabilities, equity, and revenue; decreases assets and expenses.</p>
+          </div>
+
+          <div class="callout example">
+            <div class="label">Outside example — buying equipment with a loan</div>
+            <p style="margin:0 0 8px;">A company buys $20,000 of equipment, financed entirely with a bank loan. Two accounts move, in offsetting directions:</p>
+            <p style="margin:0;"><strong>Debit</strong> Equipment (an asset) $20,000 — assets increase. <strong>Credit</strong> Loan Payable (a liability) $20,000 — liabilities increase. Assets went up by $20,000, and liabilities went up by the identical $20,000 — the equation stays perfectly balanced, by construction.</p>
+          </div>
+
+          <div class="callout" style="border-left-color:var(--red);">
+            <p style="margin:0; font-size:.9rem;"><strong>This is why it's called "double-entry":</strong> every transaction requires at least two entries that exactly offset, which is precisely the mechanism guaranteeing the accounting equation can never fall out of balance, no matter how many millions of transactions a real company processes in a year.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c5">
+            <div class="label">Check yourself</div>
+            <div class="q">A company pays $2,000 cash to settle an outstanding bill it owed a supplier. Which two accounts are affected?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="true">Cash (asset) decreases; Accounts Payable (liability) decreases</button>
+              <button class="opt-btn" data-correct="false">Cash (asset) increases; Revenue increases</button>
+              <button class="opt-btn" data-correct="false">Only Cash is affected</button>
+            </div>
+            <div class="checkin-feedback">Correct — paying off a bill reduces the cash asset and simultaneously eliminates the liability that was owed, keeping the equation balanced.</div>
+          </div>
+        </div>
+        <div>
+          <div class="callout" style="margin-top:0;">
+            <table class="exhibit" style="margin:0;">
+              <tr><th>Account type</th><th>Debit</th><th>Credit</th></tr>
+              <tr><td>Assets</td><td class="num">Increase</td><td class="num">Decrease</td></tr>
+              <tr><td>Liabilities</td><td class="num">Decrease</td><td class="num">Increase</td></tr>
+              <tr><td>Equity</td><td class="num">Decrease</td><td class="num">Increase</td></tr>
+              <tr><td>Revenue</td><td class="num">Decrease</td><td class="num">Increase</td></tr>
+              <tr><td>Expenses</td><td class="num">Increase</td><td class="num">Decrease</td></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         06 ASSETS, LIABILITIES & EQUITY
+    ========================================================== -->
+    <section class="section" id="sec-ale">
+      <div class="section-head">
+        <span class="section-tag">06</span>
+        <div>
+          <h2>Assets, Liabilities &amp; Equity — What Each Actually Means</h2>
+          <p class="subhead">Three buckets that sound obvious until you have to sort a real, messy transaction into one of them.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="definition">
+            <div class="label">The formal definitions</div>
+            <p style="margin-bottom:8px;"><strong>Asset:</strong> a resource controlled by the business, as a result of a past event, from which future economic benefit is expected to flow. Cash, inventory, equipment, and money owed by customers (receivables) all qualify.</p>
+            <p style="margin-bottom:8px;"><strong>Liability:</strong> a present obligation, arising from a past event, expected to require an outflow of resources to settle. Loans, unpaid supplier bills, and wages owed all qualify.</p>
+            <p style="margin:0;"><strong>Equity:</strong> the residual claim on assets after every liability is subtracted — literally whatever's left over for the owners.</p>
+          </div>
+
+          <div class="callout example">
+            <div class="label">A subtlety worth catching early — receivables and payables</div>
+            <p style="margin:0;">When a company delivers goods on credit, it doesn't yet have cash — but accrual accounting still recognizes an asset: <strong>accounts receivable</strong>, the right to collect cash later. The buyer, meanwhile, records <strong>accounts payable</strong> — a liability, the obligation to pay later. Same transaction, opposite sides, two different companies' books.</p>
+          </div>
+
+          <div class="callout" style="border-left-color:var(--red);">
+            <p style="margin:0; font-size:.9rem;"><strong>A common trap:</strong> equity is not "how much cash the company has." It's a residual claim, calculated only after every liability is accounted for. A company can be cash-rich and still have low (or negative) equity if its liabilities are large enough.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c6">
+            <div class="label">Check yourself</div>
+            <div class="q">A company delivers services worth $8,000 to a client on credit, to be paid in 30 days. What does the company record on its own books?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="true">An increase in accounts receivable (an asset)</button>
+              <button class="opt-btn" data-correct="false">An increase in accounts payable (a liability)</button>
+              <button class="opt-btn" data-correct="false">No entry at all, until cash is received</button>
+            </div>
+            <div class="checkin-feedback">Correct — the seller records an asset (accounts receivable), reflecting its right to collect cash later; the buyer would record the liability (accounts payable) on its own separate books.</div>
+          </div>
+        </div>
+        <div>
+          <div class="callout" style="margin-top:0;">
+            <p style="margin:0; font-size:.9rem;">Every module ahead in this volume is really just a closer look at how to measure ONE specific asset or liability correctly — inventories (Module 5), long-lived assets (Module 6), income taxes (Module 7), and long-term liabilities (Module 8) are all this same accounting equation, one line item at a time.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         07 REVENUES, EXPENSES & MATCHING
+    ========================================================== -->
+    <section class="section" id="sec-revexp">
+      <div class="section-head">
+        <span class="section-tag">07</span>
+        <div>
+          <h2>Revenues, Expenses &amp; the Matching Principle</h2>
+          <p class="subhead">Profit isn't "cash in minus cash out." It's a much more deliberate exercise in pairing effort with reward.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="definition">
+            <div class="label">The core definitions</div>
+            <p style="margin-bottom:8px;"><strong>Revenue:</strong> the value earned from a business's core operations — selling goods, providing services — recognized when earned, not necessarily when paid.</p>
+            <p style="margin:0;"><strong>Expense:</strong> the cost of resources used up in earning that revenue, recognized when incurred, not necessarily when paid.</p>
+          </div>
+
+          <div class="callout formula">
+            <div class="label">The matching principle</div>
+            <div class="formula-body" style="font-size:1rem;">Expenses are recognized in the same period as the revenue they helped generate</div>
+          </div>
+
+          <div class="callout example">
+            <div class="label">Outside example — a shoe retailer</div>
+            <p style="margin:0;">A retailer buys 100 pairs of shoes for $3,000 in January, and sells 40 pairs for $2,000 in February. The matching principle says: recognize only $1,200 of that $3,000 cost (the cost of the 40 pairs actually sold) as an expense in February, alongside the $2,000 of revenue it helped generate. The remaining $1,800 of unsold shoes stays on the balance sheet as inventory — an asset — until it's eventually sold too.</p>
+          </div>
+
+          <div class="callout" style="border-left-color:var(--red);">
+            <p style="margin:0; font-size:.9rem;"><strong>This is the entire logic behind depreciation (Module 6) and inventory accounting (Module 5).</strong> A delivery truck bought for $50,000 doesn't become a $50,000 expense the day it's purchased — its cost gets spread out ("matched") across every period the truck actually helps generate revenue, which might be ten years.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c7">
+            <div class="label">Check yourself</div>
+            <div class="q">A factory buys a $120,000 machine expected to help produce revenue for 10 years. Under the matching principle, how should its cost be treated?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="false">Expensed entirely in the year it was purchased</button>
+              <button class="opt-btn" data-correct="true">Spread out as an expense across the years it helps generate revenue</button>
+              <button class="opt-btn" data-correct="false">Never expensed at all, since it's a physical asset</button>
+            </div>
+            <div class="checkin-feedback">Correct — the matching principle requires spreading the machine's cost across the periods it helps generate revenue, exactly the logic behind depreciation.</div>
+          </div>
+        </div>
+        <div>
+          <div class="callout" style="margin-top:0;">
+            <p style="margin:0; font-size:.9rem;"><strong>Net income = Revenue − Expenses</strong> — the income statement, in one line. Every technical topic in Module 2 (Income Statements) is really just the detailed rulebook for exactly when and how much revenue and expense to recognize.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         QUIZ
+    ========================================================== -->
+    <section class="section" id="sec-quiz" style="max-width:900px;">
+      <div class="section-head">
+        <span class="section-tag">Q</span>
+        <div>
+          <h2>Practice Quiz</h2>
+          <p class="subhead">20 questions across everything above. Answer, get instant feedback, and see your score at the end.</p>
+        </div>
+      </div>
+      <div class="quiz-shell" id="quizShell">
+        <!-- populated by JS -->
+      </div>
+    </section>
+
+    <footer class="footer">
+      Module 00 — the true first-principles foundation beneath the CFA Program prerequisite Financial Statement Analysis readings. When this feels solid, move on to Module 1: Introduction to Financial Reporting.
+    </footer>
+  </main>
+</div>
+
+<script src="../../diagnostics.js"></script>
+<script src="../bundle.js"></script>
+<script src="../../accessibility.js"></script>
+</body>
+</html>

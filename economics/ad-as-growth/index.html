@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aggregate Demand, Supply & Growth (Part 2) — CFA Prerequisite Economics Toolkit</title>
+<link rel="stylesheet" href="../../shared-module-standard.css">
+</head>
+<body>
+
+<div class="mobile-bar">
+  <strong style="font-family:var(--font-display)">AD ↔ AS</strong>
+  <button id="sidebarToggle">Menu</button>
+</div>
+
+<div class="app">
+  <nav class="sidebar" id="sidebar">
+    <a href="../index.html" class="brand">
+      <span class="brand-mark"></span>
+      <span class="brand-name">AD, AS &amp;<br>Economic Growth</span>
+    </a>
+    <div class="brand-sub">CFA Prerequisite · Economics · Module 3, Part 2 of 2</div>
+
+    <div class="progress-wrap">
+      <div class="progress-label"><span>Progress</span><span id="progressPct">0%</span></div>
+      <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+    </div>
+
+    <div class="toc-group-label">The Two Curves</div>
+    <ul class="toc">
+      <li><a href="#sec-addemand" data-sec="sec-addemand"><span class="num">01</span>The Aggregate Demand Curve</a></li>
+      <li><a href="#sec-assupply" data-sec="sec-assupply"><span class="num">02</span>The Aggregate Supply Curve</a></li>
+    </ul>
+
+    <div class="toc-group-label">Equilibrium &amp; the Business Cycle</div>
+    <ul class="toc">
+      <li><a href="#sec-shifts" data-sec="sec-shifts"><span class="num">03</span>Shifts in AD &amp; AS</a></li>
+      <li><a href="#sec-equilibria" data-sec="sec-equilibria"><span class="num">04</span>Four Macroeconomic Equilibria</a></li>
+    </ul>
+
+    <div class="toc-group-label">Long-Run Growth</div>
+    <ul class="toc">
+      <li><a href="#sec-production" data-sec="sec-production"><span class="num">05</span>The Production Function &amp; Growth Accounting</a></li>
+      <li><a href="#sec-sustainable" data-sec="sec-sustainable"><span class="num">06</span>Measures of Sustainable Growth</a></li>
+    </ul>
+
+    <div class="toc-group-label">Check Yourself</div>
+    <ul class="toc">
+      <li><a href="#sec-quiz" data-sec="sec-quiz"><span class="num">Q</span>Practice Quiz (20)</a></li>
+    </ul>
+
+    <div class="toc-group-label">This Module</div>
+    <ul class="toc">
+      <li><a href="../gdp-income/index.html" style="color:#8FDFC0;"><span class="num">◂</span>Part 1: GDP, Income &amp; Expenditure</a></li>
+    </ul>
+  </nav>
+
+  <main id="top">
+    <header class="hero">
+      <div class="eyebrow">CFA Program · Prerequisite Economics · Module 3, Part 2 of 2</div>
+      <h1>Zoom out from one firm to an entire economy.</h1>
+      <p class="lede">Part 1 built GDP from the ground up. Part 2 asks the bigger question: what determines the price level and output for an entire economy, why do recessions and booms happen, and what actually drives an economy's growth over decades rather than quarters? Same demand-and-supply logic from Economics Module 1 — just scaled up to a whole nation.</p>
+    </header>
+
+    <!-- =========================================================
+         01 AGGREGATE DEMAND
+    ========================================================== -->
+    <section class="section" id="sec-addemand">
+      <div class="section-head">
+        <span class="section-tag">01</span>
+        <div>
+          <h2>The Aggregate Demand Curve</h2>
+          <p class="subhead">It looks like an ordinary demand curve — but the reason it slopes downward has nothing to do with a fixed income, because at this scale, income itself is what's being determined.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <p>The <strong>aggregate demand (AD) curve</strong> plots every combination of the overall price level and real GDP at which total spending equals total income. It slopes downward for three genuinely distinct reasons — not because "cheaper things sell more," as in ordinary microeconomics, but because of what a change in the price level does to the whole economy at once.</p>
+
+          <div class="definition">
+            <div class="label">Three reasons AD slopes downward</div>
+            <p style="margin-bottom:8px;"><strong>The wealth effect:</strong> your cash and savings have a fixed <em>nominal</em> value, but their <em>real</em> purchasing power shrinks when prices rise. £10 buys 10 loaves of bread at £1 each, but only 5 loaves if bread doubles to £2 — you're poorer in real terms, so you spend less.</p>
+            <p style="margin-bottom:8px;"><strong>The interest rate effect:</strong> a higher price level means people need to hold more money for everyday transactions, which raises the demand for money and pushes up interest rates — and higher rates discourage investment spending.</p>
+            <p style="margin:0;"><strong>The real exchange rate effect:</strong> higher domestic prices make imports relatively cheaper and exports relatively more expensive abroad, shrinking net exports.</p>
+          </div>
+
+          <div class="callout example">
+            <div class="label">Making the wealth effect concrete</div>
+            <p style="margin:0;">£10 in your pocket, bread at £1/loaf, buys 10 loaves. Bread price doubles to £2 — the same £10 now buys only 5 loaves. Your nominal wealth (£10) never changed; your real wealth (loaves you can afford) was cut in half. That's the entire mechanism — scaled up across every price in the economy at once.</p>
+          </div>
+
+          <div class="chart-card">
+            <div id="adCurveChart"></div>
+            <p style="font-size:.82rem; color:var(--ink-soft); margin:10px 0 0;">A rise in the price level from P1 to P2 moves the economy from Point A to Point B — real income/output falls from Y1 to Y2, purely because of these three effects, holding the money supply fixed.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c1">
+            <div class="label">Check yourself</div>
+            <div class="q">Which of the following explains why aggregate demand slopes downward due to the interest rate effect?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="false">Higher prices make foreign goods more expensive</button>
+              <button class="opt-btn" data-correct="true">Higher prices increase money demand, which raises interest rates and discourages investment</button>
+              <button class="opt-btn" data-correct="false">Higher prices directly reduce the money supply</button>
+            </div>
+            <div class="checkin-feedback">Correct — a higher price level means more money is needed for the same transactions, and with a fixed money supply, that extra demand for money pushes interest rates up, cooling investment spending.</div>
+          </div>
+        </div>
+        <div>
+          <div class="callout" style="margin-top:0;">
+            <p style="margin:0; font-size:.9rem;"><strong>GDP = C + I + G + (X−M) from Part 1</strong> is exactly what's moving here — all three effects work by shrinking one or more of C, I, or (X−M) as the price level rises. Nothing new to memorize; the same formula, viewed dynamically.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         02 AGGREGATE SUPPLY
+    ========================================================== -->
+    <section class="section" id="sec-assupply">
+      <div class="section-head">
+        <span class="section-tag">02</span>
+        <div>
+          <h2>The Aggregate Supply Curve</h2>
+          <p class="subhead">Three time horizons, three different shapes — because wages and contracts don't adjust to price changes instantly.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="definition">
+            <div class="label">Three aggregate supply curves, by time horizon</div>
+            <p style="margin-bottom:8px;"><strong>Very short run (VSRAS) — flat:</strong> over a few months, firms adjust output without changing prices at all — run the factory harder or softer, keeping the price tag the same.</p>
+            <p style="margin-bottom:8px;"><strong>Short run (SRAS) — upward sloping:</strong> wages and input costs are fixed by contracts for a while, so as output prices rise, profit margins widen and firms expand production.</p>
+            <p style="margin:0;"><strong>Long run (LRAS) — perfectly vertical:</strong> eventually wages and input costs catch up fully with prices, restoring margins to normal. Output settles back at the economy's <strong>potential GDP</strong> — determined only by available capital, labor, and technology — regardless of the price level.</p>
+          </div>
+
+          <div class="chart-card">
+            <div id="asCurveChart"></div>
+            <p style="font-size:.82rem; color:var(--ink-soft); margin:10px 0 0;">The same economy, three lenses: flat in the very short run, upward-sloping in the short run, vertical in the long run. The vertical LRAS position is the economy's full-employment (potential) output — the natural rate of unemployment, not zero unemployment, but a stable, healthy churn of job seekers and openings.</p>
+          </div>
+
+          <div class="callout formula">
+            <div class="label">What determines potential output</div>
+            <div class="formula-body">Y = F(K̄, L̄)</div>
+            <p style="margin:10px 0 0; font-size:.85rem; color:var(--ink-soft);">Fixed capital stock K̄ and available labor L̄, combined through the technology embedded in that capital — nothing about the price level appears in this equation at all, which is exactly why LRAS is vertical.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c2">
+            <div class="label">Check yourself</div>
+            <div class="q">Why is the long-run aggregate supply curve vertical?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="false">Because firms refuse to produce more in the long run</button>
+              <button class="opt-btn" data-correct="true">Because wages and input costs fully adjust to price changes, leaving real output determined only by capital, labor, and technology</button>
+              <button class="opt-btn" data-correct="false">Because prices never change in the long run</button>
+            </div>
+            <div class="checkin-feedback">Correct — once wages and other costs catch up fully with the price level, a higher price level no longer changes real profit margins, so output settles at potential GDP regardless of price.</div>
+          </div>
+        </div>
+        <div>
+          <div class="callout" style="margin-top:0;">
+            <table class="exhibit" style="margin:0;">
+              <tr><th>Curve</th><th>Shape</th><th>Time horizon</th></tr>
+              <tr><td>VSRAS</td><td class="num">Flat</td><td class="num">Months</td></tr>
+              <tr><td>SRAS</td><td class="num">Upward sloping</td><td class="num">A few years</td></tr>
+              <tr><td>LRAS</td><td class="num">Vertical</td><td class="num">Decade+</td></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         03 SHIFTS IN AD & AS
+    ========================================================== -->
+    <section class="section" id="sec-shifts">
+      <div class="section-head">
+        <span class="section-tag">03</span>
+        <div>
+          <h2>Shifts in Aggregate Demand &amp; Aggregate Supply</h2>
+          <p class="subhead">A movement along a curve is a price effect. A shift in the whole curve is something new entering the picture.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="definition">
+            <div class="label">What shifts AD</div>
+            <p style="margin:0;">Anything that changes C, I, G, or (X−M) at every price level: consumer confidence, tax policy, government spending decisions, foreign income levels, exchange rate moves, or central bank interest-rate policy. A rightward shift means more is demanded at every price; a leftward shift means less.</p>
+          </div>
+          <div class="definition">
+            <div class="label">What shifts AS</div>
+            <p style="margin:0;">Changes in input costs (wages, energy, raw materials), productivity, or the size of the labor force. A leftward shift — say, from an oil price shock — means less is supplied at every price level; a rightward shift, from a productivity boom, means more.</p>
+          </div>
+
+          <div class="callout example">
+            <div class="label">Distinguishing a shift from a movement</div>
+            <p style="margin:0;">If the price level itself changes and quantity responds along the existing curve, that's a <em>movement along</em> the curve. If quantity changes at every given price level — because something in the underlying economy genuinely changed — that's a <em>shift of</em> the whole curve. This is the identical distinction from the demand-curve module: a price change moves you along the curve; anything else shifts the whole curve.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c3">
+            <div class="label">Check yourself</div>
+            <div class="q">A central bank cuts interest rates, encouraging more business investment at every price level. This is best described as:</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="false">A movement along the existing AD curve</button>
+              <button class="opt-btn" data-correct="true">A rightward shift of the entire AD curve</button>
+              <button class="opt-btn" data-correct="false">A shift of the AS curve</button>
+            </div>
+            <div class="checkin-feedback">Correct — lower interest rates raise investment spending (I) at every price level, shifting the whole AD curve to the right, not just moving along it.</div>
+          </div>
+        </div>
+        <div>
+          <div class="callout" style="margin-top:0;">
+            <p style="margin:0; font-size:.9rem;">This AD/AS framework is the direct macro-scale sibling of the demand/supply model from Economics Module 1 — same logic of movements vs. shifts, just applied to an entire nation's output and price level instead of one product's market.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         04 FOUR MACROECONOMIC EQUILIBRIA
+    ========================================================== -->
+    <section class="section" id="sec-equilibria">
+      <div class="section-head">
+        <span class="section-tag">04</span>
+        <div>
+          <h2>Four Types of Macroeconomic Equilibrium</h2>
+          <p class="subhead">Where AD meets SRAS can land above, below, or exactly at potential GDP — and each case has its own name, causes, and investment implications.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="definition">
+            <div class="label">1. Long-run full employment</div>
+            <p style="margin:0;">AD intersects SRAS exactly on the vertical LRAS line. Output equals potential GDP; both labor and capital are fully utilized at the economy's natural, sustainable pace.</p>
+          </div>
+          <div class="definition">
+            <div class="label">2. Recessionary gap</div>
+            <p style="margin:0;">AD falls (shifts left) — perhaps from weaker consumer confidence — pushing equilibrium output below potential GDP. Both output and prices fall; unemployment rises. A recession is formally defined as at least two consecutive quarters of falling real GDP.</p>
+          </div>
+          <div class="definition">
+            <div class="label">3. Inflationary gap</div>
+            <p style="margin:0;">AD rises (shifts right) beyond what the economy can sustainably produce, pushing equilibrium output above potential GDP. Both output and prices rise; the labor market runs unusually hot.</p>
+          </div>
+          <div class="definition">
+            <div class="label">4. Stagflation</div>
+            <p style="margin:0;">Unlike the other three, this comes from an AS shift, not an AD shift. A leftward shift in SRAS — a sudden oil price spike, say — simultaneously drops output <em>and</em> raises prices, producing the uniquely painful combination of high unemployment and high inflation together.</p>
+          </div>
+
+          <div class="callout finance">
+            <div class="label">Real-world example — the 1970s oil shocks</div>
+            <p style="margin:0;">Oil prices quadrupled in 1973, triggering a global recession that lasted into 1975 — but unlike a typical demand-driven downturn, prices <em>rose</em> throughout rather than falling. Oil prices doubled again in 1979–1980, causing a second stagflationary recession in 1980–1982. Both episodes are textbook cases of an AS-driven shock: the SRAS curve shifted left, output fell, and prices rose, all at once.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c4">
+            <div class="label">Check yourself</div>
+            <div class="q">An economy experiences a sudden spike in global oil prices, causing both a decline in output and a rise in the price level simultaneously. This is:</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="false">A recessionary gap caused by falling AD</button>
+              <button class="opt-btn" data-correct="true">Stagflation, caused by a leftward shift in AS</button>
+              <button class="opt-btn" data-correct="false">An inflationary gap caused by rising AD</button>
+            </div>
+            <div class="checkin-feedback">Correct — falling output combined with rising prices at the same time is the signature of an AS-driven shock (stagflation), not an AD-driven recession or boom.</div>
+          </div>
+        </div>
+        <div>
+          <div class="dist-card" style="margin-top:0;">
+            <div class="label" style="font-family:var(--font-mono); font-size:.72rem; text-transform:uppercase; color:var(--indigo); font-weight:700; margin-bottom:12px;">The four equilibria at a glance</div>
+            <table class="exhibit" style="margin:0;">
+              <tr><th>Type</th><th>Output</th><th>Prices</th><th>Cause</th></tr>
+              <tr><td>Full employment</td><td class="num">= Potential</td><td class="num">Stable</td><td>Equilibrium</td></tr>
+              <tr><td>Recessionary gap</td><td class="num">Below</td><td class="num">Falls</td><td>AD falls</td></tr>
+              <tr><td>Inflationary gap</td><td class="num">Above</td><td class="num">Rises</td><td>AD rises</td></tr>
+              <tr><td>Stagflation</td><td class="num">Below</td><td class="num">Rises</td><td>AS falls</td></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         05 PRODUCTION FUNCTION & GROWTH ACCOUNTING
+    ========================================================== -->
+    <section class="section" id="sec-production">
+      <div class="section-head">
+        <span class="section-tag">05</span>
+        <div>
+          <h2>The Production Function &amp; Growth Accounting</h2>
+          <p class="subhead">Zoom out from quarters to decades, and a completely different question takes over: what actually makes an economy bigger over time?</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="callout formula">
+            <div class="label">The production function</div>
+            <div class="formula-body">Y = A × F(L, K)</div>
+            <p style="margin:10px 0 0; font-size:.85rem; color:var(--ink-soft);">Y = output, L = labor, K = capital stock, A = total factor productivity (TFP) — the part of growth that isn't explained by simply adding more labor or capital, largely reflecting technological progress.</p>
+          </div>
+
+          <div class="definition">
+            <div class="label">Two governing assumptions</div>
+            <p style="margin-bottom:8px;"><strong>Constant returns to scale:</strong> double every input, and output exactly doubles.</p>
+            <p style="margin:0;"><strong>Diminishing marginal productivity:</strong> holding other inputs fixed, each additional unit of any one input adds progressively less output. Pile ever more capital onto a fixed workforce, and each new machine contributes less than the last.</p>
+          </div>
+
+          <div class="callout" style="border-left-color:var(--red);">
+            <p style="margin:0; font-size:.9rem;"><strong>Why this matters for growth policy:</strong> diminishing returns mean an economy can never sustain long-run growth just by piling up capital relative to labor — that strategy runs into steadily worse returns. The <em>only</em> way to sustain per-capita growth indefinitely is genuine TFP growth: technological progress that shifts the entire production function upward.</p>
+          </div>
+
+          <div class="callout formula">
+            <div class="label">The growth accounting equation</div>
+            <div class="formula-body">Growth in potential GDP = Growth in TFP + W<sub>L</sub>(Growth in labor) + W<sub>K</sub>(Growth in capital)</div>
+            <p style="margin:10px 0 0; font-size:.85rem; color:var(--ink-soft);">W<sub>L</sub> and W<sub>K</sub> are labor's and capital's shares of national income — for many developed economies, roughly 0.7 and 0.3 respectively.</p>
+          </div>
+
+          <div class="callout finance">
+            <div class="label">Worked example</div>
+            <p style="margin:0 0 8px;">TFP growth 1.0%, labor grows 1.5%, capital grows 3.0%, with WL=0.7 and WK=0.3:</p>
+            <p style="margin:0;">Growth in potential GDP = 1.0% + 0.7(1.5%) + 0.3(3.0%) = 1.0% + 1.05% + 0.90% = <strong>2.95%</strong>. Notice labor's larger income share means the identical percentage growth rate in labor contributes more to overall growth than the same percentage growth rate in capital.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c5">
+            <div class="label">Check yourself</div>
+            <div class="q">Why can't an economy sustain long-run per-capita growth purely by continuously adding more capital per worker?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="true">Diminishing marginal productivity means each additional unit of capital adds progressively less output</button>
+              <button class="opt-btn" data-correct="false">Capital is illegal to accumulate beyond a certain point</button>
+              <button class="opt-btn" data-correct="false">Labor supply automatically shrinks as capital grows</button>
+            </div>
+            <div class="checkin-feedback">Correct — diminishing returns to capital mean that simply deepening the capital stock relative to labor runs into steadily worse payoffs; only genuine technological progress (TFP growth) can sustain growth indefinitely.</div>
+          </div>
+        </div>
+        <div>
+          <div class="dist-card" style="margin-top:0;">
+            <div class="label" style="font-family:var(--font-mono); font-size:.72rem; text-transform:uppercase; color:var(--indigo); font-weight:700; margin-bottom:12px;">Try it — growth accounting calculator</div>
+            <div class="tvm-grid">
+              <div class="tvm-field"><label>TFP growth (%)</label><input type="number" id="gaTFP" value="1.0" step="0.1"></div>
+              <div class="tvm-field"><label>Labor growth (%)</label><input type="number" id="gaL" value="1.5" step="0.1"></div>
+              <div class="tvm-field"><label>Capital growth (%)</label><input type="number" id="gaK" value="3.0" step="0.1"></div>
+              <div class="tvm-field"><label>Labor share (WL)</label><input type="number" id="gaWL" value="0.7" step="0.05" min="0" max="1"></div>
+            </div>
+            <div class="tvm-result" id="gaResult">Potential GDP growth = 2.95%</div>
+            <div class="calc-steps" id="gaSteps">1.0 + 0.7(1.5) + 0.3(3.0) = 2.95%</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         06 MEASURES OF SUSTAINABLE GROWTH
+    ========================================================== -->
+    <section class="section" id="sec-sustainable">
+      <div class="section-head">
+        <span class="section-tag">06</span>
+        <div>
+          <h2>Measures of Sustainable Growth</h2>
+          <p class="subhead">One ratio explains most of the difference in living standards between rich and poor countries.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="callout formula">
+            <div class="label">Labor productivity</div>
+            <div class="formula-body">Labor productivity = Real GDP / Aggregate hours worked</div>
+          </div>
+
+          <p>Dividing the production function through by labor (L) reveals what actually drives output per worker: <strong>Y/L = A × F(1, K/L)</strong> — labor productivity depends on the capital-to-labor ratio and total factor productivity, and nothing else. Everything else in this module ultimately funnels through this one number.</p>
+
+          <div class="definition">
+            <div class="label">Level vs. growth rate — a crucial distinction</div>
+            <p style="margin-bottom:8px;"><strong>The level</strong> of labor productivity is much higher in developed countries, reflecting decades of accumulated capital and technology — it's a stock, built up over a long history.</p>
+            <p style="margin:0;"><strong>The growth rate</strong> of labor productivity, by contrast, is often faster in developing countries, precisely because they're starting from a lower capital base where diminishing returns haven't bitten yet — the same logic behind the "convergence" idea from the growth-accounting section.</p>
+          </div>
+
+          <div class="callout finance">
+            <div class="label">Why analysts watch this number closely</div>
+            <p style="margin:0;">Rising labor productivity means the same workforce can produce more, which lets companies raise wages without necessarily squeezing profit margins — a genuinely healthy combination for equity markets. Slowing productivity growth, by contrast, often forces a harder trade-off between wage growth and profitability.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c6">
+            <div class="label">Check yourself</div>
+            <div class="q">Country A has a much higher level of labor productivity than Country B, but Country B's productivity is growing faster. What does this pattern most likely reflect?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="true">Country A is a mature, developed economy; Country B is a developing economy catching up from a lower capital base</button>
+              <button class="opt-btn" data-correct="false">Country B's workers are fundamentally more skilled than Country A's</button>
+              <button class="opt-btn" data-correct="false">This pattern is impossible under the production function model</button>
+            </div>
+            <div class="checkin-feedback">Correct — this is the classic convergence pattern: developed economies have a higher accumulated productivity level, while developing economies, starting from less capital per worker, often grow faster as they build up their capital base.</div>
+          </div>
+        </div>
+        <div>
+          <div class="dist-card" style="margin-top:0;">
+            <div class="label" style="font-family:var(--font-mono); font-size:.72rem; text-transform:uppercase; color:var(--indigo); font-weight:700; margin-bottom:12px;">Try it — labor productivity calculator</div>
+            <div class="tvm-grid">
+              <div class="tvm-field"><label>Real GDP</label><input type="number" id="lpGDP" value="21000000" step="10000"></div>
+              <div class="tvm-field"><label>Aggregate hours (millions)</label><input type="number" id="lpHours" value="260000" step="1000"></div>
+            </div>
+            <div class="tvm-result" id="lpResult">Labor productivity = $80.77 / hour</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         QUIZ
+    ========================================================== -->
+    <section class="section" id="sec-quiz" style="max-width:900px;">
+      <div class="section-head">
+        <span class="section-tag">Q</span>
+        <div>
+          <h2>Practice Quiz</h2>
+          <p class="subhead">20 questions across everything above. Answer, get instant feedback, and see your score at the end.</p>
+        </div>
+      </div>
+      <div class="quiz-shell" id="quizShell">
+        <!-- populated by JS -->
+      </div>
+    </section>
+
+    <footer class="footer">
+      Part 2 of 2 for the CFA Program prerequisite Economics reading on Aggregate Output, Prices, and Economic Growth. <a href="../gdp-income/index.html" style="color:var(--indigo);">← Back to Part 1: GDP, Income &amp; Expenditure</a>
+    </footer>
+  </main>
+</div>
+
+<script src="../../diagnostics.js"></script>
+<script src="../bundle.js"></script>
+<script src="../../accessibility.js"></script>
+</body>
+</html>

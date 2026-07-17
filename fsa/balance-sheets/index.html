@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Balance Sheets — CFA Prerequisite FSA Toolkit</title>
+<link rel="stylesheet" href="../../shared-module-standard.css">
+</head>
+<body>
+
+<div class="mobile-bar">
+  <strong style="font-family:var(--font-display)">A = L + E</strong>
+  <button id="sidebarToggle">Menu</button>
+</div>
+
+<div class="app">
+  <nav class="sidebar" id="sidebar">
+    <a href="../index.html" class="brand">
+      <span class="brand-mark"></span>
+      <span class="brand-name">Balance<br>Sheets</span>
+    </a>
+    <div class="brand-sub">CFA Prerequisite · FSA · Module 3</div>
+
+    <div class="progress-wrap">
+      <div class="progress-label"><span>Progress</span><span id="progressPct">0%</span></div>
+      <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+    </div>
+
+    <div class="toc-group-label">The Snapshot</div>
+    <ul class="toc">
+      <li><a href="#sec-overview" data-sec="sec-overview"><span class="num">01</span>What the Balance Sheet Reports</a></li>
+      <li><a href="#sec-classification" data-sec="sec-classification"><span class="num">02</span>Current vs. Non-Current</a></li>
+      <li><a href="#sec-liquidity" data-sec="sec-liquidity"><span class="num">03</span>Liquidity-Based Presentation</a></li>
+    </ul>
+
+    <div class="toc-group-label">What's In Each Bucket</div>
+    <ul class="toc">
+      <li><a href="#sec-currentassets" data-sec="sec-currentassets"><span class="num">04</span>Current Assets</a></li>
+      <li><a href="#sec-currentliab" data-sec="sec-currentliab"><span class="num">05</span>Current Liabilities</a></li>
+      <li><a href="#sec-equity" data-sec="sec-equity"><span class="num">06</span>Components of Equity</a></li>
+    </ul>
+
+    <div class="toc-group-label">Check Yourself</div>
+    <ul class="toc">
+      <li><a href="#sec-quiz" data-sec="sec-quiz"><span class="num">Q</span>Practice Quiz (20)</a></li>
+    </ul>
+  </nav>
+
+  <main id="top">
+    <header class="hero">
+      <div class="eyebrow">CFA Program · Prerequisite Financial Statement Analysis · Module 3</div>
+      <h1>A photograph, not a valuation — and the difference matters more than it sounds.</h1>
+      <p class="lede">The income statement covers a stretch of time. The balance sheet is the opposite: everything a company owns and owes, frozen at one exact instant. This module goes past the accounting equation you already know from Module 00, into how real companies like SAP, Apple, and HSBC actually organize that snapshot — and why the "equity" number on it was never meant to tell you what the company is actually worth.</p>
+    </header>
+
+    <!-- =========================================================
+         01 WHAT THE BALANCE SHEET REPORTS
+    ========================================================== -->
+    <section class="section" id="sec-overview">
+      <div class="section-head">
+        <span class="section-tag">01</span>
+        <div>
+          <h2>What the Balance Sheet Reports</h2>
+          <p class="subhead">Also called the statement of financial position — and genuinely not a market valuation of the company, even though it's tempting to read it that way.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="definition">
+            <div class="label">Two ways to read the same equation</div>
+            <p style="margin:0;">A = L + E can be read as: the left side shows the resources a company controls; the right side shows <em>how those resources were financed</em> — by owners (equity) or by others (liabilities). Every asset on the left has a financing story on the right.</p>
+          </div>
+
+          <div class="callout" style="border-left-color:var(--red);">
+            <div class="label" style="font-family:var(--font-mono); font-size:.72rem; text-transform:uppercase; color:var(--red); font-weight:700; margin-bottom:8px;">Why balance sheet equity ≠ market value</div>
+            <p style="margin:0 0 8px;"><strong>1. It's a mixed measurement model</strong> — some items sit at historical cost, others at fair value, within the same statement.</p>
+            <p style="margin:0 0 8px;"><strong>2. Even fair-value items go stale immediately</strong> — they reflect value as of the balance sheet date, which can move the very next day.</p>
+            <p style="margin:0;"><strong>3. Genuine value drivers are missing entirely</strong> — a company's reputation, its management team's skill, its brand strength — none of it sits on the balance sheet, even though all of it drives future cash flows.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c1">
+            <div class="label">Check yourself</div>
+            <div class="q">Why shouldn't an analyst treat a company's balance sheet equity as equivalent to its market value?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="true">The balance sheet mixes measurement bases, reflects only a single past date, and excludes real value drivers like reputation and management skill</button>
+              <button class="opt-btn" data-correct="false">Balance sheet equity is always exactly equal to market value by definition</button>
+              <button class="opt-btn" data-correct="false">The balance sheet only reports liabilities, never equity</button>
+            </div>
+            <div class="checkin-feedback">Correct — mixed measurement bases, a single point-in-time snapshot, and the exclusion of unrecorded value drivers all mean book equity and market value are genuinely different things.</div>
+          </div>
+        </div>
+        <div>
+          <div class="callout" style="margin-top:0;">
+            <p style="margin:0; font-size:.9rem;"><strong>Naming note:</strong> IFRS calls this the "statement of financial position." US GAAP uses "balance sheet" and "statement of financial position" interchangeably. Same report, different preferred names.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         02 CURRENT VS NON-CURRENT
+    ========================================================== -->
+    <section class="section" id="sec-classification">
+      <div class="section-head">
+        <span class="section-tag">02</span>
+        <div>
+          <h2>Current vs. Non-Current Classification</h2>
+          <p class="subhead">One year, or one operating cycle — whichever is longer. That's the entire dividing line between "current" and everything else.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="definition">
+            <div class="label">The classification rule</div>
+            <p style="margin-bottom:8px;"><strong>Current assets:</strong> expected to be sold, used up, or converted to cash within one year or one operating cycle, whichever is <em>greater</em>.</p>
+            <p style="margin:0;"><strong>Current liabilities:</strong> expected to be settled within that same window, or held primarily for trading, or the entity lacks an unconditional right to defer settlement beyond a year.</p>
+          </div>
+
+          <div class="callout example">
+            <div class="label">Why a lumber company's 18-month-old inventory can still be "current"</div>
+            <p style="margin:0;">A company's <strong>operating cycle</strong> is the average time from acquiring inventory to collecting cash from its sale. Tobacco, distillery, and lumber businesses often have operating cycles well over a year — their inventory sits in a warehouse aging for a long time by design. Even inventory held 18 months still counts as a <em>current</em> asset, because it's genuinely expected to sell within that industry's normal operating cycle, not within a rigid calendar year.</p>
+          </div>
+
+          <div class="callout formula">
+            <div class="label">Working capital</div>
+            <div class="formula-body">Working Capital = Current Assets − Current Liabilities</div>
+          </div>
+
+          <div class="checkin" data-checkin="c2">
+            <div class="label">Check yourself</div>
+            <div class="q">A distillery holds whiskey inventory that ages in barrels for 3 years before being sold, well beyond a calendar year. Should this inventory be classified as a current or non-current asset?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="true">Current — because it's expected to be sold within the company's normal (longer) operating cycle</button>
+              <button class="opt-btn" data-correct="false">Non-current, since it's held longer than one calendar year</button>
+              <button class="opt-btn" data-correct="false">It isn't classified as an asset at all until sold</button>
+            </div>
+            <div class="checkin-feedback">Correct — the one-year-or-operating-cycle rule uses whichever is greater, so inventory genuinely expected to sell within a longer normal operating cycle still counts as current.</div>
+          </div>
+        </div>
+        <div>
+          <div class="dist-card" style="margin-top:0;">
+            <div class="label" style="font-family:var(--font-mono); font-size:.72rem; text-transform:uppercase; color:var(--indigo); font-weight:700; margin-bottom:12px;">Try it — working capital calculator</div>
+            <div class="tvm-grid">
+              <div class="tvm-field"><label>Total current assets</label><input type="number" id="wcAssets" value="128645" step="1000"></div>
+              <div class="tvm-field"><label>Total current liabilities</label><input type="number" id="wcLiab" value="100814" step="1000"></div>
+            </div>
+            <div class="tvm-result" id="wcResult">Working capital = $27,831</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         03 LIQUIDITY-BASED PRESENTATION
+    ========================================================== -->
+    <section class="section" id="sec-liquidity">
+      <div class="section-head">
+        <span class="section-tag">03</span>
+        <div>
+          <h2>Liquidity-Based Presentation</h2>
+          <p class="subhead">For a bank, "current vs. non-current" barely means anything — so IFRS lets certain companies present their balance sheet a completely different way.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <p>Most companies use a <strong>classified balance sheet</strong> — current items grouped separately from non-current items. But under IFRS, a company can instead use a <strong>liquidity-based presentation</strong>, listing every asset and liability in order of liquidity, when that's more relevant and reliable.</p>
+
+          <div class="callout example">
+            <div class="label">Real example — HSBC's balance sheet</div>
+            <p style="margin:0;">HSBC, a global bank, starts its asset listing with <strong>cash and balances at central banks</strong> — the most liquid item possible — and works down toward less liquid items like <strong>interests in associates and joint ventures</strong> near the bottom. There's no "current assets" subtotal at all, because for a bank, almost every asset and liability is inherently tied to trading, lending, and interest-rate exposure — the current/non-current distinction just isn't as meaningful as it is for a manufacturer.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c3">
+            <div class="label">Check yourself</div>
+            <div class="q">Why might a global bank like HSBC use a liquidity-based balance sheet presentation instead of a classified (current/non-current) one?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="true">Because the current/non-current distinction is less meaningful for a bank's trading and lending assets than ordering by liquidity</button>
+              <button class="opt-btn" data-correct="false">Because IFRS requires all companies to use liquidity-based presentation</button>
+              <button class="opt-btn" data-correct="false">Because banks are not required to present a balance sheet at all</button>
+            </div>
+            <div class="checkin-feedback">Correct — for entities like banks, ordering assets and liabilities by liquidity provides more relevant, reliable information than a current/non-current split.</div>
+          </div>
+        </div>
+        <div>
+          <div class="callout" style="margin-top:0;">
+            <p style="margin:0; font-size:.9rem;">Both SAP and Apple, in contrast, use classified balance sheets — current assets and liabilities presented as their own distinct subtotal, ahead of everything else.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         04 CURRENT ASSETS
+    ========================================================== -->
+    <section class="section" id="sec-currentassets">
+      <div class="section-head">
+        <span class="section-tag">04</span>
+        <div>
+          <h2>Current Assets — Cash, Marketable Securities &amp; Receivables</h2>
+          <p class="subhead">Four specific line items are required to be shown separately, whenever material — everything else is company discretion.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="definition">
+            <div class="label">The required current-asset categories</div>
+            <p style="margin-bottom:6px;"><strong>Cash and cash equivalents:</strong> cash plus highly liquid investments with original maturities of three months or less — Treasury bills, commercial paper, money market funds.</p>
+            <p style="margin-bottom:6px;"><strong>Trade and other receivables:</strong> amounts owed to the company by its customers.</p>
+            <p style="margin-bottom:6px;"><strong>Inventories:</strong> goods held for sale or used in production.</p>
+            <p style="margin:0;"><strong>Financial assets with short maturities:</strong> short-term marketable securities.</p>
+          </div>
+
+          <div class="callout finance">
+            <div class="label">Real example — Apple's current asset mix</div>
+            <p style="margin:0;">Apple's FY2017 balance sheet shows $20.3B cash and equivalents, $53.9B short-term marketable securities, $17.9B accounts receivable, just $4.9B inventories (notably lean for a hardware company — a deliberate supply-chain efficiency), and $17.8B "vendor non-trade receivables" — a line item specific to Apple's unusual arrangement of supplying components to manufacturing partners.</p>
+          </div>
+
+          <div class="callout" style="border-left-color:var(--red);">
+            <p style="margin:0; font-size:.9rem;"><strong>Cash equivalents have a hard cutoff:</strong> only investments with original maturities of three months or less qualify. Something maturing in four months, however safe, doesn't belong in "cash and cash equivalents" — it belongs elsewhere, typically short-term investments.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c4">
+            <div class="label">Check yourself</div>
+            <div class="q">A company holds a US Treasury bill with an original maturity of 2 months. How should this typically be classified?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="true">A cash equivalent</button>
+              <button class="opt-btn" data-correct="false">Inventory</button>
+              <button class="opt-btn" data-correct="false">A non-current asset</button>
+            </div>
+            <div class="checkin-feedback">Correct — with an original maturity under three months, this Treasury bill qualifies as a cash equivalent.</div>
+          </div>
+        </div>
+        <div>
+          <div class="callout" style="margin-top:0;">
+            <table class="exhibit" style="margin:0;">
+              <tr><th>Apple FY2017 ($B)</th><th></th></tr>
+              <tr><td>Cash &amp; equivalents</td><td class="num">20.3</td></tr>
+              <tr><td>Short-term securities</td><td class="num">53.9</td></tr>
+              <tr><td>Accounts receivable</td><td class="num">17.9</td></tr>
+              <tr><td>Inventories</td><td class="num">4.9</td></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         05 CURRENT LIABILITIES
+    ========================================================== -->
+    <section class="section" id="sec-currentliab">
+      <div class="section-head">
+        <span class="section-tag">05</span>
+        <div>
+          <h2>Current Liabilities — Payables, Financial Liabilities &amp; Deferred Income</h2>
+          <p class="subhead">Everything a company owes and expects to settle soon, split into a few genuinely distinct types.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="definition">
+            <div class="label">Common types of current liabilities</div>
+            <p style="margin-bottom:6px;"><strong>Trade payables (accounts payable):</strong> unpaid amounts owed to vendors for purchases on credit — the flip side of another company's receivables.</p>
+            <p style="margin-bottom:6px;"><strong>Financial liabilities:</strong> bank loans, notes payable, commercial paper due within the operating cycle — plus the current portion of any long-term debt.</p>
+            <p style="margin-bottom:6px;"><strong>Accrued expenses:</strong> costs incurred but not yet paid or invoiced.</p>
+            <p style="margin:0;"><strong>Deferred (unearned) revenue:</strong> cash already received for goods or services not yet delivered.</p>
+          </div>
+
+          <div class="callout example">
+            <div class="label">Why trade payables trends matter to analysts</div>
+            <p style="margin:0;">A meaningful shift in accounts payable relative to purchase volume can signal a changing relationship with suppliers — either a company negotiating better payment terms (a good sign), or suppliers tightening credit because they're worried about getting paid (a warning sign). The direction alone doesn't tell you which; context does.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c5">
+            <div class="label">Check yourself</div>
+            <div class="q">A software company receives a full year's subscription payment upfront but hasn't yet delivered 11 of the 12 months of service. How should the unearned portion be classified?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="true">Deferred (unearned) revenue — a current liability</button>
+              <button class="opt-btn" data-correct="false">Revenue, recognized immediately in full</button>
+              <button class="opt-btn" data-correct="false">An asset</button>
+            </div>
+            <div class="checkin-feedback">Correct — cash received before the related service is delivered creates a liability (deferred revenue), recognized as revenue only as the service is actually delivered.</div>
+          </div>
+        </div>
+        <div>
+          <div class="callout" style="margin-top:0;">
+            <p style="margin:0; font-size:.9rem;"><strong>Watch for the "current portion of long-term debt":</strong> even a 10-year bond gets partially reclassified as a current liability once its next principal payment falls within the coming year — a detail that trips up analysts who assume "long-term debt" always stays entirely non-current.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         06 COMPONENTS OF EQUITY
+    ========================================================== -->
+    <section class="section" id="sec-equity">
+      <div class="section-head">
+        <span class="section-tag">06</span>
+        <div>
+          <h2>Components of Shareholders' Equity</h2>
+          <p class="subhead">"Equity" is really six different things added together, and real companies rarely show all six with the same labels.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="definition">
+            <div class="label">The six components</div>
+            <p style="margin-bottom:6px;"><strong>1. Contributed capital:</strong> what owners directly paid into the company for shares.</p>
+            <p style="margin-bottom:6px;"><strong>2. Preferred shares:</strong> classified as equity or as a liability based on their actual characteristics, not just their label — mandatory redemption pushes them toward liability treatment.</p>
+            <p style="margin-bottom:6px;"><strong>3. Treasury shares:</strong> the company's own previously-issued shares, repurchased and held (not cancelled) — reduces total equity, and these shares carry no vote and receive no dividend.</p>
+            <p style="margin-bottom:6px;"><strong>4. Retained earnings:</strong> cumulative net income earned over the company's life, minus all dividends ever paid.</p>
+            <p style="margin-bottom:6px;"><strong>5. Accumulated other comprehensive income (AOCI):</strong> the cumulative balance of every year's OCI from Module 2 — the running total that OCI feeds into.</p>
+            <p style="margin:0;"><strong>6. Non-controlling (minority) interest:</strong> the slice of a consolidated subsidiary's equity that belongs to outside shareholders, not the parent company.</p>
+          </div>
+
+          <div class="callout finance">
+            <div class="label">Real example — SAP vs. Apple's equity sections</div>
+            <p style="margin:0;">SAP shows all six components explicitly: €1,229M issued capital, €1,591M treasury shares, €24,794M retained earnings, €508M other comprehensive income, plus a non-controlling interest of €31M. Apple's equity section, by contrast, shows just three line items — common stock, retained earnings, and AOCI — because Apple <em>cancels</em> repurchased shares rather than holding them as treasury stock, and has no meaningful non-controlling interests to report.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c6">
+            <div class="label">Check yourself</div>
+            <div class="q">A company repurchases its own shares and holds them, rather than cancelling them. What is this called, and what's its effect on total equity?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="true">Treasury shares — total equity decreases by the repurchase cost</button>
+              <button class="opt-btn" data-correct="false">Retained earnings — total equity increases</button>
+              <button class="opt-btn" data-correct="false">Non-controlling interest — no effect on total equity</button>
+            </div>
+            <div class="checkin-feedback">Correct — shares repurchased and held (not cancelled) become treasury shares, reducing total shareholders' equity by the repurchase cost.</div>
+          </div>
+        </div>
+        <div>
+          <div class="dist-card" style="margin-top:0;">
+            <div class="label" style="font-family:var(--font-mono); font-size:.72rem; text-transform:uppercase; color:var(--indigo); font-weight:700; margin-bottom:12px;">Try it — build total equity</div>
+            <div class="tvm-grid">
+              <div class="tvm-field"><label>Contributed capital</label><input type="number" id="eqContrib" value="1229" step="10"></div>
+              <div class="tvm-field"><label>Treasury shares (reduces equity)</label><input type="number" id="eqTreasury" value="1591" step="10"></div>
+              <div class="tvm-field"><label>Retained earnings</label><input type="number" id="eqRetained" value="24794" step="100"></div>
+              <div class="tvm-field"><label>AOCI</label><input type="number" id="eqAOCI" value="508" step="10"></div>
+              <div class="tvm-field"><label>Non-controlling interest</label><input type="number" id="eqNCI" value="31" step="1"></div>
+            </div>
+            <div class="tvm-result" id="eqResult">Total equity = €24,971M</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         QUIZ
+    ========================================================== -->
+    <section class="section" id="sec-quiz" style="max-width:900px;">
+      <div class="section-head">
+        <span class="section-tag">Q</span>
+        <div>
+          <h2>Practice Quiz</h2>
+          <p class="subhead">20 questions across everything above. Answer, get instant feedback, and see your score at the end.</p>
+        </div>
+      </div>
+      <div class="quiz-shell" id="quizShell">
+        <!-- populated by JS -->
+      </div>
+    </section>
+
+    <footer class="footer">
+      Built as a companion study tool for the CFA Program prerequisite Financial Statement Analysis reading on Balance Sheets. Work through it alongside your primary curriculum — this isn't a replacement for official CFA Institute materials.
+    </footer>
+  </main>
+</div>
+
+<script src="../../diagnostics.js"></script>
+<script src="../bundle.js"></script>
+<script src="../../accessibility.js"></script>
+</body>
+</html>

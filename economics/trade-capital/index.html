@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>International Trade and Capital Flows — CFA Prerequisite Economics Toolkit</title>
+<link rel="stylesheet" href="../../shared-module-standard.css">
+</head>
+<body>
+
+<div class="mobile-bar">
+  <strong style="font-family:var(--font-display)">🌍 ⇄</strong>
+  <button id="sidebarToggle">Menu</button>
+</div>
+
+<div class="app">
+  <nav class="sidebar" id="sidebar">
+    <a href="../index.html" class="brand">
+      <span class="brand-mark"></span>
+      <span class="brand-name">International Trade<br>&amp; Capital Flows</span>
+    </a>
+    <div class="brand-sub">CFA Prerequisite · Economics · Module 6</div>
+
+    <div class="progress-wrap">
+      <div class="progress-label"><span>Progress</span><span id="progressPct">0%</span></div>
+      <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+    </div>
+
+    <div class="toc-group-label">Why Nations Trade</div>
+    <ul class="toc">
+      <li><a href="#sec-terminology" data-sec="sec-terminology"><span class="num">01</span>GDP vs. GNP &amp; Basic Terms</a></li>
+      <li><a href="#sec-patterns" data-sec="sec-patterns"><span class="num">02</span>Patterns &amp; Trends in Trade</a></li>
+      <li><a href="#sec-advantage" data-sec="sec-advantage"><span class="num">03</span>Absolute vs. Comparative Advantage</a></li>
+      <li><a href="#sec-gains" data-sec="sec-gains"><span class="num">04</span>The Gains from Trade</a></li>
+    </ul>
+
+    <div class="toc-group-label">Two Models of Trade</div>
+    <ul class="toc">
+      <li><a href="#sec-ricardian" data-sec="sec-ricardian"><span class="num">05</span>The Ricardian Model</a></li>
+      <li><a href="#sec-heckscher" data-sec="sec-heckscher"><span class="num">06</span>The Heckscher–Ohlin Model</a></li>
+    </ul>
+
+    <div class="toc-group-label">The Balance of Payments</div>
+    <ul class="toc">
+      <li><a href="#sec-bopcomponents" data-sec="sec-bopcomponents"><span class="num">07</span>BOP Components</a></li>
+      <li><a href="#sec-nationalincome" data-sec="sec-nationalincome"><span class="num">08</span>The National Income Identity</a></li>
+    </ul>
+
+    <div class="toc-group-label">Check Yourself</div>
+    <ul class="toc">
+      <li><a href="#sec-quiz" data-sec="sec-quiz"><span class="num">Q</span>Practice Quiz (20)</a></li>
+    </ul>
+  </nav>
+
+  <main id="top">
+    <header class="hero">
+      <div class="eyebrow">CFA Program · Prerequisite Economics · Module 6</div>
+      <h1>No country needs to be best at everything to gain from trade.</h1>
+      <p class="lede">This is the module that explains why a country can import something it's actually better at producing than its trading partner — and still come out ahead. It closes with the balance of payments, the accounting system that tracks every dollar a country's households, firms, and government exchange with the rest of the world.</p>
+    </header>
+
+    <!-- =========================================================
+         01 GDP VS GNP & BASIC TERMINOLOGY
+    ========================================================== -->
+    <section class="section" id="sec-terminology">
+      <div class="section-head">
+        <span class="section-tag">01</span>
+        <div>
+          <h2>GDP vs. GNP &amp; Basic Trade Terminology</h2>
+          <p class="subhead">Two very similar-sounding numbers that measure genuinely different things.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="definition">
+            <div class="label">GDP vs. GNP — where, not who</div>
+            <p style="margin-bottom:8px;"><strong>GDP:</strong> value of output produced by factors of production <em>located within</em> a country, regardless of who owns them.</p>
+            <p style="margin:0;"><strong>GNP:</strong> value of output produced by factors of production <em>owned by a country's citizens</em>, regardless of where the production physically happens.</p>
+          </div>
+
+          <div class="callout example">
+            <div class="label">Where they diverge</div>
+            <p style="margin:0;">A German-owned factory operating in Poland counts toward Poland's GDP (it's physically located there) but toward Germany's GNP (a German company owns it). GDP includes foreign-owned production at home; GNP includes citizen-owned production abroad — they're mirror images of each other.</p>
+          </div>
+
+          <div class="definition">
+            <div class="label">Core vocabulary</div>
+            <p style="margin-bottom:8px;"><strong>Terms of trade</strong> = price of exports / price of imports. A rising ratio means a country's exports buy more imports than before — its terms of trade have improved.</p>
+            <p style="margin-bottom:8px;"><strong>Net exports</strong> = exports − imports. Positive means a trade surplus (the country lends to or buys assets from foreigners); negative means a trade deficit (it borrows from or sells assets to foreigners).</p>
+            <p style="margin-bottom:8px;"><strong>Autarky:</strong> a closed economy that doesn't trade at all — everything produced and consumed domestically, at the domestic "autarkic price."</p>
+            <p style="margin:0;"><strong>Free trade:</strong> no government restrictions on trade at all — global supply and demand alone set the price and quantity of imports and exports.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c1">
+            <div class="label">Check yourself</div>
+            <div class="q">A Japanese-owned car factory operates inside the United States. This factory's output counts toward:</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="true">US GDP, and Japan's GNP</button>
+              <button class="opt-btn" data-correct="false">Japan's GDP, and US GNP</button>
+              <button class="opt-btn" data-correct="false">Neither country's GDP or GNP</button>
+            </div>
+            <div class="checkin-feedback">Correct — GDP counts output produced within a country's borders (US GDP), while GNP counts output produced by a country's own citizens or companies wherever it happens (Japan's GNP).</div>
+          </div>
+        </div>
+        <div>
+          <div class="callout" style="margin-top:0;">
+            <table class="exhibit" style="margin:0;">
+              <tr><th>Term</th><th>Trade surplus</th><th>Trade deficit</th></tr>
+              <tr><td>Exports vs. imports</td><td class="num">Exports &gt; imports</td><td class="num">Imports &gt; exports</td></tr>
+              <tr><td>Net position</td><td class="num">Lends to foreigners</td><td class="num">Borrows from foreigners</td></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         02 PATTERNS & TRENDS IN TRADE
+    ========================================================== -->
+    <section class="section" id="sec-patterns">
+      <div class="section-head">
+        <span class="section-tag">02</span>
+        <div>
+          <h2>Patterns &amp; Trends in International Trade</h2>
+          <p class="subhead">Trade isn't just bigger than it used to be — production itself has become genuinely global.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <p>Trade as a share of world GDP climbed from 39% in 1990 to 57% by 2010. Some economies opened up dramatically — Germany's trade-to-GDP ratio nearly doubled (46%→87%) between 1990 and 2017; India's roughly tripled (16%→~50%). The United States, by contrast, expanded far more modestly (20%→27%) over the same span.</p>
+
+          <div class="definition">
+            <div class="label">FDI vs. FPI</div>
+            <p style="margin-bottom:8px;"><strong>Foreign direct investment (FDI):</strong> a firm directly investing in productive assets in another country — building a factory, acquiring a foreign subsidiary. A firm doing this becomes a multinational corporation (MNC).</p>
+            <p style="margin:0;"><strong>Foreign portfolio investment (FPI):</strong> shorter-term investment in foreign financial instruments — foreign stocks, foreign government bonds — without direct operational control.</p>
+          </div>
+
+          <div class="callout finance">
+            <div class="label">Worked example — the globally-assembled iPhone</div>
+            <p style="margin:0;">Apple's iPhone 6s sourced its camera, display, and storage from Japan; its RAM and processor from South Korea; its modem, battery, and chassis from China — with hardware and software designed in the US, and final assembly in China. This is production genuinely decomposed into a global value chain, with each component sourced wherever it can be made most efficiently — the modern face of comparative advantage in action.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c2">
+            <div class="label">Check yourself</div>
+            <div class="q">A US pension fund buys shares of a French company on the French stock exchange, with no intention of controlling the company. This is an example of:</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="false">Foreign direct investment (FDI)</button>
+              <button class="opt-btn" data-correct="true">Foreign portfolio investment (FPI)</button>
+              <button class="opt-btn" data-correct="false">A current account transfer</button>
+            </div>
+            <div class="checkin-feedback">Correct — a shorter-term investment in foreign financial instruments without operational control is FPI, distinct from FDI.</div>
+          </div>
+        </div>
+        <div>
+          <div class="callout" style="margin-top:0;">
+            <p style="margin:0; font-size:.9rem;"><strong>Intra-firm trade is a bigger deal than it sounds:</strong> around 46% of US imports occur between related parties (a US company and its own foreign subsidiary) — meaning a huge share of "international trade" is really internal logistics for global companies, not arm's-length transactions between strangers.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         03 ABSOLUTE VS COMPARATIVE ADVANTAGE
+    ========================================================== -->
+    <section class="section" id="sec-advantage">
+      <div class="section-head">
+        <span class="section-tag">03</span>
+        <div>
+          <h2>Absolute vs. Comparative Advantage</h2>
+          <p class="subhead">The single most important — and most counterintuitive — idea in all of trade theory.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="definition">
+            <div class="label">Two different kinds of "better"</div>
+            <p style="margin-bottom:8px;"><strong>Absolute advantage:</strong> a country can produce a good using fewer resources than its trading partner — it's simply more efficient at it, full stop.</p>
+            <p style="margin:0;"><strong>Comparative advantage:</strong> a country's <em>opportunity cost</em> of producing a good is lower than its trading partner's — even if it isn't the more efficient producer in absolute terms.</p>
+          </div>
+
+          <div class="callout finance">
+            <div class="label">Worked example — machinery and cloth</div>
+            <p style="margin:0 0 8px;">Output per worker per day:</p>
+            <table class="exhibit" style="margin:0 0 10px;">
+              <tr><th></th><th>Machinery</th><th>Cloth (yards)</th></tr>
+              <tr><td>United Kingdom</td><td class="num">4</td><td class="num">8</td></tr>
+              <tr><td>India</td><td class="num">2</td><td class="num">16</td></tr>
+            </table>
+            <p style="margin:0 0 8px;">The UK has an <strong>absolute advantage</strong> in machinery (4 &gt; 2); India has one in cloth (16 &gt; 8). But do these line up with comparative advantage too? Check opportunity costs: in the UK, 1 machine costs 2 yards of cloth (8÷4); in India, 1 machine costs 8 yards of cloth (16÷2). The UK's opportunity cost is lower, so it also has the <strong>comparative advantage</strong> in machinery. Flipping it around: 1 yard of cloth costs 1/2 a machine in the UK, but only 1/8 of a machine in India — India has the comparative advantage in cloth.</p>
+            <p style="margin:0;">Both countries gain by specializing and trading — the UK exports machinery, India exports cloth — even though this example happens to have absolute and comparative advantage pointing the same direction for each country.</p>
+          </div>
+
+          <div class="callout" style="border-left-color:var(--red);">
+            <div class="label" style="font-family:var(--font-mono); font-size:.72rem; text-transform:uppercase; color:var(--red); font-weight:700; margin-bottom:8px;">The genuinely surprising case</div>
+            <p style="margin:0;">Suppose India could only produce 6 yards of cloth per worker per day (not 16) — meaning the UK now has the absolute advantage in <em>both</em> goods. India would still have a comparative advantage in cloth: its opportunity cost of a yard of cloth would be 1/3 of a machine (6÷2 inverted), still lower than the UK's 1/2 of a machine. Both countries can still gain from trade, even though one country is worse at producing everything in absolute terms.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c3">
+            <div class="label">Check yourself</div>
+            <div class="q">A Brazilian worker produces 20 pens or 40 pencils per day. A Vietnamese worker produces 10 pens or 60 pencils per day. What is Vietnam's opportunity cost of producing one pen?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="false">2 pencils</button>
+              <button class="opt-btn" data-correct="true">6 pencils</button>
+              <button class="opt-btn" data-correct="false">10 pencils</button>
+            </div>
+            <div class="checkin-feedback">Correct — Vietnam can make 60 pencils or 10 pens in a day, so making 1 pen costs 60/10 = 6 pencils forgone.</div>
+          </div>
+        </div>
+        <div>
+          <div class="dist-card" style="margin-top:0;">
+            <div class="label" style="font-family:var(--font-mono); font-size:.72rem; text-transform:uppercase; color:var(--indigo); font-weight:700; margin-bottom:12px;">Try it — advantage calculator</div>
+            <p style="font-size:.8rem; color:var(--ink-soft); margin:0 0 10px;">Output per worker per day, two countries, two goods.</p>
+            <div class="tvm-grid">
+              <div class="tvm-field"><label>Country A, Good 1</label><input type="number" id="advA1" value="4" step="1"></div>
+              <div class="tvm-field"><label>Country A, Good 2</label><input type="number" id="advA2" value="8" step="1"></div>
+              <div class="tvm-field"><label>Country B, Good 1</label><input type="number" id="advB1" value="2" step="1"></div>
+              <div class="tvm-field"><label>Country B, Good 2</label><input type="number" id="advB2" value="16" step="1"></div>
+            </div>
+            <div id="advOut" style="margin-top:12px;"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         04 THE GAINS FROM TRADE
+    ========================================================== -->
+    <section class="section" id="sec-gains">
+      <div class="section-head">
+        <span class="section-tag">04</span>
+        <div>
+          <h2>The Gains from Trade</h2>
+          <p class="subhead">Any price between the two countries' autarkic prices makes both sides better off than not trading at all.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <p>Continuing the UK/India machinery example: the UK's autarkic price is 2 yards of cloth per machine; India's is 8 yards of cloth per machine. Any world price for machinery <strong>between 2 and 8 yards of cloth</strong> makes trade worthwhile for both countries — the UK sells above its own autarkic price, India buys below its own autarkic price.</p>
+
+          <div class="callout example">
+            <div class="label">Where the world price lands matters — a lot</div>
+            <p style="margin:0;">If the UK can sell a machine to India for 7 yards of cloth (close to India's autarkic price), the UK gains 5 yards of cloth per machine versus its own 2-yard autarkic price — a big win for the UK. If instead the world price settles at 3 yards of cloth (close to the UK's own autarkic price), the UK only gains 1 yard of cloth per machine. The further the world price sits from a country's own autarkic price, the more that country gains from trade.</p>
+          </div>
+
+          <div class="callout" style="border-left-color:var(--red);">
+            <p style="margin:0; font-size:.9rem;"><strong>Comparative advantage isn't permanent.</strong> It shifts with capital accumulation, new technology, and resource discoveries. Rising skilled labor in China, for instance, has pulled multinational R&D facilities there — a comparative advantage that didn't exist a generation earlier.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c4">
+            <div class="label">Check yourself</div>
+            <div class="q">Two countries' autarkic prices for a good are 3 units and 9 units of another good. Which world price would allow both countries to gain from trade?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="false">2 units</button>
+              <button class="opt-btn" data-correct="true">6 units</button>
+              <button class="opt-btn" data-correct="false">10 units</button>
+            </div>
+            <div class="checkin-feedback">Correct — any world price strictly between the two autarkic prices (3 and 9) allows both countries to gain; 6 sits between them.</div>
+          </div>
+        </div>
+        <div>
+          <div class="dist-card" style="margin-top:0;">
+            <div class="label" style="font-family:var(--font-mono); font-size:.72rem; text-transform:uppercase; color:var(--indigo); font-weight:700; margin-bottom:12px;">Try it — gains from trade range</div>
+            <div class="tvm-grid">
+              <div class="tvm-field"><label>Country A autarkic price</label><input type="number" id="gtA" value="2" step="0.5"></div>
+              <div class="tvm-field"><label>Country B autarkic price</label><input type="number" id="gtB" value="8" step="0.5"></div>
+              <div class="tvm-field"><label>Proposed world price</label><input type="number" id="gtWorld" value="5" step="0.5"></div>
+            </div>
+            <div class="tvm-result" id="gtResult">Valid range: [2.0, 8.0] · World price 5.0 works for both</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         05 THE RICARDIAN MODEL
+    ========================================================== -->
+    <section class="section" id="sec-ricardian">
+      <div class="section-head">
+        <span class="section-tag">05</span>
+        <div>
+          <h2>The Ricardian Model of Trade</h2>
+          <p class="subhead">One factor of production, one source of comparative advantage: technology.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <p>David Ricardo extended Adam Smith's absolute-advantage idea into something more powerful: a country can gain from trade even <em>without</em> being the more efficient producer of anything, as long as it has a comparative advantage in something.</p>
+
+          <div class="definition">
+            <div class="label">The model's core assumption</div>
+            <p style="margin:0;"><strong>Labor is the only variable factor of production.</strong> Differences in labor productivity — which reflect underlying differences in technology — are the entire source of comparative advantage in this model. A country with a lower opportunity cost (driven by better relative technology) specializes in that good.</p>
+          </div>
+
+          <div class="callout example">
+            <div class="label">Real-world example — India's IT services shift</div>
+            <p style="margin:0;">The shift of information technology services from developed economies toward India illustrates comparative advantage moving over time: a growing pool of highly skilled, relatively low-wage labor, expanding telecommunications infrastructure, and trade-liberalizing government policy in the 1990s together gave India a genuine comparative advantage in IT services — one that simply didn't exist a generation earlier.</p>
+          </div>
+
+          <div class="callout" style="border-left-color:var(--red);">
+            <p style="margin:0; font-size:.9rem;"><strong>A country's comparative advantage can be lost, too.</strong> Technology gaps close over time, and trading partners can even overtake the original leader — comparative advantage in the Ricardian model is a snapshot, not a permanent feature.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c5">
+            <div class="label">Check yourself</div>
+            <div class="q">In the Ricardian model of trade, what is the single underlying source of comparative advantage?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="false">Differences in capital abundance between countries</button>
+              <button class="opt-btn" data-correct="true">Differences in labor productivity, reflecting differences in technology</button>
+              <button class="opt-btn" data-correct="false">Differences in government tax policy</button>
+            </div>
+            <div class="checkin-feedback">Correct — with labor as the only variable factor of production in this model, technology-driven differences in labor productivity are the entire source of comparative advantage.</div>
+          </div>
+        </div>
+        <div>
+          <div class="callout" style="margin-top:0;">
+            <p style="margin:0; font-size:.9rem;"><strong>Incomplete specialization:</strong> if a smaller country fully specializes but still can't meet total world demand, a larger trading partner may remain only partially specialized — still producing some of the good in which it holds a comparative disadvantage, alongside its comparative-advantage good.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         06 THE HECKSCHER-OHLIN MODEL
+    ========================================================== -->
+    <section class="section" id="sec-heckscher">
+      <div class="section-head">
+        <span class="section-tag">06</span>
+        <div>
+          <h2>The Heckscher–Ohlin Model of Trade</h2>
+          <p class="subhead">Add a second factor of production, and comparative advantage stops being just about technology — it becomes about what a country has plenty of.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="definition">
+            <div class="label">The model's core assumption</div>
+            <p style="margin:0;"><strong>Both labor and capital are variable factors.</strong> Technology is assumed identical across countries within each industry (unlike the Ricardian model), so it's differences in <em>relative factor endowments</em> — how much capital vs. labor a country has — that drive comparative advantage. A country specializes in whichever good is intensive in the factor it holds relatively abundantly.</p>
+          </div>
+
+          <div class="callout finance">
+            <div class="label">Worked example — Canada and Thailand</div>
+            <p style="margin:0 0 8px;">In 2002, capital per worker in Canada's paper industry was C$118,777, versus just C$8,954 in its clothing sector — paper manufacturing is far more capital-intensive than clothing.</p>
+            <p style="margin:0;">Canada, being relatively capital-abundant compared with Thailand, exports capital-intensive paper to Thailand and imports labor-intensive clothing — exactly the pattern Heckscher–Ohlin predicts.</p>
+          </div>
+
+          <div class="callout example">
+            <div class="label">Real-world example — Japan's shifting advantage</div>
+            <p style="margin:0;">In 1967, Japan held a comparative advantage in unskilled-labor-intensive goods — textiles, apparel, leather. By 1980, having built up a much larger base of skilled labor, Japan's comparative advantage had shifted decisively toward skill-intensive products, especially non-electrical machinery — a textbook illustration of changing factor endowments reshaping a nation's trade pattern.</p>
+          </div>
+
+          <div class="callout" style="border-left-color:var(--red);">
+            <div class="label" style="font-family:var(--font-mono); font-size:.72rem; text-transform:uppercase; color:var(--red); font-weight:700; margin-bottom:8px;">A consequence unique to this model</div>
+            <p style="margin:0;">Because Heckscher–Ohlin has two factors of production, trade can genuinely redistribute income within a country. Opening to trade raises the price of a country's export good and lowers the price of its import good — which benefits the abundant factor (used intensively in the export good) and hurts the scarce factor (used intensively in the import good). The Ricardian model, with only one factor, can't produce this kind of internal winners-and-losers effect at all.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c6">
+            <div class="label">Check yourself</div>
+            <div class="q">According to the Heckscher–Ohlin model, a labor-abundant country would be expected to:</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="true">Export relatively labor-intensive goods and import relatively capital-intensive goods</button>
+              <button class="opt-btn" data-correct="false">Export relatively capital-intensive goods and import relatively labor-intensive goods</button>
+              <button class="opt-btn" data-correct="false">Export and import identical baskets of goods</button>
+            </div>
+            <div class="checkin-feedback">Correct — a country specializes in and exports the good that intensively uses the factor it holds relatively abundantly — for a labor-abundant country, that's labor-intensive goods.</div>
+          </div>
+        </div>
+        <div>
+          <div class="callout" style="margin-top:0;">
+            <table class="exhibit" style="margin:0;">
+              <tr><th></th><th>Ricardian</th><th>Heckscher–Ohlin</th></tr>
+              <tr><td>Factors of production</td><td class="num">Labor only</td><td class="num">Labor &amp; capital</td></tr>
+              <tr><td>Source of advantage</td><td class="num">Technology differences</td><td class="num">Factor endowment differences</td></tr>
+              <tr><td>Can redistribute income?</td><td class="num">No</td><td class="num">Yes</td></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         07 BALANCE OF PAYMENTS COMPONENTS
+    ========================================================== -->
+    <section class="section" id="sec-bopcomponents">
+      <div class="section-head">
+        <span class="section-tag">07</span>
+        <div>
+          <h2>The Balance of Payments — Components</h2>
+          <p class="subhead">Every single transaction a country's residents make with the rest of the world, recorded in one unified accounting system.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <p>The <strong>balance of payments (BOP)</strong> splits into three accounts, each tracking a different kind of cross-border flow.</p>
+
+          <div class="definition">
+            <div class="label">The current account — four sub-accounts</div>
+            <p style="margin-bottom:6px;"><strong>1. Merchandise trade:</strong> physical goods bought, sold, or given away.</p>
+            <p style="margin-bottom:6px;"><strong>2. Services:</strong> tourism, transportation, legal and consulting services, patent and copyright fees.</p>
+            <p style="margin-bottom:6px;"><strong>3. Income receipts:</strong> dividends, interest, and profits earned on foreign investments.</p>
+            <p style="margin:0;"><strong>4. Unilateral transfers:</strong> one-way flows — worker remittances home, foreign aid, gifts.</p>
+          </div>
+
+          <div class="definition">
+            <div class="label">The capital account &amp; the financial account</div>
+            <p style="margin-bottom:8px;"><strong>Capital account:</strong> capital transfers (debt forgiveness, migrants' transferred assets) and sales of non-produced, non-financial assets like patents and natural-resource rights.</p>
+            <p style="margin:0;"><strong>Financial account:</strong> a country's financial assets abroad and foreign-owned financial assets at home — official reserves, direct investment, portfolio holdings.</p>
+          </div>
+
+          <div class="callout example">
+            <div class="label">Reading a BOP entry — a $1 million export on credit</div>
+            <p style="margin:0;">Country B ships $1 million of goods to Country A in September, to be paid in December. In September, Country B records a credit (an export — a decrease in real assets) and a debit (a short-term financial claim against Country A — an increase in financial assets). In December, when payment arrives, Country B records a credit (that claim is eliminated) and a debit (cash received). Every single transaction always generates one offsetting debit and one offsetting credit — that's precisely why the overall BOP always balances by construction.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c7">
+            <div class="label">Check yourself</div>
+            <div class="q">A domestic worker sends $500 home to family in another country as a remittance. Which BOP sub-account does this belong to?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="false">Merchandise trade</button>
+              <button class="opt-btn" data-correct="true">Unilateral transfers</button>
+              <button class="opt-btn" data-correct="false">Income receipts</button>
+            </div>
+            <div class="checkin-feedback">Correct — a one-way transfer of money with nothing exchanged in return, like a remittance, falls under unilateral transfers in the current account.</div>
+          </div>
+        </div>
+        <div>
+          <div class="callout" style="margin-top:0;">
+            <table class="exhibit" style="margin:0;">
+              <tr><th>Account</th><th>Tracks</th></tr>
+              <tr><td>Current</td><td class="num">Goods, services, income, transfers</td></tr>
+              <tr><td>Capital</td><td class="num">Debt forgiveness, IP sales</td></tr>
+              <tr><td>Financial</td><td class="num">Investment flows</td></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         08 NATIONAL INCOME IDENTITY
+    ========================================================== -->
+    <section class="section" id="sec-nationalincome">
+      <div class="section-head">
+        <span class="section-tag">08</span>
+        <div>
+          <h2>The National Income Identity &amp; the Current Account</h2>
+          <p class="subhead">A country's current account balance is really just a statement about whether it's spending more or less than it produces.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="callout formula">
+            <div class="label">From closed economy to open economy</div>
+            <div class="formula-body">
+              Closed economy: Y = C + I + G<br>
+              Open economy: Y = C + I + G + (X − M)
+            </div>
+          </div>
+
+          <p>Net exports (X−M) is essentially the current account balance. Rearranging the open-economy identity gives a genuinely useful way to think about the current account:</p>
+
+          <div class="callout formula">
+            <div class="label">The current account, restated</div>
+            <div class="formula-body">CA = X − M = Y − (C + I + G)</div>
+            <p style="margin:10px 0 0; font-size:.85rem; color:var(--ink-soft);">A current account deficit means a country is consuming, investing, and spending <em>more</em> than it produces — only possible by borrowing the difference from foreigners.</p>
+          </div>
+
+          <div class="callout finance">
+            <div class="label">Reading real-world current account patterns</div>
+            <p style="margin:0;">The United States has run persistent current account deficits for years, financed by foreign direct investment, foreign bank loans, and foreign purchases of US equities and bonds — effectively importing present consumption and exporting a claim on future consumption. Japan, Germany, and China, by contrast, have traditionally run current account surpluses, accumulating substantial net foreign claims — largely against the United States — by lending their surplus savings abroad.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c8">
+            <div class="label">Check yourself</div>
+            <div class="q">A country's GDP (Y) is $500B, with C+I+G totaling $520B. What is this country's current account balance, and what must be true?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="true">A $20B deficit — the country must borrow from foreigners to cover the gap</button>
+              <button class="opt-btn" data-correct="false">A $20B surplus — the country is lending to foreigners</button>
+              <button class="opt-btn" data-correct="false">Exactly balanced trade</button>
+            </div>
+            <div class="checkin-feedback">Correct — CA = Y − (C+I+G) = 500 − 520 = −$20B, a deficit. Spending more than it produces means the country must borrow the difference from abroad.</div>
+          </div>
+        </div>
+        <div>
+          <div class="dist-card" style="margin-top:0;">
+            <div class="label" style="font-family:var(--font-mono); font-size:.72rem; text-transform:uppercase; color:var(--indigo); font-weight:700; margin-bottom:12px;">Try it — current account calculator</div>
+            <div class="tvm-grid">
+              <div class="tvm-field"><label>GDP (Y)</label><input type="number" id="caY" value="500" step="5"></div>
+              <div class="tvm-field"><label>Consumption (C)</label><input type="number" id="caC" value="350" step="5"></div>
+              <div class="tvm-field"><label>Investment (I)</label><input type="number" id="caI" value="90" step="5"></div>
+              <div class="tvm-field"><label>Government (G)</label><input type="number" id="caG" value="80" step="5"></div>
+            </div>
+            <div class="tvm-result" id="caResult">Current account = −$20B (deficit)</div>
+            <div class="calc-steps" id="caSteps">500 − (350+90+80) = −20</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         QUIZ
+    ========================================================== -->
+    <section class="section" id="sec-quiz" style="max-width:900px;">
+      <div class="section-head">
+        <span class="section-tag">Q</span>
+        <div>
+          <h2>Practice Quiz</h2>
+          <p class="subhead">20 questions across everything above. Answer, get instant feedback, and see your score at the end.</p>
+        </div>
+      </div>
+      <div class="quiz-shell" id="quizShell">
+        <!-- populated by JS -->
+      </div>
+    </section>
+
+    <footer class="footer">
+      Built as a companion study tool for the CFA Program prerequisite Economics reading on International Trade and Capital Flows. Work through it alongside your primary curriculum — this isn't a replacement for official CFA Institute materials.
+    </footer>
+  </main>
+</div>
+
+<script src="../../diagnostics.js"></script>
+<script src="../bundle.js"></script>
+<script src="../../accessibility.js"></script>
+</body>
+</html>

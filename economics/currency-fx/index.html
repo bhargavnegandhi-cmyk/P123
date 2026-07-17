@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Currency Exchange Rates — CFA Prerequisite Economics Toolkit</title>
+<link rel="stylesheet" href="../../shared-module-standard.css">
+</head>
+<body>
+
+<div class="mobile-bar">
+  <strong style="font-family:var(--font-display)">$ ⇄ €</strong>
+  <button id="sidebarToggle">Menu</button>
+</div>
+
+<div class="app">
+  <nav class="sidebar" id="sidebar">
+    <a href="../index.html" class="brand">
+      <span class="brand-mark"></span>
+      <span class="brand-name">Currency<br>Exchange Rates</span>
+    </a>
+    <div class="brand-sub">CFA Prerequisite · Economics · Module 7</div>
+
+    <div class="progress-wrap">
+      <div class="progress-label"><span>Progress</span><span id="progressPct">0%</span></div>
+      <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+    </div>
+
+    <div class="toc-group-label">The FX Market</div>
+    <ul class="toc">
+      <li><a href="#sec-fxmarket" data-sec="sec-fxmarket"><span class="num">01</span>Size &amp; Importance</a></li>
+      <li><a href="#sec-nominalreal" data-sec="sec-nominalreal"><span class="num">02</span>Nominal &amp; Real Exchange Rates</a></li>
+      <li><a href="#sec-spotforward" data-sec="sec-spotforward"><span class="num">03</span>Spot, Forward &amp; FX Swaps</a></li>
+    </ul>
+
+    <div class="toc-group-label">Calculating &amp; Hedging</div>
+    <ul class="toc">
+      <li><a href="#sec-hedging" data-sec="sec-hedging"><span class="num">04</span>Hedging a Foreign Investment</a></li>
+      <li><a href="#sec-percentchange" data-sec="sec-percentchange"><span class="num">05</span>% Change in Currency Value</a></li>
+    </ul>
+
+    <div class="toc-group-label">Exchange Rates &amp; Trade</div>
+    <ul class="toc">
+      <li><a href="#sec-elasticities" data-sec="sec-elasticities"><span class="num">06</span>The Elasticities Approach</a></li>
+    </ul>
+
+    <div class="toc-group-label">Check Yourself</div>
+    <ul class="toc">
+      <li><a href="#sec-quiz" data-sec="sec-quiz"><span class="num">Q</span>Practice Quiz (20)</a></li>
+    </ul>
+  </nav>
+
+  <main id="top">
+    <header class="hero">
+      <div class="eyebrow">CFA Program · Prerequisite Economics · Module 7</div>
+      <h1>The single largest market in the world trades nothing but money itself.</h1>
+      <p class="lede">This closing module of the Economics volume ties together everything before it — trade, capital flows, monetary policy — through the market where it all actually settles: foreign exchange. At roughly $5.1 trillion changing hands every single day, the FX market dwarfs global bond and equity markets combined, and it's the invisible mechanism behind every cross-border transaction in this toolkit.</p>
+    </header>
+
+    <!-- =========================================================
+         01 FX MARKET SIZE & IMPORTANCE
+    ========================================================== -->
+    <section class="section" id="sec-fxmarket">
+      <div class="section-head">
+        <span class="section-tag">01</span>
+        <div>
+          <h2>The Foreign Exchange Market — Size &amp; Importance</h2>
+          <p class="subhead">Bigger than every other financial market, running every hour of every business day.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="callout finance">
+            <div class="label">Just how big is the FX market?</div>
+            <p style="margin:0;">Daily turnover was estimated at approximately <strong>$5.1 trillion in 2016</strong> — roughly 10 to 15 times larger than daily turnover in global fixed-income markets, and about 50 times larger than global equity turnover. It's also genuinely global and continuous: FX trading runs 24 hours a day on every business day, linking participants across every time zone.</p>
+          </div>
+
+          <p>Every cross-border transaction eventually has to pass through this market. International trade in goods and services requires converting currencies; so does every cross-border capital flow — a pension fund buying foreign bonds, a company building a factory abroad, an individual investor diversifying internationally.</p>
+
+          <div class="callout example">
+            <div class="label">Why this matters even for "domestic-only" investors</div>
+            <p style="margin:0;">Roughly 30% of S&amp;P 500 Index earnings come from outside the United States. Even an investor who never buys a single foreign security is still exposed to FX markets indirectly — through the foreign revenue of the domestic companies they hold, through foreign competition those companies face, and through foreign investor demand that helps set domestic asset prices.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c1">
+            <div class="label">Check yourself</div>
+            <div class="q">An investor holds only domestic large-cap stocks and has never purchased a foreign security. Is this investor exposed to foreign exchange market movements?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="true">Yes, indirectly — through foreign revenue, foreign competition, and foreign investor demand affecting domestic companies</button>
+              <button class="opt-btn" data-correct="false">No, only investors who directly hold foreign securities are exposed to FX risk</button>
+            </div>
+            <div class="checkin-feedback">Correct — large domestic companies typically earn significant revenue abroad and compete globally, meaning FX markets shape their earnings and valuations even for an investor who never buys a foreign security directly.</div>
+          </div>
+        </div>
+        <div>
+          <div class="callout" style="margin-top:0;">
+            <table class="exhibit" style="margin:0;">
+              <tr><th>Market</th><th>Relative size</th></tr>
+              <tr><td>Foreign exchange</td><td class="num">$5.1T/day</td></tr>
+              <tr><td>Global fixed income</td><td class="num">~10–15× smaller</td></tr>
+              <tr><td>Global equities</td><td class="num">~50× smaller</td></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         02 NOMINAL & REAL EXCHANGE RATES
+    ========================================================== -->
+    <section class="section" id="sec-nominalreal">
+      <div class="section-head">
+        <span class="section-tag">02</span>
+        <div>
+          <h2>Nominal &amp; Real Exchange Rates</h2>
+          <p class="subhead">One number tells you the price. The other tells you what that price actually buys.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <p>An <strong>exchange rate</strong> is simply the price of one currency in terms of another. Currencies are identified by standardized three-character codes (USD, EUR, GBP, JPY, and so on), and a quoted rate like USD/EUR tells you how many US dollars it takes to buy one euro.</p>
+
+          <div class="definition">
+            <div class="label">Appreciation vs. depreciation</div>
+            <p style="margin:0;">When a currency buys <em>more</em> of another currency than before, it has <strong>appreciated</strong>. When it buys <em>less</em>, it has <strong>depreciated</strong>. Quoted in indirect terms (domestic currency per unit of foreign currency), a rising exchange rate means the domestic currency is depreciating; a falling rate means it's appreciating.</p>
+          </div>
+
+          <div class="callout formula">
+            <div class="label">The real exchange rate</div>
+            <div class="formula-body">R<sub>d/f</sub> = Nominal exchange rate × (Price level ratio)</div>
+            <p style="margin:10px 0 0; font-size:.85rem; color:var(--ink-soft);">The real exchange rate adjusts the nominal rate for relative price levels (inflation) between the two countries, measuring the true relative <em>purchasing power</em> of the two currencies — not just their nominal price. A rising real exchange rate means the domestic currency's relative purchasing power is falling, even if the nominal rate looks unchanged.</p>
+          </div>
+
+          <div class="callout example">
+            <div class="label">Why the distinction matters</div>
+            <p style="margin:0;">Two countries' nominal exchange rate can stay perfectly flat for years — while one experiences much higher inflation than the other. In real terms, the high-inflation country's currency is quietly losing purchasing power the entire time, even though the nominal quote on a screen shows no movement at all. The real exchange rate is what actually captures this.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c2">
+            <div class="label">Check yourself</div>
+            <div class="q">The nominal USD/EUR exchange rate has been flat for two years, but the Eurozone has experienced much higher inflation than the US over that period. What has happened to the real exchange rate (from the US perspective)?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="true">It has changed, reflecting the euro's declining relative purchasing power despite the flat nominal rate</button>
+              <button class="opt-btn" data-correct="false">It must be identical to the nominal rate, since exchange rates only reflect nominal prices</button>
+              <button class="opt-btn" data-correct="false">Real exchange rates cannot change if nominal rates are flat</button>
+            </div>
+            <div class="checkin-feedback">Correct — the real exchange rate adjusts for the inflation differential, capturing the genuine shift in relative purchasing power that the flat nominal rate alone hides.</div>
+          </div>
+        </div>
+        <div>
+          <div class="callout" style="margin-top:0;">
+            <p style="margin:0; font-size:.9rem;">Given exchange rates for two currency pairs sharing a common currency (A/B and A/C), you can always compute the implied <strong>cross-rate</strong> (B/C) between the other two currencies — useful when a direct quote between two currencies isn't readily available.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         03 SPOT, FORWARD & FX SWAPS
+    ========================================================== -->
+    <section class="section" id="sec-spotforward">
+      <div class="section-head">
+        <span class="section-tag">03</span>
+        <div>
+          <h2>Spot, Forward &amp; FX Swap Transactions</h2>
+          <p class="subhead">Most currency ever traded isn't for "right now" — it's a promise about a future date.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="definition">
+            <div class="label">Three building blocks</div>
+            <p style="margin-bottom:8px;"><strong>Spot transactions:</strong> exchange currencies for near-immediate delivery — typically "T+2" (settled two business days after the trade). This is the rate quoted on the evening news.</p>
+            <p style="margin-bottom:8px;"><strong>Forward contracts:</strong> agree today on a rate for exchanging currencies at a specified future date — locking in certainty against a currency move you can't yet see.</p>
+            <p style="margin:0;"><strong>FX swaps:</strong> a spot transaction combined with an offsetting forward transaction, typically used to roll an existing forward position out to a new settlement date.</p>
+          </div>
+
+          <p>Spot transactions are actually a <em>minority</em> of total FX market turnover — the majority comes from forwards, swaps, and options, reflecting how much of the market exists specifically to manage future currency risk, not just settle today's trades.</p>
+
+          <div class="callout example">
+            <div class="label">Why a company would use a forward contract</div>
+            <p style="margin:0;">A UK company expects to receive €100 million in 85 days. Waiting and converting at whatever the spot rate happens to be in 85 days exposes it to real currency risk — the rate could move against it. By locking in a forward exchange rate today, the company knows exactly how many pounds it will receive, regardless of where the spot rate actually ends up.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c3">
+            <div class="label">Check yourself</div>
+            <div class="q">A US company will receive a payment in Japanese yen in 60 days and wants to lock in today's exchange rate to eliminate currency risk. Which instrument should it use?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="false">A spot transaction</button>
+              <button class="opt-btn" data-correct="true">A forward contract</button>
+              <button class="opt-btn" data-correct="false">Neither instrument can address this need</button>
+            </div>
+            <div class="checkin-feedback">Correct — a forward contract locks in an exchange rate today for a transaction settling on a specified future date, exactly addressing this need.</div>
+          </div>
+        </div>
+        <div>
+          <div class="callout" style="margin-top:0;">
+            <table class="exhibit" style="margin:0;">
+              <tr><th>Instrument</th><th>Settlement</th></tr>
+              <tr><td>Spot</td><td class="num">~T+2 (near-immediate)</td></tr>
+              <tr><td>Forward</td><td class="num">Any future date, agreed today</td></tr>
+              <tr><td>FX swap</td><td class="num">Spot + offsetting forward</td></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         04 HEDGING A FOREIGN INVESTMENT
+    ========================================================== -->
+    <section class="section" id="sec-hedging">
+      <div class="section-head">
+        <span class="section-tag">04</span>
+        <div>
+          <h2>Worked Example — Hedging a Foreign Bond Investment</h2>
+          <p class="subhead">Combine a spot trade, a foreign bond, and a forward contract, and you can earn a foreign yield with zero currency risk.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="callout finance">
+            <div class="label">The setup</div>
+            <p style="margin:0 0 8px;">An Australia-based investor wants to invest in a risk-free, one-year, HKD-denominated zero-coupon bond, then convert the proceeds back to AUD in one year, with zero currency risk.</p>
+            <table class="exhibit" style="margin:0 0 10px;">
+              <tr><th>Input</th><th>Value</th></tr>
+              <tr><td>Spot exchange rate (AUD/HKD)</td><td class="num">0.1714</td></tr>
+              <tr><td>One-year HKD interest rate</td><td class="num">2.20%</td></tr>
+              <tr><td>One-year forward rate (AUD/HKD)</td><td class="num">0.1724</td></tr>
+            </table>
+          </div>
+
+          <div class="callout example">
+            <div class="label">Working through the three steps</div>
+            <p style="margin:0 0 6px;"><strong>Step 1 — convert spot:</strong> 1 AUD ÷ 0.1714 = HKD 5.83.</p>
+            <p style="margin:0 0 6px;"><strong>Step 2 — invest for one year:</strong> 5.83 × 1.022 = HKD 5.96.</p>
+            <p style="margin:0 0 8px;"><strong>Step 3 — convert back at the locked-in forward rate:</strong> 5.96 × 0.1724 = AUD 1.028.</p>
+            <p style="margin:0;">Total AUD-denominated return: <strong>≈ 2.8%</strong> — even though the underlying bond itself is a risk-free HKD instrument. All currency risk was eliminated the moment the forward contract was locked in at the start.</p>
+          </div>
+
+          <div class="callout" style="border-left-color:var(--red);">
+            <p style="margin:0; font-size:.9rem;"><strong>What made this trade genuinely risk-free:</strong> the exchange rate for converting HKD proceeds back to AUD was fixed <em>today</em>, via the forward contract — removing the only source of uncertainty (future spot rates) from an otherwise risk-free bond investment.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c4">
+            <div class="label">Check yourself</div>
+            <div class="q">In this strategy, what specifically eliminates the investor's exchange rate risk?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="false">The fact that the HKD bond is risk-free</button>
+              <button class="opt-btn" data-correct="true">Locking in the AUD/HKD conversion rate today via a forward contract, rather than waiting for the future spot rate</button>
+              <button class="opt-btn" data-correct="false">Choosing a one-year maturity instead of a shorter one</button>
+            </div>
+            <div class="checkin-feedback">Correct — it's specifically the forward contract that removes uncertainty about the future spot rate, which is the actual source of currency risk in this trade.</div>
+          </div>
+        </div>
+        <div>
+          <div class="dist-card" style="margin-top:0;">
+            <div class="label" style="font-family:var(--font-mono); font-size:.72rem; text-transform:uppercase; color:var(--indigo); font-weight:700; margin-bottom:12px;">Try it — hedged return calculator</div>
+            <div class="tvm-grid">
+              <div class="tvm-field"><label>Spot rate (domestic/foreign)</label><input type="number" id="hedgeSpot" value="0.1714" step="0.0001"></div>
+              <div class="tvm-field"><label>Foreign interest rate (%)</label><input type="number" id="hedgeRate" value="2.20" step="0.05"></div>
+              <div class="tvm-field"><label>Forward rate (domestic/foreign)</label><input type="number" id="hedgeForward" value="0.1724" step="0.0001"></div>
+            </div>
+            <div class="tvm-result" id="hedgeResult">AUD return ≈ 2.80%</div>
+            <div class="calc-steps" id="hedgeSteps">1/0.1714=5.83 → ×1.022=5.96 → ×0.1724=1.028 → 2.80%</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         05 % CHANGE IN CURRENCY VALUE
+    ========================================================== -->
+    <section class="section" id="sec-percentchange">
+      <div class="section-head">
+        <span class="section-tag">05</span>
+        <div>
+          <h2>Calculating the Percentage Change in a Currency</h2>
+          <p class="subhead">"The euro moved" is meaningless without a number attached to it.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="callout formula">
+            <div class="label">Percentage change formula</div>
+            <div class="formula-body">%Δ = (New rate − Old rate) / Old rate</div>
+            <p style="margin:10px 0 0; font-size:.85rem; color:var(--ink-soft);">A positive result means the quoted currency (in the denominator convention used) has moved one direction; a negative result, the other — always check which currency the quote is expressed in terms of before interpreting the sign.</p>
+          </div>
+
+          <div class="callout example">
+            <div class="label">Worked example</div>
+            <p style="margin:0;">The USD/EUR rate moves from 1.1000 to 1.1330 over a month. %Δ = (1.1330 − 1.1000)/1.1000 = <strong>+3.0%</strong>. Since USD/EUR quotes how many dollars one euro costs, a rising number means the euro is appreciating against the dollar — it now takes 3% more dollars to buy the same euro.</p>
+          </div>
+
+          <div class="callout" style="border-left-color:var(--red);">
+            <p style="margin:0; font-size:.9rem;"><strong>A common trap:</strong> a currency depreciating by X% against another does NOT mean the other currency appreciates by exactly X% in return — the relationship is asymmetric because percentage changes are calculated relative to different starting bases. A currency that falls 10% against another has to rise by more than 10% (about 11.1%) just to get back to where it started.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c5">
+            <div class="label">Check yourself</div>
+            <div class="q">The GBP/USD rate falls from 1.3000 to 1.2350. What is the approximate percentage change?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="true">−5.0%</button>
+              <button class="opt-btn" data-correct="false">−6.5%</button>
+              <button class="opt-btn" data-correct="false">+5.0%</button>
+            </div>
+            <div class="checkin-feedback">Correct — %Δ = (1.2350−1.3000)/1.3000 = −0.0650/1.3000 ≈ −5.0%.</div>
+          </div>
+        </div>
+        <div>
+          <div class="dist-card" style="margin-top:0;">
+            <div class="label" style="font-family:var(--font-mono); font-size:.72rem; text-transform:uppercase; color:var(--indigo); font-weight:700; margin-bottom:12px;">Try it — % change calculator</div>
+            <div class="tvm-grid">
+              <div class="tvm-field"><label>Old rate</label><input type="number" id="pcOld" value="1.1000" step="0.001"></div>
+              <div class="tvm-field"><label>New rate</label><input type="number" id="pcNew" value="1.1330" step="0.001"></div>
+            </div>
+            <div class="tvm-result" id="pcResult">%Δ = +3.00%</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         06 THE ELASTICITIES APPROACH
+    ========================================================== -->
+    <section class="section" id="sec-elasticities">
+      <div class="section-head">
+        <span class="section-tag">06</span>
+        <div>
+          <h2>Exchange Rates &amp; the Trade Balance: The Elasticities Approach</h2>
+          <p class="subhead">Devaluing a currency to fix a trade deficit only works if buyers actually respond to the resulting price change.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <p>A weaker domestic currency makes exports cheaper abroad and imports pricier at home — the textbook mechanism for correcting a trade deficit. But it doesn't automatically work. Whether it actually shrinks a trade deficit depends entirely on how <em>elastic</em> — how price-sensitive — the demand for exports and imports actually is.</p>
+
+          <div class="callout formula">
+            <div class="label">The generalized Marshall–Lerner condition</div>
+            <div class="formula-body">ω<sub>X</sub>ε<sub>X</sub> + ω<sub>M</sub>(ε<sub>M</sub> − 1) &gt; 0</div>
+            <p style="margin:10px 0 0; font-size:.85rem; color:var(--ink-soft);">ω<sub>X</sub>, ω<sub>M</sub> = exports' and imports' shares of total trade (summing to 1). ε<sub>X</sub>, ε<sub>M</sub> = price elasticity of foreign demand for exports, and domestic demand for imports. If this condition holds, a currency devaluation moves the trade balance toward surplus.</p>
+          </div>
+
+          <div class="definition">
+            <div class="label">The intuition behind each term</div>
+            <p style="margin-bottom:8px;"><strong>Export elasticity (ε<sub>X</sub>):</strong> a weaker currency makes exports cheaper for foreign buyers. If foreign demand is elastic (responsive), quantity sold rises enough to genuinely boost export revenue.</p>
+            <p style="margin:0;"><strong>Import elasticity (ε<sub>M</sub>):</strong> a weaker currency makes imports pricier at home. If domestic demand for imports is elastic, quantity purchased falls enough to meaningfully cut import spending. If ε<sub>M</sub> &lt; 1 (inelastic), buyers keep purchasing nearly the same volume despite the higher price — import <em>expenditure</em> can actually rise instead of fall.</p>
+          </div>
+
+          <div class="callout finance">
+            <div class="label">Worked example</div>
+            <p style="margin:0 0 8px;">A country initially runs a trade deficit, so ω<sub>M</sub> &gt; ω<sub>X</sub> — say ω<sub>X</sub>=0.45 and ω<sub>M</sub>=0.55. Export elasticity ε<sub>X</sub>=1.2, import elasticity ε<sub>M</sub>=0.9.</p>
+            <p style="margin:0;">Marshall–Lerner: 0.45(1.2) + 0.55(0.9−1) = 0.54 + 0.55(−0.1) = 0.54 − 0.055 = <strong>0.485 &gt; 0</strong>. The condition holds — a devaluation would move this country's trade balance toward surplus, despite import demand being somewhat inelastic.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c6">
+            <div class="label">Check yourself</div>
+            <div class="q">If a country's export and import demand are both highly inelastic (both ε values well below 1), what does the Marshall-Lerner logic suggest about using currency devaluation to fix a trade deficit?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="true">Devaluation is unlikely to be effective, since quantities barely respond to the price changes it creates</button>
+              <button class="opt-btn" data-correct="false">Devaluation is guaranteed to work regardless of elasticity</button>
+              <button class="opt-btn" data-correct="false">Elasticity is irrelevant to whether devaluation works</button>
+            </div>
+            <div class="checkin-feedback">Correct — if buyers on both sides barely change their purchasing behavior in response to price changes, a weaker currency won't meaningfully shift trade volumes, and the Marshall-Lerner condition is unlikely to hold.</div>
+          </div>
+        </div>
+        <div>
+          <div class="dist-card" style="margin-top:0;">
+            <div class="label" style="font-family:var(--font-mono); font-size:.72rem; text-transform:uppercase; color:var(--indigo); font-weight:700; margin-bottom:12px;">Try it — Marshall-Lerner calculator</div>
+            <div class="tvm-grid">
+              <div class="tvm-field"><label>Export share (ωX)</label><input type="number" id="mlWx" value="0.45" step="0.05" min="0" max="1"></div>
+              <div class="tvm-field"><label>Export elasticity (εX)</label><input type="number" id="mlEx" value="1.2" step="0.1"></div>
+              <div class="tvm-field"><label>Import elasticity (εM)</label><input type="number" id="mlEm" value="0.9" step="0.1"></div>
+            </div>
+            <div class="tvm-result" id="mlResult">0.485 &gt; 0 — condition holds</div>
+            <div class="calc-steps" id="mlSteps">0.45(1.2) + 0.55(0.9−1) = 0.485</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         QUIZ
+    ========================================================== -->
+    <section class="section" id="sec-quiz" style="max-width:900px;">
+      <div class="section-head">
+        <span class="section-tag">Q</span>
+        <div>
+          <h2>Practice Quiz</h2>
+          <p class="subhead">20 questions across everything above. Answer, get instant feedback, and see your score at the end.</p>
+        </div>
+      </div>
+      <div class="quiz-shell" id="quizShell">
+        <!-- populated by JS -->
+      </div>
+    </section>
+
+    <footer class="footer">
+      Built as a companion study tool for the CFA Program prerequisite Economics reading on Currency Exchange Rates. Work through it alongside your primary curriculum — this isn't a replacement for official CFA Institute materials.
+    </footer>
+  </main>
+</div>
+
+<script src="../../diagnostics.js"></script>
+<script src="../bundle.js"></script>
+<script src="../../accessibility.js"></script>
+</body>
+</html>

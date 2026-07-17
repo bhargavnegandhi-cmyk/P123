@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Monetary and Fiscal Policy — CFA Prerequisite Economics Toolkit</title>
+<link rel="stylesheet" href="../../shared-module-standard.css">
+</head>
+<body>
+
+<div class="mobile-bar">
+  <strong style="font-family:var(--font-display)">M × V = P × Y</strong>
+  <button id="sidebarToggle">Menu</button>
+</div>
+
+<div class="app">
+  <nav class="sidebar" id="sidebar">
+    <a href="../index.html" class="brand">
+      <span class="brand-mark"></span>
+      <span class="brand-name">Monetary &amp;<br>Fiscal Policy</span>
+    </a>
+    <div class="brand-sub">CFA Prerequisite · Economics · Module 5</div>
+
+    <div class="progress-wrap">
+      <div class="progress-label"><span>Progress</span><span id="progressPct">0%</span></div>
+      <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+    </div>
+
+    <div class="toc-group-label">Two Levers of Policy</div>
+    <ul class="toc">
+      <li><a href="#sec-policytypes" data-sec="sec-policytypes"><span class="num">01</span>Monetary vs. Fiscal Policy</a></li>
+      <li><a href="#sec-moneyfunctions" data-sec="sec-moneyfunctions"><span class="num">02</span>Functions &amp; Definitions of Money</a></li>
+      <li><a href="#sec-moneycreation" data-sec="sec-moneycreation"><span class="num">03</span>The Money Creation Process</a></li>
+    </ul>
+
+    <div class="toc-group-label">Money, Prices &amp; Interest Rates</div>
+    <ul class="toc">
+      <li><a href="#sec-quantitytheory" data-sec="sec-quantitytheory"><span class="num">04</span>The Quantity Theory of Money</a></li>
+      <li><a href="#sec-moneydemand" data-sec="sec-moneydemand"><span class="num">05</span>The Demand for Money</a></li>
+      <li><a href="#sec-equilibrium" data-sec="sec-equilibrium"><span class="num">06</span>Money Market Equilibrium</a></li>
+      <li><a href="#sec-fishereffect" data-sec="sec-fishereffect"><span class="num">07</span>The Fisher Effect</a></li>
+    </ul>
+
+    <div class="toc-group-label">Inflation's Real Costs</div>
+    <ul class="toc">
+      <li><a href="#sec-inflationcosts" data-sec="sec-inflationcosts"><span class="num">08</span>The Costs of Inflation</a></li>
+    </ul>
+
+    <div class="toc-group-label">Check Yourself</div>
+    <ul class="toc">
+      <li><a href="#sec-quiz" data-sec="sec-quiz"><span class="num">Q</span>Practice Quiz (20)</a></li>
+    </ul>
+  </nav>
+
+  <main id="top">
+    <header class="hero">
+      <div class="eyebrow">CFA Program · Prerequisite Economics · Module 5</div>
+      <h1>Two levers, one goal: an economy that grows steadily without overheating.</h1>
+      <p class="lede">Governments influence an entire economy through exactly two channels — a central bank managing money and credit, and a government managing taxation and spending. This module builds both from first principles: what money actually is, how a bank literally creates it out of a single deposit, and why the interest rate you see quoted on the news is really just the price of money itself.</p>
+    </header>
+
+    <!-- =========================================================
+         01 MONETARY VS FISCAL POLICY
+    ========================================================== -->
+    <section class="section" id="sec-policytypes">
+      <div class="section-head">
+        <span class="section-tag">01</span>
+        <div>
+          <h2>Monetary Policy vs. Fiscal Policy</h2>
+          <p class="subhead">Two different institutions, two different tools, one shared goal.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="definition">
+            <div class="label">Two policy types, two different actors</div>
+            <p style="margin-bottom:8px;"><strong>Monetary policy:</strong> central bank activities directed at influencing the quantity of money and credit in an economy.</p>
+            <p style="margin:0;"><strong>Fiscal policy:</strong> government decisions about taxation and spending.</p>
+          </div>
+
+          <p>Both exist to steer the same overarching goal: <strong>stable, positive growth with low, stable inflation</strong> — avoiding both damaging boom-bust cycles and the human cost of high unemployment. Fiscal policy carries an extra role monetary policy doesn't: it can be used deliberately to redistribute income and wealth across society, not just to manage the business cycle.</p>
+
+          <div class="callout example">
+            <div class="label">Why governments, specifically, move markets</div>
+            <p style="margin:0;">A single household's spending decision is invisible at the scale of a national economy. A government's isn't — for two structural reasons. First, the public sector typically employs a significant share of the population and accounts for a significant share of total spending. Second, governments are the largest borrowers in world debt markets, meaning their financing decisions directly move interest rates that everyone else has to borrow against.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c1">
+            <div class="label">Check yourself</div>
+            <div class="q">A central bank raises its policy interest rate to cool an overheating economy. Is this monetary or fiscal policy?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="true">Monetary policy</button>
+              <button class="opt-btn" data-correct="false">Fiscal policy</button>
+            </div>
+            <div class="checkin-feedback">Correct — actions by a central bank aimed at influencing money and credit conditions are monetary policy, distinct from a government's own taxation and spending decisions.</div>
+          </div>
+        </div>
+        <div>
+          <div class="callout" style="margin-top:0;">
+            <table class="exhibit" style="margin:0;">
+              <tr><th></th><th>Monetary Policy</th><th>Fiscal Policy</th></tr>
+              <tr><td>Set by</td><td class="num">Central bank</td><td class="num">Government</td></tr>
+              <tr><td>Main tools</td><td class="num">Interest rates, money supply</td><td class="num">Taxes, spending</td></tr>
+              <tr><td>Can redistribute wealth?</td><td class="num">No</td><td class="num">Yes</td></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         02 FUNCTIONS & DEFINITIONS OF MONEY
+    ========================================================== -->
+    <section class="section" id="sec-moneyfunctions">
+      <div class="section-head">
+        <span class="section-tag">02</span>
+        <div>
+          <h2>Functions &amp; Definitions of Money</h2>
+          <p class="subhead">Money didn't need to be invented by decree — it emerged because barter is genuinely painful to live with.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="callout" style="border-left-color:var(--red);">
+            <div class="label" style="font-family:var(--font-mono); font-size:.72rem; text-transform:uppercase; color:var(--red); font-weight:700; margin-bottom:8px;">The problem money solves — a barter economy</div>
+            <p style="margin:0;">Without money, every trade requires a "double coincidence of wants" — you need to find someone who has what you want <em>and</em> wants exactly what you have. Goods may be indivisible (you can't sell "half a cow" for a loaf of bread), and there's no common measure of value: is a chicken worth three loaves of bread, or five? Every possible pair of goods needs its own separately negotiated exchange rate.</p>
+          </div>
+
+          <div class="definition">
+            <div class="label">Three functions of money</div>
+            <p style="margin-bottom:8px;"><strong>Medium of exchange:</strong> a farmer can sell wheat for money, then exchange that money for wine — no need to find a wine producer who happens to want wheat specifically.</p>
+            <p style="margin-bottom:8px;"><strong>Store of wealth:</strong> money can be held and spent later, provided people continue to trust its value.</p>
+            <p style="margin:0;"><strong>Unit of account:</strong> a single, universal measure of value — every good's price can be stated in the same units, instead of needing a separate exchange rate for every possible pair of goods.</p>
+          </div>
+
+          <div class="callout example">
+            <div class="label">Why gold worked so well as early money</div>
+            <p style="margin:0;">To function as money, an asset needs to be readily acceptable, have a known value, be easily divisible, hold high value relative to its weight, and be difficult to counterfeit. Gold and silver checked every box — durable, splittable into coins, valuable in small quantities, and hard to fake — which is exactly why precious metals dominated as money for most of human history.</p>
+          </div>
+
+          <div class="definition">
+            <div class="label">Narrow money vs. broad money</div>
+            <p style="margin-bottom:8px;"><strong>Narrow money:</strong> physical notes and coins in circulation, plus other very highly liquid deposits.</p>
+            <p style="margin:0;"><strong>Broad money:</strong> narrow money plus the entire wider range of liquid assets that can realistically be used to make purchases — savings accounts, money market funds, and similar.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c2">
+            <div class="label">Check yourself</div>
+            <div class="q">A collector holds gold coins for years, confident they'll still be valuable when sold. This best illustrates which function of money?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="false">Medium of exchange</button>
+              <button class="opt-btn" data-correct="true">Store of wealth</button>
+              <button class="opt-btn" data-correct="false">Unit of account</button>
+            </div>
+            <div class="checkin-feedback">Correct — holding an asset over time specifically because it's expected to retain value is the store-of-wealth function.</div>
+          </div>
+        </div>
+        <div>
+          <div class="callout" style="margin-top:0;">
+            <p style="margin:0; font-size:.9rem;"><strong>Credit cards aren't quite money:</strong> unlike a debit card or a cheque, a credit card payment is a deferred promise to pay — a genuinely different mechanism from spending money you already hold, even though it feels identical at checkout.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         03 THE MONEY CREATION PROCESS
+    ========================================================== -->
+    <section class="section" id="sec-moneycreation">
+      <div class="section-head">
+        <span class="section-tag">03</span>
+        <div>
+          <h2>The Money Creation Process</h2>
+          <p class="subhead">A single €100 deposit can turn into €1,000 of money in the economy — without a single new euro being printed.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="definition">
+            <div class="label">Fractional reserve banking</div>
+            <p style="margin:0;">Banks keep only a fraction of deposits on hand as reserves and lend out the rest — a reasonable bet, since not every depositor withdraws their money at the same time. The share kept back is the <strong>reserve requirement</strong>.</p>
+          </div>
+
+          <div class="callout finance">
+            <div class="label">Worked example — the cascade across three banks</div>
+            <p style="margin:0 0 8px;">A customer deposits €100 at First Bank of Nations. With a 10% reserve requirement, the bank keeps €10 and lends €90. The borrower spends that €90, and the recipient deposits it at Second Bank of Nations — which keeps €9 and lends €81. That €81 gets spent, deposited at Third Bank of Nations, which keeps €8.10 and lends €72.90 — and the cascade continues.</p>
+            <table class="exhibit" style="margin:0 0 10px;">
+              <tr><th>Bank</th><th>Deposit</th><th>Reserves (10%)</th><th>Loan (90%)</th></tr>
+              <tr><td>First</td><td class="num">€100.00</td><td class="num">€10.00</td><td class="num">€90.00</td></tr>
+              <tr><td>Second</td><td class="num">€90.00</td><td class="num">€9.00</td><td class="num">€81.00</td></tr>
+              <tr><td>Third</td><td class="num">€81.00</td><td class="num">€8.10</td><td class="num">€72.90</td></tr>
+            </table>
+          </div>
+
+          <div class="callout formula">
+            <div class="label">Total money created</div>
+            <div class="formula-body">Total money = New deposit / Reserve requirement</div>
+            <p style="margin:10px 0 0; font-size:.85rem; color:var(--ink-soft);">€100 / 0.10 = €1,000 total. The multiplier itself, 1/reserve requirement, is called the <strong>money multiplier</strong> — here, 1/0.10 = 10. A smaller reserve requirement means a larger multiplier, and more money created from the same original deposit.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c3">
+            <div class="label">Check yourself</div>
+            <div class="q">If the reserve requirement is 20% instead of 10%, how much total money is ultimately created from an initial €100 deposit?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="false">€1,000</button>
+              <button class="opt-btn" data-correct="true">€500</button>
+              <button class="opt-btn" data-correct="false">€2,000</button>
+            </div>
+            <div class="checkin-feedback">Correct — Total money = €100/0.20 = €500. A higher reserve requirement means a smaller money multiplier (1/0.20=5) and less money created.</div>
+          </div>
+        </div>
+        <div>
+          <div class="dist-card" style="margin-top:0;">
+            <div class="label" style="font-family:var(--font-mono); font-size:.72rem; text-transform:uppercase; color:var(--indigo); font-weight:700; margin-bottom:12px;">Try it — money multiplier calculator</div>
+            <div class="tvm-grid">
+              <div class="tvm-field"><label>Initial deposit</label><input type="number" id="mmDeposit" value="100" step="10"></div>
+              <div class="tvm-field"><label>Reserve requirement (%)</label><input type="number" id="mmReserve" value="10" step="1" min="1" max="100"></div>
+            </div>
+            <div id="mmTable" style="margin:14px 0;"></div>
+            <div class="tvm-result" id="mmResult">Money multiplier = 10 · Total money created = €1,000</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         04 QUANTITY THEORY OF MONEY
+    ========================================================== -->
+    <section class="section" id="sec-quantitytheory">
+      <div class="section-head">
+        <span class="section-tag">04</span>
+        <div>
+          <h2>The Quantity Theory of Money</h2>
+          <p class="subhead">One equation ties the entire money supply to the entire economy's spending — and it isn't even a theory, technically. It's an accounting identity.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="callout formula">
+            <div class="label">The quantity equation of exchange</div>
+            <div class="formula-body">M × V = P × Y</div>
+            <p style="margin:10px 0 0; font-size:.85rem; color:var(--ink-soft);">M = quantity of money, V = velocity of circulation (how many times a unit of currency changes hands in a given period), P = average price level, Y = real output.</p>
+          </div>
+
+          <p>Both sides describe the identical flow of spending, just from two different angles: the left side is "how much money changed hands, and how often," the right side is "the dollar value of everything actually produced." They must be equal by construction — this isn't a claim that could turn out false, it's an accounting identity.</p>
+
+          <div class="definition">
+            <div class="label">Where the "theory" part comes in</div>
+            <p style="margin:0;">The <strong>quantity theory of money</strong> adds an assumption on top of the identity: that velocity (V) is roughly constant. If that holds, spending (P×Y) moves proportionally with the money supply (M) — and if real output (Y) is also fixed in the short run, any increase in M shows up almost entirely as a rise in the price level, P. Economists who believe money growth directly drives inflation this way are called <strong>Monetarists</strong>.</p>
+          </div>
+
+          <div class="callout" style="border-left-color:var(--red);">
+            <p style="margin:0; font-size:.9rem;"><strong>The causality question isn't fully settled.</strong> It's also possible causality runs the other way: economic activity levels could determine how much money circulates, rather than the money supply driving activity. This ambiguity is exactly why some governments' attempts to control inflation purely by targeting money growth haven't always worked as cleanly as the simple theory predicts.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c4">
+            <div class="label">Check yourself</div>
+            <div class="q">If the money supply M rises 8%, velocity V is unchanged, and real output Y is unchanged, what does the quantity equation imply about the price level P?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="true">P rises by approximately 8%</button>
+              <button class="opt-btn" data-correct="false">P is unaffected</button>
+              <button class="opt-btn" data-correct="false">P falls by approximately 8%</button>
+            </div>
+            <div class="checkin-feedback">Correct — with V and Y both fixed, M×V=P×Y implies P must rise proportionally with M to keep the identity balanced, roughly 8%.</div>
+          </div>
+        </div>
+        <div>
+          <div class="dist-card" style="margin-top:0;">
+            <div class="label" style="font-family:var(--font-mono); font-size:.72rem; text-transform:uppercase; color:var(--indigo); font-weight:700; margin-bottom:12px;">Try it — quantity equation solver</div>
+            <p style="font-size:.8rem; color:var(--ink-soft); margin:0 0 10px;">Enter any three values; the fourth is solved for.</p>
+            <div class="tvm-grid">
+              <div class="tvm-field"><label>M (money supply)</label><input type="number" id="qeM" value="1000" step="10"></div>
+              <div class="tvm-field"><label>V (velocity)</label><input type="number" id="qeV" value="7" step="0.1"></div>
+              <div class="tvm-field"><label>P (price level)</label><input type="number" id="qeP" value="1" step="0.05"></div>
+            </div>
+            <div class="tvm-result" id="qeResult">Y (real output) = 7,000</div>
+            <div class="calc-steps" id="qeSteps">1000 × 7 = 1 × Y → Y = 7,000</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         05 THE DEMAND FOR MONEY
+    ========================================================== -->
+    <section class="section" id="sec-moneydemand">
+      <div class="section-head">
+        <span class="section-tag">05</span>
+        <div>
+          <h2>The Demand for Money</h2>
+          <p class="subhead">Why hold cash at all, instead of putting every last dollar into interest-bearing bonds? Three distinct reasons.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="definition">
+            <div class="label">Three motives for holding money</div>
+            <p style="margin-bottom:8px;"><strong>Transactions-related:</strong> money held to pay for everyday goods and services. Grows with the overall scale of the economy — as GDP rises, so does the money needed to conduct all those transactions.</p>
+            <p style="margin-bottom:8px;"><strong>Precautionary:</strong> a buffer against unforeseen needs. Scales with the volume and value of the transactions a person or firm typically handles — a company doing millions in transactions needs a much bigger cash buffer than an individual.</p>
+            <p style="margin:0;"><strong>Speculative:</strong> money held specifically because other assets (like bonds) look risky or unattractive right now. This is the motive most sensitive to interest rates.</p>
+          </div>
+
+          <div class="callout example">
+            <div class="label">The trade-off behind speculative demand</div>
+            <p style="margin:0;">Holding money instead of bonds means giving up the return the bond would have paid — that foregone return is the <em>opportunity cost</em> of holding cash. Speculative money demand falls as returns on other assets rise (holding cash gets more expensive) and rises as the perceived risk of those other assets increases (cash starts looking safer by comparison).</p>
+          </div>
+
+          <div class="checkin" data-checkin="c5">
+            <div class="label">Check yourself</div>
+            <div class="q">Interest rates on bonds rise sharply. What happens to the speculative demand for money, all else equal?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="true">It falls, since holding cash instead of bonds now means giving up more return</button>
+              <button class="opt-btn" data-correct="false">It rises, since bonds have become more attractive</button>
+              <button class="opt-btn" data-correct="false">It is unaffected by interest rates</button>
+            </div>
+            <div class="checkin-feedback">Correct — as bond returns rise, the opportunity cost of holding non-interest-bearing cash rises too, reducing speculative money demand.</div>
+          </div>
+        </div>
+        <div>
+          <div class="callout" style="margin-top:0;">
+            <p style="margin:0; font-size:.9rem;">Notice a pattern: transactions and precautionary demand both scale with the size of the economy (GDP), while speculative demand is the one genuinely sensitive to interest rates — which is exactly the channel monetary policy leans on.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         06 MONEY MARKET EQUILIBRIUM
+    ========================================================== -->
+    <section class="section" id="sec-equilibrium">
+      <div class="section-head">
+        <span class="section-tag">06</span>
+        <div>
+          <h2>The Supply &amp; Demand for Money — Equilibrium</h2>
+          <p class="subhead">The interest rate is, quite literally, the price of money.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <p>Just like any other market, the money market has a supply curve and a demand curve, and they settle at an equilibrium price — except here, the "price" is the nominal interest rate.</p>
+
+          <div class="definition">
+            <div class="label">The two curves</div>
+            <p style="margin-bottom:8px;"><strong>Money supply (MS) — vertical:</strong> at any given moment, there's a fixed nominal quantity of money in the economy, regardless of the interest rate.</p>
+            <p style="margin:0;"><strong>Money demand (MD) — downward sloping:</strong> as interest rates rise, the opportunity cost of holding cash rises, so speculative money demand falls.</p>
+          </div>
+
+          <div class="chart-card">
+            <div id="moneyMarketChart"></div>
+            <p style="font-size:.82rem; color:var(--ink-soft); margin:10px 0 0;">At interest rate I₀, money supply exactly matches money demand. Above I₀ (at I₁), there's an excess supply of money — people hold more cash than they want, so they buy bonds with it, pushing bond prices up and interest rates back down. Below I₀ (at I₂), there's excess demand for money — people sell bonds to raise cash, pushing bond prices down and interest rates back up. Either way, the market is pulled back to I₀.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c6">
+            <div class="label">Check yourself</div>
+            <div class="q">The nominal interest rate sits above the money market's equilibrium rate. What is happening in the money market?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="true">There is excess supply of money, which will push interest rates back down</button>
+              <button class="opt-btn" data-correct="false">There is excess demand for money, which will push interest rates up further</button>
+              <button class="opt-btn" data-correct="false">The market is already in equilibrium</button>
+            </div>
+            <div class="checkin-feedback">Correct — above equilibrium, money supply exceeds money demand; people use the excess cash to buy bonds, and rising bond prices push interest rates back down toward equilibrium.</div>
+          </div>
+        </div>
+        <div>
+          <div class="callout" style="margin-top:0;">
+            <p style="margin:0; font-size:.9rem;"><strong>This is exactly the lever central banks pull:</strong> by expanding the money supply (shifting MS to the right), a central bank pushes the equilibrium interest rate down — the standard mechanism behind an interest-rate cut.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         07 THE FISHER EFFECT
+    ========================================================== -->
+    <section class="section" id="sec-fishereffect">
+      <div class="section-head">
+        <span class="section-tag">07</span>
+        <div>
+          <h2>The Fisher Effect</h2>
+          <p class="subhead">The interest rate you're quoted is never just about time — it's also a forecast of inflation baked directly into the number.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="callout formula">
+            <div class="label">The Fisher effect</div>
+            <div class="formula-body">R<sub>nom</sub> = R<sub>real</sub> + π<sup>e</sup></div>
+            <p style="margin:10px 0 0; font-size:.85rem; color:var(--ink-soft);">Named for economist Irving Fisher: the nominal interest rate equals the required real rate of interest plus expected inflation.</p>
+          </div>
+
+          <p>The Fisher effect rests on <strong>money neutrality</strong> — the idea that, over the long run, the money supply affects nominal prices but not real economic variables. If that holds, the real interest rate stays stable over time, and it's <em>expected inflation</em> that does virtually all the moving whenever nominal rates change.</p>
+
+          <div class="callout finance">
+            <div class="label">Worked example</div>
+            <p style="margin:0 0 8px;">Investors require a 2.5% real return. Expected inflation is 3.2% over the coming year.</p>
+            <p style="margin:0;">R<sub>nom</sub> = 2.5% + 3.2% = <strong>5.7%</strong> — the nominal rate a lender should demand to be properly compensated for both giving up the use of their money and for the inflation eroding its future purchasing power.</p>
+          </div>
+
+          <div class="callout example">
+            <div class="label">A third piece — the risk premium</div>
+            <p style="margin:0;">In practice, real-world nominal rates also carry a risk premium on top of the Fisher effect's two components, compensating lenders for genuine uncertainty about the future — inflation surprises, default risk, and so on. The full picture: nominal rate = real rate + expected inflation + risk premium.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c7">
+            <div class="label">Check yourself</div>
+            <div class="q">The nominal interest rate on a bond is 6%, and expected inflation is 4%. According to the Fisher effect, what is the approximate real rate of interest?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="false">10%</button>
+              <button class="opt-btn" data-correct="true">2%</button>
+              <button class="opt-btn" data-correct="false">4%</button>
+            </div>
+            <div class="checkin-feedback">Correct — rearranging Rnom = Rreal + πe: Rreal = 6% − 4% = 2%.</div>
+          </div>
+        </div>
+        <div>
+          <div class="dist-card" style="margin-top:0;">
+            <div class="label" style="font-family:var(--font-mono); font-size:.72rem; text-transform:uppercase; color:var(--indigo); font-weight:700; margin-bottom:12px;">Try it — Fisher effect calculator</div>
+            <p style="font-size:.8rem; color:var(--ink-soft); margin:0 0 10px;">Enter any two values; the third is solved for.</p>
+            <div class="tvm-grid">
+              <div class="tvm-field"><label>Real rate (%)</label><input type="number" id="feReal" value="2.5" step="0.1"></div>
+              <div class="tvm-field"><label>Expected inflation (%)</label><input type="number" id="feInfl" value="3.2" step="0.1"></div>
+            </div>
+            <div class="tvm-result" id="feResult">Nominal rate = 5.7%</div>
+            <div class="calc-steps" id="feSteps">2.5% + 3.2% = 5.7%</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         08 THE COSTS OF INFLATION
+    ========================================================== -->
+    <section class="section" id="sec-inflationcosts">
+      <div class="section-head">
+        <span class="section-tag">08</span>
+        <div>
+          <h2>The Costs of Inflation</h2>
+          <p class="subhead">If every price in the economy rose by exactly the same amount, in perfect sync, would anyone actually care? The real damage comes from somewhere else entirely.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="callout" style="border-left-color:var(--red);">
+            <div class="label" style="font-family:var(--font-mono); font-size:.72rem; text-transform:uppercase; color:var(--red); font-weight:700; margin-bottom:8px;">The thought experiment</div>
+            <p style="margin:0;">Imagine every price — including wages — is perfectly indexed to inflation, and inflation is perfectly predictable at 10%. In that world, nobody would actually care: salaries rise 10%, prices rise 10%, everyone's real position is unchanged. The genuine cost of inflation comes specifically from the parts of this fantasy that don't hold in reality: prices aren't perfectly indexed, and inflation isn't perfectly predictable.</p>
+          </div>
+
+          <div class="definition">
+            <div class="label">Expected vs. unexpected inflation</div>
+            <p style="margin-bottom:8px;"><strong>Expected inflation</strong> can be built into wage negotiations and contracts in advance — its costs are real but manageable.</p>
+            <p style="margin:0;"><strong>Unexpected inflation</strong> is the genuinely costly one: when actual inflation surprises to the upside, borrowers benefit at lenders' expense (the real value of debt shrinks); when it surprises to the downside, lenders benefit at borrowers' expense (the real value of debt grows). Either way, wealth gets redistributed in ways nobody actually agreed to.</p>
+          </div>
+
+          <div class="callout example">
+            <div class="label">Worked example — the confused television manufacturer</div>
+            <p style="margin:0 0 8px;">A TV manufacturer sees TV prices rise 10% and assumes demand for televisions specifically has jumped. It expands the factory, hires more workers, and ramps up production — only to discover the 10% rise was actually a generalized, economy-wide price increase, not extra demand for TVs at all.</p>
+            <p style="margin:0;">Now stuck with surplus inventory, excess factory capacity, and too many workers, it has to cut production and lay people off. This is the real cost of unanticipated inflation: it corrupts the informational content of prices, causing genuinely wasteful decisions that wouldn't have happened under stable, predictable prices.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c8">
+            <div class="label">Check yourself</div>
+            <div class="q">Inflation comes in higher than almost everyone expected this year. Who benefits, and who is hurt, among borrowers and lenders?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="true">Borrowers benefit; lenders are hurt, since the real value of the debt owed shrinks</button>
+              <button class="opt-btn" data-correct="false">Lenders benefit; borrowers are hurt</button>
+              <button class="opt-btn" data-correct="false">Neither party is affected by unexpected inflation</button>
+            </div>
+            <div class="checkin-feedback">Correct — when inflation surprises to the upside, the real value of a fixed nominal debt shrinks, benefiting the borrower at the lender's expense.</div>
+          </div>
+        </div>
+        <div>
+          <div class="callout" style="margin-top:0;">
+            <p style="margin:0; font-size:.9rem;"><strong>Why controlling inflation became a central policy goal:</strong> the 1970s and 1980s gave developed economies a real-world demonstration of high, unpredictable inflation's costs, which is exactly why price stability became — and remains — the overarching mandate of most modern central banks.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         QUIZ
+    ========================================================== -->
+    <section class="section" id="sec-quiz" style="max-width:900px;">
+      <div class="section-head">
+        <span class="section-tag">Q</span>
+        <div>
+          <h2>Practice Quiz</h2>
+          <p class="subhead">20 questions across everything above. Answer, get instant feedback, and see your score at the end.</p>
+        </div>
+      </div>
+      <div class="quiz-shell" id="quizShell">
+        <!-- populated by JS -->
+      </div>
+    </section>
+
+    <footer class="footer">
+      Built as a companion study tool for the CFA Program prerequisite Economics reading on Monetary and Fiscal Policy. Work through it alongside your primary curriculum — this isn't a replacement for official CFA Institute materials.
+    </footer>
+  </main>
+</div>
+
+<script src="../../diagnostics.js"></script>
+<script src="../bundle.js"></script>
+<script src="../../accessibility.js"></script>
+</body>
+</html>

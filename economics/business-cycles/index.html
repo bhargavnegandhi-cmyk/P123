@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Introduction to Business Cycles — CFA Prerequisite Economics Toolkit</title>
+<link rel="stylesheet" href="../../shared-module-standard.css">
+</head>
+<body>
+
+<div class="mobile-bar">
+  <strong style="font-family:var(--font-display)">↗ ↘ ↗</strong>
+  <button id="sidebarToggle">Menu</button>
+</div>
+
+<div class="app">
+  <nav class="sidebar" id="sidebar">
+    <a href="../index.html" class="brand">
+      <span class="brand-mark"></span>
+      <span class="brand-name">Introduction to<br>Business Cycles</span>
+    </a>
+    <div class="brand-sub">CFA Prerequisite · Economics · Module 4</div>
+
+    <div class="progress-wrap">
+      <div class="progress-label"><span>Progress</span><span id="progressPct">0%</span></div>
+      <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+    </div>
+
+    <div class="toc-group-label">Sectors Through the Cycle</div>
+    <ul class="toc">
+      <li><a href="#sec-consumer" data-sec="sec-consumer"><span class="num">01</span>Consumer Behavior</a></li>
+      <li><a href="#sec-housing" data-sec="sec-housing"><span class="num">02</span>Housing &amp; Business Investment</a></li>
+      <li><a href="#sec-trade" data-sec="sec-trade"><span class="num">03</span>External Trade</a></li>
+    </ul>
+
+    <div class="toc-group-label">Unemployment</div>
+    <ul class="toc">
+      <li><a href="#sec-unemploytypes" data-sec="sec-unemploytypes"><span class="num">04</span>Types &amp; Measures</a></li>
+      <li><a href="#sec-unemploylag" data-sec="sec-unemploylag"><span class="num">05</span>Why It Lags the Cycle</a></li>
+    </ul>
+
+    <div class="toc-group-label">Inflation</div>
+    <ul class="toc">
+      <li><a href="#sec-inflationtypes" data-sec="sec-inflationtypes"><span class="num">06</span>Inflation, Deflation &amp; Hyperinflation</a></li>
+      <li><a href="#sec-priceindex" data-sec="sec-priceindex"><span class="num">07</span>Measuring Inflation</a></li>
+      <li><a href="#sec-costdemand" data-sec="sec-costdemand"><span class="num">08</span>Cost-Push vs. Demand-Pull</a></li>
+    </ul>
+
+    <div class="toc-group-label">Reading &amp; Explaining the Cycle</div>
+    <ul class="toc">
+      <li><a href="#sec-indicators" data-sec="sec-indicators"><span class="num">09</span>Leading, Coincident &amp; Lagging Indicators</a></li>
+      <li><a href="#sec-theories" data-sec="sec-theories"><span class="num">10</span>Theories of the Business Cycle</a></li>
+    </ul>
+
+    <div class="toc-group-label">Check Yourself</div>
+    <ul class="toc">
+      <li><a href="#sec-quiz" data-sec="sec-quiz"><span class="num">Q</span>Practice Quiz (24)</a></li>
+    </ul>
+  </nav>
+
+  <main id="top">
+    <header class="hero">
+      <div class="eyebrow">CFA Program · Prerequisite Economics · Module 4</div>
+      <h1>The economy breathes in a rhythm — and every sector breathes differently.</h1>
+      <p class="lede">Module 3 built the tools for measuring a whole economy at a single moment. This module asks how that economy moves through time — recovery, expansion, slowdown, contraction — and why consumer durables, housing, and exports each dance to a different beat within that same cycle. It closes with the two numbers every financial news report leans on constantly: the unemployment rate and the inflation rate.</p>
+    </header>
+
+    <!-- =========================================================
+         01 CONSUMER BEHAVIOR
+    ========================================================== -->
+    <section class="section" id="sec-consumer">
+      <div class="section-head">
+        <span class="section-tag">01</span>
+        <div>
+          <h2>Consumer Behavior Across the Business Cycle</h2>
+          <p class="subhead">Households are the largest sector of most economies — and not every kind of spending reacts to the cycle the same way.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <p>Consumer spending splits into three categories that behave very differently as the economy moves through recovery, expansion, slowdown, and contraction:</p>
+
+          <div class="chart-card">
+            <div class="test-tabs" id="phaseTabs">
+              <button class="test-tab active" data-phase="recovery">Recovery</button>
+              <button class="test-tab" data-phase="expansion">Expansion</button>
+              <button class="test-tab" data-phase="slowdown">Slowdown</button>
+              <button class="test-tab" data-phase="contraction">Contraction</button>
+            </div>
+            <div id="phaseDisplay"></div>
+          </div>
+
+          <div class="definition">
+            <div class="label">Three spending categories, three cyclical personalities</div>
+            <p style="margin-bottom:8px;"><strong>Durables</strong> (autos, appliances, furniture): the most cyclical. Big-ticket items with a long useful life are easy to postpone when things look shaky — a weakness here is often an early warning sign.</p>
+            <p style="margin-bottom:8px;"><strong>Non-durables</strong> (food, medicine, household products): the least cyclical — people keep buying necessities regardless of the economic mood.</p>
+            <p style="margin:0;"><strong>Services</strong> (dining out, entertainment, personal care): somewhere in between, since services mix discretionary and non-discretionary spending together.</p>
+          </div>
+
+          <div class="callout example">
+            <div class="label">Permanent income vs. temporary income</div>
+            <p style="margin:0;"><strong>Permanent income</strong> excludes one-off windfalls and losses, capturing the income households believe they can reliably count on. Services spending tracks permanent income closely — people adjust their gym membership or streaming subscriptions based on their durable sense of financial security, not a one-time bonus. Durable goods spending, by contrast, tracks disposable income more directly, regardless of its source.</p>
+          </div>
+
+          <div class="callout" style="border-left-color:var(--red);">
+            <p style="margin:0; font-size:.9rem;"><strong>Reading the saving rate:</strong> a rising saving rate can mean caution (households pulling back, a bearish signal) — but a large accumulated stock of savings also builds the capacity for a future spending recovery. Watch the direction of change as much as the level.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c1">
+            <div class="label">Check yourself</div>
+            <div class="q">Why do durable goods purchases show the most pronounced cyclical swings?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="true">They're big-ticket items that can be repaired and kept longer, so replacement is easy to postpone</button>
+              <button class="opt-btn" data-correct="false">They're the cheapest category of goods</button>
+              <button class="opt-btn" data-correct="false">Governments restrict durable goods purchases during recessions</button>
+            </div>
+            <div class="checkin-feedback">Correct — because durables can be kept in service longer with repairs, households have real flexibility to delay buying a replacement when the outlook looks uncertain.</div>
+          </div>
+        </div>
+        <div>
+          <div class="callout" style="margin-top:0;">
+            <p style="margin:0; font-size:.9rem;"><strong>Why analysts watch durables specifically:</strong> because they're the most sensitive spending category, a shift in durable goods orders is often one of the earliest visible signals of where the broader cycle is heading, well before broader GDP data confirms it.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         02 HOUSING & BUSINESS INVESTMENT
+    ========================================================== -->
+    <section class="section" id="sec-housing">
+      <div class="section-head">
+        <span class="section-tag">02</span>
+        <div>
+          <h2>Housing &amp; Business Investment Behavior</h2>
+          <p class="subhead">Small relative to the whole economy, but volatile enough to matter far more than its size suggests.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="definition">
+            <div class="label">Housing's two drivers</div>
+            <p style="margin-bottom:8px;"><strong>Interest rate sensitivity:</strong> since most homes are financed with a mortgage, housing demand is unusually sensitive to borrowing costs — lower rates directly expand affordability and pull buyers in.</p>
+            <p style="margin:0;"><strong>Demographics:</strong> the long-run trend underneath the cycle, driven by household formation, concentrated in the 25–40 age bracket. A country with fast urbanization or a large cohort entering that age range has a demographic tailwind that can override short-term cyclical weakness.</p>
+          </div>
+
+          <div class="callout" style="border-left-color:var(--red);">
+            <div class="label" style="font-family:var(--font-mono); font-size:.72rem; text-transform:uppercase; color:var(--red); font-weight:700; margin-bottom:8px;">How housing cycles can overshoot</div>
+            <p style="margin:0;">If prices have risen briskly, buyers sometimes purchase specifically to capture expected future gains — extending the boom upward and inviting overbuilding. The resulting inventory of unsold homes eventually reverses the price trend, catching late buyers who stretched their finances thin. This exact pattern played out across many countries in the 2008–2009 financial crisis.</p>
+          </div>
+
+          <div class="callout example">
+            <div class="label">Business investment — the most volatile sector of all</div>
+            <p style="margin:0;">Among consumer goods, business equipment, and household-products companies, <strong>business investment fluctuates the most</strong> with the cycle — more than either consumer spending or exports. Firms sharply expand capital spending in good times and cut it just as sharply when demand looks uncertain, since capital projects are the easiest kind of spending to delay entirely.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c2">
+            <div class="label">Check yourself</div>
+            <div class="q">Housing demand is unusually sensitive to which factor, more than most other sectors?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="true">Interest rates</button>
+              <button class="opt-btn" data-correct="false">Government spending levels</button>
+              <button class="opt-btn" data-correct="false">The unemployment rate alone</button>
+            </div>
+            <div class="checkin-feedback">Correct — because most home purchases are mortgage-financed, changes in borrowing costs directly and immediately affect affordability and demand.</div>
+          </div>
+        </div>
+        <div>
+          <div class="callout" style="margin-top:0;">
+            <p style="margin:0; font-size:.9rem;">Rank order of cyclical sensitivity, roughly: <strong>business investment &gt; durable goods &gt; housing &gt; services &gt; non-durables</strong> — though housing's sensitivity to interest rates specifically can make it move independently of the broader cycle at times.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         03 EXTERNAL TRADE
+    ========================================================== -->
+    <section class="section" id="sec-trade">
+      <div class="section-head">
+        <span class="section-tag">03</span>
+        <div>
+          <h2>External Trade Sector Behavior</h2>
+          <p class="subhead">Imports answer to the domestic cycle. Exports answer to everyone else's.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="definition">
+            <div class="label">Two different masters</div>
+            <p style="margin-bottom:8px;"><strong>Imports</strong> rise and fall with domestic GDP growth — stronger domestic demand pulls in more goods from abroad.</p>
+            <p style="margin:0;"><strong>Exports</strong> depend on economic conditions in trading partner countries, largely independent of what's happening domestically. A country's exports can grow even during a domestic slowdown, if its major trading partners are booming.</p>
+          </div>
+
+          <div class="callout formula">
+            <div class="label">The exchange rate's independent effect</div>
+            <div class="formula-body" style="font-size:.9rem;">Currency appreciates → imports cheaper, exports more expensive abroad<br>Currency depreciates → imports pricier, exports cheaper abroad</div>
+            <p style="margin:10px 0 0; font-size:.85rem; color:var(--ink-soft);">Short-term currency wiggles barely matter for trade flows — it's sustained, multi-year currency trends that actually move the trade balance meaningfully.</p>
+          </div>
+
+          <div class="callout example">
+            <div class="label">Worked example — where does trade sensitivity concentrate?</div>
+            <p style="margin:0;">A tiny, highly open economy like Singapore or Lithuania can see total trade (exports + imports) exceed its entire GDP — external cycles matter enormously there. A large, relatively closed economy like the United States or Brazil sees domestic conditions dominate far more, with trade a smaller share of the overall picture.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c3">
+            <div class="label">Check yourself</div>
+            <div class="q">A country's major trading partners are experiencing strong economic growth, even though its own domestic economy is slowing. What is the most likely effect on this country's exports?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="true">Exports may continue growing, since they respond to trading partners' conditions, not domestic conditions</button>
+              <button class="opt-btn" data-correct="false">Exports must fall in line with the domestic slowdown</button>
+              <button class="opt-btn" data-correct="false">Exports are unaffected by trading partners' growth</button>
+            </div>
+            <div class="checkin-feedback">Correct — exports respond primarily to the economic conditions of trading partners, so strong foreign growth can keep exports rising even as the domestic economy weakens.</div>
+          </div>
+        </div>
+        <div>
+          <div class="callout" style="margin-top:0;">
+            <p style="margin:0; font-size:.9rem;"><strong>Why this matters for a portfolio:</strong> a company whose sales are mostly domestic tracks the local cycle closely; a genuinely global exporter can partially decouple from it — worth remembering when a stock's earnings don't match the headlines about the local economy.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         04 UNEMPLOYMENT TYPES & MEASURES
+    ========================================================== -->
+    <section class="section" id="sec-unemploytypes">
+      <div class="section-head">
+        <span class="section-tag">04</span>
+        <div>
+          <h2>Types &amp; Measures of Unemployment</h2>
+          <p class="subhead">"Unemployed" sounds simple. The official statistic hides several genuinely different situations inside one number.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="definition">
+            <div class="label">The building blocks</div>
+            <p style="margin-bottom:8px;"><strong>Employed:</strong> has a job (excludes informal-sector work).</p>
+            <p style="margin-bottom:8px;"><strong>Labor force:</strong> employed + actively job-seeking. Excludes retirees, children, students, and stay-at-home parents.</p>
+            <p style="margin:0;"><strong>Unemployed:</strong> actively seeking work but currently jobless.</p>
+          </div>
+
+          <div class="callout formula">
+            <div class="label">The two headline ratios</div>
+            <div class="formula-body">
+              Unemployment rate = Unemployed / Labor force<br>
+              Participation rate = Labor force / Working-age population
+            </div>
+          </div>
+
+          <div class="definition">
+            <div class="label">The hidden categories</div>
+            <p style="margin-bottom:8px;"><strong>Frictionally unemployed:</strong> between jobs, short-term and largely harmless — a healthy sign of a dynamic labor market, not weakness.</p>
+            <p style="margin-bottom:8px;"><strong>Long-term unemployed:</strong> jobless for an extended period (often 3–4+ months), a genuinely worse signal.</p>
+            <p style="margin-bottom:8px;"><strong>Discouraged workers:</strong> stopped looking entirely — statistically <em>outside</em> the labor force, and therefore invisible to the official unemployment rate, even though they represent real joblessness.</p>
+            <p style="margin:0;"><strong>Underemployed:</strong> has a job, but overqualified or working part-time while wanting full-time — also invisible to the standard unemployment rate.</p>
+          </div>
+
+          <div class="callout" style="border-left-color:var(--red);">
+            <p style="margin:0; font-size:.9rem;"><strong>The trap:</strong> during a prolonged downturn, the unemployment rate can actually <em>fall</em> — not because jobs improved, but because discouraged workers stop counting as part of the labor force at all. Always read the unemployment rate alongside the participation rate to tell these two very different stories apart.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c4">
+            <div class="label">Check yourself</div>
+            <div class="q">A lawyer who lost her corporate job takes a part-time position at a bookstore while continuing to search for legal work. How does she count in the official unemployment rate?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="false">She counts as unemployed, since it's not her career job</button>
+              <button class="opt-btn" data-correct="true">She counts as employed, even though she may be underemployed</button>
+              <button class="opt-btn" data-correct="false">She is excluded from the labor force entirely</button>
+            </div>
+            <div class="checkin-feedback">Correct — having any job counts as employed for the unemployment rate, regardless of whether it matches her qualifications. Underemployment is a real phenomenon, but it isn't captured by the standard unemployment statistic.</div>
+          </div>
+        </div>
+        <div>
+          <div class="dist-card" style="margin-top:0;">
+            <div class="label" style="font-family:var(--font-mono); font-size:.72rem; text-transform:uppercase; color:var(--indigo); font-weight:700; margin-bottom:12px;">Try it — unemployment &amp; participation calculator</div>
+            <div class="tvm-grid">
+              <div class="tvm-field"><label>Employed</label><input type="number" id="uEmployed" value="152000" step="1000"></div>
+              <div class="tvm-field"><label>Unemployed</label><input type="number" id="uUnemployed" value="8000" step="500"></div>
+              <div class="tvm-field"><label>Working-age population</label><input type="number" id="uWorkingAge" value="200000" step="1000"></div>
+            </div>
+            <div class="stat-readout-row" id="uOut">
+              <div class="stat-readout"><div class="k">Labor force</div><div class="v">160,000</div></div>
+              <div class="stat-readout"><div class="k">Unemployment rate</div><div class="v">5.0%</div></div>
+              <div class="stat-readout"><div class="k">Participation rate</div><div class="v">80.0%</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         05 WHY UNEMPLOYMENT LAGS THE CYCLE
+    ========================================================== -->
+    <section class="section" id="sec-unemploylag">
+      <div class="section-head">
+        <span class="section-tag">05</span>
+        <div>
+          <h2>Why Unemployment Lags the Cycle</h2>
+          <p class="subhead">By the time the unemployment rate confirms a recession, the recession is usually already well underway.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="definition">
+            <div class="label">Two reasons the unemployment rate lags</div>
+            <p style="margin-bottom:8px;"><strong>The labor force itself is elastic:</strong> discouraged workers drop out during downturns (flattering the rate) and flood back in during recoveries — sometimes so quickly that the unemployment rate briefly <em>rises</em> even as the labor market genuinely improves, purely because more people resume actively looking.</p>
+            <p style="margin:0;"><strong>Businesses are reluctant to change headcount:</strong> firms hold onto workers during a downturn (avoiding the cost of losing trained staff) and wait to hire during a recovery until existing staff are fully utilized again — a delay in both directions.</p>
+          </div>
+
+          <div class="definition">
+            <div class="label">Better leading indicators of the labor market</div>
+            <p style="margin-bottom:8px;"><strong>Overtime hours and temp staffing:</strong> businesses cut overtime and temp workers first, before touching full-time headcount — watch these for the earliest warning.</p>
+            <p style="margin:0;"><strong>Labor productivity (output/hours):</strong> when businesses hold onto staff even as output falls, measured productivity drops — often the very first visible sign of trouble, even before hours or payrolls move.</p>
+          </div>
+
+          <div class="callout example">
+            <div class="label">Reading the sequence</div>
+            <p style="margin:0;">On the way down: productivity falls first → overtime and temp staffing get cut → full-time layoffs happen last. On the way up: productivity rises first (existing staff used more efficiently) → overtime and temp hiring pick up → full-time rehiring happens last. The unemployment rate is the caboose of this whole train, not the engine.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c5">
+            <div class="label">Check yourself</div>
+            <div class="q">During an economic recovery, the unemployment rate briefly ticks up even though job openings are genuinely increasing. What is the most likely explanation?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="true">Discouraged workers are re-entering the labor force to search for jobs, temporarily raising the measured unemployed count</button>
+              <button class="opt-btn" data-correct="false">The recovery has actually already ended</button>
+              <button class="opt-btn" data-correct="false">This pattern is statistically impossible</button>
+            </div>
+            <div class="checkin-feedback">Correct — as conditions improve, previously discouraged workers resume actively job-seeking, and since they aren't immediately hired, they can temporarily push the unemployment rate up even during a genuine recovery.</div>
+          </div>
+        </div>
+        <div>
+          <div class="callout" style="margin-top:0;">
+            <p style="margin:0; font-size:.9rem;"><strong>This is exactly why unemployment is called a lagging indicator</strong> — useful for confirming where the cycle has been, far less useful for predicting where it's headed next.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         06 INFLATION, DEFLATION, HYPERINFLATION
+    ========================================================== -->
+    <section class="section" id="sec-inflationtypes">
+      <div class="section-head">
+        <span class="section-tag">06</span>
+        <div>
+          <h2>Inflation, Deflation, Hyperinflation &amp; Disinflation</h2>
+          <p class="subhead">Four related words that get mixed up constantly — and mixing them up leads to genuinely different conclusions.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="definition">
+            <div class="label">Four terms, precisely defined</div>
+            <p style="margin-bottom:8px;"><strong>Inflation:</strong> a sustained rise in the overall price level.</p>
+            <p style="margin-bottom:8px;"><strong>Deflation:</strong> a sustained <em>decrease</em> in the price level — a negative inflation rate.</p>
+            <p style="margin-bottom:8px;"><strong>Disinflation:</strong> inflation is still positive, just slowing down — say, from 18% to 6%. Prices are still rising, only more gently. This is not the same thing as deflation at all.</p>
+            <p style="margin:0;"><strong>Hyperinflation:</strong> an extreme, runaway version of inflation — commonly 500% to 1,000%+ per year.</p>
+          </div>
+
+          <div class="callout" style="border-left-color:var(--red);">
+            <div class="label" style="font-family:var(--font-mono); font-size:.72rem; text-transform:uppercase; color:var(--red); font-weight:700; margin-bottom:8px;">Why deflation is genuinely dangerous</div>
+            <p style="margin:0;">Debt contracts are fixed in nominal terms — so when prices fall, the real burden of existing debt actually <em>rises</em>. Cash-strapped, over-indebted firms respond by slashing spending, investment, and jobs, which deepens the very contraction causing the deflation in the first place — a vicious spiral. This is exactly why most developed-economy central banks target roughly 2% inflation rather than 0%: it keeps a buffer against ever tipping into deflation.</p>
+          </div>
+
+          <div class="callout example">
+            <div class="label">What actually causes hyperinflation</div>
+            <p style="margin:0;">Almost always the same root cause: large government spending not backed by real tax revenue, financed instead by printing money. As prices spiral, people rush to convert cash into real goods before it loses more value, which only accelerates the money's velocity and the price spiral further. The only real fix is regaining control of the money supply.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c6">
+            <div class="label">Check yourself</div>
+            <div class="q">A country's inflation rate falls from 22% to 9% over two years. Prices are still rising, just more slowly. This is:</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="false">Deflation</button>
+              <button class="opt-btn" data-correct="true">Disinflation</button>
+              <button class="opt-btn" data-correct="false">Hyperinflation</button>
+            </div>
+            <div class="checkin-feedback">Correct — the inflation rate is still positive (prices still rising), just at a slower pace — the definition of disinflation, distinct from deflation.</div>
+          </div>
+        </div>
+        <div>
+          <div class="callout" style="margin-top:0;">
+            <p style="margin:0; font-size:.9rem;"><strong>Deflation has happened for real:</strong> the US during the Great Depression, briefly after the 2008–2009 financial crisis, and Japan repeatedly since the late 1990s — none of these were minor or theoretical events.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         07 MEASURING INFLATION
+    ========================================================== -->
+    <section class="section" id="sec-priceindex">
+      <div class="section-head">
+        <span class="section-tag">07</span>
+        <div>
+          <h2>Measuring Inflation: The Construction of Price Indexes</h2>
+          <p class="subhead">A price index is just the value of a fixed shopping basket, tracked over time.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="callout finance">
+            <div class="label">Worked example — a two-good basket</div>
+            <p style="margin:0 0 8px;">January 2019: 50 kg rice at ¥3/kg, 70 liters gasoline at ¥4.4/liter. Basket value = (50×3) + (70×4.4) = <strong>¥458</strong>.</p>
+            <p style="margin:0 0 8px;">February 2019, same quantities: 50 kg rice at ¥4/kg, 70 liters gasoline at ¥4.5/liter. Basket value = (50×4) + (70×4.5) = <strong>¥515</strong>.</p>
+            <p style="margin:0;">Setting January's index to 100: February's index = (515/458) × 100 = <strong>112.45</strong>. Inflation rate = (112.45/100) − 1 = <strong>12.45%</strong>.</p>
+          </div>
+
+          <div class="definition">
+            <div class="label">Three biases in a fixed-basket (Laspeyres) index</div>
+            <p style="margin-bottom:8px;"><strong>Substitution bias:</strong> when a good's price rises, people shift toward cheaper substitutes — a fixed basket misses this, overstating true inflation.</p>
+            <p style="margin-bottom:8px;"><strong>Quality bias:</strong> if a product's quality improves over time (safer, more reliable cars) without adjustment, rising prices get mistaken entirely for inflation rather than partly reflecting genuine improvement.</p>
+            <p style="margin:0;"><strong>New product bias:</strong> a fixed basket, set years ago, simply can't include products that didn't exist yet.</p>
+          </div>
+
+          <p>All three biases push in the same direction: <strong>a fixed-basket index tends to overstate true inflation.</strong> Statistical agencies partially correct for this with hedonic pricing (adjusting for quality) and chained index formulas (adjusting for substitution).</p>
+
+          <div class="checkin" data-checkin="c7">
+            <div class="label">Check yourself</div>
+            <div class="q">Beef prices rise sharply, and consumers shift much of their spending toward chicken instead. A fixed-basket price index that doesn't account for this shift will tend to:</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="true">Overstate the true inflation rate</button>
+              <button class="opt-btn" data-correct="false">Understate the true inflation rate</button>
+              <button class="opt-btn" data-correct="false">Have no bias at all</button>
+            </div>
+            <div class="checkin-feedback">Correct — this is substitution bias: the fixed basket keeps weighting the now-more-expensive beef as heavily as before, missing the cost savings consumers actually achieve by switching to chicken.</div>
+          </div>
+        </div>
+        <div>
+          <div class="dist-card" style="margin-top:0;">
+            <div class="label" style="font-family:var(--font-mono); font-size:.72rem; text-transform:uppercase; color:var(--indigo); font-weight:700; margin-bottom:12px;">Try it — price index &amp; inflation calculator</div>
+            <p style="font-size:.8rem; color:var(--ink-soft); margin:0 0 10px;">Good 1</p>
+            <div class="tvm-grid">
+              <div class="tvm-field"><label>Quantity</label><input type="number" id="piQ1" value="50" step="1"></div>
+              <div class="tvm-field"><label>Price (base)</label><input type="number" id="piP1Base" value="3" step="0.1"></div>
+              <div class="tvm-field"><label>Price (current)</label><input type="number" id="piP1Cur" value="4" step="0.1"></div>
+            </div>
+            <p style="font-size:.8rem; color:var(--ink-soft); margin:10px 0;">Good 2</p>
+            <div class="tvm-grid">
+              <div class="tvm-field"><label>Quantity</label><input type="number" id="piQ2" value="70" step="1"></div>
+              <div class="tvm-field"><label>Price (base)</label><input type="number" id="piP2Base" value="4.4" step="0.1"></div>
+              <div class="tvm-field"><label>Price (current)</label><input type="number" id="piP2Cur" value="4.5" step="0.1"></div>
+            </div>
+            <div class="stat-readout-row" id="piOut">
+              <div class="stat-readout"><div class="k">Base value</div><div class="v">458.0</div></div>
+              <div class="stat-readout"><div class="k">Price index</div><div class="v">112.45</div></div>
+              <div class="stat-readout"><div class="k">Inflation rate</div><div class="v">12.45%</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         08 COST-PUSH VS DEMAND-PULL
+    ========================================================== -->
+    <section class="section" id="sec-costdemand">
+      <div class="section-head">
+        <span class="section-tag">08</span>
+        <div>
+          <h2>Cost-Push vs. Demand-Pull Inflation</h2>
+          <p class="subhead">Two completely different engines can drive the same rising price level — and they call for very different responses.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="definition">
+            <div class="label">Cost-push inflation</div>
+            <p style="margin:0;">Rising input costs — especially wages growing faster than productivity — squeeze profit margins, and businesses raise prices to protect them. This is precisely the leftward AS-shift mechanism behind stagflation from Module 3, Part 2.</p>
+          </div>
+
+          <div class="callout formula">
+            <div class="label">Unit labor cost (ULC)</div>
+            <div class="formula-body">ULC = W / O</div>
+            <p style="margin:10px 0 0; font-size:.85rem; color:var(--ink-soft);">W = total labor compensation per hour, O = output per hour (productivity). If wage growth outpaces productivity growth, ULC rises — a direct, trackable cost-push inflation signal.</p>
+          </div>
+
+          <div class="definition">
+            <div class="label">Demand-pull inflation</div>
+            <p style="margin:0;">Aggregate demand grows faster than the economy's capacity to supply it, straining resources and creating bottlenecks. The closer actual GDP sits to potential GDP (the higher the capacity utilization), the more likely excess demand shows up as rising prices instead of rising output.</p>
+          </div>
+
+          <div class="callout example">
+            <div class="label">The Monetarist view</div>
+            <p style="margin:0;">"Inflation results when too much money chases too few goods." A surplus of money in circulation lowers money's own value, the same way a surplus of anything else lowers its price — and since money's value is expressed in terms of what it buys, a falling money value shows up as a rising overall price level.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c8">
+            <div class="label">Check yourself</div>
+            <div class="q">Wages across an economy grow 6% while productivity grows only 2%. What does this combination most directly signal?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="true">Rising unit labor costs, a cost-push inflation pressure</button>
+              <button class="opt-btn" data-correct="false">Falling unit labor costs, easing inflation pressure</button>
+              <button class="opt-btn" data-correct="false">No effect on inflation at all</button>
+            </div>
+            <div class="checkin-feedback">Correct — when compensation growth outpaces productivity growth, unit labor costs rise, squeezing margins and creating exactly the cost-push pressure that tends to show up as higher prices.</div>
+          </div>
+        </div>
+        <div>
+          <div class="dist-card" style="margin-top:0;">
+            <div class="label" style="font-family:var(--font-mono); font-size:.72rem; text-transform:uppercase; color:var(--indigo); font-weight:700; margin-bottom:12px;">Try it — unit labor cost calculator</div>
+            <div class="tvm-grid">
+              <div class="tvm-field"><label>Wage growth (%)</label><input type="number" id="ulcW" value="6" step="0.5"></div>
+              <div class="tvm-field"><label>Productivity growth (%)</label><input type="number" id="ulcO" value="2" step="0.5"></div>
+            </div>
+            <div class="tvm-result" id="ulcResult">ULC growth ≈ 4.0%</div>
+            <div class="calc-steps" id="ulcSteps">6% − 2% ≈ 4.0% growth in unit labor costs</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         09 LEADING, COINCIDENT & LAGGING INDICATORS
+    ========================================================== -->
+    <section class="section" id="sec-indicators">
+      <div class="section-head">
+        <span class="section-tag">09</span>
+        <div>
+          <h2>Leading, Coincident &amp; Lagging Economic Indicators</h2>
+          <p class="subhead">You already learned unemployment lags the cycle. Here's the full, formal classification it belongs to — and the specific data series analysts actually watch.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <div class="definition">
+            <div class="label">Three timing categories</div>
+            <p style="margin-bottom:8px;"><strong>Leading indicators</strong> turn <em>before</em> the overall economy does — their value is in forecasting where the cycle is headed next.</p>
+            <p style="margin-bottom:8px;"><strong>Coincident indicators</strong> turn <em>at roughly the same time</em> as the overall economy — useful for confirming where the economy actually stands right now.</p>
+            <p style="margin:0;"><strong>Lagging indicators</strong> turn <em>after</em> the overall economy already has — useful for confirming a trend once it's already well underway, not for predicting it.</p>
+          </div>
+
+          <div class="chart-card">
+            <div class="test-tabs" id="indicatorTabs">
+              <button class="test-tab active" data-cat="leading">Leading</button>
+              <button class="test-tab" data-cat="coincident">Coincident</button>
+              <button class="test-tab" data-cat="lagging">Lagging</button>
+            </div>
+            <div id="indicatorDisplay"></div>
+          </div>
+
+          <div class="callout" style="border-left-color:var(--red);">
+            <p style="margin:0; font-size:.9rem;"><strong>No indicator is perfect.</strong> Every one of these series gets revised periodically after its initial release, and turning points are only ever confirmed well after the fact — even a "leading" indicator can send a false signal. Analysts typically watch a basket of several at once rather than trusting any single series in isolation.</p>
+          </div>
+
+          <div class="callout example">
+            <div class="label">Why the yield curve counts as a leading indicator</div>
+            <p style="margin:0;">The spread between long-term and short-term bond yields is one of the most closely watched leading indicators precisely because it reflects investors' collective forward-looking expectations — when short-term rates rise above long-term rates (an inverted curve), markets are often pricing in a future slowdown well before it shows up in actual GDP or employment data.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c9">
+            <div class="label">Check yourself</div>
+            <div class="q">Industrial production and non-agricultural employment are examples of which type of economic indicator?</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="false">Leading</button>
+              <button class="opt-btn" data-correct="true">Coincident</button>
+              <button class="opt-btn" data-correct="false">Lagging</button>
+            </div>
+            <div class="checkin-feedback">Correct — these series move in step with the broader economy, making them useful for confirming its current state rather than predicting or lagging it.</div>
+          </div>
+        </div>
+        <div>
+          <div class="callout" style="margin-top:0;">
+            <div class="label" style="font-family:var(--font-mono); font-size:.72rem; text-transform:uppercase; color:var(--indigo); font-weight:700; margin-bottom:8px;">Nowcasting</div>
+            <p style="margin:0; font-size:.9rem;">Official GDP figures are only published well after the period they describe. <strong>Nowcasting</strong> combines real-time indicators — the ones above, plus higher-frequency data — to produce a continuously updated estimate of the economy's <em>present</em> state, without waiting for the official, lagged data release.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         10 THEORIES OF THE BUSINESS CYCLE
+    ========================================================== -->
+    <section class="section" id="sec-theories">
+      <div class="section-head">
+        <span class="section-tag">10</span>
+        <div>
+          <h2>Theories of the Business Cycle</h2>
+          <p class="subhead">Everyone agrees the economy cycles. Economists genuinely disagree about why — and what, if anything, a government should do about it.</p>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div>
+          <p>Module 3 built the AD/AS framework. These three schools of thought are really three different answers to the same question: when the economy dips, which curve moved, and should anyone try to move it back?</p>
+
+          <div class="definition">
+            <div class="label">Neoclassical &amp; Real Business Cycle (RBC) theory — a supply-side story</div>
+            <p style="margin:0;">Fluctuations come from shifts in <strong>aggregate supply</strong> — an input price spike shifting AS left, or new technology shifting it right. Left alone, the economy gradually converges back to its new equilibrium on its own. Government intervention is generally seen as unnecessary, and possibly counterproductive — it can exacerbate the very fluctuation it's trying to fix, or delay the natural convergence.</p>
+          </div>
+
+          <div class="definition">
+            <div class="label">Keynesian theory — a demand-side story</div>
+            <p style="margin:0;">Fluctuations come from shifts in <strong>aggregate demand</strong> — a collapse in consumer or business confidence shifting AD left. Left alone, a weak economy can get stuck well below potential GDP for a long time. Keynesians advocate active government intervention — fiscal or monetary stimulus — specifically to restore full employment and head off a deflationary spiral.</p>
+          </div>
+
+          <div class="definition">
+            <div class="label">Monetarist theory — trust the money supply, not the timing</div>
+            <p style="margin:0;">Monetarists share some common ground with the Neoclassical view: the timing and impact of discretionary government intervention is highly uncertain, and poorly-timed intervention can do more harm than good. Rather than actively steering AD or AS, Monetarists argue it's generally better to let the economy find its own equilibrium unassisted, while keeping the money supply growing at a steady, predictable pace.</p>
+          </div>
+
+          <div class="callout finance">
+            <div class="label">Same recession, three different prescriptions</div>
+            <p style="margin:0;">A demand-driven downturn hits. A Neoclassical/RBC economist expects the economy to self-correct and generally advises against intervention. A Keynesian economist sees a stuck, underperforming economy and advocates for active fiscal or monetary stimulus to close the gap. A Monetarist agrees intervention timing is genuinely hard to get right, and prefers a steady, rules-based approach to money growth over discretionary fine-tuning.</p>
+          </div>
+
+          <div class="checkin" data-checkin="c10">
+            <div class="label">Check yourself</div>
+            <div class="q">An economist argues that a recession is best addressed by active government fiscal stimulus to restore full employment and prevent a deflationary spiral. This view most closely aligns with:</div>
+            <div class="opt-list">
+              <button class="opt-btn" data-correct="false">Real Business Cycle (RBC) theory</button>
+              <button class="opt-btn" data-correct="true">Keynesian theory</button>
+              <button class="opt-btn" data-correct="false">Monetarist theory</button>
+            </div>
+            <div class="checkin-feedback">Correct — advocating active intervention to restore full employment and avoid a deflationary spiral is the defining Keynesian position.</div>
+          </div>
+        </div>
+        <div>
+          <div class="callout" style="margin-top:0;">
+            <table class="exhibit" style="margin:0;">
+              <tr><th>Theory</th><th>Cycle driven by</th><th>Govt. role</th></tr>
+              <tr><td>Neoclassical / RBC</td><td class="num">AS shifts</td><td class="num">Minimal</td></tr>
+              <tr><td>Keynesian</td><td class="num">AD shifts</td><td class="num">Active intervention</td></tr>
+              <tr><td>Monetarist</td><td class="num">Money supply</td><td class="num">Steady, rules-based</td></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         QUIZ
+    ========================================================== -->
+    <section class="section" id="sec-quiz" style="max-width:900px;">
+      <div class="section-head">
+        <span class="section-tag">Q</span>
+        <div>
+          <h2>Practice Quiz</h2>
+          <p class="subhead">24 questions across everything above. Answer, get instant feedback, and see your score at the end.</p>
+        </div>
+      </div>
+      <div class="quiz-shell" id="quizShell">
+        <!-- populated by JS -->
+      </div>
+    </section>
+
+    <footer class="footer">
+      Built as a companion study tool for the CFA Program prerequisite Economics reading on Introduction to Business Cycles. Work through it alongside your primary curriculum — this isn't a replacement for official CFA Institute materials.
+    </footer>
+  </main>
+</div>
+
+<script src="../../diagnostics.js"></script>
+<script src="../bundle.js"></script>
+<script src="../../accessibility.js"></script>
+</body>
+</html>
